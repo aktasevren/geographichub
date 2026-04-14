@@ -260,6 +260,8 @@ export default function SquadPage() {
     );
   }
 
+  const h = w * 0.5;
+
   // Pins — one per country nationality, clustered
   const pins = useMemo(() => {
     const byCountry = new Map<string, { hit: CountryHit; players: Player[] }>();
@@ -283,8 +285,6 @@ export default function SquadPage() {
     pins.forEach((p) => p.hit.iso3 && s.add(p.hit.iso3));
     return s;
   }, [pins]);
-
-  const h = w * 0.5;
 
   useEffect(() => {
     if (!dragging) return;
