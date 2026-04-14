@@ -38,10 +38,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 md:px-10 pb-12">
+      <section className="px-5 md:px-10 pb-5">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           <PilotTile t={t} locale={locale} />
           <AlliancesTile t={t} locale={locale} />
+        </div>
+      </section>
+
+      <section className="px-5 md:px-10 pb-12">
+        <div className="max-w-[1200px] mx-auto">
+          <AnthemsTile t={t} locale={locale} />
         </div>
       </section>
 
@@ -365,6 +371,138 @@ function AlliancesTile({
         </div>
       </div>
     </Link>
+  );
+}
+
+function AnthemsTile({
+  t,
+  locale,
+}: {
+  t: (k: any) => string;
+  locale: string;
+}) {
+  const title = t("home.anthemsTitle");
+  const blurb = t("home.anthemsBlurb");
+  const parts = [t("home.anthemsTag1"), t("home.anthemsTag2")];
+  return (
+    <Link
+      href="/maps/anthems"
+      className="group relative overflow-hidden rounded-2xl md:rounded-3xl border border-[var(--line-2)] hover:border-white/40 transition-all duration-500 block min-h-[260px] md:min-h-[300px]"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2a0d2e] via-[#3d1247] to-[#5b1d6e]" />
+      <div
+        className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 25% 30%, rgba(232,195,106,0.4), transparent 55%), radial-gradient(circle at 80% 70%, rgba(217,70,239,0.3), transparent 55%)",
+        }}
+      />
+      <AnthemsBigPreview />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/30 to-transparent md:bg-gradient-to-t md:from-black/80 md:via-black/10 md:to-transparent" />
+
+      <div className="absolute inset-0 p-5 md:p-7 lg:p-9 flex flex-col justify-between text-white">
+        <div className="flex flex-wrap gap-2">
+          {parts.map((p) => (
+            <span
+              key={p}
+              className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full border border-[#e8c36a]/55 bg-[#e8c36a]/10 text-[#e8c36a] backdrop-blur-sm"
+            >
+              {p}
+            </span>
+          ))}
+        </div>
+
+        <div className="max-w-[640px]">
+          <h2 className="font-serif leading-[0.95] tracking-tight text-4xl md:text-5xl lg:text-[64px]">
+            {title}
+          </h2>
+          <p className="mt-3 md:mt-4 text-white/80 text-[14px] md:text-[15px] leading-relaxed max-w-[520px]">
+            {blurb}
+          </p>
+          <div className="mt-5 md:mt-6">
+            <span className="inline-flex items-center gap-3 md:gap-4 px-5 md:px-7 py-3 md:py-3.5 rounded-full bg-[#e8c36a] text-black font-mono text-[12px] md:text-[14px] uppercase tracking-[0.22em] font-semibold group-hover:gap-5 transition-all shadow-lg shadow-black/40">
+              {t("tile.enter")}
+              <span className="inline-block h-px w-6 md:w-8 bg-black/60 group-hover:w-12 transition-all" />
+              <span className="text-lg">→</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function AnthemsBigPreview() {
+  return (
+    <svg
+      className="absolute -right-12 top-1/2 -translate-y-1/2 opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+      width="700"
+      height="700"
+      viewBox="0 0 400 400"
+      aria-hidden
+      preserveAspectRatio="xMidYMid slice"
+    >
+      <defs>
+        <radialGradient id="anthemBg" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stopColor="#5b1d6e" />
+          <stop offset="100%" stopColor="#2a0d2e" />
+        </radialGradient>
+      </defs>
+      {/* world frame */}
+      <ellipse
+        cx="200" cy="200" rx="170" ry="115"
+        fill="url(#anthemBg)"
+        stroke="rgba(232,195,106,0.3)" strokeWidth="1"
+      />
+      {/* graticule */}
+      {[140, 175, 200, 225, 260].map((y) => (
+        <line key={y} x1="40" y1={y} x2="360" y2={y} stroke="rgba(255,255,255,0.06)" />
+      ))}
+
+      {/* highlighted countries with musical notes */}
+      {[
+        { x: 110, y: 160, color: "#e8c36a" },
+        { x: 175, y: 145, color: "#e8c36a" },
+        { x: 215, y: 140, color: "#e8c36a" },
+        { x: 250, y: 160, color: "#e8c36a" },
+        { x: 290, y: 175, color: "#e8c36a" },
+        { x: 195, y: 200, color: "#e8c36a" },
+        { x: 240, y: 215, color: "#e8c36a" },
+        { x: 285, y: 230, color: "#e8c36a" },
+        { x: 130, y: 235, color: "#e8c36a" },
+        { x: 195, y: 270, color: "#e8c36a" },
+      ].map((p, i) => (
+        <g key={i}>
+          <circle cx={p.x} cy={p.y} r="9" fill={p.color} fillOpacity="0.7" />
+          <circle cx={p.x} cy={p.y} r="14" fill={p.color} fillOpacity="0.2" />
+        </g>
+      ))}
+
+      {/* Big musical notes around */}
+      <g fill="#e8c36a" opacity="0.85">
+        <g transform="translate(75 120)">
+          <ellipse cx="0" cy="14" rx="9" ry="6" transform="rotate(-15)" />
+          <line x1="9" y1="14" x2="11" y2="-22" stroke="#e8c36a" strokeWidth="2.5" />
+          <path d="M 11 -22 Q 22 -18 24 -8" stroke="#e8c36a" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+        </g>
+        <g transform="translate(330 280)">
+          <ellipse cx="0" cy="14" rx="8" ry="5.5" transform="rotate(-15)" />
+          <line x1="8" y1="14" x2="10" y2="-18" stroke="#e8c36a" strokeWidth="2" />
+          <path d="M 10 -18 Q 20 -14 22 -6" stroke="#e8c36a" strokeWidth="2" fill="none" strokeLinecap="round" />
+        </g>
+        <g transform="translate(320 110)">
+          <ellipse cx="0" cy="10" rx="7" ry="5" transform="rotate(-15)" />
+          <line x1="7" y1="10" x2="9" y2="-14" stroke="#e8c36a" strokeWidth="2" />
+        </g>
+      </g>
+
+      {/* Sound waves arc */}
+      <g fill="none" stroke="#e8c36a" strokeOpacity="0.5">
+        <path d="M 60 200 Q 30 220 60 240" strokeWidth="1.5" />
+        <path d="M 50 195 Q 12 220 50 245" strokeWidth="1" />
+        <path d="M 40 190 Q -5 220 40 250" strokeWidth="0.7" />
+      </g>
+    </svg>
   );
 }
 

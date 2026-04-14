@@ -181,6 +181,10 @@ export const DICT = {
     "home.alliancesBlurb": "NATO, AB, BRICS, Commonwealth — dünya nasıl gruplara ayrıldı? Bir topluluk seç, üyelerini ve amacını gör.",
     "home.alliancesTag1": "Siyaset",
     "home.alliancesTag2": "Coğrafya",
+    "home.anthemsTitle": "Milli Marşlar",
+    "home.anthemsBlurb": "Bir ülkeye tıkla, marşını dinle ve hikâyesini oku. 20 ülke küratörlü.",
+    "home.anthemsTag1": "Müzik",
+    "home.anthemsTag2": "Kültür",
   },
 
   en: {
@@ -351,6 +355,10 @@ export const DICT = {
     "home.alliancesBlurb": "NATO, EU, BRICS, Commonwealth — how the world groups itself. Pick an alliance, see its members and what it does.",
     "home.alliancesTag1": "Politics",
     "home.alliancesTag2": "Geography",
+    "home.anthemsTitle": "National Anthems",
+    "home.anthemsBlurb": "Click a country, hear its anthem, read its story. 20 countries curated.",
+    "home.anthemsTag1": "Music",
+    "home.anthemsTag2": "Culture",
   },
 } as const;
 
