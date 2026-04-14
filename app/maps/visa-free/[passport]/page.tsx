@@ -10,6 +10,7 @@ import {
 } from "@/lib/visa-data";
 import { breadcrumbs, faqPage, jsonLd, siteUrl } from "@/lib/seo";
 import RelatedMaps from "@/components/RelatedMaps";
+import ShareButton from "@/components/ShareButton";
 
 type Params = { passport: string };
 
@@ -284,6 +285,13 @@ export default async function PassportPage({
           >
             Passport ranking →
           </Link>
+          <ShareButton
+            title={`${meta.name} Passport · GeographicHub`}
+            text={`${demonym} passport opens ${totalFree} destinations without an embassy visa. Check yours:`}
+            label="Share"
+            variant="primary"
+            className="text-emerald-300"
+          />
         </div>
       </section>
 

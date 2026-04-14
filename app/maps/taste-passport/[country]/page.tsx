@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import PageHeader from "@/components/PageHeader";
+import ShareButton from "@/components/ShareButton";
 import { useLocale } from "@/components/LocaleProvider";
 import {
   Country,
@@ -152,6 +153,18 @@ export default function CountryPage() {
                       />
                     </div>
                   </div>
+                  {p && p.tasted > 0 && (
+                    <ShareButton
+                      title={`${country.name} · Damak Pasaportu`}
+                      text={
+                        complete
+                          ? `${country.flag} ${country.name} pasaportumu damgaladım — tüm yemekleri tattım! Sen de dene:`
+                          : `${country.flag} ${country.name}: ${p.tasted}/${p.total} yemek tadıldı (%${pct}). Sen kaç yedin?`
+                      }
+                      label={t("nav.about") === "Hakkında" ? "Paylaş" : "Share"}
+                      variant="primary"
+                    />
+                  )}
                 </div>
               </div>
             </div>

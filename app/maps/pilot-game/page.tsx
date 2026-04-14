@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import SiteLogo from "@/components/SiteLogo";
 import { LocaleToggle, useLocale } from "@/components/LocaleProvider";
+import ShareButton from "@/components/ShareButton";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
@@ -218,6 +219,8 @@ export default function PilotGame() {
   const [countries, setCountries] = useState<any[]>([]);
   const [hints, setHints] = useState<string[]>([]);
   const [mask, setMask] = useState<boolean[]>([]);
+  const [bestScore, setBestScore] = useState<number>(0);
+  const [bestHops, setBestHops] = useState<number>(0);
   const globeRef = useRef<any>(null);
 
   useEffect(() => {
@@ -233,7 +236,30 @@ export default function PilotGame() {
       .then((r) => r.json())
       .then((d) => setCountries(d.features || []))
       .catch(() => {});
+    // Load personal best from localStorage
+    try {
+      const b = localStorage.getItem("pilot-best");
+      if (b) {
+        const parsed = JSON.parse(b);
+        setBestScore(parsed.score || 0);
+        setBestHops(parsed.hops || 0);
+      }
+    } catch {}
   }, []);
+
+  // Save personal best when game ends
+  useEffect(() => {
+    if (status !== "won" && status !== "lost") return;
+    if (score > bestScore) {
+      const next = { score, hops };
+      try {
+        localStorage.setItem("pilot-best", JSON.stringify(next));
+      } catch {}
+      setBestScore(score);
+      setBestHops(hops);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status]);
 
   const newGame = async () => {
     const p = randomLatLng();
@@ -478,6 +504,19 @@ export default function PilotGame() {
         <div className="mt-3 font-mono text-[9px] uppercase tracking-[0.2em] text-white/40">
           {kmTravelled.toLocaleString()} / {EARTH_CIRC_KM.toLocaleString()} km
         </div>
+        {bestScore > 0 && (
+          <div className="mt-3 pt-3 border-t border-white/10">
+            <div className="flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.18em]">
+              <span className="text-white/40">
+                {locale === "tr" ? "Rekorun" : "Best"}
+              </span>
+              <span className="text-emerald-400 tabular-nums">
+                {bestScore} · {bestHops}{" "}
+                {locale === "tr" ? "atlama" : "hops"}
+              </span>
+            </div>
+          </div>
+        )}
       </aside>
 
       {/* Bottom guess panel */}
@@ -486,18 +525,35 @@ export default function PilotGame() {
           <div className="rounded-2xl border border-white/15 bg-black/70 backdrop-blur-md p-5">
             {status === "won" && (
               <div className="text-center">
+                {score === bestScore && score > 0 && bestHops === hops && (
+                  <div className="inline-block mb-2 font-mono text-[10px] uppercase tracking-[0.22em] px-2 py-0.5 rounded-full bg-emerald-400 text-black font-semibold">
+                    ★ {locale === "tr" ? "Yeni rekor!" : "New record!"}
+                  </div>
+                )}
                 <div className="font-serif text-3xl md:text-4xl text-emerald-400 mb-2">
                   {t("pilot.win")}
                 </div>
                 <div className="text-white/70 mb-4">
                   {t("pilot.score.summary", { score, hops, wrong })}
                 </div>
-                <button
-                  onClick={newGame}
-                  className="px-6 py-2.5 rounded-full bg-emerald-400 text-black font-mono text-[11px] uppercase tracking-[0.22em] font-semibold"
-                >
-                  {t("pilot.playAgain")}
-                </button>
+                <div className="flex items-center justify-center gap-2 flex-wrap">
+                  <button
+                    onClick={newGame}
+                    className="px-6 py-2.5 rounded-full bg-emerald-400 text-black font-mono text-[11px] uppercase tracking-[0.22em] font-semibold"
+                  >
+                    {t("pilot.playAgain")}
+                  </button>
+                  <ShareButton
+                    title="Pilotsun · GeographicHub"
+                    text={
+                      locale === "tr"
+                        ? `🌍 Dünyayı turladım! ${score} puan, ${hops} atlama, ${wrong} hata. Sen de dene:`
+                        : `🌍 I circled the Earth! ${score} pts, ${hops} hops, ${wrong} wrong. Try it:`
+                    }
+                    label={locale === "tr" ? "Sonucu paylaş" : "Share result"}
+                    className="text-white"
+                  />
+                </div>
               </div>
             )}
 
@@ -511,14 +567,28 @@ export default function PilotGame() {
                   <span className="text-white font-semibold">
                     {spawn?.country || spawn?.label}
                   </span>
-                  . {t("pilot.score.summary", { score, hops, wrong: "" })}
+                  . {t("pilot.score.summary", { score, hops, wrong })}
                 </div>
-                <button
-                  onClick={newGame}
-                  className="px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-mono text-[11px] uppercase tracking-[0.22em]"
-                >
-                  {t("pilot.newGame")}
-                </button>
+                <div className="flex items-center justify-center gap-2 flex-wrap">
+                  <button
+                    onClick={newGame}
+                    className="px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-mono text-[11px] uppercase tracking-[0.22em]"
+                  >
+                    {t("pilot.newGame")}
+                  </button>
+                  {score > 0 && (
+                    <ShareButton
+                      title="Pilotsun · GeographicHub"
+                      text={
+                        locale === "tr"
+                          ? `Pilotsun oyununda ${score} puan, ${hops} doğru atlama yaptım! Sen ne kadar yaparsın?`
+                          : `Scored ${score} pts, ${hops} hops in Pilot Game! Beat me:`
+                      }
+                      label={locale === "tr" ? "Paylaş" : "Share"}
+                      className="text-white"
+                    />
+                  )}
+                </div>
               </div>
             )}
 
