@@ -6,16 +6,12 @@ import { useLocale, LocaleToggle } from "@/components/LocaleProvider";
 export default function Home() {
   const { t, locale } = useLocale();
 
-  const warTitle = locale === "tr" ? "Kurtuluş Savaşı" : "Turkish War of Independence";
-  const warBlurb =
-    locale === "tr"
-      ? "Bir savaş ara — her muharebeyi, antlaşmayı ve dönüm noktasını tarihî bir harita üzerinde gör. Her konum için kısa hikâye ve gerçek fotoğraf."
-      : "Search any war — see every battle, treaty and turning point on a historical globe, with a short story and real photo per location.";
-  const meta = locale === "tr" ? "17 olay haritalandı" : "17 events mapped";
+  const title = locale === "tr" ? "Savaş Haritaları" : "War Maps";
+  const meta = locale === "tr" ? "1 savaş haritalandı" : "1 war mapped";
+  const tag = locale === "tr" ? "Tarih · Küre" : "History · Globe";
 
   return (
     <div className="relative min-h-screen grain flex flex-col">
-      {/* Header */}
       <header className="relative z-30 flex justify-between items-center px-5 md:px-10 py-4 md:py-5">
         <Link href="/" className="flex items-center gap-2.5 min-w-0">
           <BrandMark />
@@ -31,33 +27,13 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero — compact */}
-      <section className="px-5 md:px-10 pt-6 md:pt-12 pb-4 md:pb-6">
-        <div className="max-w-[1200px] mx-auto">
-          <h1 className="font-serif font-light text-[36px] sm:text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-tight">
-            {t("home.heroA")}{" "}
-            <span className="italic" style={{ color: "var(--accent)" }}>
-              {t("home.heroB")}
-            </span>
-          </h1>
+      <section className="px-5 md:px-10 pt-3 md:pt-6 pb-4 md:pb-6 flex-1 flex flex-col">
+        <div className="max-w-[1200px] w-full mx-auto flex-1 flex flex-col">
+          <FeaturedMap title={title} meta={meta} tag={tag} t={t} />
         </div>
       </section>
 
-      {/* Featured map — dominant */}
-      <section className="px-5 md:px-10 pb-8 md:pb-10 flex-1">
-        <div className="max-w-[1200px] mx-auto">
-          <FeaturedMap
-            title={warTitle}
-            blurb={warBlurb}
-            meta={meta}
-            locale={locale}
-            t={t}
-          />
-        </div>
-      </section>
-
-      {/* Minimal footer */}
-      <footer className="px-5 md:px-10 py-6 md:py-7 hair-t">
+      <footer className="px-5 md:px-10 py-5 hair-t">
         <div className="max-w-[1200px] mx-auto flex flex-wrap justify-between items-center gap-3 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">
           <span>
             {t("footer.copyright", { year: new Date().getFullYear() })}
@@ -86,24 +62,8 @@ function BrandMark() {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <ellipse
-        cx="32"
-        cy="32"
-        rx="20"
-        ry="8"
-        stroke="currentColor"
-        strokeWidth="1"
-        opacity="0.4"
-      />
-      <line
-        x1="12"
-        y1="32"
-        x2="52"
-        y2="32"
-        stroke="currentColor"
-        strokeWidth="1"
-        opacity="0.4"
-      />
+      <ellipse cx="32" cy="32" rx="20" ry="8" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+      <line x1="12" y1="32" x2="52" y2="32" stroke="currentColor" strokeWidth="1" opacity="0.4" />
       <circle cx="52" cy="32" r="2" fill="currentColor" />
     </svg>
   );
@@ -111,26 +71,19 @@ function BrandMark() {
 
 function FeaturedMap({
   title,
-  blurb,
   meta,
-  locale,
+  tag,
   t,
 }: {
   title: string;
-  blurb: string;
   meta: string;
-  locale: string;
+  tag: string;
   t: (k: any) => string;
 }) {
-  const newLabel = locale === "tr" ? "Yeni" : "New";
-  const numLabel = locale === "tr" ? "N°" : "N°";
-  const tagLabel =
-    locale === "tr" ? "Tarih · Küre" : "History · Globe";
-
   return (
     <Link
       href="/maps/wars"
-      className="group relative overflow-hidden rounded-2xl md:rounded-3xl border border-[var(--line-2)] hover:border-white/40 transition-all duration-500 block h-[72vh] min-h-[440px] md:min-h-[520px]"
+      className="group relative overflow-hidden rounded-2xl md:rounded-3xl border border-[var(--line-2)] hover:border-white/40 transition-all duration-500 block flex-1 min-h-[72vh]"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-[#1a0806] via-[#2a0f0a] to-[#3d1d12]" />
       <div
@@ -141,30 +94,21 @@ function FeaturedMap({
         }}
       />
       <WarsPreview />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
-      {/* NEW ribbon — locale aware */}
-      <div className="absolute top-4 md:top-5 right-4 md:right-5 z-10 font-mono text-[9px] md:text-[10px] uppercase tracking-[0.25em] px-2 md:px-2.5 py-1 rounded-full bg-emerald-400/90 text-black font-semibold">
-        ● {newLabel}
-      </div>
-
-      {/* Content */}
       <div className="absolute inset-0 p-5 md:p-8 lg:p-10 flex flex-col justify-between text-white">
-        <div className="flex justify-between items-start gap-4 pr-16 md:pr-20">
+        <div className="flex justify-between items-start gap-4">
           <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.22em] text-white/65">
-            <span className="text-white/35">{numLabel}</span>01 · {tagLabel}
+            <span className="text-white/35">N°</span>01 · {tag}
           </span>
-          <span className="hidden sm:inline font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/60">
+          <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/60">
             {meta}
           </span>
         </div>
         <div>
-          <h2 className="font-serif leading-[0.98] tracking-tight mb-2 md:mb-3 text-[34px] sm:text-5xl md:text-6xl lg:text-[80px]">
+          <h2 className="font-serif leading-[0.95] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[96px]">
             {title}
           </h2>
-          <p className="text-white/80 leading-relaxed text-[14px] md:text-[16px] max-w-[620px]">
-            {blurb}
-          </p>
           <span className="inline-flex items-center gap-2 mt-4 md:mt-6 font-mono text-[11px] md:text-[12px] uppercase tracking-[0.22em] text-white group-hover:gap-3 transition-all">
             {t("tile.enter")}
             <span className="inline-block h-px w-8 md:w-10 bg-white/50 group-hover:w-14 md:group-hover:w-16 group-hover:bg-white transition-all" />
@@ -179,12 +123,12 @@ function FeaturedMap({
 function WarsPreview() {
   return (
     <svg
-      className="absolute -right-12 -top-12 opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-      width="720"
-      height="720"
+      className="absolute -right-16 md:-right-10 top-1/2 -translate-y-1/2 opacity-70 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+      width="760"
+      height="760"
       viewBox="0 0 400 400"
       aria-hidden
-      preserveAspectRatio="xMaxYMid slice"
+      preserveAspectRatio="xMidYMid slice"
     >
       <defs>
         <radialGradient id="warsGlobe" cx="50%" cy="50%" r="55%">
@@ -192,32 +136,26 @@ function WarsPreview() {
           <stop offset="100%" stopColor="#1a0806" />
         </radialGradient>
       </defs>
-      <circle cx="200" cy="200" r="170" fill="url(#warsGlobe)" />
-      <circle cx="200" cy="200" r="170" stroke="rgba(245,158,11,0.28)" strokeWidth="1" fill="none" />
-      <ellipse cx="200" cy="200" rx="170" ry="58" stroke="rgba(245,158,11,0.2)" strokeWidth="0.8" fill="none" />
-      <ellipse cx="200" cy="200" rx="58" ry="170" stroke="rgba(245,158,11,0.2)" strokeWidth="0.8" fill="none" />
+      <circle cx="200" cy="200" r="180" fill="url(#warsGlobe)" />
+      <circle cx="200" cy="200" r="180" stroke="rgba(245,158,11,0.3)" strokeWidth="1" fill="none" />
+      <ellipse cx="200" cy="200" rx="180" ry="60" stroke="rgba(245,158,11,0.22)" strokeWidth="0.8" fill="none" />
+      <ellipse cx="200" cy="200" rx="60" ry="180" stroke="rgba(245,158,11,0.22)" strokeWidth="0.8" fill="none" />
 
       {[
-        { x: 120, y: 150, c: "#a855f7", icon: "🚩" },
-        { x: 170, y: 170, c: "#ec4899", icon: "⚓" },
-        { x: 215, y: 145, c: "#f59e0b", icon: "🏛" },
-        { x: 255, y: 165, c: "#f59e0b", icon: "🏛" },
+        { x: 118, y: 145, c: "#a855f7", icon: "🚩" },
+        { x: 168, y: 168, c: "#ec4899", icon: "⚓" },
+        { x: 215, y: 140, c: "#f59e0b", icon: "🏛" },
+        { x: 260, y: 160, c: "#f59e0b", icon: "🏛" },
         { x: 230, y: 205, c: "#eab308", icon: "⭐" },
-        { x: 275, y: 195, c: "#dc2626", icon: "⚔" },
+        { x: 278, y: 195, c: "#dc2626", icon: "⚔" },
         { x: 180, y: 225, c: "#dc2626", icon: "⚔" },
-        { x: 305, y: 235, c: "#dc2626", icon: "⚔" },
-        { x: 130, y: 250, c: "#22c55e", icon: "✨" },
-        { x: 240, y: 265, c: "#06b6d4", icon: "🕊" },
+        { x: 310, y: 238, c: "#dc2626", icon: "⚔" },
+        { x: 128, y: 252, c: "#22c55e", icon: "✨" },
+        { x: 245, y: 268, c: "#06b6d4", icon: "🕊" },
       ].map((p, i) => (
         <g key={i}>
-          <circle cx={p.x} cy={p.y} r="14" fill={p.c} stroke="white" strokeWidth="2" />
-          <text
-            x={p.x}
-            y={p.y}
-            textAnchor="middle"
-            dominantBaseline="central"
-            fontSize="13"
-          >
+          <circle cx={p.x} cy={p.y} r="15" fill={p.c} stroke="white" strokeWidth="2.2" />
+          <text x={p.x} y={p.y} textAnchor="middle" dominantBaseline="central" fontSize="14">
             {p.icon}
           </text>
         </g>

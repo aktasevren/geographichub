@@ -29,6 +29,7 @@ export default function WarMapClient({ war }: { war: War }) {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [tourIdx, setTourIdx] = useState<number | null>(null);
   const [thumbs, setThumbs] = useState<Record<string, string>>({});
+  const [mobileTimelineOpen, setMobileTimelineOpen] = useState(false);
   const globeRef = useRef<any>(null);
   const tourTimer = useRef<any>(null);
 
@@ -160,9 +161,9 @@ export default function WarMapClient({ war }: { war: War }) {
 
   const selectEvent = (e: WarEvent) => {
     setActiveId(e.id);
+    setMobileTimelineOpen(false); // close timeline sheet when picking on mobile
     if (!globeRef.current) return;
     const current = globeRef.current.pointOfView();
-    // Never zoom out on click — keep user's current altitude if already closer.
     const alt = current && current.altitude < 1.2 ? current.altitude : 1.2;
     globeRef.current.pointOfView({ lat: e.lat, lng: e.lng, altitude: alt }, 800);
   };
@@ -204,12 +205,12 @@ export default function WarMapClient({ war }: { war: War }) {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <header className="absolute top-0 left-0 right-0 z-30 flex justify-between items-center px-5 md:px-8 py-4 bg-gradient-to-b from-black/85 to-transparent">
+      <header className="absolute top-0 left-0 right-0 z-40 flex justify-between items-center px-4 md:px-8 py-3 md:py-4 bg-gradient-to-b from-black/90 to-transparent">
         <SiteLogo />
-        <h1 className="hidden md:block font-serif text-lg md:text-xl">
+        <h1 className="hidden lg:block font-serif text-lg md:text-xl">
           {locale === "tr" && war.nameTr ? war.nameTr : war.name}
         </h1>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 md:gap-4">
           <LocaleToggle />
           <Link
             href="/maps/wars"
@@ -243,8 +244,23 @@ export default function WarMapClient({ war }: { war: War }) {
         />
       )}
 
-      {/* LEFT: Timeline sidebar */}
-      <aside className="absolute top-[70px] left-4 md:left-6 z-20 w-[330px] max-h-[calc(100vh-90px)] rounded-2xl border border-white/15 bg-black/65 backdrop-blur-md flex flex-col">
+      {/* Mobile: toggle button for timeline */}
+      <button
+        onClick={() => setMobileTimelineOpen((v) => !v)}
+        className="md:hidden absolute top-[70px] left-4 z-30 px-3 py-2 rounded-full border border-white/20 bg-black/70 backdrop-blur font-mono text-[10px] uppercase tracking-[0.2em] text-white"
+        aria-label={t("wars.timelineLabel")}
+      >
+        {mobileTimelineOpen ? "▼" : "▲"} {t("wars.timelineLabel")} · {eventsSorted.length}
+      </button>
+
+      {/* LEFT: Timeline sidebar (desktop) / bottom sheet (mobile) */}
+      <aside
+        className={`absolute z-20 rounded-2xl border border-white/15 bg-black/75 backdrop-blur-md flex flex-col transition-transform
+          md:top-[70px] md:left-6 md:w-[330px] md:max-h-[calc(100vh-90px)]
+          left-4 right-4 bottom-[130px] max-h-[min(60vh,520px)]
+          ${mobileTimelineOpen ? "translate-y-0" : "translate-y-[120%] md:translate-y-0"}
+        `}
+      >
         <div className="p-5 border-b border-white/10">
           <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50 mb-1">
             § {war.startYear}–{war.endYear}
@@ -352,7 +368,9 @@ export default function WarMapClient({ war }: { war: War }) {
         <aside
           role="dialog"
           aria-labelledby="event-title"
-          className="absolute top-[70px] right-4 md:right-6 z-20 w-[340px] md:w-[400px] max-h-[calc(100vh-110px)] rounded-2xl border border-white/15 bg-black/70 backdrop-blur-md p-5 overflow-y-auto shadow-2xl"
+          className="absolute z-30 rounded-2xl border border-white/15 bg-black/80 backdrop-blur-md p-4 md:p-5 overflow-y-auto shadow-2xl
+            md:top-[70px] md:right-6 md:w-[400px] md:max-h-[calc(100vh-110px)]
+            left-4 right-4 bottom-[130px] max-h-[72vh]"
         >
           <div className="flex items-start justify-between gap-3 mb-3">
             <div className="flex items-center gap-2.5 min-w-0">
@@ -457,7 +475,7 @@ export default function WarMapClient({ war }: { war: War }) {
       )}
 
       {/* Zoom controls */}
-      <div className="absolute right-4 md:right-6 bottom-[150px] md:bottom-[120px] z-20 flex flex-col gap-1">
+      <div className="absolute right-3 md:right-6 bottom-[160px] md:bottom-[120px] z-20 flex flex-col gap-1">
         <button
           onClick={() => {
             const c = globeRef.current?.controls?.();
@@ -504,25 +522,32 @@ export default function WarMapClient({ war }: { war: War }) {
         </button>
       </div>
 
-      {/* BOTTOM: permanent legend */}
-      <div className="absolute left-0 right-0 bottom-0 z-10 px-4 md:px-6 pb-4 pt-8 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none">
+      {/* BOTTOM: permanent legend (horizontally scrollable on mobile) */}
+      <div className="absolute left-0 right-0 bottom-0 z-10 px-3 md:px-6 pb-3 md:pb-4 pt-6 md:pt-8 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none">
         <div className="max-w-[1100px] mx-auto">
-          <div className="rounded-xl border border-white/10 bg-black/65 backdrop-blur-md px-3 py-2.5 pointer-events-auto flex flex-wrap gap-x-4 gap-y-2 justify-center">
-            {Object.entries(KIND_META)
-              .filter(([k]) => kindCounts[k])
-              .map(([k, m]) => (
-                <div key={k} className="flex items-center gap-2">
-                  <span
-                    className="w-6 h-6 rounded-full flex items-center justify-center text-[12px]"
-                    style={{ background: m.color }}
+          <div className="rounded-xl border border-white/10 bg-black/70 backdrop-blur-md px-2.5 md:px-3 py-2 md:py-2.5 pointer-events-auto overflow-x-auto">
+            <div className="flex gap-3 md:gap-4 justify-start md:justify-center w-max md:w-auto">
+              {Object.entries(KIND_META)
+                .filter(([k]) => kindCounts[k])
+                .map(([k, m]) => (
+                  <div
+                    key={k}
+                    className="flex items-center gap-1.5 md:gap-2 flex-shrink-0"
                   >
-                    {m.icon}
-                  </span>
-                  <span className="text-[12px] text-white/85">{kindLabel(k as any, locale)}</span>
-                </div>
-              ))}
+                    <span
+                      className="w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center text-[11px] md:text-[12px]"
+                      style={{ background: m.color }}
+                    >
+                      {m.icon}
+                    </span>
+                    <span className="text-[11px] md:text-[12px] text-white/85">
+                      {kindLabel(k as any, locale)}
+                    </span>
+                  </div>
+                ))}
+            </div>
           </div>
-          <div className="text-center mt-2 font-mono text-[9px] uppercase tracking-[0.22em] text-white/35">
+          <div className="text-center mt-1.5 md:mt-2 font-mono text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-white/35">
             {t("wars.dataCredit")} · {war.events.length} {t("wars.eventsLabel")}
           </div>
         </div>

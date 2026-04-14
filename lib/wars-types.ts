@@ -45,6 +45,22 @@ export type War = {
   events: WarEvent[];
 };
 
+export type WarEra =
+  | "ancient"
+  | "medieval"
+  | "early-modern"
+  | "19th-century"
+  | "20th-century"
+  | "21st-century";
+
+export type WarRegion =
+  | "europe"
+  | "middle-east"
+  | "asia"
+  | "africa"
+  | "americas"
+  | "global";
+
 export type WarIndexEntry = {
   slug: string;
   name: string;
@@ -54,6 +70,27 @@ export type WarIndexEntry = {
   eventCount: number;
   blurb: string;
   blurbTr?: string;
+  era?: WarEra;
+  region?: WarRegion;
+  tags?: string[];
+};
+
+export const ERA_LABEL: Record<WarEra, { tr: string; en: string }> = {
+  "ancient":       { tr: "Antik",           en: "Ancient" },
+  "medieval":      { tr: "Orta Çağ",        en: "Medieval" },
+  "early-modern":  { tr: "Erken Modern",    en: "Early Modern" },
+  "19th-century":  { tr: "19. Yüzyıl",      en: "19th Century" },
+  "20th-century":  { tr: "20. Yüzyıl",      en: "20th Century" },
+  "21st-century":  { tr: "21. Yüzyıl",      en: "21st Century" },
+};
+
+export const REGION_LABEL: Record<WarRegion, { tr: string; en: string }> = {
+  "europe":       { tr: "Avrupa",       en: "Europe" },
+  "middle-east":  { tr: "Orta Doğu",    en: "Middle East" },
+  "asia":         { tr: "Asya",         en: "Asia" },
+  "africa":       { tr: "Afrika",       en: "Africa" },
+  "americas":     { tr: "Amerika",      en: "Americas" },
+  "global":       { tr: "Küresel",      en: "Global" },
 };
 
 // Visual mapping — icons + colors + localized labels
