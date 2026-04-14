@@ -1,22 +1,35 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pilot Game — Can You Circle the Earth by Guessing Where You Are?",
+  title: "Pilotsun — Coğrafya Bilgi Oyunu, Dünyayı Turla",
   description:
-    "A geography game. You wake up over a random part of the world — tell us which country or ocean you're over, and you'll fly 1,500 km east. Circle the planet to win.",
+    "Pilotsun. Rastgele bir noktada uyandın — neredesin? Doğru tahmin et ve 1.500 km doğuya uç. Dünyayı tam tur atarsan kazanırsın.",
   keywords: [
+    "coğrafya oyunu",
+    "ülke tahmin oyunu",
+    "neredeyim oyunu",
+    "dünya turlama oyunu",
+    "coğrafya bilgi yarışması",
+    "pilot oyunu",
     "geography game",
     "country guessing game",
-    "where am I geography",
-    "circumnavigate earth game",
-    "interactive globe game",
   ],
   openGraph: {
-    title: "Pilot Game · GeographicHub",
-    description: "Wake up as a pilot. Guess where you are. Circle the Earth.",
+    title: "Pilotsun · GeographicHub",
+    description: "Pilotsun. Neredesin? Dünyayı turla.",
     type: "website",
+    locale: "tr_TR",
+    alternateLocale: ["en_US"],
   },
-  alternates: { canonical: "/maps/pilot-game" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pilotsun · Coğrafya Bilgi Oyunu",
+    description: "Rastgele bir konumda uyandın — neredesin? Dünyayı tam tur at.",
+  },
+  alternates: {
+    canonical: "/maps/pilot-game",
+    languages: { tr: "/maps/pilot-game", en: "/maps/pilot-game" },
+  },
 };
 
 const JSONLD = {

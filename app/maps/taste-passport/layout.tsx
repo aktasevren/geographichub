@@ -1,24 +1,38 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Taste Passport — Have You Tasted the World?",
+  title: "Damak Pasaportu — Dünyayı Tattın Mı?",
   description:
-    "A bucket list for your tastebuds. Mark the signature dishes you've tried in every country and collect passport stamps as you complete cuisines.",
+    "Damağın için bir bucket-list. Her ülkenin imza yemeklerini işaretle, tamamladığın her ülke için pasaportuna damga topla. 145+ yemek, 10 ülke.",
   keywords: [
-    "signature dishes by country",
+    "ülke yemekleri",
+    "dünya mutfağı",
+    "imza yemekler",
+    "ne yemeli",
+    "yemek bucket list",
+    "Türk yemekleri",
+    "İtalyan yemekleri",
+    "Japon yemekleri",
+    "signature dishes",
     "world cuisine bucket list",
-    "what to eat in",
-    "national food map",
-    "must try dishes",
-    "food passport",
   ],
   openGraph: {
-    title: "Taste Passport · GeographicHub",
+    title: "Damak Pasaportu · GeographicHub",
     description:
-      "A gamified bucket list of the world's signature dishes. Mark, collect, complete.",
+      "Dünyanın imza yemeklerinden oluşan oyunlaştırılmış bucket-list. İşaretle, biriktir, tamamla.",
     type: "website",
+    locale: "tr_TR",
+    alternateLocale: ["en_US"],
   },
-  alternates: { canonical: "/maps/taste-passport" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Damak Pasaportu · GeographicHub",
+    description: "Dünyanın imza yemeklerini tattığın oyun.",
+  },
+  alternates: {
+    canonical: "/maps/taste-passport",
+    languages: { tr: "/maps/taste-passport", en: "/maps/taste-passport" },
+  },
 };
 
 const JSONLD_APP = {

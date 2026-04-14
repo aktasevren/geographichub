@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import SiteLogo from "@/components/SiteLogo";
-import { useLocale, LocaleToggle } from "@/components/LocaleProvider";
+import PageHeader from "@/components/PageHeader";
+import { useLocale } from "@/components/LocaleProvider";
 import {
   type WarIndexEntry,
   type WarEra,
@@ -68,12 +68,13 @@ export default function WarsIndexClient({ wars }: { wars: WarIndexEntry[] }) {
 
   return (
     <div className="min-h-screen grain">
-      <header className="flex justify-between items-center px-5 md:px-10 py-4 md:py-5 hair-b">
-        <SiteLogo theme="light" />
-        <div className="flex items-center gap-4 md:gap-5">
-          <LocaleToggle theme="light" />
-        </div>
-      </header>
+      <PageHeader
+        theme="light"
+        breadcrumbs={[
+          { label: t("common.home"), href: "/" },
+          { label: t("wars.title") },
+        ]}
+      />
 
       <section className="max-w-[1100px] mx-auto px-5 md:px-10 pt-8 md:pt-12 pb-4">
         <h1 className="font-serif font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.0] tracking-tight">

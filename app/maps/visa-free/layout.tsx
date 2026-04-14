@@ -1,26 +1,37 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Visa-Free Atlas — Where Can Your Passport Take You?",
+  title: "Vizesiz Ülkeler Haritası — Pasaportun Seni Nereye Götürür?",
   description:
-    "Pick your passport and see every country on a 3D globe, colored by visa requirement — visa-free, visa on arrival, eVisa, ETA, or full embassy visa.",
+    "Pasaportunu seç, dünyada hangi ülkelere vizesiz / vize ile arrival / eVisa ile gidebileceğini 3D küre üzerinde gör. 199 pasaport için tam liste.",
   keywords: [
-    "visa free countries",
-    "passport power",
-    "visa on arrival",
-    "eVisa countries",
-    "ETA countries",
+    "vizesiz ülkeler",
+    "Türk pasaportu vizesiz ülkeler",
+    "pasaport gücü",
+    "vize gerektiren ülkeler",
+    "eVisa ülkeleri",
+    "vize başvurusu",
     "passport index",
-    "visa requirements map",
-    "where can I travel without a visa",
+    "visa free countries map",
+    "visa on arrival",
   ],
   openGraph: {
-    title: "Visa-Free Atlas · GeographicHub",
+    title: "Vizesiz Ülkeler Haritası · GeographicHub",
     description:
-      "Pick your passport, spin the globe, see where you can go visa-free.",
+      "Pasaportunu seç, küreyi döndür, vizesiz gidebileceğin ülkeleri gör.",
     type: "website",
+    locale: "tr_TR",
+    alternateLocale: ["en_US"],
   },
-  alternates: { canonical: "/maps/visa-free" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vizesiz Ülkeler Haritası · GeographicHub",
+    description: "199 pasaport · interaktif 3D küre · vize gereklilikleri.",
+  },
+  alternates: {
+    canonical: "/maps/visa-free",
+    languages: { tr: "/maps/visa-free", en: "/maps/visa-free" },
+  },
 };
 
 const JSONLD_APP = {

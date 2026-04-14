@@ -205,19 +205,23 @@ export default function WarMapClient({ war }: { war: War }) {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <header className="absolute top-0 left-0 right-0 z-40 flex justify-between items-center px-4 md:px-8 py-3 md:py-4 bg-gradient-to-b from-black/90 to-transparent">
-        <SiteLogo />
-        <h1 className="hidden lg:block font-serif text-lg md:text-xl">
-          {locale === "tr" && war.nameTr ? war.nameTr : war.name}
-        </h1>
-        <div className="flex items-center gap-3 md:gap-4">
-          <LocaleToggle />
-          <Link
-            href="/maps/wars"
-            className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/70 hover:text-white"
-          >
-            {t("wars.allWars")}
-          </Link>
+      <header className="absolute top-0 left-0 right-0 z-40 bg-gradient-to-b from-black/90 to-transparent">
+        <div className="flex justify-between items-center px-4 md:px-8 py-3 md:py-4">
+          <SiteLogo />
+          <div className="flex items-center gap-3 md:gap-4">
+            <Link
+              href="/maps/wars"
+              className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/70 hover:text-white"
+            >
+              ← {t("wars.allWars").replace(/[→←]/g, "").trim()}
+            </Link>
+            <LocaleToggle />
+          </div>
+        </div>
+        <div className="px-4 md:px-8 pb-3 md:pb-4">
+          <h1 className="font-serif text-base md:text-lg">
+            {locale === "tr" && war.nameTr ? war.nameTr : war.name}
+          </h1>
         </div>
       </header>
 

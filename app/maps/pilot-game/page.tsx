@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import SiteLogo from "@/components/SiteLogo";
+import { LocaleToggle, useLocale } from "@/components/LocaleProvider";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
@@ -202,6 +203,7 @@ function matchGuess(guess: string, target: string, isOcean: boolean): boolean {
 }
 
 export default function PilotGame() {
+  const { t, locale } = useLocale();
   const [size, setSize] = useState({ w: 0, h: 0 });
   const [spawn, setSpawn] = useState<Spawn | null>(null);
   const [trail, setTrail] = useState<{ lat: number; lng: number }[]>([]);
@@ -274,10 +276,12 @@ export default function PilotGame() {
     setScore((s) => s - cost);
     let hint = "";
     if (kind === "continent") {
-      hint = `Continent / region · ${continentFor(spawn.lat, spawn.lng)}`;
+      hint = `${t("pilot.hint.continentLabel")} ${continentFor(spawn.lat, spawn.lng)}`;
     } else {
-      hint = `Hemisphere · ${spawn.lat >= 0 ? "Northern" : "Southern"}, ${
-        spawn.lng >= 0 ? "Eastern" : "Western"
+      hint = `${t("pilot.hint.hemisphereLabel")} ${
+        spawn.lat >= 0 ? t("pilot.hemi.northern") : t("pilot.hemi.southern")
+      }, ${
+        spawn.lng >= 0 ? t("pilot.hemi.eastern") : t("pilot.hemi.western")
       }`;
     }
     setHints((h) => (h.includes(hint) ? h : [...h, hint]));
@@ -290,9 +294,10 @@ export default function PilotGame() {
 
   useEffect(() => {
     if (!globeRef.current || !spawn) return;
+    // Tight focus on the spawn location each round
     globeRef.current.pointOfView(
-      { lat: spawn.lat, lng: spawn.lng, altitude: 1.8 },
-      900
+      { lat: spawn.lat, lng: spawn.lng, altitude: 1.1 },
+      1400
     );
   }, [spawn]);
 
@@ -388,14 +393,22 @@ export default function PilotGame() {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <header className="absolute top-0 left-0 right-0 z-30 flex justify-between items-center px-5 md:px-8 py-4 bg-gradient-to-b from-black/85 to-transparent">
-        <SiteLogo />
-        <h1 className="hidden md:block font-serif text-lg md:text-xl">
-          Pilot Game · <span className="italic text-white/60">guess where you are</span>
-        </h1>
-        <span className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">
-          Circle the Earth
-        </span>
+      <header className="absolute top-0 left-0 right-0 z-40 bg-gradient-to-b from-black/90 to-transparent">
+        <div className="flex justify-between items-center px-4 md:px-8 py-3 md:py-4">
+          <SiteLogo />
+          <div className="flex items-center gap-3 md:gap-4">
+            <span className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.25em] text-emerald-300/80">
+              {t("pilot.subtitle")}
+            </span>
+            <LocaleToggle />
+          </div>
+        </div>
+        <div className="px-4 md:px-8 pb-3 md:pb-4">
+          <h1 className="font-serif text-lg md:text-xl">
+            {t("pilot.title")} ·{" "}
+            <span className="italic text-white/60">{t("pilot.tagline")}</span>
+          </h1>
+        </div>
       </header>
 
       {size.w > 0 && (
@@ -437,16 +450,18 @@ export default function PilotGame() {
       )}
 
       {/* Top-right HUD */}
-      <aside className="absolute top-[70px] right-4 md:right-6 z-20 w-[280px] rounded-2xl border border-white/15 bg-black/65 backdrop-blur-md p-5">
+      <aside className="absolute z-20 rounded-2xl border border-white/15 bg-black/75 backdrop-blur-md p-4 md:p-5
+        top-[120px] right-3 left-3 md:left-auto md:right-6 md:w-[280px]
+        max-w-[calc(100vw-24px)] md:max-w-none">
         <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50 mb-3">
-          § Progress
+          § {t("pilot.progress")}
         </div>
         <div className="flex items-baseline gap-2 mb-3">
           <span className="font-serif text-4xl text-emerald-400 tabular-nums">
             {progressPct.toFixed(0)}%
           </span>
           <span className="text-[12px] font-mono uppercase tracking-[0.18em] text-white/60">
-            of Earth
+            {t("pilot.ofEarth")}
           </span>
         </div>
         <div className="h-2 rounded-full bg-white/10 overflow-hidden mb-4">
@@ -456,9 +471,9 @@ export default function PilotGame() {
           />
         </div>
         <div className="grid grid-cols-3 gap-2 font-mono text-[10px] uppercase tracking-[0.18em]">
-          <HudStat label="Score" value={score.toString()} accent="#22c55e" />
-          <HudStat label="Hops" value={hops.toString()} />
-          <HudStat label="Wrong" value={`${wrong}/${MAX_WRONG}`} accent="#f87171" />
+          <HudStat label={t("pilot.score")} value={score.toString()} accent="#22c55e" />
+          <HudStat label={t("pilot.hops")} value={hops.toString()} />
+          <HudStat label={t("pilot.wrong")} value={`${wrong}/${MAX_WRONG}`} accent="#f87171" />
         </div>
         <div className="mt-3 font-mono text-[9px] uppercase tracking-[0.2em] text-white/40">
           {kmTravelled.toLocaleString()} / {EARTH_CIRC_KM.toLocaleString()} km
@@ -472,16 +487,16 @@ export default function PilotGame() {
             {status === "won" && (
               <div className="text-center">
                 <div className="font-serif text-3xl md:text-4xl text-emerald-400 mb-2">
-                  🎉 You circled the Earth
+                  {t("pilot.win")}
                 </div>
                 <div className="text-white/70 mb-4">
-                  Score {score} · {hops} hops · {wrong} mistakes
+                  {t("pilot.score.summary", { score, hops, wrong })}
                 </div>
                 <button
                   onClick={newGame}
-                  className="px-6 py-2.5 rounded-full bg-emerald-400 text-black font-mono text-[11px] uppercase tracking-[0.22em]"
+                  className="px-6 py-2.5 rounded-full bg-emerald-400 text-black font-mono text-[11px] uppercase tracking-[0.22em] font-semibold"
                 >
-                  Play again
+                  {t("pilot.playAgain")}
                 </button>
               </div>
             )}
@@ -489,35 +504,32 @@ export default function PilotGame() {
             {status === "lost" && (
               <div className="text-center">
                 <div className="font-serif text-3xl text-red-400 mb-1">
-                  Out of attempts
+                  {t("pilot.lose")}
                 </div>
                 <div className="text-white/70 mb-4">
-                  You were over{" "}
+                  {t("pilot.youWereOver")}{" "}
                   <span className="text-white font-semibold">
                     {spawn?.country || spawn?.label}
                   </span>
-                  . Score {score} · {hops} correct hops
+                  . {t("pilot.score.summary", { score, hops, wrong: "" })}
                 </div>
                 <button
                   onClick={newGame}
                   className="px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-mono text-[11px] uppercase tracking-[0.22em]"
                 >
-                  New game
+                  {t("pilot.newGame")}
                 </button>
               </div>
             )}
 
             {(status === "playing" || status === "wrong" || status === "correct") && spawn && (
               <>
-                <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50 mb-2">
-                  § Where are you, pilot?
+                <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-emerald-300/80 mb-2">
+                  § {t("pilot.heading")}
                 </div>
                 <div className="text-[15px] text-white/85 mb-3 leading-relaxed">
-                  You're flying due east at {spawn.lat.toFixed(1)}°,{" "}
+                  {t("pilot.flyingAt")} {spawn.lat.toFixed(1)}°,{" "}
                   {spawn.lng.toFixed(1)}°.
-                  {!spawn.country && !revealing && (
-                    <span className="text-white/50 italic"> (you're over water — which sea?)</span>
-                  )}
                   {revealing && status === "correct" && (
                     <span className="text-emerald-400 font-semibold">
                       {" "}
@@ -525,12 +537,24 @@ export default function PilotGame() {
                     </span>
                   )}
                 </div>
+                {!spawn.country && !revealing && (
+                  <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.18em] text-cyan-300/80">
+                    💧 {t("pilot.overWaterHint")}
+                  </div>
+                )}
 
                 {/* Masked answer — hangman-style */}
                 {mask.length > 0 && (
-                  <div className="mb-3 p-3 rounded-md bg-white/5 border border-white/15">
-                    <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-white/40 mb-2">
-                      Answer · {(spawn.country || spawn.label).replace(/[^a-zA-ZÀ-ÿ]/g, "").length} letters
+                  <div className="mb-3 p-3 rounded-md bg-emerald-500/5 border border-emerald-400/25">
+                    <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-emerald-300/70 mb-2">
+                      {t("pilot.answerLabel")} ·{" "}
+                      {
+                        (spawn.country || spawn.label).replace(
+                          /[^a-zA-ZÀ-ÿ]/g,
+                          ""
+                        ).length
+                      }{" "}
+                      {t("pilot.letters")}
                     </div>
                     <div className="font-mono text-[17px] md:text-[19px] tracking-[0.2em] text-white leading-tight break-words">
                       {renderMask(spawn.country || spawn.label, mask)}
@@ -553,19 +577,19 @@ export default function PilotGame() {
 
                 <div className="flex flex-wrap gap-1.5 mb-3">
                   <HintBtn
-                    label="Continent"
+                    label={t("pilot.hint.continent")}
                     cost={HINT_COST.continent}
                     disabled={score < HINT_COST.continent || revealing}
                     onClick={() => buyHint("continent")}
                   />
                   <HintBtn
-                    label="Reveal letter"
+                    label={t("pilot.hint.letter")}
                     cost={HINT_COST.letter}
                     disabled={score < HINT_COST.letter || revealing}
                     onClick={() => buyHint("letter")}
                   />
                   <HintBtn
-                    label="Hemisphere"
+                    label={t("pilot.hint.hemisphere")}
                     cost={HINT_COST.hemisphere}
                     disabled={score < HINT_COST.hemisphere || revealing}
                     onClick={() => buyHint("hemisphere")}
@@ -582,26 +606,26 @@ export default function PilotGame() {
                     autoFocus
                     value={guess}
                     onChange={(e) => setGuess(e.target.value)}
-                    placeholder="Country name — or 'ocean' if you're over water"
-                    className="flex-1 px-4 py-2.5 rounded-md border border-white/20 bg-white/5 text-[15px] text-white placeholder-white/35 focus:outline-none focus:border-emerald-400"
+                    placeholder={t("pilot.guessPlaceholder")}
+                    className="flex-1 px-4 py-3 rounded-md border border-white/20 bg-white/5 text-[15px] text-white placeholder-white/35 focus:outline-none focus:border-emerald-400"
                     disabled={revealing}
                   />
                   <button
                     type="submit"
                     disabled={revealing || !guess.trim()}
-                    className="px-5 py-2.5 rounded-md bg-emerald-400 hover:bg-emerald-300 text-black font-mono text-[11px] uppercase tracking-[0.22em] disabled:opacity-40"
+                    className="px-6 py-3 rounded-md bg-emerald-400 hover:bg-emerald-300 text-black font-mono text-[12px] uppercase tracking-[0.22em] font-semibold disabled:opacity-40 shadow-lg shadow-black/40"
                   >
-                    Fly
+                    {t("pilot.fly")}
                   </button>
                 </form>
                 {status === "wrong" && (
                   <div className="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-red-400">
-                    ✕ Not quite. {MAX_WRONG - wrong} attempt{MAX_WRONG - wrong === 1 ? "" : "s"} left.
+                    {t("pilot.notQuite", { n: MAX_WRONG - wrong })}
                   </div>
                 )}
                 {status === "correct" && (
                   <div className="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-400">
-                    ✓ Moving {HOP_KM} km east…
+                    {t("pilot.movingEast", { km: HOP_KM })}
                   </div>
                 )}
               </>

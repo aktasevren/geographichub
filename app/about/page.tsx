@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { LocaleToggle, useLocale } from "@/components/LocaleProvider";
-import SiteLogo from "@/components/SiteLogo";
+import { useLocale } from "@/components/LocaleProvider";
+import PageHeader from "@/components/PageHeader";
 
 export default function AboutPage() {
   const { t, locale } = useLocale();
@@ -24,15 +24,13 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen grain">
-      <header className="flex justify-between items-center px-6 md:px-10 py-5 hair-b">
-        <SiteLogo theme="light" />
-        <div className="flex items-center gap-5">
-          <LocaleToggle theme="light" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">
-            {t("nav.about")}
-          </span>
-        </div>
-      </header>
+      <PageHeader
+        theme="light"
+        breadcrumbs={[
+          { label: t("common.home"), href: "/" },
+          { label: t("nav.about") },
+        ]}
+      />
 
       <section className="max-w-[820px] mx-auto px-6 md:px-10 py-16 md:py-24">
         <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-4">

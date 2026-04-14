@@ -1,22 +1,34 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Biography Map — A Famous Life on a 3D Globe",
+  title: "Biyografi Haritası — Ünlü Bir Yaşam, 3D Küre Üzerinde",
   description:
-    "Search any famous person and see their life as a map: birth, schools, residences, workplaces, death — pinned on a globe with chronological arcs.",
+    "Ünlü birini ara — doğum yeri, okulu, çalıştığı yer, vefat yeri 3D küre üzerinde işaretli zaman çizelgesi olarak. Wikidata kaynaklı.",
   keywords: [
+    "biyografi haritası",
+    "yaşam haritası",
+    "ünlü kişilerin doğum yeri",
+    "kim nerede doğdu",
+    "wikidata yaşam",
     "biography map",
     "life map",
-    "famous person life locations",
-    "wikipedia life events map",
-    "where was X born",
   ],
   openGraph: {
-    title: "Biography Map · GeographicHub",
-    description: "Pin the life of any famous person on a 3D globe.",
+    title: "Biyografi Haritası · GeographicHub",
+    description: "Herhangi bir ünlünün hayatını 3D küre üzerine sabitle.",
     type: "website",
+    locale: "tr_TR",
+    alternateLocale: ["en_US"],
   },
-  alternates: { canonical: "/maps/biography" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Biyografi Haritası · GeographicHub",
+    description: "Doğum, okul, iş, vefat — bir yaşam küre üzerinde.",
+  },
+  alternates: {
+    canonical: "/maps/biography",
+    languages: { tr: "/maps/biography", en: "/maps/biography" },
+  },
 };
 
 const JSONLD = {

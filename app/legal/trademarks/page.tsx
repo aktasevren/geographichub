@@ -12,17 +12,28 @@ export const metadata: Metadata = {
 export default function TrademarksPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="flex justify-between items-center px-6 md:px-10 py-5 border-b border-white/10">
-        <Link
-          href="/"
-          className="font-mono text-[11px] uppercase tracking-[0.25em] text-white/70 hover:text-white"
-        >
-          ← GeographicHub
-        </Link>
-        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/50">
-          Legal
-        </span>
+      <header className="flex justify-end items-center px-6 md:px-10 py-4 border-b border-white/10">
+        <div className="flex items-center gap-4">
+          <Link
+            href="/"
+            className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/70 hover:text-white"
+          >
+            ← GeographicHub
+          </Link>
+        </div>
       </header>
+      <nav
+        aria-label="Breadcrumb"
+        className="px-6 md:px-10 py-2.5 border-b border-white/10 font-mono text-[10px] uppercase tracking-[0.2em] text-white/45"
+      >
+        <Link href="/" className="hover:text-white">
+          Home
+        </Link>
+        <span className="mx-1.5">/</span>
+        <Link href="/legal/trademarks" className="text-white/80">
+          Trademarks
+        </Link>
+      </nav>
 
       <section className="max-w-[820px] mx-auto px-6 md:px-10 py-14 md:py-20">
         <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/40 mb-4">

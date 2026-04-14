@@ -531,23 +531,27 @@ export default function ISSPage() {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <header className="absolute top-0 left-0 right-0 z-20 flex justify-between items-center px-6 py-4 bg-gradient-to-b from-black/80 to-transparent">
-        <SiteLogo />
-        <h1 className="hidden md:block font-serif text-xl md:text-2xl">
-          ISS · <span className="italic text-white/60">Live Position</span>
-        </h1>
-        <div className="flex items-center gap-4">
-          <LocaleToggle />
-          <Link
-            href="/maps/iss/how-to-spot"
-            className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.22em] text-[#ffcc33]/80 hover:text-[#ffcc33]"
-          >
-            Spotting guide →
-          </Link>
-          <span className="hidden md:flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">
-            <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-            {lastUpdate ? `Updated ${secSince}s ago` : "Connecting…"}
-          </span>
+      <header className="absolute top-0 left-0 right-0 z-40 bg-gradient-to-b from-black/85 to-transparent">
+        <div className="flex justify-between items-center px-4 md:px-8 py-3 md:py-4">
+          <SiteLogo />
+          <div className="flex items-center gap-3 md:gap-4">
+            <Link
+              href="/maps/iss/how-to-spot"
+              className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.22em] text-[#ffcc33]/80 hover:text-[#ffcc33]"
+            >
+              Spotting guide →
+            </Link>
+            <span className="hidden md:flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+              {lastUpdate ? `${secSince}s` : "…"}
+            </span>
+            <LocaleToggle />
+          </div>
+        </div>
+        <div className="px-4 md:px-8 pb-3 md:pb-4">
+          <h1 className="font-serif text-lg md:text-xl">
+            ISS · <span className="italic text-white/60">Live</span>
+          </h1>
         </div>
       </header>
 
@@ -581,7 +585,9 @@ export default function ISSPage() {
       )}
 
       {/* Info panel */}
-      <aside className="absolute top-20 left-4 md:left-6 z-20 w-[280px] md:w-[320px] rounded-xl border border-white/10 bg-black/55 backdrop-blur-md p-5 text-white">
+      <aside className="absolute z-20 rounded-xl border border-white/10 bg-black/70 backdrop-blur-md p-4 md:p-5 text-white
+        top-[112px] left-3 right-3 md:left-6 md:right-auto md:w-[320px] md:top-[112px]
+        max-w-[calc(100vw-24px)] md:max-w-none">
         <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50 mb-4">
           § Live Telemetry
         </div>
@@ -671,7 +677,9 @@ export default function ISSPage() {
       </aside>
 
       {/* Passes over your location */}
-      <aside className="absolute top-20 right-4 md:right-6 z-20 w-[300px] md:w-[340px] rounded-xl border border-white/10 bg-black/55 backdrop-blur-md p-5 text-white">
+      <aside className="absolute z-20 rounded-xl border border-white/10 bg-black/75 backdrop-blur-md p-4 md:p-5 text-white
+        bottom-3 left-3 right-3 md:bottom-auto md:top-[112px] md:right-6 md:left-auto md:w-[340px]
+        max-h-[55vh] md:max-h-[calc(100vh-130px)] overflow-y-auto">
         <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50 mb-3">
           § Passes Over You
         </div>

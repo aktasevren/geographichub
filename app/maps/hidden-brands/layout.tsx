@@ -1,26 +1,38 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hidden Brands — Same Product, Different Name Around the World",
+  title: "Gizli Markalar — Aynı Ürün, Farklı İsim",
   description:
-    "Algida in Turkey is Wall's in the UK, Kibon in Brazil, Good Humor in America. Spin the globe and discover every brand that goes by a different name in your country.",
+    "Türkiye'de Algida olarak bildiğin ürün İngiltere'de Wall's, Brezilya'da Kibon, ABD'de Good Humor. Tek logo, birçok isim — küreyi döndür ve keşfet.",
   keywords: [
+    "Algida nedir",
+    "Algida hangi marka",
+    "aynı marka farklı isim",
+    "Heartbrand markaları",
+    "Axe Lynx aynı mı",
+    "Hungry Jack's Burger King",
+    "Opel Vauxhall",
+    "gizli markalar",
     "hidden brands",
-    "same product different name",
-    "is algida wall's",
-    "heartbrand countries",
-    "axe lynx same",
-    "hungry jack's burger king",
-    "opel vauxhall same",
-    "brands with different names by country",
+    "global brand names",
   ],
   openGraph: {
-    title: "Hidden Brands · GeographicHub",
+    title: "Gizli Markalar · GeographicHub",
     description:
-      "One logo, many names. The global atlas of brands that rename themselves across borders.",
+      "Tek logo, birçok isim. Sınırları aşan markaların küresel atlası.",
     type: "website",
+    locale: "tr_TR",
+    alternateLocale: ["en_US"],
   },
-  alternates: { canonical: "/maps/hidden-brands" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gizli Markalar · GeographicHub",
+    description: "Algida = Wall's = Kibon. Aynı ürün, farklı isim — interaktif harita.",
+  },
+  alternates: {
+    canonical: "/maps/hidden-brands",
+    languages: { tr: "/maps/hidden-brands", en: "/maps/hidden-brands" },
+  },
 };
 
 const JSONLD_APP = {

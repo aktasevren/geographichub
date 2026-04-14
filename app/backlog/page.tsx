@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import SiteLogo from "@/components/SiteLogo";
+import PageHeader from "@/components/PageHeader";
 import { BACKLOG, countStatuses } from "@/lib/backlog-data";
 
 export const metadata: Metadata = {
@@ -29,12 +29,13 @@ export default function BacklogPage() {
 
   return (
     <div className="min-h-screen grain">
-      <header className="flex justify-between items-center px-6 md:px-10 py-5 hair-b">
-        <SiteLogo theme="light" />
-        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">
-          Backlog
-        </span>
-      </header>
+      <PageHeader
+        theme="light"
+        breadcrumbs={[
+          { label: "Ana Sayfa", href: "/" },
+          { label: "Backlog" },
+        ]}
+      />
 
       <section className="max-w-[1100px] mx-auto px-6 md:px-10 pt-10 md:pt-14 pb-6">
         <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-4">

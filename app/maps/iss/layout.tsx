@@ -1,24 +1,36 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ISS Tracker — Where Is the International Space Station Right Now?",
+  title: "ISS Takibi — Uluslararası Uzay İstasyonu Şu An Nerede?",
   description:
-    "Live 3D globe showing the International Space Station in real time. See altitude, speed, the country it's over, and upcoming passes over your location.",
+    "Uluslararası Uzay İstasyonu'nu canlı 3D küre üzerinde takip et. Yükseklik, hız, üstünden geçtiği ülke ve şehrinin üzerinden ne zaman geçeceği bilgisi.",
   keywords: [
+    "ISS takip",
+    "Uluslararası Uzay İstasyonu",
+    "ISS şu an nerede",
+    "ISS canlı konum",
+    "ISS şehrim üzerinden ne zaman geçer",
     "ISS tracker",
     "where is the ISS",
     "international space station live",
-    "ISS live location",
     "ISS pass over my city",
-    "space station tracker",
   ],
   openGraph: {
-    title: "ISS Tracker — Live 3D Globe · GeographicHub",
-    description:
-      "Where the International Space Station is right now, and when it will pass over you.",
+    title: "ISS Takibi · GeographicHub",
+    description: "Uluslararası Uzay İstasyonu şu an nerede, ne zaman üzerinden geçecek?",
     type: "website",
+    locale: "tr_TR",
+    alternateLocale: ["en_US"],
   },
-  alternates: { canonical: "/maps/iss" },
+  twitter: {
+    card: "summary_large_image",
+    title: "ISS Takibi · GeographicHub",
+    description: "Canlı 3D küre üzerinde ISS'in tam konumu.",
+  },
+  alternates: {
+    canonical: "/maps/iss",
+    languages: { tr: "/maps/iss", en: "/maps/iss" },
+  },
 };
 
 const JSONLD_APP = {

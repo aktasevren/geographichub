@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import SiteLogo from "@/components/SiteLogo";
+import { LocaleToggle } from "@/components/LocaleProvider";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
@@ -209,14 +210,19 @@ export default function HiddenBrandsPage() {
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      <header className="absolute top-0 left-0 right-0 z-20 flex justify-between items-center px-6 py-4 bg-gradient-to-b from-black/80 to-transparent">
-        <SiteLogo />
-        <h1 className="hidden md:block font-serif text-xl md:text-2xl">
-          Hidden Brands · <span className="italic text-white/60">Same Product, Different Name</span>
-        </h1>
-        <span className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">
-          {active ? `${activeStats.names} names · ${activeStats.countries} countries` : ""}
-        </span>
+      <header className="absolute top-0 left-0 right-0 z-40 bg-gradient-to-b from-black/85 to-transparent">
+        <div className="flex justify-between items-center px-4 md:px-8 py-3 md:py-4">
+          <SiteLogo />
+          <div className="flex items-center gap-3 md:gap-4">
+            <span className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">
+              {active ? `${activeStats.names} names · ${activeStats.countries} countries` : ""}
+            </span>
+            <LocaleToggle />
+          </div>
+        </div>
+        <div className="px-4 md:px-8 pb-3 md:pb-4">
+          <h1 className="font-serif text-lg md:text-xl">Hidden Brands</h1>
+        </div>
       </header>
 
       {size.w > 0 && features.length > 0 && (
@@ -243,7 +249,10 @@ export default function HiddenBrandsPage() {
       )}
 
       {/* Brand selector */}
-      <aside className="absolute top-20 left-4 md:left-6 z-20 w-[280px] md:w-[320px] rounded-xl border border-white/10 bg-black/55 backdrop-blur-md p-5">
+      <aside className="absolute z-20 rounded-xl border border-white/10 bg-black/70 backdrop-blur-md p-4 md:p-5
+        top-[112px] left-3 right-3 md:left-6 md:right-auto md:w-[320px]
+        max-h-[40vh] md:max-h-[calc(100vh-130px)] overflow-y-auto
+        max-w-[calc(100vw-24px)] md:max-w-none">
         <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50 mb-3">
           § Pick a brand
         </div>
@@ -295,7 +304,9 @@ export default function HiddenBrandsPage() {
 
       {/* Current brand detail */}
       {active && (
-        <aside className="absolute top-20 right-4 md:right-6 z-20 w-[300px] md:w-[340px] rounded-xl border border-white/10 bg-black/55 backdrop-blur-md p-5 max-h-[calc(100vh-120px)] overflow-auto">
+        <aside className="absolute z-20 rounded-xl border border-white/10 bg-black/75 backdrop-blur-md p-4 md:p-5
+          bottom-[140px] left-3 right-3 md:bottom-auto md:top-[112px] md:right-6 md:left-auto md:w-[340px]
+          max-h-[50vh] md:max-h-[calc(100vh-130px)] overflow-y-auto">
           <div className="flex items-start justify-between gap-3">
             <div>
               <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/50">
