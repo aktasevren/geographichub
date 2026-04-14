@@ -1,0 +1,229 @@
+{
+  "version": 2,
+  "countries": [
+    {
+      "slug": "turkey",
+      "name": "Turkey",
+      "flag": "🇹🇷",
+      "blurb": "Layered empires, four seas and a bread-and-yoghurt soul — Turkish food is a living map of the eastern Mediterranean.",
+      "dishes": [
+        { "id": "baklava",     "name": "Baklava",            "wikiTitle": "Baklava",                    "tags": ["iconic","dessert"] },
+        { "id": "doner",       "name": "Döner Kebab",        "wikiTitle": "Doner_kebab",                "tags": ["iconic","street"] },
+        { "id": "lahmacun",    "name": "Lahmacun",           "wikiTitle": "Lahmajoun",                  "tags": ["iconic","everyday","street"] },
+        { "id": "manti",       "name": "Mantı",              "wikiTitle": "Mant%C4%B1",                 "tags": ["iconic","everyday"] },
+        { "id": "kofte",       "name": "Köfte",              "wikiTitle": "Turkish_meatballs",          "tags": ["everyday"] },
+        { "id": "menemen",     "name": "Menemen",            "wikiTitle": "Menemen_(food)",             "tags": ["everyday"] },
+        { "id": "iskender",    "name": "İskender Kebap",     "wikiTitle": "%C4%B0skender_kebap",        "tags": ["iconic"] },
+        { "id": "kunefe",      "name": "Künefe",             "wikiTitle": "Kanafeh",                    "tags": ["iconic","dessert"] },
+        { "id": "pide",        "name": "Pide",               "wikiTitle": "Pide",                       "tags": ["everyday"] },
+        { "id": "simit",       "name": "Simit",              "wikiTitle": "Simit",                      "tags": ["everyday","street"] },
+        { "id": "kuru-fasulye","name": "Kuru Fasulye",       "wikiTitle": "Kuru_fasulye",               "tags": ["everyday"] },
+        { "id": "mercimek",    "name": "Mercimek Çorbası",   "wikiTitle": "Lentil_soup",                "tags": ["everyday"] },
+        { "id": "borek",       "name": "Börek",              "wikiTitle": "Börek",                      "tags": ["everyday","street"] },
+        { "id": "gozleme",     "name": "Gözleme",            "wikiTitle": "Gözleme",                    "tags": ["everyday","street"] },
+        { "id": "ayran",       "name": "Ayran",              "wikiTitle": "Ayran",                      "tags": ["everyday","drink"] },
+        { "id": "cig-kofte",   "name": "Çiğ Köfte",          "wikiTitle": "Çiğ_köfte",                  "tags": ["street"] },
+        { "id": "karniyarik",  "name": "Karnıyarık",         "wikiTitle": "Karnıyarık",                 "tags": ["everyday"] },
+        { "id": "lokum",       "name": "Lokum",              "wikiTitle": "Turkish_delight",            "tags": ["iconic","dessert"] }
+      ]
+    },
+    {
+      "slug": "italy",
+      "name": "Italy",
+      "flag": "🇮🇹",
+      "blurb": "A country of regions, each arguing passionately about pasta shapes, tomato sauce and the right way to drink coffee.",
+      "dishes": [
+        { "id": "pizza",      "name": "Pizza Margherita", "wikiTitle": "Pizza_Margherita",     "tags": ["iconic","everyday"] },
+        { "id": "carbonara",  "name": "Carbonara",        "wikiTitle": "Carbonara",            "tags": ["iconic","everyday"] },
+        { "id": "lasagna",    "name": "Lasagna",          "wikiTitle": "Lasagna",              "tags": ["iconic"] },
+        { "id": "risotto",    "name": "Risotto",          "wikiTitle": "Risotto",              "tags": ["everyday"] },
+        { "id": "tiramisu",   "name": "Tiramisu",         "wikiTitle": "Tiramisu",             "tags": ["iconic","dessert"] },
+        { "id": "ossobuco",   "name": "Osso Buco",        "wikiTitle": "Ossobuco",             "tags": ["iconic"] },
+        { "id": "arancini",   "name": "Arancini",         "wikiTitle": "Arancini",             "tags": ["street","everyday"] },
+        { "id": "gelato",     "name": "Gelato",           "wikiTitle": "Gelato",               "tags": ["iconic","dessert","street"] },
+        { "id": "caprese",    "name": "Caprese Salad",    "wikiTitle": "Caprese_salad",        "tags": ["everyday"] },
+        { "id": "prosciutto", "name": "Prosciutto",       "wikiTitle": "Prosciutto",           "tags": ["iconic","everyday"] },
+        { "id": "pomodoro",   "name": "Pasta al Pomodoro","wikiTitle": "Pomodoro_sauce",       "tags": ["everyday"] },
+        { "id": "cacio-pepe", "name": "Cacio e Pepe",     "wikiTitle": "Cacio_e_pepe",         "tags": ["everyday"] },
+        { "id": "focaccia",   "name": "Focaccia",         "wikiTitle": "Focaccia",             "tags": ["everyday","street"] },
+        { "id": "cotoletta",  "name": "Cotoletta alla Milanese","wikiTitle":"Cotoletta_alla_milanese","tags": ["everyday"] },
+        { "id": "cannoli",    "name": "Cannoli",          "wikiTitle": "Cannoli",              "tags": ["dessert","street"] }
+      ]
+    },
+    {
+      "slug": "japan",
+      "name": "Japan",
+      "flag": "🇯🇵",
+      "blurb": "Umami, precision and seasonality — an entire culinary philosophy built on rice, dashi, and respect for ingredients.",
+      "dishes": [
+        { "id": "sushi",       "name": "Sushi",       "wikiTitle": "Sushi",         "tags": ["iconic"] },
+        { "id": "ramen",       "name": "Ramen",       "wikiTitle": "Ramen",         "tags": ["iconic","everyday"] },
+        { "id": "tempura",     "name": "Tempura",     "wikiTitle": "Tempura",       "tags": ["iconic","everyday"] },
+        { "id": "okonomiyaki", "name": "Okonomiyaki", "wikiTitle": "Okonomiyaki",   "tags": ["street","everyday"] },
+        { "id": "takoyaki",    "name": "Takoyaki",    "wikiTitle": "Takoyaki",      "tags": ["street"] },
+        { "id": "unagi",       "name": "Unagi",       "wikiTitle": "Unagi",         "tags": ["iconic"] },
+        { "id": "wagyu",       "name": "Wagyu Beef",  "wikiTitle": "Wagyu",         "tags": ["iconic"] },
+        { "id": "miso",        "name": "Miso Soup",   "wikiTitle": "Miso_soup",     "tags": ["everyday"] },
+        { "id": "matcha",      "name": "Matcha",      "wikiTitle": "Matcha",        "tags": ["iconic","drink"] },
+        { "id": "yakitori",    "name": "Yakitori",    "wikiTitle": "Yakitori",      "tags": ["everyday","street"] },
+        { "id": "karee",       "name": "Curry Rice (Karē)", "wikiTitle": "Japanese_curry","tags":["everyday"] },
+        { "id": "gyudon",      "name": "Gyūdon",      "wikiTitle": "Gyudon",        "tags": ["everyday"] },
+        { "id": "onigiri",     "name": "Onigiri",     "wikiTitle": "Onigiri",       "tags": ["everyday","street"] },
+        { "id": "tonkatsu",    "name": "Tonkatsu",    "wikiTitle": "Tonkatsu",      "tags": ["everyday"] },
+        { "id": "oden",        "name": "Oden",        "wikiTitle": "Oden",          "tags": ["everyday","street"] }
+      ]
+    },
+    {
+      "slug": "mexico",
+      "name": "Mexico",
+      "flag": "🇲🇽",
+      "blurb": "Corn, chili and chocolate — an ancient, layered cuisine recognized by UNESCO as intangible cultural heritage.",
+      "dishes": [
+        { "id": "al-pastor",   "name": "Tacos al Pastor", "wikiTitle": "Al_pastor",        "tags":["iconic","street","everyday"] },
+        { "id": "mole",        "name": "Mole Poblano",    "wikiTitle": "Mole_poblano",     "tags":["iconic"] },
+        { "id": "guacamole",   "name": "Guacamole",       "wikiTitle": "Guacamole",        "tags":["iconic","everyday"] },
+        { "id": "tamale",      "name": "Tamale",          "wikiTitle": "Tamale",           "tags":["street","everyday"] },
+        { "id": "chiles-nogada","name":"Chiles en Nogada","wikiTitle":"Chiles_en_nogada",  "tags":["iconic"] },
+        { "id": "pozole",      "name": "Pozole",          "wikiTitle": "Pozole",           "tags":["everyday"] },
+        { "id": "enchilada",   "name": "Enchilada",       "wikiTitle": "Enchilada",        "tags":["everyday"] },
+        { "id": "ceviche",     "name": "Ceviche",         "wikiTitle": "Ceviche",          "tags":["iconic"] },
+        { "id": "churro",      "name": "Churro",          "wikiTitle": "Churro",           "tags":["street","dessert"] },
+        { "id": "quesadilla",  "name": "Quesadilla",      "wikiTitle": "Quesadilla",       "tags":["everyday","street"] },
+        { "id": "chilaquiles", "name": "Chilaquiles",     "wikiTitle": "Chilaquiles",      "tags":["everyday"] },
+        { "id": "torta",       "name": "Torta",           "wikiTitle": "Torta",            "tags":["everyday","street"] },
+        { "id": "barbacoa",    "name": "Barbacoa",        "wikiTitle": "Barbacoa",         "tags":["everyday"] },
+        { "id": "cochinita",   "name": "Cochinita Pibil", "wikiTitle": "Cochinita_pibil",  "tags":["iconic"] }
+      ]
+    },
+    {
+      "slug": "india",
+      "name": "India",
+      "flag": "🇮🇳",
+      "blurb": "A subcontinent of cuisines — every state, every city, every street corner serves something worth crossing borders for.",
+      "dishes": [
+        { "id": "biryani",    "name": "Biryani",          "wikiTitle": "Biryani",          "tags":["iconic","everyday"] },
+        { "id": "butter-chx", "name": "Butter Chicken",   "wikiTitle": "Butter_chicken",   "tags":["iconic"] },
+        { "id": "dosa",       "name": "Masala Dosa",      "wikiTitle": "Dosa_(food)",      "tags":["iconic","everyday","street"] },
+        { "id": "samosa",     "name": "Samosa",           "wikiTitle": "Samosa",           "tags":["iconic","street","everyday"] },
+        { "id": "tandoori",   "name": "Tandoori Chicken", "wikiTitle": "Tandoori_chicken", "tags":["iconic"] },
+        { "id": "chole",      "name": "Chole Bhature",    "wikiTitle": "Chole_bhature",    "tags":["everyday"] },
+        { "id": "gulab",      "name": "Gulab Jamun",      "wikiTitle": "Gulab_jamun",      "tags":["dessert"] },
+        { "id": "paneer",     "name": "Paneer Tikka",     "wikiTitle": "Paneer_tikka",     "tags":["everyday"] },
+        { "id": "rogan",      "name": "Rogan Josh",       "wikiTitle": "Rogan_josh",       "tags":["iconic"] },
+        { "id": "pani-puri",  "name": "Pani Puri",        "wikiTitle": "Panipuri",         "tags":["street","everyday"] },
+        { "id": "dal",        "name": "Dal",              "wikiTitle": "Dal",              "tags":["everyday"] },
+        { "id": "chai",       "name": "Masala Chai",      "wikiTitle": "Masala_chai",      "tags":["everyday","drink"] },
+        { "id": "vada-pav",   "name": "Vada Pav",         "wikiTitle": "Vada_pav",         "tags":["street","everyday"] },
+        { "id": "idli-sambar","name":"Idli + Sambar",     "wikiTitle": "Idli",             "tags":["everyday"] },
+        { "id": "aloo-paratha","name":"Aloo Paratha",     "wikiTitle": "Aloo_paratha",     "tags":["everyday"] }
+      ]
+    },
+    {
+      "slug": "thailand",
+      "name": "Thailand",
+      "flag": "🇹🇭",
+      "blurb": "Sweet, sour, salty, spicy — all four dimensions on every plate. A cuisine of balance and noisy street corners.",
+      "dishes": [
+        { "id": "padthai",    "name": "Pad Thai",           "wikiTitle": "Pad_thai",         "tags":["iconic","street"] },
+        { "id": "tom-yum",    "name": "Tom Yum",            "wikiTitle": "Tom_yum",          "tags":["iconic"] },
+        { "id": "green-curry","name": "Green Curry",        "wikiTitle": "Green_curry",      "tags":["iconic","everyday"] },
+        { "id": "som-tam",    "name": "Som Tam",            "wikiTitle": "Som_tam",          "tags":["everyday","street"] },
+        { "id": "massaman",   "name": "Massaman Curry",     "wikiTitle": "Massaman_curry",   "tags":["iconic"] },
+        { "id": "khao-pad",   "name": "Khao Pad",           "wikiTitle": "Khao_phat",        "tags":["everyday"] },
+        { "id": "pad-see-ew", "name": "Pad See Ew",         "wikiTitle": "Phat_si-io",       "tags":["everyday","street"] },
+        { "id": "mango-rice", "name": "Mango Sticky Rice",  "wikiTitle": "Mango_sticky_rice","tags":["dessert","iconic"] },
+        { "id": "satay",      "name": "Satay",              "wikiTitle": "Satay",            "tags":["street"] },
+        { "id": "tom-kha",    "name": "Tom Kha Gai",        "wikiTitle": "Tom_kha_kai",      "tags":["everyday"] },
+        { "id": "pad-kra-pao","name": "Pad Kra Pao",        "wikiTitle": "Phat_kaphrao",     "tags":["everyday","street"] },
+        { "id": "khao-man-gai","name":"Khao Man Gai",       "wikiTitle": "Hainanese_chicken_rice","tags":["everyday","street"] },
+        { "id": "khao-soi",   "name": "Khao Soi",           "wikiTitle": "Khao_soi",         "tags":["iconic","everyday"] }
+      ]
+    },
+    {
+      "slug": "france",
+      "name": "France",
+      "flag": "🇫🇷",
+      "blurb": "The gastronomic meal of the French is on UNESCO's list — butter, bread, wine and an unhurried table.",
+      "dishes": [
+        { "id": "croissant",   "name": "Croissant",        "wikiTitle": "Croissant",          "tags":["iconic","everyday"] },
+        { "id": "coq-au-vin",  "name": "Coq au Vin",       "wikiTitle": "Coq_au_vin",         "tags":["iconic"] },
+        { "id": "ratatouille", "name": "Ratatouille",      "wikiTitle": "Ratatouille",        "tags":["iconic","everyday"] },
+        { "id": "bouillabaisse","name": "Bouillabaisse",   "wikiTitle": "Bouillabaisse",      "tags":["iconic"] },
+        { "id": "crepe",       "name": "Crêpe",            "wikiTitle": "Cr%C3%AApe",         "tags":["everyday","street","dessert"] },
+        { "id": "boeuf",       "name": "Boeuf Bourguignon","wikiTitle": "Beef_bourguignon",   "tags":["iconic"] },
+        { "id": "foie-gras",   "name": "Foie Gras",        "wikiTitle": "Foie_gras",          "tags":["iconic"] },
+        { "id": "souffle",     "name": "Soufflé",          "wikiTitle": "Souffl%C3%A9",       "tags":["iconic"] },
+        { "id": "quiche",      "name": "Quiche Lorraine",  "wikiTitle": "Quiche",             "tags":["everyday"] },
+        { "id": "macaron",     "name": "Macaron",          "wikiTitle": "Macaron",            "tags":["iconic","dessert"] },
+        { "id": "jambon-beurre","name":"Jambon-Beurre",    "wikiTitle": "Jambon-beurre",      "tags":["everyday","street"] },
+        { "id": "steak-frites","name": "Steak Frites",     "wikiTitle": "Steak_frites",       "tags":["everyday"] },
+        { "id": "croque",      "name": "Croque Monsieur",  "wikiTitle": "Croque_monsieur",    "tags":["everyday"] },
+        { "id": "tartiflette", "name": "Tartiflette",      "wikiTitle": "Tartiflette",        "tags":["everyday"] }
+      ]
+    },
+    {
+      "slug": "greece",
+      "name": "Greece",
+      "flag": "🇬🇷",
+      "blurb": "Olive oil, lemon, herbs and the sea — a cuisine that treats simplicity as the highest sophistication.",
+      "dishes": [
+        { "id": "moussaka",    "name": "Moussaka",       "wikiTitle": "Moussaka",           "tags":["iconic"] },
+        { "id": "souvlaki",    "name": "Souvlaki",       "wikiTitle": "Souvlaki",           "tags":["iconic","street","everyday"] },
+        { "id": "gyros",       "name": "Gyros",          "wikiTitle": "Gyros",              "tags":["iconic","street","everyday"] },
+        { "id": "tzatziki",    "name": "Tzatziki",       "wikiTitle": "Tzatziki",           "tags":["everyday"] },
+        { "id": "greek-salad", "name": "Greek Salad (Choriatiki)", "wikiTitle": "Greek_salad","tags":["iconic","everyday"] },
+        { "id": "spanakopita", "name": "Spanakopita",    "wikiTitle": "Spanakopita",        "tags":["everyday","street"] },
+        { "id": "dolmades",    "name": "Dolmades",       "wikiTitle": "Dolma",              "tags":["iconic"] },
+        { "id": "baklava-gr",  "name": "Baklava",        "wikiTitle": "Baklava",            "tags":["iconic","dessert"] },
+        { "id": "loukoumades", "name": "Loukoumades",    "wikiTitle": "Loukoumades",        "tags":["street","dessert"] },
+        { "id": "fava",        "name": "Fava (Yellow Split Pea)","wikiTitle":"Fava_(dip)",   "tags":["everyday"] },
+        { "id": "pastitsio",   "name": "Pastitsio",      "wikiTitle": "Pastitsio",          "tags":["everyday"] },
+        { "id": "horiatiko",   "name": "Horiatiko Psomi","wikiTitle": "Greek_cuisine",      "tags":["everyday"] },
+        { "id": "frappe",      "name": "Frappé",         "wikiTitle": "Frappé_coffee",      "tags":["iconic","drink"] }
+      ]
+    },
+    {
+      "slug": "vietnam",
+      "name": "Vietnam",
+      "flag": "🇻🇳",
+      "blurb": "Fresh herbs, fish sauce, rice noodles, and a cup of strong coffee to end the day — a cuisine of lightness and clarity.",
+      "dishes": [
+        { "id": "pho",            "name": "Phở",            "wikiTitle": "Phở",            "tags":["iconic","everyday","street"] },
+        { "id": "banh-mi",        "name": "Bánh Mì",        "wikiTitle": "Bánh_mì",        "tags":["iconic","street","everyday"] },
+        { "id": "goi-cuon",       "name": "Gỏi Cuốn",       "wikiTitle": "Gỏi_cuốn",       "tags":["everyday","street"] },
+        { "id": "bun-cha",        "name": "Bún Chả",        "wikiTitle": "Bún_chả",        "tags":["iconic","everyday"] },
+        { "id": "bun-bo-hue",     "name": "Bún Bò Huế",     "wikiTitle": "Bún_bò_Huế",     "tags":["iconic","everyday"] },
+        { "id": "com-tam",        "name": "Cơm Tấm",        "wikiTitle": "Cơm_tấm",        "tags":["everyday","street"] },
+        { "id": "banh-xeo",       "name": "Bánh Xèo",       "wikiTitle": "Bánh_xèo",       "tags":["street"] },
+        { "id": "cha-ca",         "name": "Chả Cá Lã Vọng", "wikiTitle": "Chả_cá_Lã_Vọng", "tags":["iconic"] },
+        { "id": "ca-phe-sua-da",  "name": "Cà Phê Sữa Đá",  "wikiTitle": "Vietnamese_iced_coffee","tags":["iconic","drink","everyday"] },
+        { "id": "banh-cuon",      "name": "Bánh Cuốn",      "wikiTitle": "Bánh_cuốn",      "tags":["everyday","street"] },
+        { "id": "hu-tieu",        "name": "Hủ Tiếu",        "wikiTitle": "Hủ_tiếu",        "tags":["everyday","street"] },
+        { "id": "nuoc-mam",       "name": "Nước Chấm",      "wikiTitle": "Nước_chấm",      "tags":["everyday"] }
+      ]
+    },
+    {
+      "slug": "scotland",
+      "name": "Scotland",
+      "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "blurb": "Oats, whisky, smoke and cold seas — a country where comfort food means something, and it means a lot.",
+      "dishes": [
+        { "id": "haggis",      "name": "Haggis",             "wikiTitle": "Haggis",             "tags":["iconic"] },
+        { "id": "cullen",      "name": "Cullen Skink",       "wikiTitle": "Cullen_skink",       "tags":["iconic"] },
+        { "id": "scotch-pie",  "name": "Scotch Pie",         "wikiTitle": "Scotch_pie",         "tags":["everyday","street"] },
+        { "id": "shortbread",  "name": "Shortbread",         "wikiTitle": "Shortbread",         "tags":["iconic","dessert"] },
+        { "id": "cranachan",   "name": "Cranachan",          "wikiTitle": "Cranachan",          "tags":["dessert"] },
+        { "id": "tattie-scone","name": "Tattie Scone",       "wikiTitle": "Potato_scone",       "tags":["everyday"] },
+        { "id": "neeps",       "name": "Neeps and Tatties",  "wikiTitle": "Neeps_and_tatties",  "tags":["everyday"] },
+        { "id": "smokie",      "name": "Arbroath Smokie",    "wikiTitle": "Arbroath_smokie",    "tags":["iconic"] },
+        { "id": "stovies",     "name": "Stovies",            "wikiTitle": "Stovies",            "tags":["everyday"] },
+        { "id": "scotch-broth","name": "Scotch Broth",       "wikiTitle": "Scotch_broth",       "tags":["everyday"] },
+        { "id": "fish-chips",  "name": "Fish and Chips",     "wikiTitle": "Fish_and_chips",     "tags":["everyday","street"] },
+        { "id": "full-scot",   "name": "Full Scottish Breakfast","wikiTitle":"Full_breakfast",  "tags":["everyday"] },
+        { "id": "mince-tatties","name":"Mince and Tatties",  "wikiTitle": "Mince_and_tatties",  "tags":["everyday"] },
+        { "id": "tikka-masala","name": "Chicken Tikka Masala (Glasgow)","wikiTitle":"Chicken_tikka_masala","tags":["iconic","everyday"] },
+        { "id": "porridge",    "name": "Porridge",           "wikiTitle": "Porridge",           "tags":["everyday"] }
+      ]
+    }
+  ]
+}

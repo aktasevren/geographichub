@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --bg: #0a0b0d;
+  --bg-2: #111216;
+  --bg-3: #17181d;
+  --line: rgba(255,255,255,0.08);
+  --line-2: rgba(255,255,255,0.14);
+  --text: #f3f0e7;
+  --text-2: #cfcabb;
+  --muted: #85827a;
+  --accent: #d4ff3a;   /* electric lime */
+  --warm: #ff6a3d;     /* signal orange */
+  --cool: #7dd3fc;     /* horizon blue */
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--accent); color: #000; }
+
+/* Subtle grain */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 200;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Spotlight gradient behind hero */
+.spot {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(800px 500px at 20% 10%, rgba(212, 255, 58, 0.08), transparent 60%),
+    radial-gradient(900px 600px at 100% 40%, rgba(255, 106, 61, 0.06), transparent 60%),
+    radial-gradient(700px 500px at 60% 100%, rgba(125, 211, 252, 0.05), transparent 60%);
+  pointer-events: none;
+}
+
+.hair { border-color: var(--line); }
+.hair-b { border-bottom: 1px solid var(--line); }
+.hair-t { border-top: 1px solid var(--line); }
+
+/* Marquee */
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { animation: marquee 50s linear infinite; }
+
+/* Thumbnail card animations */
+.tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  transition: transform 0.5s cubic-bezier(.2,.7,.2,1), border-color 0.3s, box-shadow 0.5s;
+}
+.tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-2);
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.7);
+}
+.tile-canvas {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.8s cubic-bezier(.2,.7,.2,1), opacity 0.4s;
+}
+.tile:hover .tile-canvas { transform: scale(1.06); }
+
+.tile-meta {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 28px;
+  background: linear-gradient(to top, rgba(10,11,13,0.98) 20%, rgba(10,11,13,0.85) 60%, transparent 100%);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-2);
+}
+.chip-live { background: rgba(212,255,58,0.12); border-color: rgba(212,255,58,0.4); color: var(--accent); }
+.chip-draft { background: rgba(255,106,61,0.12); border-color: rgba(255,106,61,0.4); color: var(--warm); }
+.chip-dot {
+  width: 6px; height: 6px; border-radius: 999px; background: currentColor;
+  box-shadow: 0 0 6px currentColor;
+}
+.chip-live .chip-dot { animation: pulse 2s infinite; }
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Animated preview shapes */
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(6px, -4px); }
+}
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+@keyframes shimmer {
+  0% { opacity: 0.3; } 50% { opacity: 1; } 100% { opacity: 0.3; }
+}
+
+/* nav underline */
+.link-u { position: relative; }
+.link-u::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -4px;
+  height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s;
+}
+.link-u:hover::after { transform: scaleX(1); }

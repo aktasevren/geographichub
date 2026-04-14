@@ -1,0 +1,171 @@
+{
+  "version": 3,
+  "brands": [
+    {
+      "slug": "mars-milky-way",
+      "title": "Mars / Milky Way",
+      "product": "Chocolate bar",
+      "parent": "Mars, Incorporated",
+      "symbol": "🌌",
+      "wikiTitle": "Mars_(chocolate_bar)",
+      "blurb": "The most confusing naming twist in candy. The bar called Mars in Europe is NOT the same recipe as the Mars bar in the US — and the US Milky Way is actually the European Mars.",
+      "story": "When Forrest Mars opened his British factory in 1932, he reformulated his father's American Milky Way for local tastes and called it the Mars bar. The US Mars bar (a different recipe with almonds) kept that name across the Atlantic. So: US Milky Way ≈ UK/EU Mars; US Mars ≠ UK/EU Mars. Mars, Inc. eventually discontinued the original US Mars bar in 2002 and re-released it briefly as Mars Almond.",
+      "names": [
+        { "name": "Mars", "color": "#dc2626", "wikiTitle": "Mars_(chocolate_bar)", "countries": ["GBR","IRL","DEU","FRA","ITA","ESP","PRT","NLD","BEL","AUT","CHE","POL","CZE","SVK","HUN","ROU","BGR","GRC","DNK","SWE","NOR","FIN","TUR","AUS","NZL","ZAF","IND","JPN"] },
+        { "name": "Milky Way (US version = European Mars)", "color": "#7c3aed", "wikiTitle": "Milky_Way_(chocolate_bar)", "countries": ["USA","CAN","MEX"] }
+      ]
+    },
+    {
+      "slug": "snickers-marathon",
+      "title": "Snickers ← Marathon",
+      "product": "Chocolate bar (historical rebrand)",
+      "parent": "Mars, Incorporated",
+      "symbol": "🥜",
+      "wikiTitle": "Snickers",
+      "blurb": "From 1968 to 1990, what the world called Snickers was sold in the UK and Ireland as Marathon. Same bar, same recipe — Mars just wanted to align the global brand name.",
+      "story": "Mars launched the bar as Snickers in the US in 1930, named after the family's racehorse. When it arrived in the UK in 1968, marketers feared 'Snickers' sounded too close to a slang word. So it was rebranded Marathon. The bar ran under that name for 22 years. In 1990, Mars unified its global brand — Marathon became Snickers overnight. British consumers grumbled for years. (Unrelated: Cadbury later reused the Marathon name for a different bar in 2012.)",
+      "names": [
+        { "name": "Snickers (1990–today)", "color": "#a16207", "wikiTitle": "Snickers", "countries": ["GBR","IRL","USA","CAN","DEU","FRA","ITA","ESP","NLD","BEL","POL","RUS","TUR","BRA","ARG","MEX","IND","CHN","JPN","KOR","AUS","NZL","ZAF","SAU","ARE"] },
+        { "name": "Marathon (1968–1990, UK/IE only)", "color": "#dc2626", "wikiTitle": "Snickers", "countries": ["GBR","IRL"] }
+      ]
+    },
+    {
+      "slug": "mr-clean",
+      "title": "Mr. Clean Family",
+      "product": "Household cleaner",
+      "parent": "Procter & Gamble",
+      "symbol": "🧼",
+      "wikiTitle": "Mr._Clean",
+      "blurb": "Same bald muscular mascot, same bottle — six different names. Mr. Proper in much of Europe, Don Limpio in Spain, Maestro Limpio in Mexico, Mastro Lindo in Italy.",
+      "story": "P&G launched Mr. Clean in 1958. When expanding abroad, the company discovered 'Clean' didn't translate well and some markets already had similar products. So they adapted the name to each language — keeping the iconic mascot identical across all of them. The character's design (bald, earring, folded arms) is the one constant signal to shoppers.",
+      "names": [
+        { "name": "Mr. Clean", "color": "#3b82f6", "wikiTitle": "Mr._Clean", "countries": ["USA","CAN","JPN"] },
+        { "name": "Mr. Proper", "color": "#06b6d4", "wikiTitle": "Mr._Clean", "countries": ["DEU","AUT","CHE","NLD","BEL","POL","CZE","SVK","HUN","ROU","BGR","RUS","UKR","TUR","GRC","PRT"] },
+        { "name": "Maestro Limpio", "color": "#10b981", "wikiTitle": "Mr._Clean", "countries": ["MEX","COL","VEN","PER","CHL","ARG"] },
+        { "name": "Don Limpio", "color": "#f59e0b", "wikiTitle": "Mr._Clean", "countries": ["ESP"] },
+        { "name": "Mastro Lindo", "color": "#ef4444", "wikiTitle": "Mr._Clean", "countries": ["ITA"] },
+        { "name": "Monsieur Propre", "color": "#8b5cf6", "wikiTitle": "Mr._Clean", "countries": ["FRA","LUX"] }
+      ]
+    },
+    {
+      "slug": "dove-galaxy",
+      "title": "Dove / Galaxy",
+      "product": "Chocolate bar",
+      "parent": "Mars, Incorporated",
+      "symbol": "🍫",
+      "wikiTitle": "Dove_(chocolate)",
+      "blurb": "Same silky milk chocolate, two names. Dove in most of the world — but Galaxy in the UK, Ireland and parts of the Middle East.",
+      "story": "Mars bought the US brand Dove in 1986 and the UK brand Galaxy in 1960. Rather than cannibalise one with the other, Mars kept both — making functionally the same chocolate. Galaxy stayed dominant in British-sphere markets; Dove elsewhere. The Mars soap brand 'Dove' is a separate company entirely (Unilever) — unrelated chocolate.",
+      "names": [
+        { "name": "Dove", "color": "#a16207", "wikiTitle": "Dove_(chocolate)", "countries": ["USA","CAN","MEX","BRA","ARG","CHL","COL","TUR","DEU","FRA","ITA","ESP","POL","RUS","CHN","JPN","KOR","IND","ZAF"] },
+        { "name": "Galaxy", "color": "#7c3aed", "wikiTitle": "Galaxy_(chocolate)", "countries": ["GBR","IRL","SAU","ARE","EGY","JOR","LBN","KWT","OMN","QAT","BHR"] }
+      ]
+    },
+    {
+      "slug": "oil-of-olay",
+      "title": "Olay (née Oil of Ulay)",
+      "product": "Skincare",
+      "parent": "Procter & Gamble",
+      "symbol": "🧴",
+      "wikiTitle": "Olay",
+      "blurb": "Before 2000 it had four names across four continents. P&G finally unified everything under 'Olay' — but the old bottles are still remembered.",
+      "story": "South African chemist Graham Wulff created the formula in 1952. It launched internationally as Oil of Olay (US), Oil of Ulay (UK, Ireland, South Africa), Oil of Olaz (Germany, Netherlands, France, Italy) and Oil of Ulan (Australia). In 2000 P&G consolidated globally to the single name 'Olay' — except German-speaking markets, which kept 'Olaz'.",
+      "names": [
+        { "name": "Olay", "color": "#ec4899", "wikiTitle": "Olay", "countries": ["USA","CAN","MEX","BRA","ARG","GBR","IRL","TUR","FRA","ITA","ESP","POL","RUS","CHN","JPN","KOR","IND","PHL","IDN","THA","VNM","MYS","SGP","AUS","NZL","ZAF","SAU","ARE","EGY"] },
+        { "name": "Olaz (German markets)", "color": "#a855f7", "wikiTitle": "Olay", "countries": ["DEU","AUT","CHE","NLD","BEL"] }
+      ]
+    },
+    {
+      "slug": "heartbrand",
+      "title": "Heartbrand",
+      "product": "Ice cream",
+      "parent": "Unilever",
+      "symbol": "♥",
+      "wikiTitle": "Heartbrand",
+      "blurb": "One logo — a red heart — 40+ different names. What you call Algida in Turkey is Wall's in the UK, Kibon in Brazil, Good Humor in the US.",
+      "story": "Unilever acquired dozens of local ice cream brands between the 1920s and 1990s. Rather than rebrand every factory, the company adopted a single stylised heart mark in 2003 — then kept each country's historical name. So you get one logo, dozens of names, all made in the same freezers.",
+      "names": [
+        { "name": "Algida", "color": "#ef4444", "wikiTitle": "Algida", "countries": ["TUR","ITA","GRC","CYP","ROU","HUN","BGR","POL","SVK","CZE","ISR"] },
+        { "name": "Wall's", "color": "#3b82f6", "wikiTitle": "Wall's_(ice_cream)", "countries": ["GBR","IRL","IDN","THA","PHL","MYS","SGP","LKA","VNM","CHN","SAU","ARE"] },
+        { "name": "Kwality Wall's", "color": "#60a5fa", "wikiTitle": "Kwality_Wall's", "countries": ["IND","PAK","BGD","NPL"] },
+        { "name": "Ola", "color": "#10b981", "wikiTitle": "Ola_(ice_cream)", "countries": ["NLD","BEL"] },
+        { "name": "Good Humor", "color": "#f59e0b", "wikiTitle": "Good_Humor", "countries": ["USA","CAN"] },
+        { "name": "Langnese", "color": "#a855f7", "wikiTitle": "Langnese_(ice_cream)", "countries": ["DEU"] },
+        { "name": "Eskimo", "color": "#06b6d4", "wikiTitle": "Eskimo_(ice_cream)", "countries": ["AUT","BIH","SRB","MKD"] },
+        { "name": "Frigo", "color": "#eab308", "wikiTitle": "Frigo_(ice_cream)", "countries": ["ESP"] },
+        { "name": "Kibon", "color": "#22c55e", "wikiTitle": "Kibon", "countries": ["BRA"] },
+        { "name": "Streets", "color": "#f97316", "wikiTitle": "Streets_(ice_cream)", "countries": ["AUS","NZL"] },
+        { "name": "Frisko", "color": "#ec4899", "wikiTitle": "Frisko", "countries": ["DNK"] },
+        { "name": "Olá", "color": "#14b8a6", "wikiTitle": "Olá_(ice_cream)", "countries": ["PRT"] },
+        { "name": "Miko", "color": "#8b5cf6", "wikiTitle": "Miko_(ice_cream)", "countries": ["FRA"] },
+        { "name": "GB Glace", "color": "#fb7185", "wikiTitle": "GB_Glace", "countries": ["SWE","NOR","FIN"] },
+        { "name": "Tío Rico", "color": "#d946ef", "wikiTitle": "Tío_Rico", "countries": ["VEN"] },
+        { "name": "Bresler", "color": "#84cc16", "wikiTitle": "Bresler", "countries": ["CHL"] },
+        { "name": "Holanda", "color": "#f43f5e", "wikiTitle": "Helados_Holanda", "countries": ["MEX"] },
+        { "name": "Pingüino", "color": "#0ea5e9", "wikiTitle": "Pingüino_(ice_cream)", "countries": ["ECU","COL"] }
+      ]
+    },
+    {
+      "slug": "axe-lynx",
+      "title": "Axe / Lynx",
+      "product": "Men's deodorant",
+      "parent": "Unilever",
+      "symbol": "⚔",
+      "wikiTitle": "Axe_(brand)",
+      "blurb": "Same tagline, same bottle, two names. Lynx in countries where Axe is a rival brand's trademark; Axe everywhere else.",
+      "story": "When Unilever launched the deodorant in France in 1983, the name Axe was free. Elsewhere — the UK, Ireland, Australia, New Zealand — another company already held the Axe trademark on cleaning products. So Unilever went with Lynx there. Same product, two brand identities, ever since.",
+      "names": [
+        { "name": "Lynx", "color": "#f59e0b", "wikiTitle": "Axe_(brand)", "countries": ["GBR","IRL","AUS","NZL"] },
+        { "name": "Axe", "color": "#ef4444", "wikiTitle": "Axe_(brand)", "countries": ["USA","CAN","MEX","BRA","ARG","CHL","COL","PER","TUR","DEU","FRA","ITA","ESP","NLD","BEL","POL","RUS","IND","PAK","IDN","PHL","THA","VNM","CHN","JPN","KOR","EGY","MAR","ZAF","NGA","KEN","SAU","ARE"] }
+      ]
+    },
+    {
+      "slug": "burger-king",
+      "title": "Burger King / Hungry Jack's",
+      "product": "Fast food chain",
+      "parent": "Restaurant Brands International",
+      "symbol": "🍔",
+      "wikiTitle": "Burger_King",
+      "blurb": "When Burger King tried to open in Australia in 1971, the name was already trademarked. So down under, it's Hungry Jack's — same menu, same crown, different sign.",
+      "story": "A local takeaway shop in Adelaide owned the Burger King trademark in Australia. The US company gave its Australian franchisee, Jack Cowin, a list of pre-approved alternatives; he chose Hungry Jack — the name of a Pillsbury pancake mix the parent company also owned. Decades later, the trademark lapsed briefly and Burger King tried to open directly — only to lose the ensuing lawsuit.",
+      "names": [
+        { "name": "Hungry Jack's", "color": "#f59e0b", "wikiTitle": "Hungry_Jack's", "countries": ["AUS"] },
+        { "name": "Burger King", "color": "#dc2626", "wikiTitle": "Burger_King", "countries": ["USA","CAN","MEX","BRA","ARG","TUR","GBR","IRL","DEU","FRA","ITA","ESP","NLD","BEL","POL","CHE","AUT","PRT","SWE","DNK","NOR","FIN","CZE","ROU","HUN","BGR","GRC","RUS","UKR","JPN","KOR","CHN","IND","IDN","PHL","THA","VNM","MYS","SGP","SAU","ARE","EGY","MAR","ZAF","NZL"] }
+      ]
+    },
+    {
+      "slug": "opel-vauxhall",
+      "title": "Opel / Vauxhall",
+      "product": "Car brand",
+      "parent": "Stellantis",
+      "symbol": "⚡",
+      "wikiTitle": "Opel",
+      "blurb": "The same cars off the same production line — but in the UK they wear the Vauxhall griffin badge. Elsewhere in Europe, the Opel lightning bolt.",
+      "story": "General Motors bought Vauxhall Motors in 1925 and Adam Opel AG in 1929, then ran them as twin European brands for nearly a century. Both built the same platforms; only the badge and grille differed. When Stellantis acquired both in 2021, the twin-brand arrangement continued — Vauxhall for Britain, Opel for the continent.",
+      "names": [
+        { "name": "Vauxhall", "color": "#dc2626", "wikiTitle": "Vauxhall_Motors", "countries": ["GBR"] },
+        { "name": "Opel", "color": "#facc15", "wikiTitle": "Opel", "countries": ["DEU","FRA","ITA","ESP","PRT","NLD","BEL","LUX","AUT","CHE","POL","CZE","SVK","HUN","ROU","BGR","HRV","SVN","GRC","IRL","TUR","SWE","NOR","DNK","FIN","EST","LVA","LTU","RUS","UKR"] }
+      ]
+    },
+    {
+      "slug": "lays",
+      "title": "Lay's Family",
+      "product": "Potato chips",
+      "parent": "PepsiCo / Frito-Lay",
+      "symbol": "🥔",
+      "wikiTitle": "Lay's",
+      "blurb": "The same sunny logo worldwide… except when it's a different name entirely. Walkers in Britain, Smith's in Australia, Sabritas in Mexico, Margarita in Venezuela.",
+      "story": "PepsiCo acquired local chip brands over decades — Walkers (UK, 1989), Smith's (Australia, 1998), Sabritas (Mexico, 1966), Margarita (Venezuela, 1980s). Each kept its homegrown name while quietly adopting the Lay's sun-logo framework. In Russia and Eastern Europe the brand moved fully to Lay's in the 2000s.",
+      "names": [
+        { "name": "Walkers", "color": "#2563eb", "wikiTitle": "Walkers_(snack_foods)", "countries": ["GBR","IRL"] },
+        { "name": "Smith's", "color": "#f97316", "wikiTitle": "Smith's_Snackfood_Company", "countries": ["AUS"] },
+        { "name": "Sabritas", "color": "#dc2626", "wikiTitle": "Sabritas", "countries": ["MEX"] },
+        { "name": "Margarita", "color": "#10b981", "wikiTitle": "Lay's", "countries": ["VEN"] },
+        { "name": "Chipsy", "color": "#a855f7", "wikiTitle": "Lay's", "countries": ["EGY"] },
+        { "name": "Tapuchips", "color": "#06b6d4", "wikiTitle": "Lay's", "countries": ["ISR"] },
+        { "name": "Poca", "color": "#ec4899", "wikiTitle": "Lay's", "countries": ["VNM","THA"] },
+        { "name": "Lay's", "color": "#eab308", "wikiTitle": "Lay's", "countries": ["USA","CAN","BRA","ARG","CHL","COL","PER","TUR","DEU","FRA","ITA","ESP","NLD","BEL","POL","RUS","UKR","CZE","HUN","ROU","BGR","GRC","PRT","AUT","CHE","SWE","NOR","DNK","FIN","IND","PAK","CHN","JPN","KOR","IDN","PHL","MYS","SGP","SAU","ARE","ZAF","MAR"] }
+      ]
+    }
+  ]
+}

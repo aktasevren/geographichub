@@ -1,0 +1,14 @@
+{
+  "wars": [
+    {
+      "slug": "turkish-independence",
+      "name": "Turkish War of Independence",
+      "nameTr": "Kurtuluş Savaşı",
+      "startYear": 1919,
+      "endYear": 1923,
+      "eventCount": 17,
+      "blurb": "The military and political campaign that established the Republic of Türkiye after the partition of the Ottoman Empire. From the landing at Samsun in May 1919 to the Treaty of Lausanne in July 1923.",
+      "blurbTr": "Osmanlı'nın paylaşılmasının ardından Türkiye Cumhuriyeti'nin kuruluşuna giden askeri ve siyasi mücadele. 1919 Mayıs'ında Samsun'a çıkıştan 1923 Temmuz'unda Lozan Antlaşması'na kadar."
+    }
+  ]
+}
