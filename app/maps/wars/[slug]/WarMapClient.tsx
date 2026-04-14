@@ -8,6 +8,8 @@ import { LocaleToggle, useLocale } from "@/components/LocaleProvider";
 import {
   KIND_META,
   SIDE_META,
+  kindLabel,
+  sideLabel,
   type War,
   type WarEvent,
   formatFuzzyDate,
@@ -169,7 +171,9 @@ export default function WarMapClient({ war }: { war: War }) {
     const e: WarEvent = d._e;
     const active = activeId === e.id || tourIdx !== null && eventsSorted[tourIdx!]?.id === e.id;
     const m = KIND_META[e.kind];
+    const title = locale === "tr" && e.nameTr ? e.nameTr : e.name;
     const el = document.createElement("div");
+    el.title = title;
     el.innerHTML = `
       <div style="width:40px;height:40px;transform:translate(-50%,-50%);pointer-events:auto;cursor:pointer;">
         ${active ? `<div style="position:absolute;inset:-8px;border-radius:50%;background:${m.color}33;animation:warPulse 1.6s ease-out infinite"></div>` : ""}
@@ -320,19 +324,19 @@ export default function WarMapClient({ war }: { war: War }) {
                     <span
                       className="inline-flex items-center justify-center w-6 h-6 rounded-full text-[13px] flex-shrink-0 mt-0.5"
                       style={{ background: m.color }}
-                      aria-label={m.label}
+                      aria-label={kindLabel(e.kind, locale)}
                     >
                       {m.icon}
                     </span>
                     <div className="min-w-0 flex-1">
                       <div className="text-[13px] text-white/90 leading-tight">
-                        {e.name}
+                        {locale === "tr" && e.nameTr ? e.nameTr : e.name}
                       </div>
                       <div className="font-mono text-[10px] text-white/45 uppercase tracking-[0.12em] mt-0.5">
                         {formatFuzzyDate(e.date)}
                         {e.dateEnd && ` – ${formatFuzzyDate(e.dateEnd)}`}
                         {" · "}
-                        {m.label}
+                        {kindLabel(e.kind, locale)}
                       </div>
                     </div>
                   </button>
@@ -408,7 +412,7 @@ export default function WarMapClient({ war }: { war: War }) {
               background: `${SIDE_META[activeEvent.side].color}22`,
             }}
           >
-            {SIDE_META[activeEvent.side].label}
+            {sideLabel(activeEvent.side, locale)}
           </div>
 
           <p className="text-[14px] leading-relaxed text-white/85 mb-4">
@@ -514,7 +518,7 @@ export default function WarMapClient({ war }: { war: War }) {
                   >
                     {m.icon}
                   </span>
-                  <span className="text-[12px] text-white/85">{m.label}</span>
+                  <span className="text-[12px] text-white/85">{kindLabel(k as any, locale)}</span>
                 </div>
               ))}
           </div>
