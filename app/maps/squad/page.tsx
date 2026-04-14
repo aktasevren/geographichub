@@ -526,14 +526,16 @@ export default function SquadPage() {
   useEffect(() => {
     if (!dragging) return;
     const onMove = (e: MouseEvent) => {
-      if (!dragStart.current || !containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const dx = (e.clientX - dragStart.current.x) / rect.width / zoom.scale;
-      const dy = (e.clientY - dragStart.current.y) / rect.height / zoom.scale;
+      const ds = dragStart.current;
+      const el = containerRef.current;
+      if (!ds || !el) return;
+      const rect = el.getBoundingClientRect();
+      const dx = (e.clientX - ds.x) / rect.width / zoom.scale;
+      const dy = (e.clientY - ds.y) / rect.height / zoom.scale;
       setZoom((z) => ({
         ...z,
-        cx: Math.max(0, Math.min(1, dragStart.current!.cx - dx)),
-        cy: Math.max(0, Math.min(1, dragStart.current!.cy - dy)),
+        cx: Math.max(0, Math.min(1, ds.cx - dx)),
+        cy: Math.max(0, Math.min(1, ds.cy - dy)),
       }));
     };
     const onUp = () => {
@@ -685,225 +687,265 @@ export default function SquadPage() {
 
       {team && !loading && players.length > 0 && (
         <section className="px-5 md:px-10 pb-12">
-          <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5">
-            <div className="md:col-span-8">
-              <div className="mb-3 flex items-center gap-3">
-                {team.thumbnail && (
-                  <span className="w-14 h-14 rounded-lg bg-white/95 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={team.thumbnail}
-                      alt=""
-                      className="w-full h-full object-contain p-1"
-                    />
-                  </span>
-                )}
-                <div className="min-w-0">
-                  <div className="font-serif text-2xl md:text-3xl leading-tight">
-                    {team.title}
-                  </div>
-                  <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--muted)] mt-1">
-                    {players.length} {locale === "tr" ? "oyuncu" : "players"}
-                    {manager && (
-                      <>
-                        {" · "}
-                        {locale === "tr" ? "TD" : "Manager"}:{" "}
-                        <span className="text-[var(--text-2)]">{manager}</span>
-                      </>
-                    )}
-                    {" · "}
-                    <a
-                      href={`${WP}/wiki/${encodeURIComponent(team.key)}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-[var(--accent)]"
-                    >
-                      Wikipedia ↗
-                    </a>
-                  </div>
+          <div className="max-w-[1500px] mx-auto">
+            {/* Team banner */}
+            <div className="mb-4 flex items-center gap-4 flex-wrap">
+              {team.thumbnail && (
+                <span className="w-16 h-16 rounded-lg bg-white/95 flex items-center justify-center overflow-hidden flex-shrink-0 ring-1 ring-emerald-500/30">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={team.thumbnail}
+                    alt=""
+                    className="w-full h-full object-contain p-1"
+                  />
+                </span>
+              )}
+              <div className="min-w-0 flex-1">
+                <div className="font-serif text-2xl md:text-4xl leading-tight">
+                  {team.title}
+                </div>
+                <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[var(--muted)] mt-1.5">
+                  {players.length} {locale === "tr" ? "oyuncu" : "players"}
+                  {" · "}
+                  {byNat.length} {locale === "tr" ? "ülke" : "countries"}
+                  {manager && (
+                    <>
+                      {" · "}
+                      {locale === "tr" ? "TD" : "Manager"}:{" "}
+                      <span className="text-[var(--text-2)] normal-case tracking-normal">
+                        {manager}
+                      </span>
+                    </>
+                  )}
+                  {" · "}
+                  <a
+                    href={`${WP}/wiki/${encodeURIComponent(team.key)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-[var(--accent)]"
+                  >
+                    Wikipedia ↗
+                  </a>
                 </div>
               </div>
+            </div>
 
-              <div
-                ref={containerRef}
-                className="rounded-xl border border-[var(--line-2)] bg-[#0a0a0c] overflow-hidden relative select-none"
-                style={{
-                  aspectRatio: "2 / 1",
-                  cursor: dragging ? "grabbing" : "grab",
-                }}
-                onMouseDown={(e) => {
-                  if ((e.target as HTMLElement).closest("button")) return;
-                  dragStart.current = {
-                    x: e.clientX,
-                    y: e.clientY,
-                    cx: zoom.cx,
-                    cy: zoom.cy,
-                  };
-                  setDragging(true);
-                }}
+            {/* Kim nereli? — country summary chips */}
+            <div className="mb-5">
+              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-2.5">
+                {locale === "tr" ? "§ Kim nereli?" : "§ Who's from where?"}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {byNat.map(([nat, list]) => {
+                  const c = resolveCountry(nat);
+                  return (
+                    <div
+                      key={nat}
+                      className="flex items-center gap-2 pl-2.5 pr-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/10 to-emerald-500/5 border border-emerald-500/30"
+                    >
+                      <span className="text-lg leading-none">
+                        {flagFor(c?.iso2 || null)}
+                      </span>
+                      <span className="font-serif text-[13px] md:text-[14px] text-[var(--text)]">
+                        {fifaLabel(nat)}
+                      </span>
+                      <span className="font-mono text-[10px] tabular-nums px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300">
+                        {list.length}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Map — full width, taller */}
+            <div
+              ref={containerRef}
+              className="rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-[#071912] via-[#0a0a0c] to-[#0e1a12] overflow-hidden relative select-none shadow-2xl"
+              style={{
+                height: "clamp(420px, 62vh, 720px)",
+                cursor: dragging ? "grabbing" : "grab",
+              }}
+              onMouseDown={(e) => {
+                if ((e.target as HTMLElement).closest("button")) return;
+                dragStart.current = {
+                  x: e.clientX,
+                  y: e.clientY,
+                  cx: zoom.cx,
+                  cy: zoom.cy,
+                };
+                setDragging(true);
+              }}
+            >
+              <svg
+                viewBox={`0 0 ${w} ${h}`}
+                width="100%"
+                height="100%"
+                preserveAspectRatio="xMidYMid slice"
               >
-                <svg
-                  viewBox={`0 0 ${w} ${h}`}
-                  width="100%"
-                  height="100%"
-                  preserveAspectRatio="xMidYMid meet"
+                <defs>
+                  <radialGradient id="oceanGrad" cx="50%" cy="50%" r="70%">
+                    <stop offset="0%" stopColor="#0a1b14" />
+                    <stop offset="100%" stopColor="#060a08" />
+                  </radialGradient>
+                  <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#34d399" stopOpacity="0.55" />
+                    <stop offset="100%" stopColor="#34d399" stopOpacity="0" />
+                  </radialGradient>
+                </defs>
+                <rect width={w} height={h} fill="url(#oceanGrad)" />
+                <g
+                  style={{
+                    transformOrigin: `${zoom.cx * w}px ${zoom.cy * h}px`,
+                    transform: `scale(${zoom.scale})`,
+                    transition: dragging ? "none" : "transform 400ms ease",
+                  }}
                 >
-                  <rect width={w} height={h} fill="#0e0f12" />
-                  <g
-                    style={{
-                      transformOrigin: `${zoom.cx * w}px ${zoom.cy * h}px`,
-                      transform: `scale(${zoom.scale})`,
-                      transition: dragging ? "none" : "transform 400ms ease",
-                    }}
-                  >
-                    {features.map((f, i) => {
-                      const ic3 = iso3Of(f);
-                      const isMember = ic3 && memberIso.has(ic3);
-                      const isHover =
-                        hoveredCountry === nameOf(f) && isMember;
-                      return (
-                        <path
-                          key={i}
-                          d={geomToPath(f.geometry, w, h)}
-                          fill={
-                            isMember
-                              ? isHover
-                                ? "rgba(52,211,153,0.8)"
-                                : "rgba(52,211,153,0.5)"
-                              : "rgba(255,255,255,0.05)"
-                          }
-                          stroke="rgba(255,255,255,0.15)"
-                          strokeWidth={0.4 / zoom.scale}
-                          onMouseEnter={() => setHoveredCountry(nameOf(f))}
-                          onMouseLeave={() => setHoveredCountry(null)}
-                        />
-                      );
-                    })}
-                    {pins.map((p) => (
+                  {features.map((f, i) => {
+                    const ic3 = iso3Of(f);
+                    const count = ic3
+                      ? pins.find((p) => p.hit.iso3 === ic3)?.players.length || 0
+                      : 0;
+                    const isMember = count > 0;
+                    const isHover =
+                      hoveredCountry === nameOf(f) && isMember;
+                    // Graduated fill based on player count
+                    let fill = "rgba(255,255,255,0.04)";
+                    if (isMember) {
+                      const intensity = Math.min(1, 0.35 + count * 0.12);
+                      fill = `rgba(52,211,153,${isHover ? Math.min(1, intensity + 0.25) : intensity})`;
+                    }
+                    return (
+                      <path
+                        key={i}
+                        d={geomToPath(f.geometry, w, h)}
+                        fill={fill}
+                        stroke={
+                          isMember
+                            ? "rgba(110,231,183,0.55)"
+                            : "rgba(255,255,255,0.10)"
+                        }
+                        strokeWidth={(isMember ? 0.6 : 0.35) / zoom.scale}
+                        onMouseEnter={() => setHoveredCountry(nameOf(f))}
+                        onMouseLeave={() => setHoveredCountry(null)}
+                      />
+                    );
+                  })}
+                  {pins.map((p) => {
+                    const r1 = (10 + p.players.length * 1.6) / zoom.scale + 3;
+                    const r2 = (5 + p.players.length * 0.8) / zoom.scale + 2.2;
+                    return (
                       <g key={p.key}>
+                        <circle cx={p.x} cy={p.y} r={r1 * 1.6} fill="url(#pinGlow)" />
                         <circle
                           cx={p.x}
                           cy={p.y}
-                          r={(7 + p.players.length * 1.2) / zoom.scale + 3}
+                          r={r1}
                           fill="#34d399"
-                          fillOpacity="0.3"
+                          fillOpacity="0.35"
                         />
                         <circle
                           cx={p.x}
                           cy={p.y}
-                          r={(4 + p.players.length * 0.6) / zoom.scale + 2}
-                          fill="#34d399"
+                          r={r2}
+                          fill="#10b981"
                           stroke="#064e3b"
-                          strokeWidth={0.8 / zoom.scale}
+                          strokeWidth={1 / zoom.scale}
                         />
                         <text
                           x={p.x}
-                          y={p.y + 2 / zoom.scale}
+                          y={p.y + 2.2 / zoom.scale}
                           textAnchor="middle"
-                          fontSize={9 / zoom.scale + 2}
-                          fill="#000"
-                          fontWeight="700"
+                          fontSize={10 / zoom.scale + 2}
+                          fill="#052e1b"
+                          fontWeight="800"
                           fontFamily="monospace"
                         >
                           {p.players.length}
                         </text>
                       </g>
-                    ))}
-                  </g>
-                </svg>
-
-                <div className="absolute right-2 top-2 flex flex-col gap-1 z-10">
-                  <button
-                    onClick={() =>
-                      setZoom((z) => ({ ...z, scale: Math.min(8, z.scale * 1.5) }))
-                    }
-                    className="w-8 h-8 rounded-full border border-white/20 bg-black/70 backdrop-blur text-white text-base"
-                  >
-                    +
-                  </button>
-                  <button
-                    onClick={() =>
-                      setZoom((z) => ({ ...z, scale: Math.max(1, z.scale / 1.5) }))
-                    }
-                    className="w-8 h-8 rounded-full border border-white/20 bg-black/70 backdrop-blur text-white text-base"
-                  >
-                    −
-                  </button>
-                  <button
-                    onClick={() => setZoom({ scale: 1, cx: 0.5, cy: 0.5 })}
-                    className="w-8 h-8 rounded-full border border-white/20 bg-black/70 backdrop-blur text-white text-[10px]"
-                  >
-                    ⟲
-                  </button>
-                </div>
-                <div className="absolute left-2 bottom-2 font-mono text-[9px] uppercase tracking-[0.2em] text-white/50 pointer-events-none">
-                  {locale === "tr"
-                    ? "sürükle · tekerlek = zoom"
-                    : "drag · wheel to zoom"}
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--muted)] mb-2">
-                  {locale === "tr" ? "Millilik dağılımı" : "By nationality"}
-                </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {byNat.map(([nat, list]) => {
-                    const c = resolveCountry(nat);
-                    return (
-                      <span
-                        key={nat}
-                        className="font-mono text-[11px] px-2.5 py-1 rounded-md border border-[var(--line-2)] bg-[var(--line)] flex items-center gap-1.5"
-                      >
-                        <span>{flagFor(c?.iso2 || null)}</span>
-                        <span>{fifaLabel(nat)}</span>
-                        <span className="text-emerald-500 tabular-nums">
-                          ×{list.length}
-                        </span>
-                      </span>
                     );
                   })}
-                </div>
+                </g>
+              </svg>
+
+              <div className="absolute right-3 top-3 flex flex-col gap-1.5 z-10">
+                <button
+                  onClick={() =>
+                    setZoom((z) => ({ ...z, scale: Math.min(8, z.scale * 1.5) }))
+                  }
+                  className="w-9 h-9 rounded-full border border-emerald-500/30 bg-black/70 backdrop-blur text-white hover:border-emerald-400 hover:bg-black/80 text-base"
+                  aria-label="Zoom in"
+                >
+                  +
+                </button>
+                <button
+                  onClick={() =>
+                    setZoom((z) => ({ ...z, scale: Math.max(1, z.scale / 1.5) }))
+                  }
+                  className="w-9 h-9 rounded-full border border-emerald-500/30 bg-black/70 backdrop-blur text-white hover:border-emerald-400 hover:bg-black/80 text-base"
+                  aria-label="Zoom out"
+                >
+                  −
+                </button>
+                <button
+                  onClick={() => setZoom({ scale: 1, cx: 0.5, cy: 0.5 })}
+                  className="w-9 h-9 rounded-full border border-emerald-500/30 bg-black/70 backdrop-blur text-white hover:border-emerald-400 text-[11px]"
+                  aria-label="Reset"
+                >
+                  ⟲
+                </button>
               </div>
+              <div className="absolute left-3 bottom-3 font-mono text-[9px] uppercase tracking-[0.22em] text-white/45 pointer-events-none">
+                {locale === "tr"
+                  ? "sürükle · tekerlek = zoom"
+                  : "drag · wheel to zoom"}
+              </div>
+              {hoveredCountry && (
+                <div className="absolute left-3 top-3 font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-300 bg-black/60 backdrop-blur px-2.5 py-1 rounded pointer-events-none">
+                  {hoveredCountry}
+                </div>
+              )}
             </div>
 
-            <aside className="md:col-span-4">
-              <div className="rounded-xl border border-[var(--line-2)] p-4 sticky top-4">
-                <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-[var(--muted)] mb-2">
-                  {locale === "tr" ? "Oyuncular" : "Players"} · {players.length}
-                </div>
-                <ul className="space-y-1 max-h-[70vh] overflow-auto pr-1">
-                  {players.map((p, i) => {
-                    const c = resolveCountry(p.nat);
-                    return (
-                      <li
-                        key={`${p.name}-${i}`}
-                        className="flex items-center gap-2.5 px-2 py-1.5 rounded hover:bg-[var(--line)]"
-                      >
-                        <span className="w-8 h-8 rounded-full bg-[var(--line)] flex-shrink-0 flex items-center justify-center font-mono text-[11px] tabular-nums text-[var(--muted)]">
-                          {p.no || "–"}
-                        </span>
-                        <div className="min-w-0 flex-1">
-                          <div className="flex items-center gap-1">
-                            <span className="text-[13px] text-[var(--text)] truncate">
-                              {p.name}
-                            </span>
-                            <span className="text-sm">{flagFor(c?.iso2 || null)}</span>
-                          </div>
-                          <div className="font-mono text-[10px] text-[var(--muted)] uppercase tracking-[0.12em]">
-                            {fifaLabel(p.nat)}
-                            {p.pos && ` · ${p.pos}`}
-                            {p.loan && (
-                              <span className="text-amber-500"> · {p.loan}</span>
-                            )}
-                          </div>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
+            {/* Player list — grid below map */}
+            <div className="mt-6">
+              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-3">
+                {locale === "tr" ? "§ Kadro" : "§ Squad"} · {players.length}
               </div>
-            </aside>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+                {players.map((p, i) => {
+                  const c = resolveCountry(p.nat);
+                  return (
+                    <li
+                      key={`${p.name}-${i}`}
+                      className="flex items-center gap-2.5 px-2.5 py-2 rounded-lg border border-[var(--line)] bg-[var(--line)]/40 hover:border-emerald-500/40 hover:bg-emerald-500/5 transition"
+                    >
+                      <span className="w-9 h-9 rounded-full bg-black/60 flex-shrink-0 flex items-center justify-center font-mono text-[12px] tabular-nums text-emerald-300 border border-emerald-500/20">
+                        {p.no || "–"}
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-[13px] text-[var(--text)] truncate font-serif">
+                            {p.name}
+                          </span>
+                          <span className="text-base leading-none">
+                            {flagFor(c?.iso2 || null)}
+                          </span>
+                        </div>
+                        <div className="font-mono text-[10px] text-[var(--muted)] uppercase tracking-[0.12em] truncate">
+                          {fifaLabel(p.nat)}
+                          {p.pos && ` · ${p.pos}`}
+                          {p.loan && (
+                            <span className="text-amber-500"> · {p.loan}</span>
+                          )}
+                        </div>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </section>
       )}
