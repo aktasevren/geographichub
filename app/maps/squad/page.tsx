@@ -7,42 +7,68 @@ import { LocaleToggle, useLocale } from "@/components/LocaleProvider";
 const COUNTRIES_URL =
   "https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@master/geojson/ne_110m_admin_0_countries.geojson";
 
-type TeamSuggestion = {
-  qid: string;
-  label: string;
-  description: string;
-  logo?: string;
+const TSDB = "https://www.thesportsdb.com/api/v1/json/3";
+
+type TeamHit = {
+  idTeam: string;
+  strTeam: string;
+  strLeague?: string | null;
+  strCountry?: string | null;
+  strSport?: string | null;
+  strBadge?: string | null;
+  strStadium?: string | null;
+  strManager?: string | null;
 };
 
-type Member = {
-  qid: string;
+type Player = {
+  idPlayer: string;
+  strPlayer: string;
+  strNationality: string | null;
+  strPosition: string | null;
+  strCutout: string | null;
+  strThumb: string | null;
+};
+
+type CountryHit = {
   name: string;
-  countryName: string;
-  countryIso2: string | null;
-  lat: number | null;
-  lng: number | null;
-  position?: string | null;
-  isCoach?: boolean;
-  image?: string | null;
-  startDate?: string | null;
+  iso2: string | null;
+  iso3: string | null;
+  lat: number;
+  lng: number;
 };
 
-type Team = {
-  qid: string;
-  name: string;
-  image?: string | null;
-  members: Member[];
+// Aliases between nationality strings and Natural Earth NAME
+const COUNTRY_ALIAS: Record<string, string> = {
+  "The Netherlands": "Netherlands",
+  "United States": "United States of America",
+  USA: "United States of America",
+  "United Kingdom": "United Kingdom",
+  England: "United Kingdom",
+  Scotland: "United Kingdom",
+  Wales: "United Kingdom",
+  "Northern Ireland": "United Kingdom",
+  "Czech Republic": "Czechia",
+  "Ivory Coast": "Ivory Coast",
+  "Cote d'Ivoire": "Ivory Coast",
+  "Cape Verde": "Cape Verde",
+  "DR Congo": "Democratic Republic of the Congo",
+  "Congo DR": "Democratic Republic of the Congo",
+  "North Macedonia": "North Macedonia",
+  "Bosnia-Herzegovina": "Bosnia and Herzegovina",
+  "Bosnia and Herzegovina": "Bosnia and Herzegovina",
+  "Trinidad and Tobago": "Trinidad and Tobago",
+  "Saint Lucia": "Saint Lucia",
 };
 
-function iso3(feat: any): string | null {
-  const p = feat?.properties || {};
-  return p.ADM0_A3 || p.ISO_A3 || p.ISO_A3_EH || p.SOV_A3 || null;
-}
 function iso2Of(feat: any): string | null {
   const p = feat?.properties || {};
   return p.ISO_A2_EH || p.ISO_A2 || p.WB_A2 || null;
 }
-function countryName(feat: any): string {
+function iso3Of(feat: any): string | null {
+  const p = feat?.properties || {};
+  return p.ADM0_A3 || p.ISO_A3 || p.ISO_A3_EH || p.SOV_A3 || null;
+}
+function nameOf(feat: any): string {
   const p = feat?.properties || {};
   return p.NAME || p.ADMIN || p.NAME_LONG || "—";
 }
@@ -58,6 +84,30 @@ function flagFor(iso2Code: string | null): string {
     return "🏳️";
   }
 }
+
+// Geometric centroid of a country feature for placing pins
+function geomCentroid(geom: any): [number, number] | null {
+  if (!geom) return null;
+  const rings: number[][][] =
+    geom.type === "Polygon"
+      ? geom.coordinates
+      : geom.type === "MultiPolygon"
+      ? geom.coordinates.flat()
+      : [];
+  let sx = 0,
+    sy = 0,
+    n = 0;
+  for (const r of rings) {
+    for (const pt of r) {
+      sx += pt[0];
+      sy += pt[1];
+      n++;
+    }
+  }
+  if (!n) return null;
+  return [sy / n, sx / n];
+}
+
 function project(lat: number, lng: number, w: number, h: number) {
   return [((lng + 180) / 360) * w, ((90 - lat) / 180) * h];
 }
@@ -85,8 +135,9 @@ function geomToPath(geom: any, w: number, h: number): string {
 export default function SquadPage() {
   const { t, locale } = useLocale();
   const [query, setQuery] = useState("");
-  const [suggestions, setSuggestions] = useState<TeamSuggestion[]>([]);
-  const [team, setTeam] = useState<Team | null>(null);
+  const [suggestions, setSuggestions] = useState<TeamHit[]>([]);
+  const [team, setTeam] = useState<TeamHit | null>(null);
+  const [players, setPlayers] = useState<Player[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [features, setFeatures] = useState<any[]>([]);
@@ -111,7 +162,7 @@ export default function SquadPage() {
     return () => window.removeEventListener("resize", onR);
   }, []);
 
-  // Autocomplete
+  // Autocomplete — TheSportsDB, soccer-only
   useEffect(() => {
     clearTimeout(searchTimer.current);
     if (!query.trim() || query.length < 2) {
@@ -121,207 +172,119 @@ export default function SquadPage() {
     searchTimer.current = setTimeout(async () => {
       try {
         const r = await fetch(
-          `https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(
-            query
-          )}&language=${locale === "tr" ? "tr" : "en"}&format=json&type=item&origin=*&limit=8`
+          `${TSDB}/searchteams.php?t=${encodeURIComponent(query)}`
         );
         const d = await r.json();
-        const base = (d.search || []).map((e: any) => ({
-          qid: e.id,
-          label: e.label,
-          description: e.description || "",
-        }));
-        setSuggestions(base);
-
-        // Fetch logos in parallel
-        if (base.length > 0) {
-          const ids = base.map((b: any) => b.qid).join("|");
-          try {
-            const er = await fetch(
-              `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${ids}&props=claims&format=json&origin=*`
-            );
-            const ed = await er.json();
-            const withLogos = base.map((b: any) => {
-              const ent = ed.entities?.[b.qid];
-              const c = ent?.claims || {};
-              // P154 = logo image, P18 = image (fallback)
-              const file =
-                c.P154?.[0]?.mainsnak?.datavalue?.value ||
-                c.P41?.[0]?.mainsnak?.datavalue?.value || // flag
-                c.P18?.[0]?.mainsnak?.datavalue?.value;
-              if (!file) return b;
-              return {
-                ...b,
-                logo: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(
-                  file
-                )}?width=64`,
-              };
-            });
-            setSuggestions(withLogos);
-          } catch {}
-        }
+        const teams: TeamHit[] = (d.teams || [])
+          .filter((t: any) => t.strSport === "Soccer")
+          .slice(0, 8)
+          .map((t: any) => ({
+            idTeam: t.idTeam,
+            strTeam: t.strTeam,
+            strLeague: t.strLeague,
+            strCountry: t.strCountry,
+            strSport: t.strSport,
+            strBadge: t.strBadge,
+            strStadium: t.strStadium,
+            strManager: t.strManager,
+          }));
+        setSuggestions(teams);
       } catch {}
-    }, 250);
-  }, [query, locale]);
+    }, 300);
+  }, [query]);
 
-  const pickTeam = async (qid: string, label: string, logo?: string) => {
-    setQuery(label);
+  const pickTeam = async (hit: TeamHit) => {
+    setQuery(hit.strTeam);
     setSuggestions([]);
     setLoading(true);
     setError(null);
-    setTeam(null);
+    setTeam(hit);
+    setPlayers([]);
     try {
-      // Simplified SPARQL — current players of the team
-      const sparql = `
-SELECT ?person ?personLabel ?country ?countryLabel ?iso2 ?coord ?positionLabel WHERE {
-  ?person p:P54 ?ps .
-  ?ps ps:P54 wd:${qid} .
-  FILTER NOT EXISTS { ?ps pq:P582 ?e }
-  OPTIONAL { ?person wdt:P413 ?position }
-  ?person wdt:P27 ?country .
-  OPTIONAL { ?country wdt:P297 ?iso2 }
-  OPTIONAL { ?country wdt:P625 ?coord }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "${locale === "tr" ? "tr,en" : "en,tr"}" . }
-}
-LIMIT 50`;
-
-      const ctrl = new AbortController();
-      const timeout = setTimeout(() => ctrl.abort(), 20000);
-      const r = await fetch("https://query.wikidata.org/sparql", {
-        method: "POST",
-        headers: {
-          Accept: "application/sparql-results+json",
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: "query=" + encodeURIComponent(sparql),
-        signal: ctrl.signal,
-      });
-      clearTimeout(timeout);
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const r = await fetch(`${TSDB}/lookup_all_players.php?id=${hit.idTeam}`);
       const d = await r.json();
-      const rows = d?.results?.bindings || [];
-
-      // Separately fetch the head coach (smaller query, less likely to timeout)
-      try {
-        const csp = `
-SELECT ?person ?personLabel ?country ?countryLabel ?iso2 ?coord WHERE {
-  wd:${qid} p:P286 ?cs .
-  ?cs ps:P286 ?person .
-  FILTER NOT EXISTS { ?cs pq:P582 ?e }
-  ?person wdt:P27 ?country .
-  OPTIONAL { ?country wdt:P297 ?iso2 }
-  OPTIONAL { ?country wdt:P625 ?coord }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "${locale === "tr" ? "tr,en" : "en,tr"}" . }
-}
-LIMIT 5`;
-        const cr = await fetch("https://query.wikidata.org/sparql", {
-          method: "POST",
-          headers: {
-            Accept: "application/sparql-results+json",
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: "query=" + encodeURIComponent(csp),
-        });
-        if (cr.ok) {
-          const cd = await cr.json();
-          (cd?.results?.bindings || []).forEach((row: any) => {
-            row.isCoachFlag = { value: "true" };
-          });
-          rows.push(...(cd?.results?.bindings || []));
-        }
-      } catch {}
-
-      // Dedupe by person
-      const byQid = new Map<string, Member>();
-      for (const row of rows) {
-        const pqid = row.person.value.split("/").pop() || "";
-        const coord = row.coord?.value as string | undefined;
-        let lat: number | null = null,
-          lng: number | null = null;
-        if (coord) {
-          const m = coord.match(/Point\(([-\d.]+) ([-\d.]+)\)/);
-          if (m) {
-            lng = parseFloat(m[1]);
-            lat = parseFloat(m[2]);
-          }
-        }
-        const isCoach = row.isCoachFlag?.value === "true";
-        const existing = byQid.get(pqid);
-        if (existing) {
-          // Prefer coach row over player row (or vice versa — we want both)
-          if (!existing.isCoach && isCoach) existing.isCoach = true;
-          continue;
-        }
-        byQid.set(pqid, {
-          qid: pqid,
-          name: row.personLabel?.value || pqid,
-          countryName: row.countryLabel?.value || "",
-          countryIso2: row.iso2?.value || null,
-          lat,
-          lng,
-          position: row.positionLabel?.value || null,
-          isCoach,
-          image: row.image?.value || null,
-          startDate: row.start?.value || null,
-        });
-      }
-      const members = Array.from(byQid.values());
-      if (members.length === 0) {
+      const list: Player[] = (d.player || []).map((p: any) => ({
+        idPlayer: p.idPlayer,
+        strPlayer: p.strPlayer,
+        strNationality: p.strNationality,
+        strPosition: p.strPosition,
+        strCutout: p.strCutout,
+        strThumb: p.strThumb,
+      }));
+      if (list.length === 0) {
         setError(
           locale === "tr"
-            ? "Bu takım için kadro bulunamadı (Wikidata'da kayıt yoksa)."
-            : "No squad found for this team (Wikidata has no current records)."
+            ? "Bu takım için kadro bulunamadı."
+            : "No squad found for this team."
         );
       }
-      setTeam({
-        qid,
-        name: label,
-        image: logo || null,
-        members,
-      });
-    } catch (e) {
+      setPlayers(list);
+    } catch {
       setError(
-        locale === "tr" ? "Veri alınamadı." : "Failed to fetch data."
+        locale === "tr" ? "Veri alınamadı." : "Failed to fetch squad."
       );
     } finally {
       setLoading(false);
     }
   };
 
-  const h = w * 0.5;
-
-  // Group members by country
-  const byCountry = useMemo(() => {
-    const m = new Map<string, Member[]>();
-    team?.members.forEach((mem) => {
-      const key = mem.countryName || "—";
-      if (!m.has(key)) m.set(key, []);
-      m.get(key)!.push(mem);
+  // Country lookup (by name) — returns centroid/iso
+  const countryIndex = useMemo(() => {
+    const m = new Map<string, CountryHit>();
+    features.forEach((f) => {
+      const nm = nameOf(f);
+      const c = geomCentroid(f.geometry);
+      if (!c) return;
+      const entry: CountryHit = {
+        name: nm,
+        iso2: iso2Of(f),
+        iso3: iso3Of(f),
+        lat: c[0],
+        lng: c[1],
+      };
+      m.set(nm.toLowerCase(), entry);
+      const p = f.properties || {};
+      if (p.NAME_LONG) m.set(String(p.NAME_LONG).toLowerCase(), entry);
+      if (p.ADMIN) m.set(String(p.ADMIN).toLowerCase(), entry);
     });
     return m;
-  }, [team]);
+  }, [features]);
 
-  // ISO country code -> list of members (for highlighting on map via iso2)
-  const memberIsoSet = useMemo(() => {
-    const s = new Set<string>();
-    team?.members.forEach((m) => {
-      if (m.countryIso2) s.add(m.countryIso2.toUpperCase());
-    });
-    return s;
-  }, [team]);
-
-  // Player pins with lat/lng
-  const pins = useMemo(() => {
+  function resolveCountry(nationality: string | null): CountryHit | null {
+    if (!nationality) return null;
+    const alias = COUNTRY_ALIAS[nationality] || nationality;
     return (
-      team?.members
-        .filter((m) => m.lat !== null && m.lng !== null)
-        .map((m) => ({
-          ...m,
-          x: ((m.lng! + 180) / 360) * w,
-          y: ((90 - m.lat!) / 180) * h,
-        })) || []
+      countryIndex.get(alias.toLowerCase()) ||
+      countryIndex.get(nationality.toLowerCase()) ||
+      null
     );
-  }, [team, w, h]);
+  }
+
+  // Pins — one per country nationality, clustered
+  const pins = useMemo(() => {
+    const byCountry = new Map<string, { hit: CountryHit; players: Player[] }>();
+    players.forEach((p) => {
+      const c = resolveCountry(p.strNationality);
+      if (!c) return;
+      const key = c.iso3 || c.name;
+      if (!byCountry.has(key)) byCountry.set(key, { hit: c, players: [] });
+      byCountry.get(key)!.players.push(p);
+    });
+    return Array.from(byCountry.entries()).map(([key, v]) => {
+      const [x, y] = project(v.hit.lat, v.hit.lng, w, h);
+      return { key, x, y, hit: v.hit, players: v.players };
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [players, countryIndex, w]);
+
+  // Country → player count (for map highlight)
+  const memberIso = useMemo(() => {
+    const s = new Set<string>();
+    pins.forEach((p) => p.hit.iso3 && s.add(p.hit.iso3));
+    return s;
+  }, [pins]);
+
+  const h = w * 0.5;
 
   useEffect(() => {
     if (!dragging) return;
@@ -348,8 +311,16 @@ LIMIT 5`;
     };
   }, [dragging, zoom.scale]);
 
-  const coach = team?.members.find((m) => m.isCoach);
-  const players = team?.members.filter((m) => !m.isCoach) || [];
+  // Country breakdown
+  const byNat = useMemo(() => {
+    const m = new Map<string, Player[]>();
+    players.forEach((p) => {
+      const n = p.strNationality || "?";
+      if (!m.has(n)) m.set(n, []);
+      m.get(n)!.push(p);
+    });
+    return Array.from(m.entries()).sort((a, b) => b[1].length - a[1].length);
+  }, [players]);
 
   return (
     <div className="min-h-screen grain">
@@ -376,7 +347,7 @@ LIMIT 5`;
       <section className="px-5 md:px-10 pt-8 md:pt-12 pb-4">
         <div className="max-w-[1200px] mx-auto">
           <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-3">
-            {locale === "tr" ? "§ Bir takım ara" : "§ Search a team"}
+            {locale === "tr" ? "§ Güncel kadro" : "§ Current squad"}
           </div>
           <h1 className="font-serif font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.98] tracking-tight">
             {locale === "tr" ? "Kadro" : "Squad"}{" "}
@@ -386,8 +357,8 @@ LIMIT 5`;
           </h1>
           <p className="mt-3 text-[14px] md:text-[16px] text-[var(--text-2)] max-w-xl">
             {locale === "tr"
-              ? "Bir takım ismi yaz — Fenerbahçe, Real Madrid, PSG. Oyuncuları ve teknik direktörü haritada memleketlerine göre gör."
-              : "Type a team name — Fenerbahçe, Real Madrid, PSG. See players and manager on a world map by their nationality."}
+              ? "Bir futbol takımı yaz — güncel kadro ve oyuncuların millilikleri dünya haritasında."
+              : "Type a football team — current squad and players' nationalities on a world map."}
           </p>
         </div>
       </section>
@@ -399,7 +370,7 @@ LIMIT 5`;
             onChange={(e) => setQuery(e.target.value)}
             placeholder={
               locale === "tr"
-                ? "Örn: Fenerbahçe, Galatasaray, Real Madrid…"
+                ? "Örn: Fenerbahçe, Real Madrid, Liverpool…"
                 : "e.g. Fenerbahçe, Real Madrid, Liverpool…"
             }
             className="w-full max-w-xl px-5 py-3 rounded-full border border-[var(--line-2)] bg-transparent text-[15px] focus:outline-none focus:border-[var(--accent)]"
@@ -408,34 +379,30 @@ LIMIT 5`;
             <div className="absolute z-20 top-full left-0 mt-2 max-w-xl w-full rounded-md border border-[var(--line-2)] bg-[var(--bg)] shadow-2xl max-h-[380px] overflow-auto">
               {suggestions.map((s) => (
                 <button
-                  key={s.qid}
-                  onClick={() => pickTeam(s.qid, s.label, s.logo)}
+                  key={s.idTeam}
+                  onClick={() => pickTeam(s)}
                   className="flex items-center gap-3 w-full text-left px-3 py-2.5 hover:bg-[var(--line)] transition border-b border-[var(--line)] last:border-b-0"
                 >
                   <span className="w-10 h-10 flex-shrink-0 rounded-md bg-white/90 flex items-center justify-center overflow-hidden">
-                    {s.logo ? (
+                    {s.strBadge ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={s.logo}
+                        src={s.strBadge}
                         alt=""
                         className="w-full h-full object-contain p-0.5"
                         loading="lazy"
                       />
                     ) : (
-                      <span className="text-[var(--muted)] font-mono text-[10px]">
-                        ⚽
-                      </span>
+                      <span className="text-[var(--muted)] text-sm">⚽</span>
                     )}
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="text-[14px] font-serif truncate">
-                      {s.label}
+                      {s.strTeam}
                     </div>
-                    {s.description && (
-                      <div className="text-[11px] text-[var(--muted)] line-clamp-1 mt-0.5">
-                        {s.description}
-                      </div>
-                    )}
+                    <div className="text-[11px] text-[var(--muted)] line-clamp-1 mt-0.5">
+                      {s.strLeague} · {s.strCountry}
+                    </div>
                   </div>
                 </button>
               ))}
@@ -455,17 +422,17 @@ LIMIT 5`;
         </div>
       )}
 
-      {team && !loading && (
+      {team && !loading && players.length > 0 && (
         <section className="px-5 md:px-10 pb-12">
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5">
             {/* Map */}
             <div className="md:col-span-8">
               <div className="mb-3 flex items-center gap-3">
-                {team.image && (
+                {team.strBadge && (
                   <span className="w-14 h-14 rounded-lg bg-white/95 flex items-center justify-center overflow-hidden flex-shrink-0">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={team.image}
+                      src={team.strBadge}
                       alt=""
                       className="w-full h-full object-contain p-1"
                     />
@@ -473,15 +440,18 @@ LIMIT 5`;
                 )}
                 <div className="min-w-0">
                   <div className="font-serif text-2xl md:text-3xl leading-tight">
-                    {team.name}
+                    {team.strTeam}
                   </div>
                   <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--muted)] mt-1">
-                    {players.length} {locale === "tr" ? "oyuncu" : "players"}
-                    {coach && (
+                    {team.strLeague} · {team.strCountry} · {players.length}{" "}
+                    {locale === "tr" ? "oyuncu" : "players"}
+                    {team.strManager && (
                       <>
                         {" · "}
                         {locale === "tr" ? "TD" : "Manager"}:{" "}
-                        <span className="text-[var(--text-2)]">{coach.name}</span>
+                        <span className="text-[var(--text-2)]">
+                          {team.strManager}
+                        </span>
                       </>
                     )}
                   </div>
@@ -521,11 +491,10 @@ LIMIT 5`;
                     }}
                   >
                     {features.map((f, i) => {
-                      const ic2 = iso2Of(f);
-                      const isMember =
-                        ic2 && memberIsoSet.has(ic2.toUpperCase());
+                      const ic3 = iso3Of(f);
+                      const isMember = ic3 && memberIso.has(ic3);
                       const isHover =
-                        hoveredCountry === countryName(f) && isMember;
+                        hoveredCountry === nameOf(f) && isMember;
                       return (
                         <path
                           key={i}
@@ -533,41 +502,51 @@ LIMIT 5`;
                           fill={
                             isMember
                               ? isHover
-                                ? "rgba(52,211,153,0.75)"
+                                ? "rgba(52,211,153,0.8)"
                                 : "rgba(52,211,153,0.5)"
                               : "rgba(255,255,255,0.05)"
                           }
                           stroke="rgba(255,255,255,0.15)"
                           strokeWidth={0.4 / zoom.scale}
-                          onMouseEnter={() => setHoveredCountry(countryName(f))}
+                          onMouseEnter={() => setHoveredCountry(nameOf(f))}
                           onMouseLeave={() => setHoveredCountry(null)}
                         />
                       );
                     })}
-                    {/* Player pins */}
-                    {pins.map((p, i) => (
-                      <g key={`${p.qid}-${i}`}>
+                    {pins.map((p) => (
+                      <g key={p.key}>
                         <circle
                           cx={p.x}
                           cy={p.y}
-                          r={8 / zoom.scale + 4}
-                          fill={p.isCoach ? "#fbbf24" : "#34d399"}
+                          r={(7 + p.players.length * 1.2) / zoom.scale + 3}
+                          fill="#34d399"
                           fillOpacity="0.3"
                         />
                         <circle
                           cx={p.x}
                           cy={p.y}
-                          r={4 / zoom.scale + 3}
-                          fill={p.isCoach ? "#fbbf24" : "#34d399"}
-                          stroke="#000"
+                          r={(4 + p.players.length * 0.6) / zoom.scale + 2}
+                          fill="#34d399"
+                          stroke="#064e3b"
                           strokeWidth={0.8 / zoom.scale}
                         />
+                        <text
+                          x={p.x}
+                          y={p.y + 2 / zoom.scale}
+                          textAnchor="middle"
+                          fontSize={9 / zoom.scale + 2}
+                          fill="#000"
+                          fontWeight="700"
+                          fontFamily="monospace"
+                        >
+                          {p.players.length}
+                        </text>
                       </g>
                     ))}
                   </g>
                 </svg>
 
-                <div className="absolute right-2 top-2 flex flex-col gap-1">
+                <div className="absolute right-2 top-2 flex flex-col gap-1 z-10">
                   <button
                     onClick={() =>
                       setZoom((z) => ({ ...z, scale: Math.min(6, z.scale * 1.5) }))
@@ -593,29 +572,26 @@ LIMIT 5`;
                 </div>
               </div>
 
-              {/* Country breakdown */}
               <div className="mt-4">
                 <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--muted)] mb-2">
                   {locale === "tr" ? "Millilik dağılımı" : "By nationality"}
                 </div>
                 <div className="flex flex-wrap gap-1.5">
-                  {Array.from(byCountry.entries())
-                    .sort((a, b) => b[1].length - a[1].length)
-                    .map(([cn, list]) => {
-                      const iso2 = list[0]?.countryIso2;
-                      return (
-                        <span
-                          key={cn}
-                          className="font-mono text-[11px] px-2.5 py-1 rounded-md border border-[var(--line-2)] bg-[var(--line)] flex items-center gap-1.5"
-                        >
-                          <span>{flagFor(iso2)}</span>
-                          <span>{cn}</span>
-                          <span className="text-emerald-500 tabular-nums">
-                            ×{list.length}
-                          </span>
+                  {byNat.map(([nat, list]) => {
+                    const c = resolveCountry(nat);
+                    return (
+                      <span
+                        key={nat}
+                        className="font-mono text-[11px] px-2.5 py-1 rounded-md border border-[var(--line-2)] bg-[var(--line)] flex items-center gap-1.5"
+                      >
+                        <span>{flagFor(c?.iso2 || null)}</span>
+                        <span>{nat}</span>
+                        <span className="text-emerald-500 tabular-nums">
+                          ×{list.length}
                         </span>
-                      );
-                    })}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -623,48 +599,45 @@ LIMIT 5`;
             {/* Squad list */}
             <aside className="md:col-span-4">
               <div className="rounded-xl border border-[var(--line-2)] p-4 sticky top-4">
-                {coach && (
-                  <>
-                    <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-[var(--muted)] mb-2">
-                      {locale === "tr" ? "Teknik direktör" : "Manager"}
-                    </div>
-                    <div className="flex items-center gap-2.5 py-2 mb-3 border-b border-[var(--line)]">
-                      <span
-                        className="w-8 h-8 rounded-full flex items-center justify-center text-lg"
-                        style={{ background: "#fbbf24" }}
-                      >
-                        {flagFor(coach.countryIso2)}
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <div className="text-[14px] font-serif">{coach.name}</div>
-                        <div className="font-mono text-[10px] text-[var(--muted)] uppercase tracking-[0.15em]">
-                          {coach.countryName}
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                )}
                 <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-[var(--muted)] mb-2">
                   {locale === "tr" ? "Oyuncular" : "Players"} · {players.length}
                 </div>
-                <ul className="space-y-1 max-h-[60vh] overflow-auto pr-1">
-                  {players.map((p) => (
-                    <li
-                      key={p.qid}
-                      className="flex items-center gap-2 px-2 py-1.5 rounded hover:bg-[var(--line)]"
-                    >
-                      <span className="text-lg">{flagFor(p.countryIso2)}</span>
-                      <div className="min-w-0 flex-1">
-                        <div className="text-[13px] text-[var(--text)] truncate">
-                          {p.name}
+                <ul className="space-y-1 max-h-[70vh] overflow-auto pr-1">
+                  {players.map((p) => {
+                    const c = resolveCountry(p.strNationality);
+                    return (
+                      <li
+                        key={p.idPlayer}
+                        className="flex items-center gap-2.5 px-2 py-1.5 rounded hover:bg-[var(--line)]"
+                      >
+                        {p.strCutout ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={p.strCutout}
+                            alt=""
+                            className="w-8 h-8 rounded-full object-cover bg-[var(--line)] flex-shrink-0"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <span className="w-8 h-8 rounded-full bg-[var(--line)] flex-shrink-0 flex items-center justify-center text-[14px]">
+                            👤
+                          </span>
+                        )}
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-1">
+                            <span className="text-[13px] text-[var(--text)] truncate">
+                              {p.strPlayer}
+                            </span>
+                            <span className="text-sm">{flagFor(c?.iso2 || null)}</span>
+                          </div>
+                          <div className="font-mono text-[10px] text-[var(--muted)] uppercase tracking-[0.12em]">
+                            {p.strNationality}
+                            {p.strPosition && ` · ${p.strPosition}`}
+                          </div>
                         </div>
-                        <div className="font-mono text-[10px] text-[var(--muted)] uppercase tracking-[0.15em]">
-                          {p.countryName}
-                          {p.position && ` · ${p.position}`}
-                        </div>
-                      </div>
-                    </li>
-                  ))}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </aside>
@@ -679,23 +652,26 @@ LIMIT 5`;
               <div className="text-4xl mb-3">⚽</div>
               <p className="font-serif text-lg md:text-xl text-[var(--text-2)] italic max-w-xl mx-auto">
                 {locale === "tr"
-                  ? "Bir takım ismi yaz — Fenerbahçe, Real Madrid, Bayern München…"
-                  : "Type a team name — Fenerbahçe, Real Madrid, Bayern München…"}
+                  ? "Bir futbol takımı yaz — Fenerbahçe, Real Madrid, Bayern, Arsenal…"
+                  : "Type a football team — Fenerbahçe, Real Madrid, Bayern, Arsenal…"}
               </p>
               <div className="mt-6 flex flex-wrap gap-2 justify-center">
                 {[
-                  { label: "Fenerbahçe", q: "Fenerbahçe" },
-                  { label: "Galatasaray", q: "Galatasaray" },
-                  { label: "Real Madrid", q: "Real Madrid" },
-                  { label: "Barcelona", q: "FC Barcelona" },
-                  { label: "Liverpool", q: "Liverpool FC" },
-                ].map((t) => (
+                  "Fenerbahce",
+                  "Galatasaray",
+                  "Real Madrid",
+                  "Barcelona",
+                  "Bayern",
+                  "Arsenal",
+                  "Liverpool",
+                  "PSG",
+                ].map((q) => (
                   <button
-                    key={t.q}
-                    onClick={() => setQuery(t.q)}
+                    key={q}
+                    onClick={() => setQuery(q)}
                     className="px-3 py-1.5 rounded-full border border-[var(--line-2)] text-[12px] font-mono uppercase tracking-[0.15em] hover:border-[var(--accent)] hover:text-[var(--accent)]"
                   >
-                    {t.label}
+                    {q}
                   </button>
                 ))}
               </div>
@@ -707,7 +683,7 @@ LIMIT 5`;
       <footer className="px-5 md:px-10 py-6 hair-t flex flex-wrap justify-between gap-4 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">
         <span>{t("footer.copyright", { year: new Date().getFullYear() })}</span>
         <span className="hidden md:inline">
-          {locale === "tr" ? "Veri · Wikidata" : "Data · Wikidata"}
+          {locale === "tr" ? "Veri · TheSportsDB" : "Data · TheSportsDB"}
         </span>
       </footer>
     </div>
