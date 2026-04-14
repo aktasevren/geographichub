@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/maps/wars/russo-ukrainian-war", priority: 0.8, changeFrequency: "weekly" },
     { url: "/maps/alliances", priority: 0.85, changeFrequency: "monthly" },
     { url: "/maps/anthems", priority: 0.85, changeFrequency: "monthly" },
+    { url: "/maps/squad", priority: 0.85, changeFrequency: "monthly" },
     { url: "/legal/trademarks", priority: 0.3, changeFrequency: "monthly" },
     { url: "/about", priority: 0.5, changeFrequency: "monthly" },
     { url: "/backlog", priority: 0.4, changeFrequency: "weekly" },

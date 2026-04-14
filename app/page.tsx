@@ -45,9 +45,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 md:px-10 pb-12">
+      <section className="px-5 md:px-10 pb-5">
         <div className="max-w-[1200px] mx-auto">
           <AnthemsTile t={t} locale={locale} />
+        </div>
+      </section>
+
+      <section className="px-5 md:px-10 pb-12">
+        <div className="max-w-[1200px] mx-auto">
+          <SquadTile t={t} locale={locale} />
         </div>
       </section>
 
@@ -429,6 +435,142 @@ function AnthemsTile({
         </div>
       </div>
     </Link>
+  );
+}
+
+function SquadTile({
+  t,
+  locale,
+}: {
+  t: (k: any) => string;
+  locale: string;
+}) {
+  const title = t("home.squadTitle");
+  const blurb = t("home.squadBlurb");
+  const parts = [t("home.squadTag1"), t("home.squadTag2")];
+  return (
+    <Link
+      href="/maps/squad"
+      className="group relative overflow-hidden rounded-2xl md:rounded-3xl border border-[var(--line-2)] hover:border-white/40 transition-all duration-500 block min-h-[280px] md:min-h-[320px]"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-[#052010] via-[#073a1e] to-[#0a5a30]" />
+      <div
+        className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 25% 35%, rgba(52,211,153,0.35), transparent 55%), radial-gradient(circle at 80% 65%, rgba(251,191,36,0.25), transparent 55%)",
+        }}
+      />
+      <SquadBigPreview />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/30 to-transparent md:bg-gradient-to-t md:from-black/80 md:via-black/10 md:to-transparent" />
+
+      <div className="absolute inset-0 p-5 md:p-7 lg:p-9 flex flex-col justify-between text-white">
+        <div className="flex flex-wrap gap-2">
+          {parts.map((p) => (
+            <span
+              key={p}
+              className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full border border-[#34d399]/55 bg-[#34d399]/10 text-[#34d399] backdrop-blur-sm"
+            >
+              {p}
+            </span>
+          ))}
+        </div>
+        <div className="max-w-[640px]">
+          <h2 className="font-serif leading-[0.95] tracking-tight text-4xl md:text-5xl lg:text-[64px]">
+            {title}
+          </h2>
+          <p className="mt-3 md:mt-4 text-white/80 text-[14px] md:text-[15px] leading-relaxed max-w-[520px]">
+            {blurb}
+          </p>
+          <div className="mt-5 md:mt-6">
+            <span className="inline-flex items-center gap-3 md:gap-4 px-5 md:px-7 py-3 md:py-3.5 rounded-full bg-[#34d399] text-black font-mono text-[12px] md:text-[14px] uppercase tracking-[0.22em] font-semibold group-hover:gap-5 transition-all shadow-lg shadow-black/40">
+              {t("tile.enter")}
+              <span className="inline-block h-px w-6 md:w-8 bg-black/60 group-hover:w-12 transition-all" />
+              <span className="text-lg">→</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function SquadBigPreview() {
+  // Football pitch + 4-3-3 formation
+  return (
+    <svg
+      className="absolute -right-10 top-1/2 -translate-y-1/2 opacity-80 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+      width="640"
+      height="640"
+      viewBox="0 0 400 600"
+      aria-hidden
+      preserveAspectRatio="xMidYMid slice"
+    >
+      <defs>
+        <linearGradient id="pitch" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#0a5a30" />
+          <stop offset="50%" stopColor="#0d6b3a" />
+          <stop offset="100%" stopColor="#0a5a30" />
+        </linearGradient>
+        <pattern id="grass" patternUnits="userSpaceOnUse" width="40" height="40">
+          <rect width="40" height="40" fill="#0a5a30" />
+          <rect width="40" height="20" fill="#0b6434" />
+        </pattern>
+      </defs>
+      {/* Pitch */}
+      <rect x="50" y="60" width="300" height="480" fill="url(#grass)" stroke="#e7f7ee" strokeWidth="2.5" />
+      {/* Center line */}
+      <line x1="50" y1="300" x2="350" y2="300" stroke="#e7f7ee" strokeWidth="2" />
+      {/* Center circle */}
+      <circle cx="200" cy="300" r="50" fill="none" stroke="#e7f7ee" strokeWidth="2" />
+      <circle cx="200" cy="300" r="3" fill="#e7f7ee" />
+      {/* Penalty boxes */}
+      <rect x="120" y="60" width="160" height="60" fill="none" stroke="#e7f7ee" strokeWidth="2" />
+      <rect x="160" y="60" width="80" height="22" fill="none" stroke="#e7f7ee" strokeWidth="2" />
+      <rect x="120" y="480" width="160" height="60" fill="none" stroke="#e7f7ee" strokeWidth="2" />
+      <rect x="160" y="518" width="80" height="22" fill="none" stroke="#e7f7ee" strokeWidth="2" />
+      {/* Goal lines */}
+      <rect x="175" y="54" width="50" height="8" fill="#e7f7ee" opacity="0.6" />
+      <rect x="175" y="538" width="50" height="8" fill="#e7f7ee" opacity="0.6" />
+
+      {/* Players — 4-3-3 formation with flags */}
+      {[
+        // GK
+        { x: 200, y: 100, flag: "🇹🇷", n: "1" },
+        // Defense
+        { x: 95, y: 195, flag: "🇧🇷", n: "4" },
+        { x: 155, y: 205, flag: "🇪🇸", n: "3" },
+        { x: 245, y: 205, flag: "🇷🇸", n: "5" },
+        { x: 305, y: 195, flag: "🇹🇷", n: "2" },
+        // Midfield
+        { x: 125, y: 320, flag: "🇵🇹", n: "8" },
+        { x: 200, y: 340, flag: "🇹🇷", n: "6" },
+        { x: 275, y: 320, flag: "🇫🇷", n: "10" },
+        // Forward
+        { x: 110, y: 450, flag: "🇹🇷", n: "11" },
+        { x: 200, y: 470, flag: "🇳🇬", n: "9" },
+        { x: 290, y: 450, flag: "🇦🇷", n: "7" },
+      ].map((p, i) => (
+        <g key={i}>
+          <circle cx={p.x} cy={p.y} r="22" fill="white" stroke="#0a5a30" strokeWidth="2" />
+          <text x={p.x} y={p.y + 1} textAnchor="middle" dominantBaseline="middle" fontSize="20">
+            {p.flag}
+          </text>
+          <circle cx={p.x + 16} cy={p.y - 16} r="10" fill="#fbbf24" stroke="#000" strokeWidth="0.8" />
+          <text x={p.x + 16} y={p.y - 13} textAnchor="middle" fontSize="11" fontWeight="700" fill="#000">
+            {p.n}
+          </text>
+        </g>
+      ))}
+
+      {/* Manager badge */}
+      <g transform="translate(200 580)">
+        <rect x="-36" y="-15" width="72" height="26" rx="13" fill="#000" fillOpacity="0.7" stroke="#34d399" strokeWidth="1.5" />
+        <text y="3" textAnchor="middle" fontSize="11" fontFamily="monospace" fill="#34d399" fontWeight="700">
+          MANAGER
+        </text>
+      </g>
+    </svg>
   );
 }
 

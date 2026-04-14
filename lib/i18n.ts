@@ -185,6 +185,10 @@ export const DICT = {
     "home.anthemsBlurb": "Bir ülkeye tıkla, marşını dinle ve hikâyesini oku. 20 ülke küratörlü.",
     "home.anthemsTag1": "Müzik",
     "home.anthemsTag2": "Kültür",
+    "home.squadTitle": "Kadro Haritası",
+    "home.squadBlurb": "Bir takım ismi yaz — Fenerbahçe, Real Madrid, Manchester United. İlk 11'i ve teknik direktörü haritada nereli olduklarıyla gör.",
+    "home.squadTag1": "Futbol",
+    "home.squadTag2": "Harita",
   },
 
   en: {
@@ -359,6 +363,10 @@ export const DICT = {
     "home.anthemsBlurb": "Click a country, hear its anthem, read its story. 20 countries curated.",
     "home.anthemsTag1": "Music",
     "home.anthemsTag2": "Culture",
+    "home.squadTitle": "Squad Map",
+    "home.squadBlurb": "Type a team name — Fenerbahçe, Real Madrid, Manchester United. See the starting XI and manager on a map by their nationality.",
+    "home.squadTag1": "Football",
+    "home.squadTag2": "Map",
   },
 } as const;
 
