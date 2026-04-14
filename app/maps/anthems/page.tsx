@@ -65,6 +65,37 @@ function geomCentroid(geom: any): [number, number] | null {
   return [sy / n, sx / n]; // [lat, lng]
 }
 
+function iso2(feat: any): string | null {
+  const p = feat?.properties || {};
+  return p.ISO_A2_EH || p.ISO_A2 || p.WB_A2 || null;
+}
+
+function flagFor(iso2Code: string | null): string {
+  if (!iso2Code || iso2Code.length !== 2 || iso2Code === "-9") return "🏳️";
+  const cps = iso2Code
+    .toUpperCase()
+    .split("")
+    .map((c) => 0x1f1e6 - 65 + c.charCodeAt(0));
+  try {
+    return String.fromCodePoint(...cps);
+  } catch {
+    return "🏳️";
+  }
+}
+
+function stripHtml(s: string): string {
+  if (!s) return s;
+  return s
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .trim();
+}
+
 function geomToPath(geom: any, w: number, h: number): string {
   if (!geom) return "";
   if (geom.type === "Polygon")
@@ -89,6 +120,9 @@ export default function AnthemsPage() {
   const [audioLoading, setAudioLoading] = useState(false);
   const [dynamicAnthem, setDynamicAnthem] = useState<Anthem | null>(null);
   const [zoom, setZoom] = useState({ scale: 1, cx: 0.5, cy: 0.5 });
+  const [dragging, setDragging] = useState(false);
+  const dragStart = useRef<{ x: number; y: number; cx: number; cy: number } | null>(null);
+  const movedDuringDrag = useRef(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -163,8 +197,8 @@ export default function AnthemsPage() {
           iso: activeIso,
           country: countryName,
           countryEn: countryName,
-          name: d.displaytitle || d.title || `Anthem of ${countryName}`,
-          nameEn: d.title || `Anthem of ${countryName}`,
+          name: stripHtml(d.displaytitle || d.title || `Anthem of ${countryName}`),
+          nameEn: stripHtml(d.title || `Anthem of ${countryName}`),
           adopted: null,
           lyricist: "—",
           composer: "—",
@@ -198,6 +232,35 @@ export default function AnthemsPage() {
       cancel = true;
     };
   }, [activeIso, curated, features, locale]);
+
+  // Pan handlers
+  useEffect(() => {
+    if (!dragging) return;
+    const onMove = (e: MouseEvent) => {
+      if (!dragStart.current || !containerRef.current) return;
+      const dx = e.clientX - dragStart.current.x;
+      const dy = e.clientY - dragStart.current.y;
+      if (Math.abs(dx) + Math.abs(dy) > 4) movedDuringDrag.current = true;
+      const rect = containerRef.current.getBoundingClientRect();
+      const ndx = dx / rect.width / zoom.scale;
+      const ndy = dy / rect.height / zoom.scale;
+      setZoom((z) => ({
+        ...z,
+        cx: Math.max(0, Math.min(1, dragStart.current!.cx - ndx)),
+        cy: Math.max(0, Math.min(1, dragStart.current!.cy - ndy)),
+      }));
+    };
+    const onUp = () => {
+      setDragging(false);
+      dragStart.current = null;
+    };
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseup", onUp);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    };
+  }, [dragging, zoom.scale]);
 
   // Zoom to clicked country
   useEffect(() => {
@@ -363,8 +426,22 @@ export default function AnthemsPage() {
           <div className="md:col-span-8">
             <div
               ref={containerRef}
-              className="rounded-xl border border-[var(--line-2)] bg-[#0a0a0c] overflow-hidden relative"
-              style={{ aspectRatio: "2 / 1" }}
+              className="rounded-xl border border-[var(--line-2)] bg-[#0a0a0c] overflow-hidden relative select-none"
+              style={{
+                aspectRatio: "2 / 1",
+                cursor: dragging ? "grabbing" : "grab",
+              }}
+              onMouseDown={(e) => {
+                if ((e.target as HTMLElement).closest("button")) return;
+                movedDuringDrag.current = false;
+                dragStart.current = {
+                  x: e.clientX,
+                  y: e.clientY,
+                  cx: zoom.cx,
+                  cy: zoom.cy,
+                };
+                setDragging(true);
+              }}
             >
               <svg
                 viewBox={`0 0 ${w} ${h}`}
@@ -397,7 +474,6 @@ export default function AnthemsPage() {
                   })}
                   {features.map((f, i) => {
                     const code = iso3(f);
-                    const has = code ? anthemMap.has(code) : false;
                     const isActive = code === activeIso;
                     const isHover = code === hoveredIso;
                     return (
@@ -407,24 +483,21 @@ export default function AnthemsPage() {
                         fill={
                           isActive
                             ? "var(--accent)"
-                            : has
-                            ? "rgba(232,195,106,0.45)"
                             : isHover
-                            ? "rgba(232,195,106,0.18)"
-                            : "rgba(255,255,255,0.04)"
+                            ? "rgba(232,195,106,0.35)"
+                            : "rgba(255,255,255,0.08)"
                         }
-                        fillOpacity={isHover ? 0.95 : 1}
                         stroke="rgba(255,255,255,0.18)"
                         strokeWidth={0.4 / zoom.scale}
                         onMouseEnter={() => code && setHoveredIso(code)}
                         onMouseLeave={() => setHoveredIso(null)}
-                        onClick={() => code && setActiveIso(code)}
+                        onClick={(e) => {
+                          if (movedDuringDrag.current) return; // ignore click after drag
+                          if (code) setActiveIso(code);
+                        }}
                         style={{ cursor: code ? "pointer" : "default" }}
                       >
-                        <title>
-                          {name(f)}
-                          {has ? " · 🎵" : ""}
-                        </title>
+                        <title>{name(f)}</title>
                       </path>
                     );
                   })}
@@ -472,9 +545,10 @@ export default function AnthemsPage() {
                     const f = features.find((x) => iso3(x) === hoveredIso);
                     if (!f) return null;
                     const a = anthemMap.get(hoveredIso);
+                    const flag = flagFor(iso2(f));
                     return (
                       <span>
-                        {a ? "🎵 " : ""}
+                        {flag}{" "}
                         {a
                           ? locale === "tr"
                             ? a.country
@@ -492,8 +566,8 @@ export default function AnthemsPage() {
                     );
                   })()
                 : locale === "tr"
-                ? "Bir ülkeye tıkla → marşı dinle ve hikâyesini oku"
-                : "Click any country → hear its anthem and read its story"}
+                ? "Bir ülkeye tıkla, sürükleyerek pan yap, +/− ile zoom"
+                : "Click country, drag to pan, +/− to zoom"}
             </div>
           </div>
 
@@ -501,13 +575,27 @@ export default function AnthemsPage() {
           {active && (
             <aside className="md:col-span-4">
               <div className="rounded-xl border border-[var(--line-2)] p-5 sticky top-4 bg-[var(--bg-2,transparent)]">
-                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--muted)] mb-1">
-                  {locale === "tr" ? active.country : active.countryEn} · {active.adopted}
-                </div>
-                <h2 className="font-serif text-xl md:text-2xl leading-tight mb-1">
-                  {active.name}
-                </h2>
-                {active.name !== active.nameEn && (
+                {(() => {
+                  const feat = features.find((f) => iso3(f) === active.iso);
+                  const flag = feat ? flagFor(iso2(feat)) : "🏳️";
+                  return (
+                    <div className="flex items-start gap-3 mb-3">
+                      <span className="text-4xl md:text-5xl leading-none">
+                        {flag}
+                      </span>
+                      <div className="min-w-0">
+                        <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--muted)]">
+                          {locale === "tr" ? active.country : active.countryEn}
+                          {active.adopted ? ` · ${active.adopted}` : ""}
+                        </div>
+                        <h2 className="font-serif text-xl md:text-2xl leading-tight mt-1">
+                          {active.name}
+                        </h2>
+                      </div>
+                    </div>
+                  );
+                })()}
+                {active.name !== active.nameEn && active.nameEn && (
                   <div className="font-serif italic text-[14px] text-[var(--text-2)] leading-snug mb-3">
                     {active.nameEn}
                   </div>
