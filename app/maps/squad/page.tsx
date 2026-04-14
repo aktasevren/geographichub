@@ -7,26 +7,21 @@ import { LocaleToggle, useLocale } from "@/components/LocaleProvider";
 const COUNTRIES_URL =
   "https://cdn.jsdelivr.net/gh/nvkelso/natural-earth-vector@master/geojson/ne_110m_admin_0_countries.geojson";
 
-const TSDB = "https://www.thesportsdb.com/api/v1/json/3";
+const WP = "https://en.wikipedia.org";
 
 type TeamHit = {
-  idTeam: string;
-  strTeam: string;
-  strLeague?: string | null;
-  strCountry?: string | null;
-  strSport?: string | null;
-  strBadge?: string | null;
-  strStadium?: string | null;
-  strManager?: string | null;
+  key: string; // URL key
+  title: string;
+  description: string | null;
+  thumbnail?: string | null;
 };
 
 type Player = {
-  idPlayer: string;
-  strPlayer: string;
-  strNationality: string | null;
-  strPosition: string | null;
-  strCutout: string | null;
-  strThumb: string | null;
+  no: string | null;
+  name: string;
+  nat: string; // FIFA code (3 letters usually)
+  pos: string | null;
+  loan: string | null;
 };
 
 type CountryHit = {
@@ -37,27 +32,149 @@ type CountryHit = {
   lng: number;
 };
 
-// Aliases between nationality strings and Natural Earth NAME
-const COUNTRY_ALIAS: Record<string, string> = {
-  "The Netherlands": "Netherlands",
-  "United States": "United States of America",
+// FIFA 3-letter code → Natural Earth country NAME
+const FIFA_TO_COUNTRY: Record<string, string> = {
+  ENG: "United Kingdom",
+  SCO: "United Kingdom",
+  WAL: "United Kingdom",
+  NIR: "United Kingdom",
+  GBR: "United Kingdom",
   USA: "United States of America",
-  "United Kingdom": "United Kingdom",
-  England: "United Kingdom",
-  Scotland: "United Kingdom",
-  Wales: "United Kingdom",
-  "Northern Ireland": "United Kingdom",
-  "Czech Republic": "Czechia",
-  "Ivory Coast": "Ivory Coast",
-  "Cote d'Ivoire": "Ivory Coast",
-  "Cape Verde": "Cape Verde",
-  "DR Congo": "Democratic Republic of the Congo",
-  "Congo DR": "Democratic Republic of the Congo",
-  "North Macedonia": "North Macedonia",
-  "Bosnia-Herzegovina": "Bosnia and Herzegovina",
-  "Bosnia and Herzegovina": "Bosnia and Herzegovina",
-  "Trinidad and Tobago": "Trinidad and Tobago",
-  "Saint Lucia": "Saint Lucia",
+  TUR: "Turkey",
+  GER: "Germany",
+  NED: "Netherlands",
+  POR: "Portugal",
+  SUI: "Switzerland",
+  DEN: "Denmark",
+  CRO: "Croatia",
+  SRB: "Serbia",
+  SVK: "Slovakia",
+  SVN: "Slovenia",
+  BUL: "Bulgaria",
+  POL: "Poland",
+  RUS: "Russia",
+  UKR: "Ukraine",
+  CZE: "Czechia",
+  GRE: "Greece",
+  ESP: "Spain",
+  FRA: "France",
+  ITA: "Italy",
+  BEL: "Belgium",
+  AUT: "Austria",
+  IRL: "Ireland",
+  HUN: "Hungary",
+  ROU: "Romania",
+  ALB: "Albania",
+  BIH: "Bosnia and Herzegovina",
+  MKD: "North Macedonia",
+  MNE: "Montenegro",
+  ISL: "Iceland",
+  FIN: "Finland",
+  SWE: "Sweden",
+  NOR: "Norway",
+  ARM: "Armenia",
+  AZE: "Azerbaijan",
+  GEO: "Georgia",
+  ARG: "Argentina",
+  BRA: "Brazil",
+  URU: "Uruguay",
+  PAR: "Paraguay",
+  CHI: "Chile",
+  COL: "Colombia",
+  ECU: "Ecuador",
+  PER: "Peru",
+  VEN: "Venezuela",
+  BOL: "Bolivia",
+  MEX: "Mexico",
+  CAN: "Canada",
+  CRC: "Costa Rica",
+  HON: "Honduras",
+  PAN: "Panama",
+  JAM: "Jamaica",
+  HAI: "Haiti",
+  DOM: "Dominican Republic",
+  TRI: "Trinidad and Tobago",
+  CUB: "Cuba",
+  NGA: "Nigeria",
+  CMR: "Cameroon",
+  GHA: "Ghana",
+  CIV: "Ivory Coast",
+  SEN: "Senegal",
+  MLI: "Mali",
+  BFA: "Burkina Faso",
+  MAR: "Morocco",
+  ALG: "Algeria",
+  TUN: "Tunisia",
+  EGY: "Egypt",
+  KEN: "Kenya",
+  ETH: "Ethiopia",
+  RSA: "South Africa",
+  ANG: "Angola",
+  ZAM: "Zambia",
+  ZIM: "Zimbabwe",
+  COD: "Democratic Republic of the Congo",
+  CGO: "Republic of the Congo",
+  CPV: "Cape Verde",
+  GUI: "Guinea",
+  GNB: "Guinea-Bissau",
+  GAB: "Gabon",
+  BEN: "Benin",
+  TOG: "Togo",
+  SLE: "Sierra Leone",
+  LBR: "Liberia",
+  UGA: "Uganda",
+  MOZ: "Mozambique",
+  NAM: "Namibia",
+  SDN: "Sudan",
+  SSD: "South Sudan",
+  MRT: "Mauritania",
+  LBY: "Libya",
+  MAD: "Madagascar",
+  KSA: "Saudi Arabia",
+  UAE: "United Arab Emirates",
+  IRN: "Iran",
+  IRQ: "Iraq",
+  ISR: "Israel",
+  JOR: "Jordan",
+  LBN: "Lebanon",
+  SYR: "Syria",
+  PLE: "Palestine",
+  QAT: "Qatar",
+  KUW: "Kuwait",
+  BHR: "Bahrain",
+  OMA: "Oman",
+  YEM: "Yemen",
+  JPN: "Japan",
+  KOR: "South Korea",
+  PRK: "North Korea",
+  CHN: "China",
+  IND: "India",
+  PAK: "Pakistan",
+  AFG: "Afghanistan",
+  THA: "Thailand",
+  VIE: "Vietnam",
+  IDN: "Indonesia",
+  MAS: "Malaysia",
+  SGP: "Singapore",
+  PHI: "Philippines",
+  AUS: "Australia",
+  NZL: "New Zealand",
+  FIJ: "Fiji",
+  UZB: "Uzbekistan",
+  KAZ: "Kazakhstan",
+  KGZ: "Kyrgyzstan",
+  TJK: "Tajikistan",
+  TKM: "Turkmenistan",
+  COM: "Comoros",
+  EQG: "Equatorial Guinea",
+  GAM: "Gambia",
+  MWI: "Malawi",
+  BDI: "Burundi",
+  RWA: "Rwanda",
+  TAN: "United Republic of Tanzania",
+  NIG: "Niger",
+  CHA: "Chad",
+  CTA: "Central African Republic",
 };
 
 function iso2Of(feat: any): string | null {
@@ -85,7 +202,6 @@ function flagFor(iso2Code: string | null): string {
   }
 }
 
-// Geometric centroid of a country feature for placing pins
 function geomCentroid(geom: any): [number, number] | null {
   if (!geom) return null;
   const rings: number[][][] =
@@ -94,14 +210,10 @@ function geomCentroid(geom: any): [number, number] | null {
       : geom.type === "MultiPolygon"
       ? geom.coordinates.flat()
       : [];
-  let sx = 0,
-    sy = 0,
-    n = 0;
+  let sx = 0, sy = 0, n = 0;
   for (const r of rings) {
     for (const pt of r) {
-      sx += pt[0];
-      sy += pt[1];
-      n++;
+      sx += pt[0]; sy += pt[1]; n++;
     }
   }
   if (!n) return null;
@@ -132,11 +244,65 @@ function geomToPath(geom: any, w: number, h: number): string {
   return "";
 }
 
+// Parse a {{Fs player|...}} template body into named params
+function parseFsParams(body: string): Record<string, string> {
+  const out: Record<string, string> = {};
+  const parts = body.split("|");
+  for (const p of parts) {
+    const eq = p.indexOf("=");
+    if (eq < 0) continue;
+    const k = p.slice(0, eq).trim().toLowerCase();
+    const v = p.slice(eq + 1).trim();
+    out[k] = v;
+  }
+  return out;
+}
+
+// Strip [[wiki|links]] to plain text
+function stripWikiLinks(s: string): string {
+  return s
+    .replace(/\[\[([^\]|]+\|)?([^\]]+)\]\]/g, "$2")
+    .replace(/<ref[\s\S]*?<\/ref>/g, "")
+    .replace(/<ref[^/]*\/>/g, "")
+    .replace(/'{2,}/g, "")
+    .trim();
+}
+
+function parseSquad(wikitext: string): Player[] {
+  const re = /\{\{[Ff]s player\s*\|([^}]+)\}\}/g;
+  const out: Player[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(wikitext)) !== null) {
+    const params = parseFsParams(m[1]);
+    const name = stripWikiLinks(params.name || "");
+    if (!name) continue;
+    out.push({
+      no: params.no || null,
+      name,
+      nat: (params.nat || "").toUpperCase(),
+      pos: (params.pos || "").toUpperCase() || null,
+      loan: params.other ? stripWikiLinks(params.other) : null,
+    });
+  }
+  return out;
+}
+
+// Extract manager/head coach from infobox
+function parseManager(wikitext: string): string | null {
+  const m = wikitext.match(
+    /\|\s*(?:manager|head coach|headcoach|coach)\s*=\s*([^\n|}]+)/i
+  );
+  if (!m) return null;
+  const v = stripWikiLinks(m[1]).trim();
+  return v || null;
+}
+
 export default function SquadPage() {
   const { t, locale } = useLocale();
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<TeamHit[]>([]);
   const [team, setTeam] = useState<TeamHit | null>(null);
+  const [manager, setManager] = useState<string | null>(null);
   const [players, setPlayers] = useState<Player[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -162,7 +328,7 @@ export default function SquadPage() {
     return () => window.removeEventListener("resize", onR);
   }, []);
 
-  // Autocomplete — TheSportsDB, soccer-only
+  // Autocomplete — Wikipedia search, filtered to football clubs
   useEffect(() => {
     clearTimeout(searchTimer.current);
     if (!query.trim() || query.length < 2) {
@@ -172,63 +338,131 @@ export default function SquadPage() {
     searchTimer.current = setTimeout(async () => {
       try {
         const r = await fetch(
-          `${TSDB}/searchteams.php?t=${encodeURIComponent(query)}`
+          `${WP}/w/rest.php/v1/search/title?q=${encodeURIComponent(
+            query
+          )}&limit=15`
         );
         const d = await r.json();
-        const teams: TeamHit[] = (d.teams || [])
-          .filter((t: any) => t.strSport === "Soccer")
+        const pages: any[] = d.pages || [];
+        const clubs = pages
+          .filter((p) => {
+            const desc = (p.description || "").toLowerCase();
+            const title = (p.title || "").toLowerCase();
+            const isClub =
+              /football|soccer/.test(desc) &&
+              /(club|team|f\.c\.|s\.k\.|cf|association)/.test(
+                desc + " " + title
+              );
+            const isExcluded =
+              /(season|players|manager|supporter|kit|history|rival|derb|statistic|record)/.test(
+                title
+              ) ||
+              /season|manager|supporter/.test(desc);
+            return isClub && !isExcluded;
+          })
           .slice(0, 8)
-          .map((t: any) => ({
-            idTeam: t.idTeam,
-            strTeam: t.strTeam,
-            strLeague: t.strLeague,
-            strCountry: t.strCountry,
-            strSport: t.strSport,
-            strBadge: t.strBadge,
-            strStadium: t.strStadium,
-            strManager: t.strManager,
+          .map((p) => ({
+            key: p.key,
+            title: p.title,
+            description: p.description,
           }));
-        setSuggestions(teams);
+        setSuggestions(clubs);
+
+        // Fetch thumbnails in parallel
+        clubs.forEach(async (c) => {
+          try {
+            const s = await fetch(
+              `${WP}/api/rest_v1/page/summary/${encodeURIComponent(c.key)}`
+            );
+            const sd = await s.json();
+            const thumb = sd?.thumbnail?.source || null;
+            setSuggestions((prev) =>
+              prev.map((x) => (x.key === c.key ? { ...x, thumbnail: thumb } : x))
+            );
+          } catch {}
+        });
       } catch {}
-    }, 300);
+    }, 350);
   }, [query]);
 
   const pickTeam = async (hit: TeamHit) => {
-    setQuery(hit.strTeam);
+    setQuery(hit.title);
     setSuggestions([]);
     setLoading(true);
     setError(null);
     setTeam(hit);
     setPlayers([]);
+    setManager(null);
     try {
-      const r = await fetch(`${TSDB}/lookup_all_players.php?id=${hit.idTeam}`);
-      const d = await r.json();
-      const list: Player[] = (d.player || []).map((p: any) => ({
-        idPlayer: p.idPlayer,
-        strPlayer: p.strPlayer,
-        strNationality: p.strNationality,
-        strPosition: p.strPosition,
-        strCutout: p.strCutout,
-        strThumb: p.strThumb,
-      }));
+      // Find "Current squad" section
+      const secR = await fetch(
+        `${WP}/w/api.php?action=parse&page=${encodeURIComponent(
+          hit.key
+        )}&prop=sections&format=json&origin=*`
+      );
+      const secD = await secR.json();
+      const sections: any[] = secD?.parse?.sections || [];
+      const squadSec = sections.find((s) =>
+        /current squad|first-team squad|first team squad|squad/i.test(s.line)
+      );
+
+      // Fetch section 0 for manager + logo fallback
+      const headR = await fetch(
+        `${WP}/w/api.php?action=parse&page=${encodeURIComponent(
+          hit.key
+        )}&prop=wikitext&section=0&format=json&origin=*`
+      );
+      const headD = await headR.json();
+      const headText: string = headD?.parse?.wikitext?.["*"] || "";
+      setManager(parseManager(headText));
+
+      // Ensure team thumbnail
+      if (!hit.thumbnail) {
+        try {
+          const s = await fetch(
+            `${WP}/api/rest_v1/page/summary/${encodeURIComponent(hit.key)}`
+          );
+          const sd = await s.json();
+          if (sd?.thumbnail?.source) {
+            setTeam({ ...hit, thumbnail: sd.thumbnail.source });
+          }
+        } catch {}
+      }
+
+      if (!squadSec) {
+        setError(
+          locale === "tr"
+            ? "Bu sayfada 'Current squad' bölümü bulunamadı."
+            : "No 'Current squad' section on this page."
+        );
+        setLoading(false);
+        return;
+      }
+
+      const sqR = await fetch(
+        `${WP}/w/api.php?action=parse&page=${encodeURIComponent(
+          hit.key
+        )}&prop=wikitext&section=${squadSec.index}&format=json&origin=*`
+      );
+      const sqD = await sqR.json();
+      const sqText: string = sqD?.parse?.wikitext?.["*"] || "";
+      const list = parseSquad(sqText);
+
       if (list.length === 0) {
         setError(
           locale === "tr"
-            ? "Bu takım için kadro bulunamadı."
-            : "No squad found for this team."
+            ? "Kadro şablonu okunamadı."
+            : "Could not parse squad template."
         );
       }
       setPlayers(list);
     } catch {
-      setError(
-        locale === "tr" ? "Veri alınamadı." : "Failed to fetch squad."
-      );
+      setError(locale === "tr" ? "Veri alınamadı." : "Failed to fetch squad.");
     } finally {
       setLoading(false);
     }
   };
 
-  // Country lookup (by name) — returns centroid/iso
   const countryIndex = useMemo(() => {
     const m = new Map<string, CountryHit>();
     features.forEach((f) => {
@@ -250,23 +484,27 @@ export default function SquadPage() {
     return m;
   }, [features]);
 
-  function resolveCountry(nationality: string | null): CountryHit | null {
-    if (!nationality) return null;
-    const alias = COUNTRY_ALIAS[nationality] || nationality;
-    return (
-      countryIndex.get(alias.toLowerCase()) ||
-      countryIndex.get(nationality.toLowerCase()) ||
-      null
-    );
+  function resolveCountry(fifa: string | null): CountryHit | null {
+    if (!fifa) return null;
+    const name = FIFA_TO_COUNTRY[fifa.toUpperCase()];
+    if (name) {
+      const hit = countryIndex.get(name.toLowerCase());
+      if (hit) return hit;
+    }
+    // Fallback: direct country name input
+    return countryIndex.get(fifa.toLowerCase()) || null;
+  }
+
+  function fifaLabel(fifa: string): string {
+    return FIFA_TO_COUNTRY[fifa.toUpperCase()] || fifa;
   }
 
   const h = w * 0.5;
 
-  // Pins — one per country nationality, clustered
   const pins = useMemo(() => {
     const byCountry = new Map<string, { hit: CountryHit; players: Player[] }>();
     players.forEach((p) => {
-      const c = resolveCountry(p.strNationality);
+      const c = resolveCountry(p.nat);
       if (!c) return;
       const key = c.iso3 || c.name;
       if (!byCountry.has(key)) byCountry.set(key, { hit: c, players: [] });
@@ -279,7 +517,6 @@ export default function SquadPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [players, countryIndex, w]);
 
-  // Country → player count (for map highlight)
   const memberIso = useMemo(() => {
     const s = new Set<string>();
     pins.forEach((p) => p.hit.iso3 && s.add(p.hit.iso3));
@@ -311,11 +548,35 @@ export default function SquadPage() {
     };
   }, [dragging, zoom.scale]);
 
-  // Country breakdown
+  // Wheel-based zoom on map container
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const rect = el.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width;
+      const py = (e.clientY - rect.top) / rect.height;
+      setZoom((z) => {
+        const factor = e.deltaY > 0 ? 1 / 1.18 : 1.18;
+        const next = Math.max(1, Math.min(8, z.scale * factor));
+        if (next === z.scale) return z;
+        // Zoom toward pointer
+        return {
+          scale: next,
+          cx: Math.max(0, Math.min(1, z.cx + (px - z.cx) * (1 - z.scale / next))),
+          cy: Math.max(0, Math.min(1, z.cy + (py - z.cy) * (1 - z.scale / next))),
+        };
+      });
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel as any);
+  }, [team]);
+
   const byNat = useMemo(() => {
     const m = new Map<string, Player[]>();
     players.forEach((p) => {
-      const n = p.strNationality || "?";
+      const n = p.nat || "?";
       if (!m.has(n)) m.set(n, []);
       m.get(n)!.push(p);
     });
@@ -379,15 +640,15 @@ export default function SquadPage() {
             <div className="absolute z-20 top-full left-0 mt-2 max-w-xl w-full rounded-md border border-[var(--line-2)] bg-[var(--bg)] shadow-2xl max-h-[380px] overflow-auto">
               {suggestions.map((s) => (
                 <button
-                  key={s.idTeam}
+                  key={s.key}
                   onClick={() => pickTeam(s)}
                   className="flex items-center gap-3 w-full text-left px-3 py-2.5 hover:bg-[var(--line)] transition border-b border-[var(--line)] last:border-b-0"
                 >
                   <span className="w-10 h-10 flex-shrink-0 rounded-md bg-white/90 flex items-center justify-center overflow-hidden">
-                    {s.strBadge ? (
+                    {s.thumbnail ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={s.strBadge}
+                        src={s.thumbnail}
                         alt=""
                         className="w-full h-full object-contain p-0.5"
                         loading="lazy"
@@ -398,10 +659,10 @@ export default function SquadPage() {
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="text-[14px] font-serif truncate">
-                      {s.strTeam}
+                      {s.title}
                     </div>
                     <div className="text-[11px] text-[var(--muted)] line-clamp-1 mt-0.5">
-                      {s.strLeague} · {s.strCountry}
+                      {s.description}
                     </div>
                   </div>
                 </button>
@@ -425,14 +686,13 @@ export default function SquadPage() {
       {team && !loading && players.length > 0 && (
         <section className="px-5 md:px-10 pb-12">
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5">
-            {/* Map */}
             <div className="md:col-span-8">
               <div className="mb-3 flex items-center gap-3">
-                {team.strBadge && (
+                {team.thumbnail && (
                   <span className="w-14 h-14 rounded-lg bg-white/95 flex items-center justify-center overflow-hidden flex-shrink-0">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={team.strBadge}
+                      src={team.thumbnail}
                       alt=""
                       className="w-full h-full object-contain p-1"
                     />
@@ -440,20 +700,26 @@ export default function SquadPage() {
                 )}
                 <div className="min-w-0">
                   <div className="font-serif text-2xl md:text-3xl leading-tight">
-                    {team.strTeam}
+                    {team.title}
                   </div>
                   <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--muted)] mt-1">
-                    {team.strLeague} · {team.strCountry} · {players.length}{" "}
-                    {locale === "tr" ? "oyuncu" : "players"}
-                    {team.strManager && (
+                    {players.length} {locale === "tr" ? "oyuncu" : "players"}
+                    {manager && (
                       <>
                         {" · "}
                         {locale === "tr" ? "TD" : "Manager"}:{" "}
-                        <span className="text-[var(--text-2)]">
-                          {team.strManager}
-                        </span>
+                        <span className="text-[var(--text-2)]">{manager}</span>
                       </>
                     )}
+                    {" · "}
+                    <a
+                      href={`${WP}/wiki/${encodeURIComponent(team.key)}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-[var(--accent)]"
+                    >
+                      Wikipedia ↗
+                    </a>
                   </div>
                 </div>
               </div>
@@ -487,7 +753,7 @@ export default function SquadPage() {
                     style={{
                       transformOrigin: `${zoom.cx * w}px ${zoom.cy * h}px`,
                       transform: `scale(${zoom.scale})`,
-                      transition: "transform 600ms ease",
+                      transition: dragging ? "none" : "transform 400ms ease",
                     }}
                   >
                     {features.map((f, i) => {
@@ -549,7 +815,7 @@ export default function SquadPage() {
                 <div className="absolute right-2 top-2 flex flex-col gap-1 z-10">
                   <button
                     onClick={() =>
-                      setZoom((z) => ({ ...z, scale: Math.min(6, z.scale * 1.5) }))
+                      setZoom((z) => ({ ...z, scale: Math.min(8, z.scale * 1.5) }))
                     }
                     className="w-8 h-8 rounded-full border border-white/20 bg-black/70 backdrop-blur text-white text-base"
                   >
@@ -570,6 +836,11 @@ export default function SquadPage() {
                     ⟲
                   </button>
                 </div>
+                <div className="absolute left-2 bottom-2 font-mono text-[9px] uppercase tracking-[0.2em] text-white/50 pointer-events-none">
+                  {locale === "tr"
+                    ? "sürükle · tekerlek = zoom"
+                    : "drag · wheel to zoom"}
+                </div>
               </div>
 
               <div className="mt-4">
@@ -585,7 +856,7 @@ export default function SquadPage() {
                         className="font-mono text-[11px] px-2.5 py-1 rounded-md border border-[var(--line-2)] bg-[var(--line)] flex items-center gap-1.5"
                       >
                         <span>{flagFor(c?.iso2 || null)}</span>
-                        <span>{nat}</span>
+                        <span>{fifaLabel(nat)}</span>
                         <span className="text-emerald-500 tabular-nums">
                           ×{list.length}
                         </span>
@@ -596,43 +867,35 @@ export default function SquadPage() {
               </div>
             </div>
 
-            {/* Squad list */}
             <aside className="md:col-span-4">
               <div className="rounded-xl border border-[var(--line-2)] p-4 sticky top-4">
                 <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-[var(--muted)] mb-2">
                   {locale === "tr" ? "Oyuncular" : "Players"} · {players.length}
                 </div>
                 <ul className="space-y-1 max-h-[70vh] overflow-auto pr-1">
-                  {players.map((p) => {
-                    const c = resolveCountry(p.strNationality);
+                  {players.map((p, i) => {
+                    const c = resolveCountry(p.nat);
                     return (
                       <li
-                        key={p.idPlayer}
+                        key={`${p.name}-${i}`}
                         className="flex items-center gap-2.5 px-2 py-1.5 rounded hover:bg-[var(--line)]"
                       >
-                        {p.strCutout ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img
-                            src={p.strCutout}
-                            alt=""
-                            className="w-8 h-8 rounded-full object-cover bg-[var(--line)] flex-shrink-0"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <span className="w-8 h-8 rounded-full bg-[var(--line)] flex-shrink-0 flex items-center justify-center text-[14px]">
-                            👤
-                          </span>
-                        )}
+                        <span className="w-8 h-8 rounded-full bg-[var(--line)] flex-shrink-0 flex items-center justify-center font-mono text-[11px] tabular-nums text-[var(--muted)]">
+                          {p.no || "–"}
+                        </span>
                         <div className="min-w-0 flex-1">
                           <div className="flex items-center gap-1">
                             <span className="text-[13px] text-[var(--text)] truncate">
-                              {p.strPlayer}
+                              {p.name}
                             </span>
                             <span className="text-sm">{flagFor(c?.iso2 || null)}</span>
                           </div>
                           <div className="font-mono text-[10px] text-[var(--muted)] uppercase tracking-[0.12em]">
-                            {p.strNationality}
-                            {p.strPosition && ` · ${p.strPosition}`}
+                            {fifaLabel(p.nat)}
+                            {p.pos && ` · ${p.pos}`}
+                            {p.loan && (
+                              <span className="text-amber-500"> · {p.loan}</span>
+                            )}
                           </div>
                         </div>
                       </li>
@@ -683,7 +946,7 @@ export default function SquadPage() {
       <footer className="px-5 md:px-10 py-6 hair-t flex flex-wrap justify-between gap-4 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">
         <span>{t("footer.copyright", { year: new Date().getFullYear() })}</span>
         <span className="hidden md:inline">
-          {locale === "tr" ? "Veri · TheSportsDB" : "Data · TheSportsDB"}
+          {locale === "tr" ? "Veri · Wikipedia" : "Data · Wikipedia"}
         </span>
       </footer>
     </div>
