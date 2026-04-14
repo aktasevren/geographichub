@@ -10,8 +10,73 @@
       "era": "20th-century",
       "region": "middle-east",
       "tags": ["independence", "ottoman", "modern-turkey"],
-      "blurb": "The military and political campaign that established the Republic of Türkiye after the partition of the Ottoman Empire. From the landing at Samsun in May 1919 to the Treaty of Lausanne in July 1923.",
-      "blurbTr": "Osmanlı'nın paylaşılmasının ardından Türkiye Cumhuriyeti'nin kuruluşuna giden askeri ve siyasi mücadele. 1919 Mayıs'ında Samsun'a çıkıştan 1923 Temmuz'unda Lozan Antlaşması'na kadar."
+      "blurb": "The military and political campaign that established the Republic of Türkiye after the partition of the Ottoman Empire.",
+      "blurbTr": "Osmanlı'nın paylaşılmasının ardından Türkiye Cumhuriyeti'nin kuruluşuna giden askeri ve siyasi mücadele."
+    },
+    {
+      "slug": "world-war-2",
+      "name": "World War II",
+      "nameTr": "İkinci Dünya Savaşı",
+      "startYear": 1939,
+      "endYear": 1945,
+      "eventCount": 12,
+      "era": "20th-century",
+      "region": "global",
+      "tags": ["nazi", "fascism", "pacific", "european-theatre", "global-war"],
+      "blurb": "The most destructive conflict in human history, fought across every inhabited continent.",
+      "blurbTr": "İnsanlık tarihinin en yıkıcı çatışması; her kıtada yaşandı."
+    },
+    {
+      "slug": "world-war-1",
+      "name": "World War I",
+      "nameTr": "Birinci Dünya Savaşı",
+      "startYear": 1914,
+      "endYear": 1918,
+      "eventCount": 10,
+      "era": "20th-century",
+      "region": "global",
+      "tags": ["great-war", "trench-warfare", "empires"],
+      "blurb": "An industrial-scale conflict that ended four empires and redrew the map of Europe and the Middle East.",
+      "blurbTr": "Dört imparatorluğu yıkan ve Avrupa ile Orta Doğu haritasını yeniden çizen endüstriyel ölçekli çatışma."
+    },
+    {
+      "slug": "american-civil-war",
+      "name": "American Civil War",
+      "nameTr": "Amerikan İç Savaşı",
+      "startYear": 1861,
+      "endYear": 1865,
+      "eventCount": 9,
+      "era": "19th-century",
+      "region": "americas",
+      "tags": ["slavery", "secession", "abolition", "union-confederacy"],
+      "blurb": "The conflict between the Union and the secessionist Confederacy over the expansion of slavery.",
+      "blurbTr": "Köleliğin yayılması üzerine Birlik ile ayrılıkçı Konfederasyon arasında çıkan çatışma."
+    },
+    {
+      "slug": "napoleonic-wars",
+      "name": "Napoleonic Wars",
+      "nameTr": "Napolyon Savaşları",
+      "startYear": 1803,
+      "endYear": 1815,
+      "eventCount": 10,
+      "era": "19th-century",
+      "region": "europe",
+      "tags": ["napoleon", "france", "empire", "coalition"],
+      "blurb": "The twelve years in which Napoleon Bonaparte conquered most of Europe — and then lost it all.",
+      "blurbTr": "Napolyon Bonapart'ın Avrupa'nın büyük bölümünü fethettiği — ve sonra hepsini kaybettiği — on iki yıl."
+    },
+    {
+      "slug": "russo-ukrainian-war",
+      "name": "Russo-Ukrainian War",
+      "nameTr": "Rusya-Ukrayna Savaşı",
+      "startYear": 2014,
+      "endYear": 2025,
+      "eventCount": 9,
+      "era": "21st-century",
+      "region": "europe",
+      "tags": ["invasion", "ukraine", "russia", "contemporary"],
+      "blurb": "The ongoing conflict that began with Russia's 2014 annexation of Crimea and escalated into a full-scale invasion in 2022.",
+      "blurbTr": "Rusya'nın 2014'te Kırım'ı ilhakıyla başlayan ve 2022'de tam ölçekli işgale dönüşen devam eden çatışma."
     }
   ]
 }

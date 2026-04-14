@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import SiteLogo from "@/components/SiteLogo";
+import { LocaleToggle } from "@/components/LocaleProvider";
 import { useEffect, useRef, useState } from "react";
 import * as satellite from "satellite.js";
 
@@ -536,6 +537,7 @@ export default function ISSPage() {
           ISS · <span className="italic text-white/60">Live Position</span>
         </h1>
         <div className="flex items-center gap-4">
+          <LocaleToggle />
           <Link
             href="/maps/iss/how-to-spot"
             className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.22em] text-[#ffcc33]/80 hover:text-[#ffcc33]"

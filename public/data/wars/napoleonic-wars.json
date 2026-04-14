@@ -1,0 +1,121 @@
+{
+  "slug": "napoleonic-wars",
+  "name": "Napoleonic Wars",
+  "nameTr": "Napolyon Savaşları",
+  "startYear": 1803,
+  "endYear": 1815,
+  "blurb": "The twelve years in which Napoleon Bonaparte conquered most of Europe — and then lost it all. A succession of coalitions from Trafalgar to Waterloo.",
+  "blurbTr": "Napolyon Bonapart'ın Avrupa'nın büyük bölümünü fethettiği — ve sonra hepsini kaybettiği — on iki yıl. Trafalgar'dan Waterloo'ya uzanan koalisyonlar dizisi.",
+  "events": [
+    {
+      "id": "coronation",
+      "name": "Coronation of Napoleon",
+      "nameTr": "Napolyon'un Taç Giymesi",
+      "lat": 48.8530, "lng": 2.3499,
+      "date": "1804-12-02",
+      "kind": "event", "side": "political",
+      "summary": "Napoleon crowns himself Emperor at Notre-Dame de Paris, famously taking the crown from the Pope to place on his own head.",
+      "summaryTr": "Napolyon, Notre-Dame de Paris'te kendini İmparator ilan eder; ünlü anıyla tacı Papa'dan alıp kendi başına koyar.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Coronation_of_Napoleon"
+    },
+    {
+      "id": "trafalgar",
+      "name": "Battle of Trafalgar",
+      "nameTr": "Trafalgar Deniz Muharebesi",
+      "lat": 36.1826, "lng": -6.0366,
+      "date": "1805-10-21",
+      "kind": "battle", "side": "victory-b",
+      "summary": "Nelson destroys the Franco-Spanish fleet off Cape Trafalgar, losing his life in the moment of victory. Britain rules the seas for the next century.",
+      "summaryTr": "Nelson, Trafalgar Burnu açıklarında Fransız-İspanyol donanmasını yok eder; zafer anında hayatını kaybeder. Britanya, bir sonraki yüzyıl boyunca denizlere hükmeder.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Trafalgar"
+    },
+    {
+      "id": "austerlitz",
+      "name": "Battle of Austerlitz",
+      "nameTr": "Austerlitz Muharebesi",
+      "lat": 49.1371, "lng": 16.7498,
+      "date": "1805-12-02",
+      "kind": "battle", "side": "victory-a",
+      "summary": "The 'Battle of the Three Emperors' — Napoleon destroys the combined armies of Austria and Russia on the first anniversary of his coronation. His tactical masterpiece.",
+      "summaryTr": "'Üç İmparator Muharebesi' — Napolyon, taç giymesinin birinci yıldönümünde Avusturya ve Rusya'nın birleşik ordularını imha eder. Taktik başyapıtı.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Austerlitz"
+    },
+    {
+      "id": "borodino",
+      "name": "Battle of Borodino",
+      "nameTr": "Borodino Muharebesi",
+      "lat": 55.5181, "lng": 35.8250,
+      "date": "1812-09-07",
+      "kind": "battle", "side": "draw",
+      "summary": "70,000 casualties in a single day — the bloodiest day of the Napoleonic era. Napoleon takes the field but fails to destroy the Russian army. A strategic disaster in hindsight.",
+      "summaryTr": "Tek günde 70.000 kayıp — Napolyon döneminin en kanlı günü. Napolyon meydanı alır ama Rus ordusunu imha edemez. Geriye bakıldığında stratejik bir felaket.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Borodino"
+    },
+    {
+      "id": "moscow-retreat",
+      "name": "Retreat from Moscow",
+      "nameTr": "Moskova'dan Geri Çekilme",
+      "lat": 55.7558, "lng": 37.6173,
+      "date": "1812-10-19", "dateEnd": "1812-12-14",
+      "kind": "event", "side": "victory-b",
+      "summary": "Napoleon enters a burning, deserted Moscow and finds no peace offer. The 600,000-man Grande Armée staggers back through the Russian winter; only 40,000 reach Poland alive.",
+      "summaryTr": "Napolyon, yanan ve boşaltılmış Moskova'ya girer; barış teklifi bulamaz. 600.000 kişilik Büyük Ordu, Rus kışında geri çekilir; yalnızca 40.000'i canlı Polonya'ya ulaşır.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/French_invasion_of_Russia"
+    },
+    {
+      "id": "leipzig",
+      "name": "Battle of Leipzig",
+      "nameTr": "Leipzig Muharebesi",
+      "lat": 51.3397, "lng": 12.3731,
+      "date": "1813-10-16", "dateEnd": "1813-10-19",
+      "kind": "battle", "side": "victory-b",
+      "summary": "The 'Battle of Nations'. Russia, Prussia, Austria and Sweden destroy Napoleon's rebuilt army in the largest battle in Europe before WWI. France's grip on Europe is broken.",
+      "summaryTr": "'Milletler Muharebesi'. Rusya, Prusya, Avusturya ve İsveç, Napolyon'un yeniden kurduğu orduyu Birinci Dünya Savaşı öncesi Avrupa'nın en büyük muharebesinde imha eder. Fransa'nın Avrupa'daki hakimiyeti kırılır.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Leipzig"
+    },
+    {
+      "id": "elba-exile",
+      "name": "Exile to Elba",
+      "nameTr": "Elba'ya Sürgün",
+      "lat": 42.8180, "lng": 10.3297,
+      "date": "1814-05-04",
+      "kind": "event", "side": "political",
+      "summary": "After allied armies enter Paris, Napoleon abdicates and is exiled to the tiny Mediterranean island of Elba, where he is made sovereign.",
+      "summaryTr": "Müttefik ordular Paris'e girince Napolyon tahttan çekilir ve küçük Akdeniz adası Elba'ya sürgün edilir; adanın hükümdarı olur.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Exile_of_Napoleon_to_Elba"
+    },
+    {
+      "id": "waterloo",
+      "name": "Battle of Waterloo",
+      "nameTr": "Waterloo Muharebesi",
+      "lat": 50.6800, "lng": 4.4119,
+      "date": "1815-06-18",
+      "kind": "battle", "side": "victory-b",
+      "summary": "After escaping Elba and ruling France for 100 days, Napoleon is finally crushed by Wellington and Blücher at Waterloo in Belgium. The French Empire ends forever.",
+      "summaryTr": "Elba'dan kaçıp Fransa'yı 100 gün yönettikten sonra Napolyon, Belçika'daki Waterloo'da Wellington ve Blücher tarafından ezilir. Fransız İmparatorluğu sonsuza dek biter.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Waterloo"
+    },
+    {
+      "id": "st-helena",
+      "name": "Exile to Saint Helena",
+      "nameTr": "Saint Helena'ya Sürgün",
+      "lat": -15.9650, "lng": -5.7089,
+      "date": "1815-10-15",
+      "kind": "event", "side": "political",
+      "summary": "The British exile Napoleon to a remote volcanic rock in the South Atlantic, 2,000 km from the nearest land. He dies there six years later.",
+      "summaryTr": "İngilizler, Napolyon'u Güney Atlantik'in ortasında, en yakın karadan 2.000 km uzaklıkta uzak bir volkanik kayaya sürgün eder. Altı yıl sonra orada hayatını kaybeder.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Napoleon%27s_exile_on_Saint_Helena"
+    },
+    {
+      "id": "congress-vienna",
+      "name": "Congress of Vienna",
+      "nameTr": "Viyana Kongresi",
+      "lat": 48.2082, "lng": 16.3738,
+      "date": "1814-09-01", "dateEnd": "1815-06-09",
+      "kind": "congress", "side": "political",
+      "summary": "The European powers redraw the map of Europe. The settlement restores conservative monarchies and establishes a balance of power that holds for a century.",
+      "summaryTr": "Avrupa güçleri, Avrupa'nın haritasını yeniden çizer. Anlaşma muhafazakar monarşileri yeniden kurar ve bir yüzyıl sürecek güç dengesini tesis eder.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Congress_of_Vienna"
+    }
+  ]
+}

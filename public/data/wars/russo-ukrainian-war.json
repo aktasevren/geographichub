@@ -1,0 +1,112 @@
+{
+  "slug": "russo-ukrainian-war",
+  "name": "Russo-Ukrainian War",
+  "nameTr": "Rusya-Ukrayna Savaşı",
+  "startYear": 2014,
+  "endYear": 2025,
+  "blurb": "The ongoing conflict that began with Russia's 2014 annexation of Crimea and escalated into a full-scale invasion in 2022. The largest war in Europe since 1945.",
+  "blurbTr": "Rusya'nın 2014'te Kırım'ı ilhakıyla başlayan ve 2022'de tam ölçekli işgale dönüşen devam eden çatışma. 1945'ten bu yana Avrupa'daki en büyük savaş.",
+  "events": [
+    {
+      "id": "crimea-annexation",
+      "name": "Annexation of Crimea",
+      "nameTr": "Kırım'ın İlhakı",
+      "lat": 44.9521, "lng": 34.1024,
+      "date": "2014-02-27", "dateEnd": "2014-03-18",
+      "kind": "occupation", "side": "occupation",
+      "summary": "Russian troops without insignia seize key sites in Crimea. A disputed referendum is followed by Russia formally annexing the peninsula — the first post-WWII annexation in Europe.",
+      "summaryTr": "Ruslar, tanımlayıcı işaretleri olmayan askerlerle Kırım'ın kilit noktalarını ele geçirir. Tartışmalı bir referandumun ardından Rusya, yarımadayı resmen ilhak eder — Avrupa'daki II. Dünya Savaşı sonrası ilk ilhak.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Russian_annexation_of_Crimea",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/K%C4%B1r%C4%B1m%27%C4%B1n_Rusya_taraf%C4%B1ndan_ilhak%C4%B1"
+    },
+    {
+      "id": "donbas-war",
+      "name": "War in Donbas begins",
+      "nameTr": "Donbas Savaşı Başlar",
+      "lat": 48.0159, "lng": 37.8028,
+      "date": "2014-04-06",
+      "kind": "battle", "side": "occupation",
+      "summary": "Pro-Russian separatists seize government buildings in Donetsk and Luhansk. An 8-year limited war begins in Eastern Ukraine — the prelude to 2022.",
+      "summaryTr": "Rus yanlısı ayrılıkçılar, Donetsk ve Luhansk'ta hükümet binalarını ele geçirir. Doğu Ukrayna'da 8 yıl sürecek sınırlı savaş başlar — 2022'nin ön oyunu.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/War_in_Donbas"
+    },
+    {
+      "id": "full-invasion",
+      "name": "Full-scale Russian Invasion",
+      "nameTr": "Tam Ölçekli Rus İşgali",
+      "lat": 50.4501, "lng": 30.5234,
+      "date": "2022-02-24",
+      "kind": "occupation", "side": "occupation",
+      "summary": "At 05:00 Russia launches a multi-axis invasion of Ukraine from the north, east and south. Cruise missiles strike Kyiv; tank columns cross from Belarus. The largest conventional war in Europe since 1945 begins.",
+      "summaryTr": "Rusya saat 05.00'te Ukrayna'ya kuzey, doğu ve güneyden çok eksenli bir işgal başlatır. Füzeler Kiev'e çarpar; tank kolları Belarus'tan geçer. 1945'ten beri Avrupa'nın en büyük konvansiyonel savaşı başlar.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Rusya%27n%C4%B1n_Ukrayna%27y%C4%B1_i%C5%9Fgali_(2022-)"
+    },
+    {
+      "id": "battle-of-kyiv",
+      "name": "Battle of Kyiv",
+      "nameTr": "Kiev Muharebesi",
+      "lat": 50.4501, "lng": 30.5234,
+      "date": "2022-02-25", "dateEnd": "2022-04-02",
+      "kind": "battle", "side": "victory-a",
+      "summary": "Ukrainian forces halt the Russian advance on the capital. A stalled 64-km convoy on Kyiv's northern approach becomes an icon of the failed offensive; Russia withdraws from the Kyiv region.",
+      "summaryTr": "Ukrayna kuvvetleri başkente Rus ilerleyişini durdurur. Kiev'in kuzeyinde takılı kalan 64 km'lik Rus konvoyu, başarısız taarruzun simgesi olur; Rusya, Kiev bölgesinden çekilir.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Kyiv_offensive_(2022)"
+    },
+    {
+      "id": "siege-of-mariupol",
+      "name": "Siege of Mariupol",
+      "nameTr": "Mariupol Kuşatması",
+      "lat": 47.0971, "lng": 37.5434,
+      "date": "2022-02-24", "dateEnd": "2022-05-20",
+      "kind": "siege", "side": "occupation",
+      "summary": "Russian forces besiege the port city of Mariupol for 86 days, bombarding the Azovstal steel plant where Ukrainian defenders hold out. The city is reduced to ruins.",
+      "summaryTr": "Rus kuvvetleri, liman kenti Mariupol'ü 86 gün kuşatır; Ukraynalı savunmacıların direndiği Azovstal çelik fabrikasını bombardıman altında tutar. Kent harabeye döner.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Siege_of_Mariupol"
+    },
+    {
+      "id": "kharkiv-counteroffensive",
+      "name": "Kharkiv Counteroffensive",
+      "nameTr": "Harkiv Karşı Taarruzu",
+      "lat": 49.9935, "lng": 36.2304,
+      "date": "2022-09-06", "dateEnd": "2022-09-12",
+      "kind": "battle", "side": "victory-a",
+      "summary": "A rapid Ukrainian offensive liberates 12,000 km² of territory in six days, collapsing Russian lines around Kharkiv. The war's most dramatic reversal.",
+      "summaryTr": "Hızlı bir Ukrayna taarruzu, altı günde 12.000 km²'lik bir alanı kurtarır; Harkiv çevresindeki Rus hatları çöker. Savaşın en dramatik geri dönüşü.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/2022_Ukrainian_Kharkiv_counteroffensive"
+    },
+    {
+      "id": "kherson-liberation",
+      "name": "Liberation of Kherson",
+      "nameTr": "Herson'un Kurtuluşu",
+      "lat": 46.6354, "lng": 32.6169,
+      "date": "2022-11-11",
+      "kind": "liberation", "side": "victory-a",
+      "summary": "Ukrainian forces enter Kherson after an eight-month occupation, retaking the only regional capital Russia captured in 2022. Crowds greet soldiers with flags and flowers.",
+      "summaryTr": "Ukrayna kuvvetleri, sekiz aylık işgalden sonra Herson'a girer; Rusya'nın 2022'de ele geçirdiği tek bölge başkentini geri alır. Halk, askerleri bayrak ve çiçeklerle karşılar.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Liberation_of_Kherson"
+    },
+    {
+      "id": "bakhmut",
+      "name": "Battle of Bakhmut",
+      "nameTr": "Bahmut Muharebesi",
+      "lat": 48.5950, "lng": 38.0003,
+      "date": "2022-08-01", "dateEnd": "2023-05-20",
+      "kind": "battle", "side": "victory-b",
+      "summary": "The longest and bloodiest battle of the war. Wagner mercenary forces take the ruined city at enormous cost. A grinding stalemate that defined 2023.",
+      "summaryTr": "Savaşın en uzun ve en kanlı muharebesi. Wagner paralı kuvvetleri, harabeye dönen şehri büyük kayıplar pahasına alır. 2023'ü tanımlayan tüketici cephe savaşı.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Bakhmut"
+    },
+    {
+      "id": "kursk-incursion",
+      "name": "Kursk Incursion",
+      "nameTr": "Kursk Harekâtı",
+      "lat": 51.7373, "lng": 36.1893,
+      "date": "2024-08-06",
+      "kind": "battle", "side": "victory-a",
+      "summary": "Ukrainian forces cross into Russia's Kursk Oblast, seizing 1,000 km² of Russian soil. The first foreign military invasion of Russia since 1941.",
+      "summaryTr": "Ukrayna kuvvetleri Rusya'nın Kursk oblastına girer ve 1.000 km²'lik Rus toprağını ele geçirir. 1941'den bu yana Rusya'ya yapılan ilk yabancı askeri saldırı.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Kursk_offensive_(2024)"
+    }
+  ]
+}

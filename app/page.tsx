@@ -33,6 +33,36 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="px-5 md:px-10 pb-10">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-3">
+            {t("home.otherMaps")}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <SecondaryTile
+              href="/maps/iss"
+              title={t("home.isserTitle")}
+              blurb={t("home.isserBlurb")}
+              meta={t("home.isserMeta")}
+              gradient="from-[#050a1c] via-[#0c1530] to-[#161f4a]"
+              accent="rgba(138,180,255,0.35)"
+              preview={<IssSmallPreview />}
+              enterLabel={t("tile.enter")}
+            />
+            <SecondaryTile
+              href="/maps/taste-passport"
+              title={t("home.tasteTitle")}
+              blurb={t("home.tasteBlurb")}
+              meta={t("home.tasteMeta")}
+              gradient="from-[#2a1208] via-[#3e1f12] to-[#5a2e1a]"
+              accent="rgba(255,160,80,0.35)"
+              preview={<TasteSmallPreview />}
+              enterLabel={t("tile.enter")}
+            />
+          </div>
+        </div>
+      </section>
+
       <footer className="px-5 md:px-10 py-5 hair-t">
         <div className="max-w-[1200px] mx-auto flex flex-wrap justify-between items-center gap-3 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">
           <span>
@@ -117,6 +147,112 @@ function FeaturedMap({
         </div>
       </div>
     </Link>
+  );
+}
+
+function SecondaryTile({
+  href,
+  title,
+  blurb,
+  meta,
+  gradient,
+  accent,
+  preview,
+  enterLabel,
+}: {
+  href: string;
+  title: string;
+  blurb: string;
+  meta: string;
+  gradient: string;
+  accent: string;
+  preview: React.ReactNode;
+  enterLabel: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group relative overflow-hidden rounded-xl border border-[var(--line-2)] hover:border-white/40 transition-all duration-500 block h-[200px] md:h-[220px]"
+    >
+      <div className={`absolute inset-0 bg-gradient-to-br ${gradient}`} />
+      <div
+        className="absolute inset-0 opacity-75 group-hover:opacity-100 transition-opacity"
+        style={{
+          backgroundImage: `radial-gradient(circle at 30% 30%, ${accent}, transparent 60%)`,
+        }}
+      />
+      {preview}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+      <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between text-white">
+        <div className="flex justify-between items-start">
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/60">
+            {meta}
+          </span>
+        </div>
+        <div className="max-w-[85%]">
+          <h3 className="font-serif text-2xl md:text-[26px] leading-tight mb-1.5">
+            {title}
+          </h3>
+          <p className="text-white/75 text-[13px] md:text-[14px] leading-relaxed line-clamp-2">
+            {blurb}
+          </p>
+          <span className="inline-flex items-center gap-2 mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-white group-hover:gap-3 transition-all">
+            {enterLabel}
+            <span>→</span>
+          </span>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function IssSmallPreview() {
+  return (
+    <svg
+      className="absolute -right-6 -top-6 opacity-70 group-hover:opacity-100 transition-opacity pointer-events-none"
+      width="300" height="300" viewBox="0 0 300 300" aria-hidden
+    >
+      <circle cx="150" cy="150" r="100" stroke="rgba(138,180,255,0.3)" strokeWidth="1" fill="none" />
+      <ellipse cx="150" cy="150" rx="100" ry="32" stroke="rgba(138,180,255,0.2)" strokeWidth="0.8" fill="none" />
+      <circle cx="150" cy="150" r="125" stroke="#ffcc33" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="3 6" fill="none" />
+      <g transform="translate(230 100) rotate(20)">
+        <rect x="-6" y="-6" width="12" height="12" rx="1.5" fill="#2a2a2a" stroke="#ffcc33" strokeWidth="1" />
+        <rect x="-22" y="-5" width="14" height="10" fill="#1a2a4a" stroke="#ffcc33" strokeWidth="1" />
+        <rect x="8" y="-5" width="14" height="10" fill="#1a2a4a" stroke="#ffcc33" strokeWidth="1" />
+      </g>
+      <circle cx="230" cy="100" r="15" fill="#ffcc33" fillOpacity="0.2" />
+    </svg>
+  );
+}
+
+function TasteSmallPreview() {
+  const dishes = [
+    { c: "#fbbf24", emoji: "🍣" },
+    { c: "#fb7185", emoji: "🍕" },
+    { c: "#a3e635", emoji: "🥗" },
+    { c: "#fb923c", emoji: "🌮" },
+  ];
+  return (
+    <svg
+      className="absolute -right-4 -bottom-4 opacity-80 group-hover:opacity-100 transition-opacity pointer-events-none"
+      width="280" height="280" viewBox="0 0 280 280" aria-hidden
+    >
+      {dishes.map((d, i) => {
+        const col = i % 2;
+        const row = Math.floor(i / 2);
+        const x = 60 + col * 110;
+        const y = 70 + row * 120;
+        return (
+          <g key={i} transform={`translate(${x} ${y}) rotate(${(i - 1.5) * 6})`}>
+            <rect width="80" height="90" rx="8" fill="rgba(0,0,0,0.35)" stroke="rgba(255,204,120,0.25)" />
+            <rect x="5" y="5" width="70" height="55" rx="4" fill={d.c} fillOpacity="0.35" />
+            <text x="40" y="40" textAnchor="middle" dominantBaseline="middle" fontSize="32">
+              {d.emoji}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
   );
 }
 

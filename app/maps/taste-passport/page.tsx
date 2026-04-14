@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import SiteLogo from "@/components/SiteLogo";
+import { LocaleToggle } from "@/components/LocaleProvider";
 import {
   Country,
   PassportData,
@@ -52,19 +54,14 @@ export default function TastePassportHome() {
 
   return (
     <div className="relative min-h-screen grain">
-      <header className="relative z-30 flex justify-between items-center px-6 md:px-10 py-5 hair-b">
-        <Link
-          href="/"
-          className="font-mono text-[11px] uppercase tracking-[0.25em] text-[var(--text-2)] hover:text-[var(--text)]"
-        >
-          ← GeographicHub
-        </Link>
-        <span className="font-serif text-[18px] tracking-tight">
-          Taste Passport
-        </span>
-        <span className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--muted)]">
-          Eat your way around the world
-        </span>
+      <header className="relative z-30 flex justify-between items-center px-5 md:px-10 py-4 md:py-5 hair-b">
+        <SiteLogo theme="light" />
+        <div className="flex items-center gap-4">
+          <LocaleToggle theme="light" />
+          <span className="hidden md:inline font-serif text-[18px] tracking-tight">
+            Taste Passport
+          </span>
+        </div>
       </header>
 
       <section className="px-6 md:px-10 pt-14 pb-10">

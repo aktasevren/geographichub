@@ -90,6 +90,15 @@ export const DICT = {
     "footer.copyright": "© {year} GeographicHub",
     "footer.tagline": "İnteraktif kartografi · açık veriyle",
     "footer.trademarks": "Markalar",
+
+    // Home secondary tiles
+    "home.isserTitle": "ISS Takibi",
+    "home.isserBlurb": "Uluslararası Uzay İstasyonu'nu canlı 3D küre üzerinde takip et. Konumunu üstünden ne zaman geçeceğini hesapla.",
+    "home.isserMeta": "Canlı · Her 3 sn güncellenir",
+    "home.tasteTitle": "Damak Pasaportu",
+    "home.tasteBlurb": "Dünya mutfaklarının imza yemeklerini keşfet. Tattıklarını işaretle, her ülke için damga topla.",
+    "home.tasteMeta": "145+ yemek · 10 ülke",
+    "home.otherMaps": "Diğer haritalar",
   },
 
   en: {
@@ -174,6 +183,14 @@ export const DICT = {
     "footer.copyright": "© {year} GeographicHub",
     "footer.tagline": "Interactive cartography · built on open data",
     "footer.trademarks": "Trademarks",
+
+    "home.isserTitle": "ISS Tracker",
+    "home.isserBlurb": "Track the International Space Station live on a 3D globe. Predict when it will pass over your location.",
+    "home.isserMeta": "Live · Updates every 3s",
+    "home.tasteTitle": "Taste Passport",
+    "home.tasteBlurb": "Discover the world's signature dishes. Mark what you've tasted and collect stamps, country by country.",
+    "home.tasteMeta": "145+ dishes · 10 countries",
+    "home.otherMaps": "Other maps",
   },
 } as const;
 
