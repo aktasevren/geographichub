@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/maps/alliances", priority: 0.85, changeFrequency: "monthly" },
     { url: "/maps/anthems", priority: 0.85, changeFrequency: "monthly" },
     { url: "/maps/squad", priority: 0.85, changeFrequency: "monthly" },
+    { url: "/maps/geoguess", priority: 0.9, changeFrequency: "monthly" },
     { url: "/legal/trademarks", priority: 0.3, changeFrequency: "monthly" },
     { url: "/about", priority: 0.5, changeFrequency: "monthly" },
     { url: "/backlog", priority: 0.4, changeFrequency: "weekly" },

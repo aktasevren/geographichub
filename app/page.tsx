@@ -51,9 +51,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 md:px-10 pb-12">
+      <section className="px-5 md:px-10 pb-5">
         <div className="max-w-[1200px] mx-auto">
           <SquadTile t={t} locale={locale} />
+        </div>
+      </section>
+
+      <section className="px-5 md:px-10 pb-12">
+        <div className="max-w-[1200px] mx-auto">
+          <GeoGuessTile locale={locale} t={t} />
         </div>
       </section>
 
@@ -1286,6 +1292,127 @@ function WarsPreview() {
         <path d="M 380 120 Q 386 112, 392 120 Q 398 112, 404 120" />
         <path d="M 420 100 Q 425 94, 430 100 Q 435 94, 440 100" />
         <path d="M 680 80 Q 686 72, 692 80 Q 698 72, 704 80" />
+      </g>
+    </svg>
+  );
+}
+
+function GeoGuessTile({
+  t,
+  locale,
+}: {
+  t: (k: any) => string;
+  locale: string;
+}) {
+  const title = locale === "tr" ? "Neredeyim?" : "GeoGuess.";
+  const blurb =
+    locale === "tr"
+      ? "Bir fotoğraf göster — dünya haritasına tıkla, nerede olduğunu tahmin et. 5 tur, 25 000 puan. Ne kadar yakınsan o kadar çok puan."
+      : "See a photo, click the world map, guess where it is. 5 rounds, 25 000 points. The closer you get, the more you score.";
+  const tags =
+    locale === "tr"
+      ? ["5 tur", "25 000 puan", "50 yer"]
+      : ["5 rounds", "25 000 pts", "50 places"];
+  return (
+    <Link
+      href="/maps/geoguess"
+      className="group relative overflow-hidden rounded-2xl md:rounded-3xl border border-[var(--line-2)] hover:border-white/40 transition-all duration-500 block min-h-[280px] md:min-h-[340px]"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0b1220] via-[#0f2236] to-[#153a5c]" />
+      <div
+        className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 30%, rgba(251,191,36,0.35), transparent 55%), radial-gradient(circle at 80% 70%, rgba(52,211,153,0.30), transparent 55%)",
+        }}
+      />
+      <GeoGuessBigPreview />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/30 to-transparent md:bg-gradient-to-t md:from-black/80 md:via-black/10 md:to-transparent" />
+
+      <div className="absolute inset-0 p-5 md:p-7 lg:p-9 flex flex-col justify-between text-white">
+        <div className="flex flex-wrap gap-2">
+          {tags.map((p) => (
+            <span
+              key={p}
+              className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full border border-[#fbbf24]/55 bg-[#fbbf24]/10 text-[#fbbf24] backdrop-blur-sm"
+            >
+              {p}
+            </span>
+          ))}
+        </div>
+        <div className="max-w-[640px]">
+          <h2 className="font-serif leading-[0.95] tracking-tight text-4xl md:text-5xl lg:text-[64px]">
+            {title}
+          </h2>
+          <p className="mt-3 md:mt-4 text-white/80 text-[14px] md:text-[15px] leading-relaxed max-w-[520px]">
+            {blurb}
+          </p>
+          <div className="mt-5 md:mt-6">
+            <span className="inline-flex items-center gap-3 md:gap-4 px-5 md:px-7 py-3 md:py-3.5 rounded-full bg-[#fbbf24] text-black font-mono text-[12px] md:text-[14px] uppercase tracking-[0.22em] font-semibold group-hover:gap-5 transition-all shadow-lg shadow-black/40">
+              {t("tile.enter")}
+              <span className="inline-block h-px w-6 md:w-8 bg-black/60 group-hover:w-12 transition-all" />
+              <span className="text-lg">→</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function GeoGuessBigPreview() {
+  return (
+    <svg
+      className="absolute -right-10 top-1/2 -translate-y-1/2 opacity-80 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+      width="640"
+      height="640"
+      viewBox="0 0 640 640"
+      aria-hidden
+      preserveAspectRatio="xMidYMid slice"
+    >
+      <defs>
+        <radialGradient id="ggGlobe" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#1e3a5c" />
+          <stop offset="100%" stopColor="#0b1220" />
+        </radialGradient>
+      </defs>
+      <circle cx="320" cy="320" r="220" fill="url(#ggGlobe)" stroke="#fbbf24" strokeOpacity="0.35" strokeWidth="2" />
+      {/* Lat/lng grid */}
+      <g stroke="#fbbf24" strokeOpacity="0.15" fill="none" strokeWidth="1">
+        <ellipse cx="320" cy="320" rx="220" ry="60" />
+        <ellipse cx="320" cy="320" rx="220" ry="120" />
+        <ellipse cx="320" cy="320" rx="220" ry="180" />
+        <ellipse cx="320" cy="320" rx="60" ry="220" />
+        <ellipse cx="320" cy="320" rx="120" ry="220" />
+        <ellipse cx="320" cy="320" rx="180" ry="220" />
+      </g>
+      {/* Continent blobs */}
+      <g fill="#34d399" fillOpacity="0.6">
+        <path d="M 220 260 Q 240 230, 290 240 Q 320 250, 310 280 Q 280 305, 240 295 Q 215 285, 220 260 Z" />
+        <path d="M 340 350 Q 380 330, 420 360 Q 440 395, 410 420 Q 370 425, 345 400 Q 330 375, 340 350 Z" />
+        <path d="M 430 250 Q 470 235, 495 265 Q 505 295, 475 310 Q 440 305, 425 280 Q 420 260, 430 250 Z" />
+      </g>
+      {/* Dashed line + pins */}
+      <line x1="280" y1="290" x2="405" y2="385" stroke="#fbbf24" strokeWidth="2.5" strokeDasharray="6 5" />
+      {/* Guess pin (amber) */}
+      <circle cx="280" cy="290" r="18" fill="#fbbf24" fillOpacity="0.3" />
+      <circle cx="280" cy="290" r="9" fill="#fbbf24" stroke="#78350f" strokeWidth="2" />
+      {/* Actual pin (emerald) */}
+      <circle cx="405" cy="385" r="22" fill="#34d399" fillOpacity="0.35" />
+      <circle cx="405" cy="385" r="11" fill="#10b981" stroke="#064e3b" strokeWidth="2" />
+      {/* Crosshair overlay */}
+      <g stroke="#fff" strokeOpacity="0.25" strokeWidth="1" fill="none">
+        <line x1="320" y1="80" x2="320" y2="120" />
+        <line x1="320" y1="520" x2="320" y2="560" />
+        <line x1="80" y1="320" x2="120" y2="320" />
+        <line x1="520" y1="320" x2="560" y2="320" />
+      </g>
+      {/* Score tag */}
+      <g transform="translate(440, 180)">
+        <rect x="0" y="0" width="140" height="44" rx="22" fill="#0b1220" stroke="#fbbf24" strokeOpacity="0.4" strokeWidth="1.5" />
+        <text x="70" y="28" textAnchor="middle" fontFamily="monospace" fontWeight="700" fontSize="17" fill="#fbbf24" letterSpacing="2">
+          4 820
+        </text>
       </g>
     </svg>
   );
