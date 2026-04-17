@@ -6,15 +6,39 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import SiteLogo from "@/components/SiteLogo";
 import { LocaleToggle, useLocale } from "@/components/LocaleProvider";
 import {
-  KIND_META,
-  SIDE_META,
   kindLabel,
   sideLabel,
   type War,
   type WarEvent,
+  type WarEventKind,
+  type WarEventSide,
   formatFuzzyDate,
   parseFuzzyDate,
 } from "@/lib/wars-types";
+
+// Temporary shim — old KIND_META/SIDE_META used inline colors/icons.
+// Retained here so the existing UI still builds while the noir rewrite lands
+// (see app/maps/wars/[slug]/WarBottomSheet.tsx etc. in Tasks 8–13).
+const KIND_META: Record<WarEventKind, { icon: string; color: string }> = {
+  battle:     { icon: "⚔", color: "#dc2626" },
+  siege:      { icon: "🏰", color: "#f97316" },
+  congress:   { icon: "🏛", color: "#f59e0b" },
+  treaty:     { icon: "🕊", color: "#06b6d4" },
+  occupation: { icon: "🚩", color: "#a855f7" },
+  liberation: { icon: "✨", color: "#22c55e" },
+  armistice:  { icon: "✋", color: "#94a3b8" },
+  landing:    { icon: "⚓", color: "#ec4899" },
+  event:      { icon: "⭐", color: "#eab308" },
+};
+const SIDE_META: Record<WarEventSide, { color: string }> = {
+  "victory-a":  { color: "#22c55e" },
+  "victory-b":  { color: "#ef4444" },
+  "draw":       { color: "#94a3b8" },
+  "political":  { color: "#f59e0b" },
+  "occupation": { color: "#a855f7" },
+  "armistice":  { color: "#06b6d4" },
+  "treaty":     { color: "#0ea5e9" },
+};
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
