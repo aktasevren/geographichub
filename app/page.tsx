@@ -26,39 +26,45 @@ export default function Home() {
         </div>
       </header>
 
+      {/* 1. War Maps — hero */}
       <section className="px-5 md:px-10 pt-3 md:pt-6 pb-5 flex-1 flex flex-col">
-        <div className="max-w-[1200px] w-full mx-auto flex-1 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 min-h-[72vh]">
-          <div className="md:col-span-2 flex">
-            <FeaturedMap title={title} tag={tag} t={t} locale={locale} />
-          </div>
-          <div className="md:col-span-1 flex flex-col gap-4 md:gap-5">
-            <TastePassportTile t={t} locale={locale} />
-            <IssTile t={t} locale={locale} />
-          </div>
+        <div className="max-w-[1200px] w-full mx-auto flex-1 flex min-h-[72vh]">
+          <FeaturedMap title={title} tag={tag} t={t} locale={locale} />
         </div>
       </section>
 
-      <section className="px-5 md:px-10 pb-5">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          <PilotTile t={t} locale={locale} />
-          <AlliancesTile t={t} locale={locale} />
-        </div>
-      </section>
-
+      {/* 2. National Anthems */}
       <section className="px-5 md:px-10 pb-5">
         <div className="max-w-[1200px] mx-auto">
           <AnthemsTile t={t} locale={locale} />
         </div>
       </section>
 
+      {/* 3. Alliances */}
+      <section className="px-5 md:px-10 pb-5">
+        <div className="max-w-[1200px] mx-auto">
+          <AlliancesTile t={t} locale={locale} />
+        </div>
+      </section>
+
+      {/* 4. Squads */}
       <section className="px-5 md:px-10 pb-5">
         <div className="max-w-[1200px] mx-auto">
           <SquadTile t={t} locale={locale} />
         </div>
       </section>
 
+      {/* Rest — order is less deliberate */}
+      <section className="px-5 md:px-10 pb-5">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          <TastePassportTile t={t} locale={locale} />
+          <IssTile t={t} locale={locale} />
+        </div>
+      </section>
+
       <section className="px-5 md:px-10 pb-12">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          <PilotTile t={t} locale={locale} />
           <GeoGuessTile locale={locale} t={t} />
         </div>
       </section>
