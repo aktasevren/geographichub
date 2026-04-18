@@ -48,16 +48,18 @@ export default function WarBottomSheet({
     <BottomSheet open={!!active} onClose={onClose} heightVh={45}>
       {active && (
         <div data-map="wars" className="px-5 md:px-8 pb-6">
-          <EventNav
-            prev={prev}
-            next={next}
-            onPrev={() => prev && onSelect(prev)}
-            onNext={() => next && onSelect(next)}
-          />
-          <EventHero event={active} />
-          <EventPhoto event={active} />
-          <EventStats event={active} />
-          <EventStory event={active} />
+          <div className="max-w-[640px] mx-auto">
+            <EventNav
+              prev={prev}
+              next={next}
+              onPrev={() => prev && onSelect(prev)}
+              onNext={() => next && onSelect(next)}
+            />
+            <EventHero event={active} />
+            <EventPhoto event={active} />
+            <EventStats event={active} />
+            <EventStory event={active} />
+          </div>
         </div>
       )}
     </BottomSheet>

@@ -39,21 +39,27 @@ export default function EventPhoto({ event }: { event: WarEvent }) {
   if (!src) return null;
 
   return (
-    <div
-      className="aspect-[16/9] overflow-hidden rounded-md mb-4 border"
-      style={{ borderColor: "var(--war-rule)" }}
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        key={event.id}
-        src={src}
-        alt={event.name}
-        className="w-full h-full object-cover"
+    <div className="flex justify-center mb-4">
+      <div
+        className="aspect-[16/9] overflow-hidden rounded-md border"
         style={{
-          filter: "grayscale(100%) contrast(1.2) brightness(0.95)",
-          animation: "warKenBurns 6s ease-out forwards",
+          borderColor: "var(--war-rule)",
+          width: "100%",
+          maxWidth: 360,
         }}
-      />
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          key={event.id}
+          src={src}
+          alt={event.name}
+          className="w-full h-full object-cover"
+          style={{
+            filter: "grayscale(100%) contrast(1.2) brightness(0.95)",
+            animation: "warKenBurns 6s ease-out forwards",
+          }}
+        />
+      </div>
       <style jsx>{`
         @keyframes warKenBurns {
           0% {
