@@ -1,18 +1,16 @@
 # War Map — Backlog
 
 **Slug**: `/maps/wars`, `/maps/wars/[slug]`
-**Status**: ✅ MVP live (Turkish War of Independence, 17 curated events)
+**Status**: ✅ Noir upgrade live (8 turning-point wars, 214 events)
 
-> 🎨 DESIGN.md compliance required — permanent legend, icons+colors, primary action (Play timeline).
+> 🎨 DESIGN.md + `docs/superpowers/specs/2026-04-18-war-map-noir-upgrade-design.md` compliant.
 
 ---
 
 ## 🚀 Priority
 
 ### P0 — Now
-- [ ] Add **World War II** seed (≥25 events: Normandy, Stalingrad, Iwo Jima, Pearl Harbor, Berlin, Hiroshima, etc.)
-- [ ] Add **American Civil War** seed (≥20 events)
-- [ ] Add **Russo-Ukrainian War** (≥15 events, recent + well-sourced)
+- [ ] **Add World War I + World War II** (the two gap wars — subagents hit API error / rate limit during the 2026-04-18 noir push). Re-dispatch after rate reset with the per-war briefs from `docs/superpowers/plans/2026-04-18-war-map-noir-upgrade.md` Task 3.
 - [ ] **Wikidata SPARQL ingestion script** — build-time, writes `<slug>.generated.json`, curated overrides win on conflict
 - [ ] **Timeline year scrubber** — drag year cursor, future events fade
 - [ ] Image thumbnail in drawer (Wikipedia REST summary → `thumbnail.source`)
