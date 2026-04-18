@@ -1,56 +1,64 @@
 {
   "wars": [
     {
-      "slug": "turkish-independence",
-      "name": "Turkish War of Independence",
-      "nameTr": "Kurtuluş Savaşı",
-      "startYear": 1919,
-      "endYear": 1923,
-      "eventCount": 17,
-      "era": "20th-century",
-      "region": "middle-east",
-      "tags": ["independence", "ottoman", "modern-turkey"],
-      "blurb": "The military and political campaign that established the Republic of Türkiye after the partition of the Ottoman Empire.",
-      "blurbTr": "Osmanlı'nın paylaşılmasının ardından Türkiye Cumhuriyeti'nin kuruluşuna giden askeri ve siyasi mücadele."
+      "slug": "second-punic-war",
+      "name": "Second Punic War",
+      "nameTr": "İkinci Pön Savaşı",
+      "startYear": -218,
+      "endYear": -201,
+      "eventCount": 22,
+      "blurb": "Seventeen years of continental war between Rome and Carthage. Hannibal Barca marches elephants over the Alps, shatters Roman armies at Cannae, and almost breaks the Republic — until Scipio Africanus carries the war to Africa and wins at Zama.",
+      "blurbTr": "Roma ile Kartaca arasında on yedi yıl süren kıtasal savaş. Hannibal Barca fillerle Alpleri aşar, Cannae'da Roma ordularını paramparça eder ve Cumhuriyet'i neredeyse çökertir — ta ki Scipio Africanus savaşı Afrika'ya taşıyıp Zama'da zafer kazanana dek.",
+      "era": "ancient",
+      "region": "europe",
+      "tags": [
+        "rome",
+        "carthage",
+        "hannibal",
+        "scipio",
+        "mediterranean"
+      ],
+      "militaryDead": 770000
     },
     {
-      "slug": "world-war-2",
-      "name": "World War II",
-      "nameTr": "İkinci Dünya Savaşı",
-      "startYear": 1939,
-      "endYear": 1945,
-      "eventCount": 12,
-      "era": "20th-century",
-      "region": "global",
-      "tags": ["nazi", "fascism", "pacific", "european-theatre", "global-war"],
-      "blurb": "The most destructive conflict in human history, fought across every inhabited continent.",
-      "blurbTr": "İnsanlık tarihinin en yıkıcı çatışması; her kıtada yaşandı."
+      "slug": "mongol-conquests",
+      "name": "Mongol Conquests",
+      "nameTr": "Moğol İstilaları",
+      "startYear": 1206,
+      "endYear": 1279,
+      "eventCount": 33,
+      "blurb": "From a kurultai on the Onon River to the cliffs of Yamen, the Mongols built history's largest contiguous empire through disciplined cavalry, siege craft learned on the march, and terror wielded as strategy.",
+      "blurbTr": "Onon Nehri kurultayından Yamen uçurumlarına kadar Moğollar; disiplinli süvarileri, yol üstünde öğrendikleri kuşatma sanatı ve araç olarak kullandıkları dehşetle tarihin en büyük bitişik imparatorluğunu kurdular.",
+      "era": "medieval",
+      "region": "asia",
+      "tags": [
+        "mongol-empire",
+        "genghis-khan",
+        "kublai-khan",
+        "steppe-warfare",
+        "eurasia"
+      ],
+      "militaryDead": 10000000
     },
     {
-      "slug": "world-war-1",
-      "name": "World War I",
-      "nameTr": "Birinci Dünya Savaşı",
-      "startYear": 1914,
-      "endYear": 1918,
-      "eventCount": 10,
-      "era": "20th-century",
-      "region": "global",
-      "tags": ["great-war", "trench-warfare", "empires"],
-      "blurb": "An industrial-scale conflict that ended four empires and redrew the map of Europe and the Middle East.",
-      "blurbTr": "Dört imparatorluğu yıkan ve Avrupa ile Orta Doğu haritasını yeniden çizen endüstriyel ölçekli çatışma."
-    },
-    {
-      "slug": "american-civil-war",
-      "name": "American Civil War",
-      "nameTr": "Amerikan İç Savaşı",
-      "startYear": 1861,
-      "endYear": 1865,
-      "eventCount": 9,
-      "era": "19th-century",
-      "region": "americas",
-      "tags": ["slavery", "secession", "abolition", "union-confederacy"],
-      "blurb": "The conflict between the Union and the secessionist Confederacy over the expansion of slavery.",
-      "blurbTr": "Köleliğin yayılması üzerine Birlik ile ayrılıkçı Konfederasyon arasında çıkan çatışma."
+      "slug": "thirty-years-war",
+      "name": "Thirty Years' War",
+      "nameTr": "Otuz Yıl Savaşları",
+      "startYear": 1618,
+      "endYear": 1648,
+      "eventCount": 31,
+      "blurb": "A devastating European conflict (1618–1648) beginning as a Catholic–Protestant struggle inside the Holy Roman Empire and widening into a dynastic war between Habsburg and Bourbon powers, concluded by the Peace of Westphalia which redrew the religious and political map of Europe.",
+      "blurbTr": "1618-1648 yılları arasında Kutsal Roma İmparatorluğu içinde Katolik-Protestan çatışması olarak başlayıp Habsburg ve Bourbon hanedanları arasındaki bir güç mücadelesine dönüşen, Avrupa'nın dini ve siyasi haritasını yeniden çizen Vestfalya Barışı ile sona eren yıkıcı bir Avrupa savaşı.",
+      "era": "early-modern",
+      "region": "europe",
+      "tags": [
+        "religion",
+        "habsburg",
+        "holy-roman-empire",
+        "westphalia",
+        "early-modern"
+      ],
+      "militaryDead": 2000000
     },
     {
       "slug": "napoleonic-wars",
@@ -58,25 +66,113 @@
       "nameTr": "Napolyon Savaşları",
       "startYear": 1803,
       "endYear": 1815,
-      "eventCount": 10,
+      "eventCount": 29,
+      "blurb": "A series of coalition wars (1803-1815) in which Napoleonic France fought shifting alliances of Britain, Russia, Austria, Prussia and others. Ended with Napoleon's defeat at Waterloo and the Congress of Vienna settlement.",
+      "blurbTr": "Napolyon Fransa'sının Britanya, Rusya, Avusturya ve Prusya önderliğindeki değişken koalisyonlara karşı verdiği 1803-1815 koalisyon savaşları dizisi. Napolyon'un Waterloo'daki yenilgisi ve Viyana Kongresi ile sona erdi.",
       "era": "19th-century",
       "region": "europe",
-      "tags": ["napoleon", "france", "empire", "coalition"],
-      "blurb": "The twelve years in which Napoleon Bonaparte conquered most of Europe — and then lost it all.",
-      "blurbTr": "Napolyon Bonapart'ın Avrupa'nın büyük bölümünü fethettiği — ve sonra hepsini kaybettiği — on iki yıl."
+      "tags": [
+        "napoleon",
+        "coalitions",
+        "france",
+        "wellington",
+        "waterloo"
+      ],
+      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
+      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg",
+      "militaryDead": 2500000
+    },
+    {
+      "slug": "american-civil-war",
+      "name": "American Civil War",
+      "nameTr": "Amerikan İç Savaşı",
+      "startYear": 1861,
+      "endYear": 1865,
+      "eventCount": 26,
+      "blurb": "A four-year civil war (1861-1865) between the United States and eleven seceded Southern states that formed the Confederacy, fought primarily over the expansion of slavery. It ended with Union victory, the abolition of slavery, and roughly 620,000-750,000 military dead, making it the deadliest conflict in American history.",
+      "blurbTr": "Amerika Birleşik Devletleri ile köleliği sürdürmek amacıyla ayrılan on bir güney eyaletinin kurduğu Konfederasyon arasında 1861-1865 yılları arasında süren dört yıllık iç savaş. Birliğin zaferi, köleliğin kaldırılması ve yaklaşık 620.000-750.000 askeri ölümle ABD tarihinin en kanlı çatışması olarak son buldu.",
+      "era": "19th-century",
+      "region": "americas",
+      "tags": [
+        "civil-war",
+        "slavery",
+        "secession",
+        "industrial-warfare",
+        "usa",
+        "confederacy"
+      ],
+      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/US_flag_35_stars.svg/1200px-US_flag_35_stars.svg.png",
+      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_the_Confederate_States_of_America_%281861%E2%80%931863%29.svg/1200px-Flag_of_the_Confederate_States_of_America_%281861%E2%80%931863%29.svg.png",
+      "militaryDead": 700000
+    },
+    {
+      "slug": "turkish-war-of-independence",
+      "name": "Turkish War of Independence",
+      "nameTr": "Kurtuluş Savaşı",
+      "startYear": 1919,
+      "endYear": 1923,
+      "eventCount": 23,
+      "blurb": "A four-year struggle waged by the Turkish National Movement against the partition of Anatolia after the Ottoman defeat in World War I. Led from Ankara by Mustafa Kemal, Turkish forces resisted Greek, British, French, Italian, and Armenian occupations, overturned the Treaty of Sèvres, signed the Treaty of Lausanne, and founded the Republic of Turkey.",
+      "blurbTr": "Osmanlı Devleti'nin Birinci Dünya Savaşı'nda yenilmesinin ardından Anadolu'nun paylaşılmasına karşı Türk Milli Hareketi'nin yürüttüğü dört yıllık mücadele. Mustafa Kemal önderliğinde Ankara'dan yönetilen Türk kuvvetleri; Yunan, İngiliz, Fransız, İtalyan ve Ermeni işgallerine direndi, Sevr Antlaşması'nı geçersiz kıldı, Lozan Antlaşması'nı imzaladı ve Türkiye Cumhuriyeti'ni kurdu.",
+      "era": "20th-century",
+      "region": "middle-east",
+      "tags": [
+        "nationalism",
+        "post-wwi",
+        "anatolia",
+        "decolonization",
+        "republic",
+        "ataturk"
+      ],
+      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
+      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece_%281822-1978%29.svg",
+      "militaryDead": 340000
+    },
+    {
+      "slug": "gulf-and-iraq-wars",
+      "name": "Gulf War and Iraq War",
+      "nameTr": "Körfez Savaşı ve Irak Savaşı",
+      "startYear": 1990,
+      "endYear": 2011,
+      "eventCount": 23,
+      "blurb": "Two US-led campaigns against Ba'athist Iraq: the 1990–1991 Gulf War expelled Saddam Hussein from Kuwait, and the 2003–2011 Iraq War toppled his regime and triggered a protracted insurgency and sectarian conflict.",
+      "blurbTr": "ABD önderliğindeki iki harekât: 1990–1991 Körfez Savaşı Saddam Hüseyin'i Kuveyt'ten çıkardı; 2003–2011 Irak Savaşı ise rejimi devirerek uzun soluklu bir isyan ve mezhepsel çatışma dönemini başlattı.",
+      "era": "21st-century",
+      "region": "middle-east",
+      "tags": [
+        "cold-war-aftermath",
+        "us-led-coalition",
+        "oil",
+        "saddam-hussein",
+        "insurgency",
+        "regime-change"
+      ],
+      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Iraq%2C_1991-2004.svg",
+      "militaryDead": 60000
     },
     {
       "slug": "russo-ukrainian-war",
       "name": "Russo-Ukrainian War",
-      "nameTr": "Rusya-Ukrayna Savaşı",
+      "nameTr": "Rus-Ukrayna Savaşı",
       "startYear": 2014,
       "endYear": 2025,
-      "eventCount": 9,
+      "eventCount": 27,
+      "blurb": "A Russian-initiated conflict against Ukraine that began in 2014 with the annexation of Crimea and war in Donbas, then escalated in February 2022 into Europe's largest interstate war since 1945.",
+      "blurbTr": "Rusya tarafından başlatılan, 2014'te Kırım ilhakı ve Donbas savaşıyla başlayan, Şubat 2022'de ise 1945'ten bu yana Avrupa'nın en büyük devletlerarası savaşına dönüşen çatışma.",
       "era": "21st-century",
       "region": "europe",
-      "tags": ["invasion", "ukraine", "russia", "contemporary"],
-      "blurb": "The ongoing conflict that began with Russia's 2014 annexation of Crimea and escalated into a full-scale invasion in 2022.",
-      "blurbTr": "Rusya'nın 2014'te Kırım'ı ilhakıyla başlayan ve 2022'de tam ölçekli işgale dönüşen devam eden çatışma."
+      "tags": [
+        "russia",
+        "ukraine",
+        "nato",
+        "donbas",
+        "crimea",
+        "21st-century"
+      ],
+      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
+      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg",
+      "militaryDead": 180000
     }
   ]
 }
