@@ -125,6 +125,7 @@ export default function WarMapClient({ war }: { war: War }) {
         />
 
         <WarBottomSheet
+          war={war}
           events={events}
           activeId={activeId}
           onSelect={handleSelect}

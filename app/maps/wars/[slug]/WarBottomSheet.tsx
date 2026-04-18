@@ -7,9 +7,10 @@ import EventStats from "./EventStats";
 import EventStory from "./EventStory";
 import EventPhoto from "./EventPhoto";
 import EventNav from "./EventNav";
-import type { WarEvent } from "@/lib/wars-types";
+import type { War, WarEvent } from "@/lib/wars-types";
 
 type Props = {
+  war: War;
   events: WarEvent[];
   activeId: string | null;
   onSelect: (e: WarEvent) => void;
@@ -17,6 +18,7 @@ type Props = {
 };
 
 export default function WarBottomSheet({
+  war,
   events,
   activeId,
   onSelect,
@@ -55,9 +57,9 @@ export default function WarBottomSheet({
               onPrev={() => prev && onSelect(prev)}
               onNext={() => next && onSelect(next)}
             />
-            <EventHero event={active} />
+            <EventHero event={active} war={war} />
             <EventPhoto event={active} />
-            <EventStats event={active} />
+            <EventStats event={active} war={war} />
             <EventStory event={active} />
           </div>
         </div>
