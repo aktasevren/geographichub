@@ -1,14 +1,20 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { War, WarIndexEntry } from "./wars-types";
+import {
+  War,
+  WarIndex,
+  type War as WarT,
+  type WarIndexEntry,
+} from "./wars-types";
 
 export function loadWarIndex(): WarIndexEntry[] {
   const p = path.join(process.cwd(), "public", "data", "wars", "index.json");
   const j = JSON.parse(fs.readFileSync(p, "utf8"));
-  return j.wars as WarIndexEntry[];
+  const parsed = WarIndex.parse(j);
+  return parsed.wars;
 }
 
-export function loadWar(slug: string): War | null {
+export function loadWar(slug: string): WarT | null {
   const p = path.join(
     process.cwd(),
     "public",
@@ -17,5 +23,6 @@ export function loadWar(slug: string): War | null {
     `${slug}.json`
   );
   if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, "utf8")) as War;
+  const j = JSON.parse(fs.readFileSync(p, "utf8"));
+  return War.parse(j);
 }

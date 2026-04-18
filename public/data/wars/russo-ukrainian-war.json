@@ -1,112 +1,696 @@
 {
   "slug": "russo-ukrainian-war",
   "name": "Russo-Ukrainian War",
-  "nameTr": "Rusya-Ukrayna Savaşı",
+  "nameTr": "Rus-Ukrayna Savaşı",
   "startYear": 2014,
   "endYear": 2025,
-  "blurb": "The ongoing conflict that began with Russia's 2014 annexation of Crimea and escalated into a full-scale invasion in 2022. The largest war in Europe since 1945.",
-  "blurbTr": "Rusya'nın 2014'te Kırım'ı ilhakıyla başlayan ve 2022'de tam ölçekli işgale dönüşen devam eden çatışma. 1945'ten bu yana Avrupa'daki en büyük savaş.",
+  "era": "21st-century",
+  "region": "europe",
+  "tags": [
+    "russia",
+    "ukraine",
+    "nato",
+    "donbas",
+    "crimea",
+    "21st-century"
+  ],
+  "blurb": "A Russian-initiated conflict against Ukraine that began in 2014 with the annexation of Crimea and war in Donbas, then escalated in February 2022 into Europe's largest interstate war since 1945.",
+  "blurbTr": "Rusya tarafından başlatılan, 2014'te Kırım ilhakı ve Donbas savaşıyla başlayan, Şubat 2022'de ise 1945'ten bu yana Avrupa'nın en büyük devletlerarası savaşına dönüşen çatışma.",
+  "sides": [
+    {
+      "id": "A",
+      "label": "Ukraine and Western Partners",
+      "labelTr": "Ukrayna ve Batılı Ortaklar",
+      "countries": [
+        {
+          "name": "Ukraine",
+          "nameTr": "Ukrayna",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Ukraine.svg"
+        },
+        {
+          "name": "United States (aid)",
+          "nameTr": "Amerika Birleşik Devletleri (yardım)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_States.svg"
+        },
+        {
+          "name": "United Kingdom (aid)",
+          "nameTr": "Birleşik Krallık (yardım)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_Kingdom.svg"
+        },
+        {
+          "name": "Germany (aid)",
+          "nameTr": "Almanya (yardım)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Germany.svg"
+        },
+        {
+          "name": "Poland (aid)",
+          "nameTr": "Polonya (yardım)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Poland.svg"
+        },
+        {
+          "name": "France (aid)",
+          "nameTr": "Fransa (yardım)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_France.svg"
+        },
+        {
+          "name": "European Union (aid)",
+          "nameTr": "Avrupa Birliği (yardım)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Europe.svg"
+        }
+      ],
+      "commanders": [
+        "Volodymyr Zelensky",
+        "Valerii Zaluzhnyi",
+        "Oleksandr Syrskyi",
+        "Kyrylo Budanov"
+      ],
+      "result": "victor"
+    },
+    {
+      "id": "B",
+      "label": "Russian Federation and Allies",
+      "labelTr": "Rusya Federasyonu ve Müttefikleri",
+      "countries": [
+        {
+          "name": "Russia",
+          "nameTr": "Rusya",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Russia.svg"
+        },
+        {
+          "name": "Donetsk People's Republic (annexed)",
+          "nameTr": "Donetsk Halk Cumhuriyeti (ilhak)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Donetsk_People's_Republic.svg"
+        },
+        {
+          "name": "Luhansk People's Republic (annexed)",
+          "nameTr": "Luhansk Halk Cumhuriyeti (ilhak)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Lugansk_People's_Republic_(Official).svg"
+        },
+        {
+          "name": "Belarus (logistical)",
+          "nameTr": "Belarus (lojistik)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Belarus.svg"
+        },
+        {
+          "name": "North Korea (later)",
+          "nameTr": "Kuzey Kore (sonradan)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_North_Korea.svg"
+        }
+      ],
+      "commanders": [
+        "Vladimir Putin",
+        "Sergei Shoigu",
+        "Valery Gerasimov",
+        "Sergey Surovikin",
+        "Yevgeny Prigozhin"
+      ],
+      "result": "defeated"
+    }
+  ],
+  "casualties": {
+    "militaryDead": 180000,
+    "civilianDead": 13000,
+    "wounded": 600000,
+    "source": "Mediazona/BBC News 2024; UN OHCHR 2024"
+  },
+  "participantCount": 2000000,
+  "opening": "Following the Euromaidan revolution in Kyiv, Russia seized Crimea in February–March 2014 and stoked a separatist war in the Donbas. After an eight-year trench conflict, Vladimir Putin ordered a full-scale invasion of Ukraine on 24 February 2022, aiming for Kyiv and regime change.",
+  "openingTr": "Kyiv'deki Euromaydan devriminin ardından Rusya, Şubat–Mart 2014'te Kırım'ı işgal etti ve Donbas'ta ayrılıkçı bir savaşı körükledi. Sekiz yıllık siper savaşının ardından Vladimir Putin, 24 Şubat 2022'de Kyiv'i hedef alan ve rejim değişikliğini amaçlayan tam çaplı işgali başlattı.",
+  "outcome": "Ukraine repelled the assault on Kyiv, liberated Kharkiv and Kherson in 2022, and fought a grinding attritional war through 2023–2025. NATO expanded with Finland and Sweden, Russia absorbed heavy casualties, and by the as-of date of April 2025 the war remained unresolved with Ukrainian statehood preserved.",
+  "outcomeTr": "Ukrayna, Kyiv'e yönelik saldırıyı püskürttü, 2022'de Kharkiv ve Herson'u kurtardı ve 2023–2025 boyunca ezici bir yıpratma savaşı yürüttü. NATO Finlandiya ve İsveç ile genişledi, Rusya ağır kayıplar verdi ve Nisan 2025 itibariyle savaş çözümlenmemiş olsa da Ukrayna'nın devlet varlığı korundu.",
+  "turningPointReason": "The failure of the Russian thrust on Kyiv in March 2022, followed by the Kharkiv counteroffensive in September 2022, turned a planned blitzkrieg into a protracted war of attrition that Russia could not end on its terms.",
+  "turningPointReasonTr": "Mart 2022'de Rus ordusunun Kyiv saldırısının başarısız olması ve ardından Eylül 2022'deki Kharkiv karşı taarruzu, planlanan yıldırım savaşını Rusya'nın kendi koşullarında bitiremediği uzun bir yıpratma savaşına dönüştürdü.",
   "events": [
     {
-      "id": "crimea-annexation",
-      "name": "Annexation of Crimea",
-      "nameTr": "Kırım'ın İlhakı",
-      "lat": 44.9521, "lng": 34.1024,
-      "date": "2014-02-27", "dateEnd": "2014-03-18",
-      "kind": "occupation", "side": "occupation",
-      "summary": "Russian troops without insignia seize key sites in Crimea. A disputed referendum is followed by Russia formally annexing the peninsula — the first post-WWII annexation in Europe.",
-      "summaryTr": "Ruslar, tanımlayıcı işaretleri olmayan askerlerle Kırım'ın kilit noktalarını ele geçirir. Tartışmalı bir referandumun ardından Rusya, yarımadayı resmen ilhak eder — Avrupa'daki II. Dünya Savaşı sonrası ilk ilhak.",
+      "id": "euromaidan",
+      "name": "Euromaidan Revolution",
+      "nameTr": "Euromaydan Devrimi",
+      "lat": 50.4501,
+      "lng": 30.5241,
+      "date": "2013-11-21",
+      "dateEnd": "2014-02-22",
+      "kind": "event",
+      "side": "political",
+      "order": 1,
+      "summary": "Mass protests in Kyiv against President Yanukovych's pivot toward Moscow toppled his government in February 2014.",
+      "summaryTr": "Cumhurbaşkanı Yanukoviç'in Moskova'ya yönelmesine karşı Kyiv'deki kitlesel protestolar, Şubat 2014'te hükümetini devirdi.",
+      "story": "On 21 November 2013 President Viktor Yanukovych announced he would not sign an Association Agreement with the European Union, instead accepting a Russian bailout. Within hours, students began gathering on the Maidan Nezalezhnosti square in Kyiv. Brutal police beatings on 30 November radicalised the movement into a broad pro-European and anti-corruption uprising spanning three months of winter camps, barricades and clashes. In mid-February 2014, after legislation restricting protest was pushed through, violent confrontations erupted on Instytutska Street. On 18–20 February, snipers killed roughly 100 protesters who became known as the Heavenly Hundred. Yanukovych signed a compromise with EU foreign ministers on 21 February but fled to Russia that night. Parliament voted to remove him from office on 22 February. Euromaidan produced a new interim government oriented toward European integration and NATO partnership, and it exposed the fragility of Russian influence in Ukraine. Moscow interpreted the outcome as a Western-backed coup against its strategic interests and moved within days to seize Crimea. Ukrainians came to call the protest movement the Revolution of Dignity; its casualties, slogans and martyrs shaped the national identity that would carry the country through the following decade of war. Euromaidan is thus the political ignition point of the Russo-Ukrainian War, setting the geopolitical stakes that made 2014 and 2022 possible.",
+      "storyTr": "21 Kasım 2013'te Cumhurbaşkanı Viktor Yanukoviç, Avrupa Birliği ile Ortaklık Anlaşması'nı imzalamayacağını ve bunun yerine Rus kredisini kabul edeceğini duyurdu. Saatler içinde öğrenciler Kyiv'in Maidan Nezalejnosti meydanında toplanmaya başladı. 30 Kasım'daki sert polis müdahalesi hareketi radikalleştirerek üç kış ayı boyunca süren çadır kentler, barikatlar ve çatışmalarla geniş bir Avrupa yanlısı ve yolsuzluk karşıtı ayaklanmaya dönüştürdü. Şubat 2014 ortalarında protesto hakkını kısıtlayan yasaların geçirilmesinin ardından Instytutska Caddesi'nde şiddetli çatışmalar patlak verdi. 18–20 Şubat'ta keskin nişancılar yaklaşık 100 protestocuyu öldürdü ve bunlar Göksel Yüzler olarak anılmaya başlandı. Yanukoviç 21 Şubat'ta AB dışişleri bakanlarıyla bir uzlaşma imzaladı ancak aynı gece Rusya'ya kaçtı. Parlamento 22 Şubat'ta onu görevden almak için oy kullandı. Euromaydan, Avrupa entegrasyonuna ve NATO ortaklığına yönelmiş yeni bir geçici hükümet doğurdu ve Rus etkisinin Ukrayna'daki kırılganlığını açığa çıkardı. Moskova sonucu stratejik çıkarlarına karşı Batı destekli bir darbe olarak yorumladı ve günler içinde Kırım'ı ele geçirmek için harekete geçti. Ukraynalılar bu hareketi Onur Devrimi olarak adlandırdı; kayıpları, sloganları ve şehitleri ülkenin sonraki on yıllık savaşına taşıyacağı ulusal kimliği biçimlendirdi. Euromaydan, 2014 ve 2022'yi mümkün kılan jeopolitik ortamı yaratarak Rus-Ukrayna Savaşı'nın siyasi kıvılcımıdır.",
+      "casualties": {
+        "sideA": 108,
+        "sideB": 13
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Euromaidan",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Euromaydan"
+    },
+    {
+      "id": "annexation-crimea",
+      "name": "Russian Annexation of Crimea",
+      "nameTr": "Rusya'nın Kırım'ı İlhakı",
+      "lat": 44.9521,
+      "lng": 34.1024,
+      "date": "2014-02-27",
+      "dateEnd": "2014-03-18",
+      "kind": "occupation",
+      "side": "occupation",
+      "order": 2,
+      "summary": "Unmarked Russian troops seized Crimean government buildings and bases; a rushed referendum preceded formal annexation on 18 March 2014.",
+      "summaryTr": "İşaretsiz Rus askerleri Kırım hükümet binalarını ve üslerini ele geçirdi; apar topar yapılan bir referandumun ardından 18 Mart 2014'te resmi ilhak gerçekleşti.",
+      "story": "On 27 February 2014 armed soldiers without insignia, later acknowledged by Putin as Russian troops, seized the Crimean parliament and Council of Ministers buildings in Simferopol. In the following days these little green men blockaded Ukrainian military bases across the peninsula, took over airports, and installed a new pro-Russian local government under Sergey Aksyonov. The Ukrainian military, underfunded and caught between orders not to fire and a rapidly shifting political authority in Kyiv, largely acquiesced; many units defected or evacuated. On 16 March a referendum organised under occupation reported 96.77% support for joining Russia, a vote the UN General Assembly declared invalid by Resolution 68/262. On 18 March Putin signed a treaty of accession in the Kremlin and formally absorbed Crimea and Sevastopol into the Russian Federation. The seizure was executed almost bloodlessly but shattered the European post-1945 principle that borders cannot be changed by force. It gave Russia control of the Black Sea Fleet base, significant offshore gas fields and a strategic springboard for the Donbas war and, eventually, the full-scale 2022 invasion. Western sanctions followed but Russia was not forced to withdraw. For Ukraine, the loss of Crimea is considered the unfinished business of the Russo-Ukrainian War and the root grievance that drives its long-term strategy for deoccupation.",
+      "storyTr": "27 Şubat 2014'te işaretsiz üniformalı silahlı askerler – Putin tarafından daha sonra Rus askerleri olduğu kabul edildi – Simferopol'deki Kırım parlamentosu ve Bakanlar Kurulu binalarını ele geçirdi. Sonraki günlerde bu küçük yeşil adamlar yarımadadaki Ukrayna askeri üslerini ablukaya aldı, havalimanlarını devraldı ve Sergey Aksyonov liderliğinde yeni bir Rusya yanlısı yerel hükümet kurdu. Yetersiz finansmanla çalışan ve Kyiv'deki hızla değişen siyasi otorite ile ateş etmeme emirleri arasında sıkışan Ukrayna ordusu büyük ölçüde direnmedi; birçok birlik ya saf değiştirdi ya da tahliye edildi. 16 Mart'ta işgal altında düzenlenen referandumda Rusya'ya katılma için yüzde 96,77 destek bildirildi; BM Genel Kurulu 68/262 sayılı Kararı ile bu oylamayı geçersiz ilan etti. 18 Mart'ta Putin Kremlin'de katılım antlaşmasını imzalayarak Kırım ve Sevastopol'u Rusya Federasyonu'na resmen kattı. Ele geçirme neredeyse kansız bir şekilde gerçekleşti ancak 1945 sonrası Avrupa'sının sınırların zorla değiştirilemeyeceği ilkesini parçaladı. Rusya'ya Karadeniz Filosu üssünün, önemli açık deniz gaz sahalarının denetimini ve Donbas savaşı ile nihayetinde 2022 tam çaplı işgali için stratejik bir sıçrama tahtası sağladı. Batılı yaptırımlar geldi ancak Rusya geri çekilmeye zorlanmadı. Ukrayna için Kırım'ın kaybı, Rus-Ukrayna Savaşı'nın bitmemiş meselesi ve uzun vadeli kurtarma stratejisini yönlendiren temel şikayettir.",
       "wikipediaEn": "https://en.wikipedia.org/wiki/Russian_annexation_of_Crimea",
       "wikipediaTr": "https://tr.wikipedia.org/wiki/K%C4%B1r%C4%B1m%27%C4%B1n_Rusya_taraf%C4%B1ndan_ilhak%C4%B1"
     },
     {
-      "id": "donbas-war",
-      "name": "War in Donbas begins",
-      "nameTr": "Donbas Savaşı Başlar",
-      "lat": 48.0159, "lng": 37.8028,
+      "id": "donbas-war-begins",
+      "name": "Donbas War Begins",
+      "nameTr": "Donbas Savaşı Başlıyor",
+      "lat": 48.0159,
+      "lng": 37.8028,
       "date": "2014-04-06",
-      "kind": "battle", "side": "occupation",
-      "summary": "Pro-Russian separatists seize government buildings in Donetsk and Luhansk. An 8-year limited war begins in Eastern Ukraine — the prelude to 2022.",
-      "summaryTr": "Rus yanlısı ayrılıkçılar, Donetsk ve Luhansk'ta hükümet binalarını ele geçirir. Doğu Ukrayna'da 8 yıl sürecek sınırlı savaş başlar — 2022'nin ön oyunu.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/War_in_Donbas"
+      "dateEnd": "2014-07-05",
+      "kind": "event",
+      "side": "victory-b",
+      "order": 3,
+      "summary": "Armed groups seized government buildings in Donetsk and Luhansk in April 2014, triggering Ukraine's Anti-Terrorist Operation.",
+      "summaryTr": "Nisan 2014'te silahlı gruplar Donetsk ve Luhansk'taki hükümet binalarını ele geçirdi; Ukrayna'nın Terörle Mücadele Operasyonu başlatıldı.",
+      "story": "In early April 2014 armed men stormed the regional administration buildings in Donetsk, Luhansk and Kharkiv, declaring people's republics. A former Russian intelligence officer, Igor Girkin (Strelkov), led a small column from Crimea into Sloviansk on 12 April and seized the town, providing a core nucleus of trained fighters. On 13 April the acting president Oleksandr Turchynov launched an Anti-Terrorist Operation (ATO). Early Ukrainian attempts to retake the cities were chaotic; checkpoints were overrun and armoured vehicles captured. But by early July Ukrainian forces had regained initiative, recapturing Sloviansk, Kramatorsk and Mariupol. The war quickly revealed that Russia was supplying heavy weapons, instructors and volunteers across a porous border. On 17 July 2014 a Buk missile system transported from Russia shot down Malaysia Airlines flight MH17 over rebel-held Donetsk, killing 298 civilians and globalising the crisis. The phase ending in early July 2014 marked the moment the Donbas uprising became a full conventional war, with artillery duels along a front line of several hundred kilometres. It also marked the emergence of Ukrainian volunteer battalions—Aidar, Azov, Donbas—that would later be absorbed into the regular armed forces. The Donbas War would grind on with shifting intensity until February 2022, when it was subsumed into the full-scale invasion.",
+      "storyTr": "Nisan 2014'ün başlarında silahlı adamlar Donetsk, Luhansk ve Kharkiv'teki il yönetimi binalarına saldırarak halk cumhuriyetleri ilan etti. Eski bir Rus istihbarat subayı olan Igor Girkin (Strelkov), 12 Nisan'da Kırım'dan Slovyansk'a küçük bir kol yöneterek kasabayı ele geçirdi ve eğitimli savaşçılardan oluşan bir çekirdek sağladı. 13 Nisan'da dönemin cumhurbaşkanı Oleksandr Turçinov, Terörle Mücadele Operasyonu'nu (ATO) başlattı. Ukrayna'nın şehirleri geri alma girişimleri başlangıçta kaotikti; kontrol noktaları ele geçirildi ve zırhlı araçlar düşmana teslim edildi. Ancak Temmuz başına gelindiğinde Ukrayna kuvvetleri inisiyatifi yeniden kazanarak Slovyansk, Kramatorsk ve Mariupol'u geri aldı. Savaş hızla Rusya'nın gözenekli sınır üzerinden ağır silahlar, eğitmenler ve gönüllüler gönderdiğini ortaya çıkardı. 17 Temmuz 2014'te Rusya'dan getirilen bir Buk füze sistemi, isyancıların kontrolündeki Donetsk üzerinde Malezya Hava Yolları MH17 uçağını düşürdü ve 298 sivili öldürerek krizi küresel bir meseleye dönüştürdü. Temmuz başında sona eren bu aşama, Donbas ayaklanmasının yüzlerce kilometrelik bir cephe boyunca topçu düellolarıyla süren tam bir konvansiyonel savaşa dönüştüğü andır. Ayrıca Aydar, Azov ve Donbas gibi Ukrayna gönüllü taburlarının ortaya çıktığı dönemdir. Donbas Savaşı, 2022 Şubat'ında tam çaplı işgale eklemlenene kadar değişen yoğunlukla sürecekti.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/War_in_Donbas",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Donbas_sava%C5%9F%C4%B1"
     },
     {
-      "id": "full-invasion",
-      "name": "Full-scale Russian Invasion",
-      "nameTr": "Tam Ölçekli Rus İşgali",
-      "lat": 50.4501, "lng": 30.5234,
+      "id": "ilovaisk",
+      "name": "Battle of Ilovaisk",
+      "nameTr": "İlovaysk Muharebesi",
+      "lat": 47.9228,
+      "lng": 38.2036,
+      "date": "2014-08-07",
+      "dateEnd": "2014-09-03",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 4,
+      "summary": "Ukrainian forces encircling Ilovaisk were trapped by regular Russian army units and suffered a catastrophic loss along a promised humanitarian corridor.",
+      "summaryTr": "İlovaysk'ı çeviren Ukrayna kuvvetleri, düzenli Rus ordu birlikleri tarafından kuşatıldı ve vaat edilen insani koridorda yıkıcı kayıplar verdi.",
+      "story": "By early August 2014 Ukrainian forces, including the Donbas, Azov and Dnipro-1 volunteer battalions, were advancing to encircle separatist forces in the strategic rail hub of Ilovaisk east of Donetsk. As Ukrainian units fought into the town, regular Russian forces—airborne and armoured battalions—crossed the border on 23–24 August, catching the attackers in a reverse encirclement. On 29 August, after Russian and Ukrainian negotiators agreed a humanitarian corridor to let Ukrainian troops leave with their weapons, the retreating columns were ambushed by Russian fire as they moved along the designated route. Soldiers, vehicles and wounded were cut down in what became known as the Ilovaisk corridor massacre. Ukrainian official figures put the losses at 366 killed, 429 wounded and 300 captured, though some estimates are higher. Ilovaisk was the first unambiguous use of regular Russian army units in the war, documented later by Russian soldiers' social media and Forbes investigations. For Kyiv, it was a military catastrophe that forced acceptance of the Minsk I ceasefire a week later. For Ukrainian society, it became a symbol of betrayal and of the Russian state's willingness to directly intervene while publicly denying its presence. An annual Day of Remembrance is held for those who died in the corridor.",
+      "storyTr": "Ağustos 2014'ün başlarında Ukrayna kuvvetleri—Donbas, Azov ve Dnipro-1 gönüllü taburları dahil—Donetsk'in doğusundaki stratejik demiryolu kavşağı İlovaysk'ı çevirmek için ilerliyordu. Ukrayna birlikleri kasabaya girerken, 23–24 Ağustos'ta düzenli Rus kuvvetleri—hava indirme ve zırhlı taburlar—sınırı geçerek saldırganları ters bir kuşatmaya aldı. 29 Ağustos'ta Rus ve Ukraynalı müzakereciler, Ukrayna askerlerinin silahlarıyla birlikte çekilmesine izin veren insani bir koridor üzerinde anlaştıktan sonra, geri çekilen kollar belirlenen güzergahta Rus ateşiyle pusuya düşürüldü. Askerler, araçlar ve yaralılar İlovaysk koridor katliamı olarak bilinen olayda vuruldu. Ukrayna resmi rakamlarına göre kayıplar 366 ölü, 429 yaralı ve 300 esirdi; bazı tahminler daha yüksektir. İlovaysk, savaşta düzenli Rus ordu birliklerinin ilk açık kullanımıydı ve daha sonra Rus askerlerinin sosyal medya paylaşımları ile Forbes araştırmalarıyla belgelendi. Kyiv için bu askeri bir felaketti ve bir hafta sonra Minsk I ateşkesinin kabul edilmesini zorunlu kıldı. Ukrayna toplumu için ise ihanetin ve Rus devletinin varlığını alenen inkâr ederken doğrudan müdahale etme isteğinin sembolü oldu. Koridorda hayatını kaybedenler için her yıl bir Anma Günü düzenlenmektedir.",
+      "forces": {
+        "sideA": 4000,
+        "sideB": 6500
+      },
+      "casualties": {
+        "sideA": 1100,
+        "sideB": 400
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Ilovaisk",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/%C4%B0lovaysk_Muharebesi"
+    },
+    {
+      "id": "minsk-i",
+      "name": "Minsk I Agreement",
+      "nameTr": "Minsk I Anlaşması",
+      "lat": 53.9045,
+      "lng": 27.5615,
+      "date": "2014-09-05",
+      "kind": "treaty",
+      "side": "treaty",
+      "order": 5,
+      "summary": "After Ilovaisk, Ukraine, Russia, OSCE and separatist representatives signed a twelve-point protocol in Minsk calling for a ceasefire and prisoner exchange.",
+      "summaryTr": "İlovaysk sonrasında Ukrayna, Rusya, AGİT ve ayrılıkçı temsilciler Minsk'te ateşkes ve esir takası öngören on iki maddelik protokolü imzaladı.",
+      "story": "On 5 September 2014, meeting in the Belarusian capital Minsk under the auspices of the Organization for Security and Co-operation in Europe (OSCE), representatives of Ukraine, Russia and the Donetsk and Luhansk people's republics signed a twelve-point protocol. The document called for an immediate bilateral ceasefire, OSCE monitoring of the border, prisoner exchanges, the withdrawal of illegal armed groups and decentralisation legislation giving a special status to parts of Donetsk and Luhansk. It was negotiated after the Ukrainian army's collapse at Ilovaisk and was widely interpreted as Russian pressure translated into paper. The Minsk I ceasefire began to fray within weeks as separatist forces, reinforced by Russian regulars, pressed toward Donetsk airport and the Debaltseve pocket. By January 2015 the ceasefire had effectively collapsed, prompting the negotiation of Minsk II in February. For Ukraine, Minsk I codified the first freezing of territorial losses and set a diplomatic framework—the Normandy Format with France and Germany—that would shape Western-Russian diplomacy for the next seven years. Critics argue the Minsk process legitimised the separatist entities and gave Moscow a political lever inside Ukrainian politics. Defenders argue it bought Ukraine the time it needed to rebuild its armed forces, which by 2022 would be vastly larger and better trained than the force that had disintegrated at Ilovaisk.",
+      "storyTr": "5 Eylül 2014'te Belarus'un başkenti Minsk'te, Avrupa Güvenlik ve İşbirliği Teşkilatı (AGİT) himayesinde Ukrayna, Rusya, Donetsk ve Luhansk halk cumhuriyetleri temsilcileri on iki maddelik bir protokol imzaladı. Belge derhal ikili ateşkes, sınırın AGİT tarafından izlenmesi, esir takası, yasa dışı silahlı grupların çekilmesi ve Donetsk ile Luhansk'ın bölümlerine özel statü veren ademimerkeziyetçilik yasaları çağrısında bulunuyordu. Ukrayna ordusunun İlovaysk'taki çöküşünün ardından müzakere edilen anlaşma, Rus baskısının kağıda dökülmüş hali olarak yorumlandı. Minsk I ateşkesi haftalar içinde çözülmeye başladı; Rus düzenli askerleriyle takviye edilen ayrılıkçı kuvvetler Donetsk havalimanına ve Debaltseve cebine doğru ilerledi. Ocak 2015'e gelindiğinde ateşkes fiilen çökmüştü ve Şubat'ta Minsk II müzakerelerine yol açtı. Ukrayna için Minsk I, toprak kayıplarının ilk dondurulmasını sağladı ve Fransa ile Almanya'nın yer aldığı Normandiya Formatı adlı diplomatik çerçeveyi kurdu; bu çerçeve sonraki yedi yıl boyunca Batı-Rusya diplomasisini şekillendirdi. Eleştirmenler, Minsk sürecinin ayrılıkçı varlıkları meşrulaştırdığını ve Moskova'ya Ukrayna siyaseti içinde siyasi bir kaldıraç verdiğini savunuyor. Savunanlar ise anlaşmanın Ukrayna'ya silahlı kuvvetlerini yeniden inşa etmesi için gereken zamanı kazandırdığını söylüyor; 2022'ye gelindiğinde bu ordu, İlovaysk'ta dağılan kuvvetten çok daha büyük ve iyi eğitimli olacaktı.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Minsk_Protocol",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Minsk_protokol%C3%BC"
+    },
+    {
+      "id": "debaltseve",
+      "name": "Battle of Debaltseve",
+      "nameTr": "Debaltseve Muharebesi",
+      "lat": 48.3436,
+      "lng": 38.4103,
+      "date": "2015-01-14",
+      "dateEnd": "2015-02-20",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 6,
+      "summary": "Russian and separatist forces encircled Ukrainian troops at the Debaltseve rail junction, forcing a costly retreat days after Minsk II.",
+      "summaryTr": "Rus ve ayrılıkçı kuvvetler, Debaltseve demiryolu kavşağındaki Ukrayna birliklerini kuşattı ve Minsk II'den günler sonra maliyetli bir geri çekilmeye zorladı.",
+      "story": "Debaltseve was a strategic rail hub between Donetsk and Luhansk, held by Ukrainian forces in a salient projecting into separatist territory. In January 2015, taking advantage of the crumbling Minsk I ceasefire, combined Russian and separatist forces began pressing the flanks of the salient, cutting the main supply road through Lohvynove. Ukrainian commanders rotated units under Multiple Launch Rocket System (MLRS) fire through thick winter fog and ice. During 11–12 February, the Normandy Format leaders met in Minsk and produced the Minsk II package, which was meant to include a ceasefire starting 15 February. But Russian and separatist forces continued assaulting Debaltseve, arguing that Ukrainian troops there were already surrounded and therefore not covered by the ceasefire. By 18 February President Petro Poroshenko ordered an organised withdrawal; Ukrainian convoys ran a gauntlet of ambushes along muddy back roads. Official Ukrainian figures acknowledged 179 killed, 110 missing and over 300 wounded, though other estimates suggest higher losses. The battle exposed the limits of the Minsk II agreement even before its ink dried and entrenched the near-permanent front line that would define the eight years preceding the full-scale 2022 invasion. It also underlined Russia's readiness to use regular troops, electronic warfare and rocket artillery against a lightly supported Ukrainian force.",
+      "storyTr": "Debaltseve, Donetsk ve Luhansk arasında stratejik bir demiryolu kavşağıydı ve ayrılıkçı bölgeye uzanan bir çıkıntıda Ukrayna kuvvetlerinin elindeydi. Ocak 2015'te Minsk I ateşkesinin çökmesinden yararlanan birleşik Rus ve ayrılıkçı kuvvetler, çıkıntının kanatlarına baskı uygulamaya başlayarak Lohvynove üzerinden geçen ana ikmal yolunu kesti. Ukraynalı komutanlar, yoğun kış sisi ve buzda Çoklu Fırlatma Roket Sistemi (MLRS) ateşi altında birlikleri rotasyonla değiştirdi. 11–12 Şubat'ta Normandiya Formatı liderleri Minsk'te buluşarak 15 Şubat'tan itibaren başlayacak bir ateşkesi içeren Minsk II paketini üretti. Ancak Rus ve ayrılıkçı kuvvetler, Debaltseve'deki Ukrayna birliklerinin zaten kuşatıldığını ve bu nedenle ateşkes kapsamında olmadığını savunarak saldırıya devam etti. 18 Şubat'a gelindiğinde Cumhurbaşkanı Petro Poroşenko, düzenli bir geri çekilme emri verdi; Ukrayna konvoyları çamurlu yan yollarda pusu dizilerinden geçti. Ukrayna'nın resmi rakamları 179 ölü, 110 kayıp ve 300'ün üzerinde yaralı olduğunu kabul etse de diğer tahminler daha yüksek kayıpları öne sürmektedir. Muharebe, Minsk II anlaşmasının mürekkebi kurumadan sınırlarını ortaya çıkardı ve 2022 tam çaplı işgalinden önceki sekiz yılı tanımlayacak neredeyse kalıcı cephe hattını sabitledi. Ayrıca Rusya'nın hafif destekli bir Ukrayna kuvvetine karşı düzenli birlikler, elektronik harp ve roket topçusu kullanmaya hazır olduğunun altını çizdi.",
+      "forces": {
+        "sideA": 6000,
+        "sideB": 8500
+      },
+      "casualties": {
+        "sideA": 600,
+        "sideB": 850
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Debaltseve",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Debaltseve_Muharebesi"
+    },
+    {
+      "id": "minsk-ii",
+      "name": "Minsk II Agreement",
+      "nameTr": "Minsk II Anlaşması",
+      "lat": 53.9045,
+      "lng": 27.5615,
+      "date": "2015-02-12",
+      "kind": "treaty",
+      "side": "treaty",
+      "order": 7,
+      "summary": "Angela Merkel, François Hollande, Petro Poroshenko and Vladimir Putin negotiated a thirteen-point package to freeze the Donbas front.",
+      "summaryTr": "Angela Merkel, François Hollande, Petro Poroşenko ve Vladimir Putin, Donbas cephesini dondurmak için on üç maddelik bir paket müzakere etti.",
+      "story": "After a seventeen-hour negotiation in the Belarusian presidential palace, the leaders of Ukraine, Russia, Germany and France announced the Minsk II package early on 12 February 2015. It contained thirteen provisions: an immediate ceasefire from 15 February, withdrawal of heavy weapons from a buffer zone, amnesty for fighters, a prisoner exchange, local elections under Ukrainian law with OSCE monitoring in parts of Donetsk and Luhansk, constitutional reform providing decentralisation by end of 2015, and restoration of Ukrainian control of the border by end of 2015. Although Minsk II did reduce large-scale combat after the fall of Debaltseve, none of its political provisions was implemented. Russia insisted Ukraine amend its constitution first; Ukraine insisted Russia withdraw its forces and hand over the border first. The deadlock persisted for seven years through Normandy Format summits and hundreds of Trilateral Contact Group meetings. The front line crystallised along a roughly 450 km contact line from Shchastia to the Azov Sea, with periodic artillery duels and low-level infantry clashes. For Moscow, Minsk II was a tool to keep Ukraine politically destabilised without formally owning the Donbas territories. For Kyiv, it was a painful compromise signed under military duress that nevertheless bought strategic time. When Russia launched the full-scale invasion on 24 February 2022, Vladimir Putin formally declared Minsk II dead.",
+      "storyTr": "Belarus cumhurbaşkanlığı sarayında on yedi saat süren müzakerelerin ardından Ukrayna, Rusya, Almanya ve Fransa liderleri 12 Şubat 2015'in erken saatlerinde Minsk II paketini duyurdu. Pakette on üç hüküm vardı: 15 Şubat'tan itibaren derhal ateşkes, bir tampon bölgeden ağır silahların çekilmesi, savaşçılara af, esir takası, Donetsk ve Luhansk'ın bölümlerinde AGİT denetiminde Ukrayna yasalarına göre yerel seçimler, 2015 sonuna kadar ademimerkeziyetçilik sağlayan anayasa reformu ve 2015 sonuna kadar sınırın Ukrayna kontrolüne iadesi. Minsk II, Debaltseve'nin düşüşünün ardından büyük çaplı çatışmaları azalttıysa da siyasi hükümlerinden hiçbiri uygulanmadı. Rusya, önce Ukrayna'nın anayasasını değiştirmesini istedi; Ukrayna ise önce Rusya'nın kuvvetlerini çekip sınırı teslim etmesini talep etti. Bu kilit, Normandiya Formatı zirveleri ve yüzlerce Üçlü Temas Grubu toplantısı boyunca yedi yıl sürdü. Cephe hattı, Şçastya'dan Azak Denizi'ne uzanan yaklaşık 450 km'lik bir temas hattı boyunca kristalleşti; dönemsel topçu düelloları ve düşük yoğunluklu piyade çatışmaları yaşandı. Moskova için Minsk II, Donbas topraklarının resmi sahibi olmadan Ukrayna'yı siyasi olarak istikrarsız tutmaya yarayan bir araçtı. Kyiv için ise askeri baskı altında imzalanan acı verici bir tavizdi ama stratejik zaman kazandırdı. Rusya 24 Şubat 2022'de tam çaplı işgali başlattığında Vladimir Putin, Minsk II'yi resmen ölü ilan etti.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Minsk_II",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Minsk_II"
+    },
+    {
+      "id": "trench-line-donbas",
+      "name": "Eight-Year Trench Line in Donbas",
+      "nameTr": "Donbas'ta Sekiz Yıllık Siper Hattı",
+      "lat": 48.5,
+      "lng": 38,
+      "date": "2015-03",
+      "dateEnd": "2022-02",
+      "kind": "event",
+      "side": "draw",
+      "order": 8,
+      "summary": "From 2015 to 2022, Ukrainian and Russian-backed forces faced each other across a 450 km trench front with regular artillery exchanges.",
+      "summaryTr": "2015'ten 2022'ye kadar Ukrayna ve Rusya destekli kuvvetler, düzenli topçu düelloları ile 450 km'lik bir siper cephesinde karşı karşıya kaldı.",
+      "story": "After Minsk II the Donbas front solidified into trench warfare reminiscent of 1915. Ukrainian units rotated through positions near Avdiivka, Marinka, Pisky and the ruins of Donetsk airport, while separatist and Russian forces dug in opposite. The Joint Forces Operation (JFO), which replaced the ATO in 2018, reported between 100 and 500 Ukrainian dead per year, with civilian casualties inside the separatist-held enclaves as well. Thousands of civilians living close to the contact line in towns such as Stanytsia Luhanska crossed through checkpoints for pensions, medication and shopping. Ukrainian reformers used this period to rebuild a hollowed-out Soviet army. With NATO mentoring, new non-commissioned officer training, English-language officer courses, and Joint Multinational Training Group-Ukraine in Yavoriv, the armed forces grew from the 6,000 combat-ready soldiers of 2014 to a force of over 200,000 with combat-experienced veterans. Territorial Defence Forces were formalised in 2021. Western lethal aid began slowly—Javelin anti-tank missiles arrived from the United States in 2018, Turkish Bayraktar TB2 drones in 2019. These years of low-intensity war gave Ukraine an institutional and psychological edge that would prove decisive in 2022: a generation of officers had already seen combat, trenches had already been dug, and the population had learned to live with the threat of Russian power projection.",
+      "storyTr": "Minsk II'nin ardından Donbas cephesi, 1915'i andıran bir siper savaşına dönüştü. Ukrayna birlikleri Avdiyivka, Marinka, Pisky ve Donetsk havalimanının enkazının yakınındaki pozisyonlar arasında rotasyonla yer değiştirirken, ayrılıkçı ve Rus kuvvetleri karşı tarafta mevzi kazdı. 2018'de ATO'nun yerini alan Birleşik Kuvvetler Operasyonu (JFO), yılda 100 ila 500 Ukraynalı ölü ve ayrılıkçıların elindeki enklavlarda da sivil kayıp bildirdi. Stanytsia Luhanska gibi kasabalarda temas hattına yakın yaşayan binlerce sivil, emekli maaşları, ilaçlar ve alışveriş için kontrol noktalarından geçti. Ukrayna reformcuları bu dönemi, içi boşaltılmış Sovyet ordusunu yeniden inşa etmek için kullandı. NATO rehberliğinde yeni astsubay eğitimleri, İngilizce subay kursları ve Yavoriv'deki Ortak Çokuluslu Eğitim Grubu-Ukrayna sayesinde silahlı kuvvetler, 2014'teki 6.000 muharebeye hazır askerden 200.000'i aşan, muharebe deneyimli gazilerden oluşan bir kuvvete büyüdü. Toprak Savunma Kuvvetleri 2021'de resmileştirildi. Batılı ölümcül yardım yavaş başladı—Javelin tanksavar füzeleri 2018'de ABD'den, Türk Bayraktar TB2 insansız hava araçları ise 2019'da geldi. Bu düşük yoğunluklu savaş yılları Ukrayna'ya 2022'de belirleyici olacak kurumsal ve psikolojik bir üstünlük sağladı: Bir subay kuşağı zaten muharebe görmüştü, siperler zaten kazılmıştı ve halk Rus güç projeksiyonu tehdidiyle yaşamayı öğrenmişti.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/War_in_Donbas",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Donbas_sava%C5%9F%C4%B1"
+    },
+    {
+      "id": "buildup-2021",
+      "name": "Russian Military Buildup",
+      "nameTr": "Rus Askeri Yığınağı",
+      "lat": 51.6,
+      "lng": 36.5,
+      "date": "2021-03",
+      "dateEnd": "2022-02",
+      "kind": "event",
+      "side": "political",
+      "order": 9,
+      "summary": "Between spring 2021 and February 2022, Russia concentrated roughly 190,000 troops along Ukraine's borders under the cover of exercises.",
+      "summaryTr": "İlkbahar 2021 ile Şubat 2022 arasında Rusya, tatbikat görünümü altında Ukrayna sınırlarına yaklaşık 190.000 asker yığdı.",
+      "story": "In April 2021 Russia conducted the largest military buildup on Ukraine's borders since 2014, then partly pulled back. A second, far larger buildup began in October 2021 and continued through the winter. By February 2022, U.S. and UK intelligence assessments counted approximately 190,000 Russian, Belarusian and separatist personnel arrayed around Ukraine's north, east and south. Battalion tactical groups, missile brigades, field hospitals and blood supplies were identified via commercial satellite imagery. Russia simultaneously demanded that NATO withdraw to its 1997 borders and guarantee Ukraine would never join the Alliance. Britain and the United States declassified intelligence at an unprecedented pace, publicly warning that Putin intended to invade. France and Germany undertook late diplomatic missions to Moscow. On 17 December 2021 Russia published draft treaties demanding legally binding security guarantees from NATO. On 21 February 2022 Putin formally recognised the DNR and LNR and ordered peacekeepers into the Donbas. President Joe Biden told the world Putin had already decided to attack. The failure of diplomacy crystallised during the Munich Security Conference in the third week of February. The buildup period demonstrated how intelligence transparency could not deter an autocrat committed to a strategic fait accompli, but it also ensured that Western partners were aligned on sanctions and aid packages when the invasion began.",
+      "storyTr": "Nisan 2021'de Rusya, Ukrayna sınırlarında 2014'ten bu yana en büyük askeri yığınağı gerçekleştirdi ve ardından kısmen geri çekildi. Ekim 2021'de çok daha büyük ikinci bir yığınak başladı ve kış boyunca sürdü. Şubat 2022'ye gelindiğinde ABD ve İngiltere istihbarat değerlendirmeleri, Ukrayna'nın kuzey, doğu ve güneyinde yaklaşık 190.000 Rus, Belarus ve ayrılıkçı personel sayıyordu. Tabur taktik grupları, füze tugayları, sahra hastaneleri ve kan stokları ticari uydu görüntüleri üzerinden tespit edildi. Rusya aynı anda NATO'nun 1997 sınırlarına çekilmesini ve Ukrayna'nın asla İttifak'a katılmamasını garanti etmesini talep etti. İngiltere ve ABD, benzeri görülmemiş bir hızla istihbarat paylaştı ve Putin'in işgal niyetinde olduğunu açıkça uyardı. Fransa ve Almanya, son dakika diplomatik misyonlarla Moskova'ya gitti. 17 Aralık 2021'de Rusya, NATO'dan hukuken bağlayıcı güvenlik garantileri talep eden antlaşma taslakları yayımladı. 21 Şubat 2022'de Putin, DNR ve LNR'yi resmen tanıdı ve Donbas'a barış gücü göndermeyi emretti. Başkan Joe Biden dünyaya Putin'in saldırı kararını çoktan verdiğini söyledi. Diplomasinin başarısızlığı Şubat'ın üçüncü haftasındaki Münih Güvenlik Konferansı'nda netleşti. Yığınak dönemi, istihbarat şeffaflığının stratejik bir oldubittiye kararlı bir otokratı caydıramayacağını gösterdi; ancak işgal başladığında Batılı ortakların yaptırımlar ve yardım paketleri konusunda uyumlu olmasını sağladı.",
+      "forces": {
+        "sideA": 200000,
+        "sideB": 190000
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/2021%E2%80%932022_Russian_military_buildup",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/2021%E2%80%932022_Rus_askeri_y%C4%B1%C4%9F%C4%B1na%C4%9F%C4%B1"
+    },
+    {
+      "id": "recognition-dnr-lnr",
+      "name": "Recognition of DNR/LNR",
+      "nameTr": "DNR/LNR'nin Tanınması",
+      "lat": 55.7558,
+      "lng": 37.6173,
+      "date": "2022-02-21",
+      "kind": "event",
+      "side": "political",
+      "order": 10,
+      "summary": "Putin signed decrees recognising the Donetsk and Luhansk People's Republics as independent, laying the legal pretext for invasion.",
+      "summaryTr": "Putin, Donetsk ve Luhansk Halk Cumhuriyetleri'ni bağımsız olarak tanıyan kararnameleri imzalayarak işgal için hukuki bahaneyi hazırladı.",
+      "story": "On the evening of 21 February 2022 Vladimir Putin chaired a theatrically staged meeting of the Russian Security Council in the Kremlin, in which senior officials walked to a lectern one by one and publicly endorsed recognising the self-declared Donetsk and Luhansk People's Republics. He then addressed the nation in a long historical monologue arguing that Ukraine had been artificially created by Lenin, that its government was a foreign puppet and that Russian-speakers in the Donbas faced genocide. Within hours, he signed decrees of recognition and friendship treaties with the two entities and ordered Russian peacekeepers into them. Crucially, the decrees claimed the entire administrative territories of Donetsk and Luhansk oblasts, most of which was still under Ukrainian control, creating a pretext for military operations well beyond the Minsk contact line. The UN Security Council held an emergency session, where Russia chaired the meeting as February's rotating president. Western leaders imposed a first round of sanctions and called the recognition a flagrant violation of the UN Charter. Inside Ukraine, President Zelensky gave a midnight address calling for unity. The 21 February recognitions were the last step before full-scale war. They rendered the Minsk agreements legally void, ended the decade-long Normandy diplomacy and provided the constitutional fiction under which Russian forces would pour across the border three days later.",
+      "storyTr": "21 Şubat 2022 akşamı Vladimir Putin, Kremlin'de Rus Güvenlik Konseyi'nin teatral bir toplantısına başkanlık etti; üst düzey yetkililer tek tek kürsüye gelerek kendi kendini ilan eden Donetsk ve Luhansk Halk Cumhuriyetleri'nin tanınmasını alenen destekledi. Ardından Putin, Ukrayna'nın Lenin tarafından yapay olarak oluşturulduğunu, hükümetinin yabancı bir kukla olduğunu ve Donbas'taki Rusça konuşanların soykırımla karşı karşıya olduğunu iddia ettiği uzun bir tarihsel monologla ulusa seslendi. Saatler içinde tanıma kararnamelerini ve iki varlıkla dostluk antlaşmalarını imzaladı ve bunlara Rus barış gücü askerleri göndermeyi emretti. Önemlisi, kararnameler Donetsk ve Luhansk illerinin, çoğu hâlâ Ukrayna kontrolünde olan idari topraklarının tamamını talep ederek Minsk temas hattının çok ötesinde askeri operasyonlar için bir bahane yaratıyordu. BM Güvenlik Konseyi acil oturum düzenledi; Rusya Şubat ayının dönem başkanı olarak toplantıya başkanlık etti. Batılı liderler ilk yaptırımları uyguladı ve tanımayı BM Şartı'nın açık bir ihlali olarak nitelendirdi. Ukrayna'da Cumhurbaşkanı Zelenski, birlik çağrısı yapan bir gece yarısı konuşması yaptı. 21 Şubat tanımaları, tam çaplı savaştan önceki son adımdı. Minsk anlaşmalarını hukuken geçersiz kıldı, on yıllık Normandiya diplomasisini bitirdi ve üç gün sonra Rus kuvvetlerinin sınırı aşacağı anayasal kurguyu sağladı.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Russian_recognition_of_the_Donetsk_People%27s_Republic_and_the_Luhansk_People%27s_Republic",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Donetsk_ve_Luhansk_Halk_Cumhuriyetlerinin_Rusya_taraf%C4%B1ndan_tan%C4%B1nmas%C4%B1"
+    },
+    {
+      "id": "full-scale-invasion",
+      "name": "Russian Full-Scale Invasion",
+      "nameTr": "Rusya'nın Tam Çaplı İşgali",
+      "lat": 50.4501,
+      "lng": 30.5241,
       "date": "2022-02-24",
-      "kind": "occupation", "side": "occupation",
-      "summary": "At 05:00 Russia launches a multi-axis invasion of Ukraine from the north, east and south. Cruise missiles strike Kyiv; tank columns cross from Belarus. The largest conventional war in Europe since 1945 begins.",
-      "summaryTr": "Rusya saat 05.00'te Ukrayna'ya kuzey, doğu ve güneyden çok eksenli bir işgal başlatır. Füzeler Kiev'e çarpar; tank kolları Belarus'tan geçer. 1945'ten beri Avrupa'nın en büyük konvansiyonel savaşı başlar.",
+      "kind": "event",
+      "side": "victory-b",
+      "order": 11,
+      "summary": "At dawn on 24 February 2022, Russia launched missile strikes and multiple ground axes into Ukraine from the north, east and south.",
+      "summaryTr": "24 Şubat 2022 şafağında Rusya, kuzey, doğu ve güneyden füze saldırıları ve birden fazla kara ekseninden Ukrayna'ya saldırdı.",
+      "story": "At 05:00 Kyiv time on 24 February 2022 Vladimir Putin delivered a televised address announcing a special military operation to demilitarise and denazify Ukraine. Within minutes, cruise and ballistic missiles struck military airfields, air defence sites, headquarters and fuel depots across Ukraine. Russian forces from at least four axes crossed the border: from Belarus toward Kyiv and Chernihiv; from southwestern Russia toward Kharkiv and Sumy; from the Donbas line; and from occupied Crimea toward Kherson and Mariupol. Airborne troops staged a dramatic helicopter assault on Hostomel airport near Kyiv, intended to land follow-on forces for a lightning decapitation strike on the capital. President Zelensky, offered evacuation by the United States, reportedly replied I need ammunition, not a ride. Millions of civilians fled or sheltered in basements and metro stations. By late afternoon Russian forces were within reach of Kyiv's outskirts, and Ukrainian sources reported border guard garrisons such as those on Snake Island refusing to surrender. The invasion unified Ukrainian society behind the state, galvanised the European Union to announce a first weapons aid package within days, and prompted Germany's Zeitenwende foreign-policy turn. The 24 February assault was the opening of the largest land war in Europe since 1945 and the single most consequential event of the entire Russo-Ukrainian War.",
+      "storyTr": "24 Şubat 2022'de Kyiv saatiyle 05:00'te Vladimir Putin, Ukrayna'yı silahsızlandırmak ve nazisizleştirmek için özel askeri operasyon başlattığını duyuran televizyon konuşmasını yaptı. Dakikalar içinde seyir ve balistik füzeler Ukrayna genelindeki askeri havaalanlarını, hava savunma mevzilerini, karargâhları ve yakıt depolarını vurdu. Rus kuvvetleri en az dört eksenden sınırı aştı: Belarus'tan Kyiv ve Çernihiv'e; Rusya'nın güneybatısından Kharkiv ve Sumy'ye; Donbas hattından; ve işgal altındaki Kırım'dan Herson ve Mariupol'a. Hava indirme birlikleri, başkente yıldırım hızında bir liderlik yıkma saldırısı için takviye kuvvetleri indirmeyi amaçlayan Kyiv yakınlarındaki Hostomel havalimanına dramatik bir helikopter çıkarması yaptı. Cumhurbaşkanı Zelenski, ABD'nin tahliye teklifine rivayete göre bana mermi gerekiyor, yolculuk değil diye yanıt verdi. Milyonlarca sivil kaçtı ya da bodrumlarda ve metro istasyonlarında sığındı. Öğleden sonranın sonlarına doğru Rus kuvvetleri Kyiv'in varoşlarına yaklaştı; Ukrayna kaynakları Yılan Adası'ndakiler gibi sınır muhafız garnizonlarının teslim olmayı reddettiğini bildirdi. İşgal, Ukrayna toplumunu devletin etrafında birleştirdi, Avrupa Birliği'nin günler içinde ilk silah yardım paketini açıklamasını sağladı ve Almanya'nın Zeitenwende (dönüm noktası) dış politika dönüşünü tetikledi. 24 Şubat saldırısı, 1945'ten bu yana Avrupa'daki en büyük kara savaşının açılışı ve tüm Rus-Ukrayna Savaşı'nın en belirleyici olayıydı.",
+      "forces": {
+        "sideA": 200000,
+        "sideB": 190000
+      },
       "wikipediaEn": "https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine",
-      "wikipediaTr": "https://tr.wikipedia.org/wiki/Rusya%27n%C4%B1n_Ukrayna%27y%C4%B1_i%C5%9Fgali_(2022-)"
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/2022_Rusya%27n%C4%B1n_Ukrayna%27y%C4%B1_i%C5%9Fgali"
     },
     {
-      "id": "battle-of-kyiv",
-      "name": "Battle of Kyiv",
-      "nameTr": "Kiev Muharebesi",
-      "lat": 50.4501, "lng": 30.5234,
-      "date": "2022-02-25", "dateEnd": "2022-04-02",
-      "kind": "battle", "side": "victory-a",
-      "summary": "Ukrainian forces halt the Russian advance on the capital. A stalled 64-km convoy on Kyiv's northern approach becomes an icon of the failed offensive; Russia withdraws from the Kyiv region.",
-      "summaryTr": "Ukrayna kuvvetleri başkente Rus ilerleyişini durdurur. Kiev'in kuzeyinde takılı kalan 64 km'lik Rus konvoyu, başarısız taarruzun simgesi olur; Rusya, Kiev bölgesinden çekilir.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Kyiv_offensive_(2022)"
+      "id": "hostomel-kyiv",
+      "name": "Battle of Kyiv and Hostomel",
+      "nameTr": "Kyiv ve Hostomel Muharebesi",
+      "lat": 50.6033,
+      "lng": 30.1911,
+      "date": "2022-02-24",
+      "dateEnd": "2022-04-02",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 12,
+      "summary": "Russian airborne troops seized Hostomel airport but were repelled, and a 64 km convoy stalled outside Kyiv before withdrawing.",
+      "summaryTr": "Rus hava indirme birlikleri Hostomel havalimanını ele geçirdi ancak püskürtüldü; 64 km'lik bir konvoy Kyiv dışında tıkanıp sonunda geri çekildi.",
+      "story": "On the morning of 24 February 2022, more than thirty Russian Ka-52 attack helicopters escorted Mi-8s carrying VDV airborne troops to seize Antonov Airport in Hostomel, 25 km northwest of Kyiv. The plan was to use the long runway to airland further troops and decapitate the Ukrainian government. A scratch force of National Guard, special forces and air assault units counter-attacked within hours, smashing Russian transport aircraft on the runway and leaving the airport unusable. Simultaneously, Russian mechanised columns from Belarus advanced on Kyiv through Ivankiv and Bucha, but Ukrainian engineers blew bridges and ambushed the long columns with Javelin anti-tank missiles and NLAW launchers provided by Western allies. By early March, satellite imagery showed a 64 km Russian convoy halted north of Kyiv, suffering from fuel, food and morale shortages. Ukrainian drone and artillery strikes, aided by night-vision and targeting support, ground down Russian battalions. Russian forces occupied Bucha, Irpin and Hostomel but never entered Kyiv. On 29 March Russia announced it would drastically reduce military activity in the Kyiv and Chernihiv directions to build trust; in practice it was an outright defeat. By 2 April Russian troops had pulled back into Belarus, leaving behind burned vehicles, unburied dead and the atrocities of Bucha. The failed Kyiv operation broke the myth of Russian military competence and preserved the Ukrainian state.",
+      "storyTr": "24 Şubat 2022 sabahı otuzdan fazla Rus Ka-52 saldırı helikopteri, Kyiv'in 25 km kuzeybatısındaki Hostomel'deki Antonov Havalimanı'nı ele geçirmek üzere VDV hava indirme birliklerini taşıyan Mi-8'lere eşlik etti. Plan, uzun pistten yararlanarak takviye birlikleri indirip Ukrayna hükümetini devirmekti. Saatler içinde Ulusal Muhafızlar, özel kuvvetler ve hava saldırı birimlerinden oluşan derme çatma bir kuvvet karşı saldırıya geçerek piste inen Rus nakliye uçaklarını tahrip etti ve havalimanını kullanılamaz hale getirdi. Aynı anda Belarus'tan gelen Rus mekanize kolları, İvankiv ve Buça üzerinden Kyiv'e ilerledi; ancak Ukraynalı mühendisler köprüleri havaya uçurdu ve uzun kolları Batılı müttefiklerden sağlanan Javelin tanksavar füzeleri ve NLAW fırlatıcılarıyla pusuya düşürdü. Mart başında uydu görüntüleri Kyiv'in kuzeyinde duraklamış 64 km'lik bir Rus konvoyunu gösterdi; yakıt, yiyecek ve moral sıkıntısı çekiyordu. Ukrayna'nın gece görüş ve hedefleme desteğiyle yürüttüğü insansız hava aracı ve topçu saldırıları, Rus taburlarını yıprattı. Rus kuvvetleri Buça, İrpin ve Hostomel'i işgal etti ancak Kyiv'e hiç giremedi. 29 Mart'ta Rusya güven inşa etmek için Kyiv ve Çernihiv yönlerindeki askeri faaliyeti büyük ölçüde azaltacağını duyurdu; pratikte bu açık bir yenilgiydi. 2 Nisan'a gelindiğinde Rus birlikleri Belarus'a çekilmiş, arkalarında yanmış araçlar, gömülmemiş cesetler ve Buça'nın vahşetini bırakmıştı. Başarısız Kyiv operasyonu, Rus askeri yetkinliği efsanesini yıktı ve Ukrayna devletini korudu.",
+      "forces": {
+        "sideA": 60000,
+        "sideB": 40000
+      },
+      "casualties": {
+        "sideA": 2000,
+        "sideB": 8000
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Kyiv_(2022)",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Kyiv_Muharebesi_(2022)"
     },
     {
-      "id": "siege-of-mariupol",
-      "name": "Siege of Mariupol",
-      "nameTr": "Mariupol Kuşatması",
-      "lat": 47.0971, "lng": 37.5434,
-      "date": "2022-02-24", "dateEnd": "2022-05-20",
-      "kind": "siege", "side": "occupation",
-      "summary": "Russian forces besiege the port city of Mariupol for 86 days, bombarding the Azovstal steel plant where Ukrainian defenders hold out. The city is reduced to ruins.",
-      "summaryTr": "Rus kuvvetleri, liman kenti Mariupol'ü 86 gün kuşatır; Ukraynalı savunmacıların direndiği Azovstal çelik fabrikasını bombardıman altında tutar. Kent harabeye döner.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Siege_of_Mariupol"
+      "id": "bucha",
+      "name": "Russian Withdrawal and Bucha Revealed",
+      "nameTr": "Rus Çekilişi ve Buça'nın Ortaya Çıkışı",
+      "lat": 50.5456,
+      "lng": 30.2153,
+      "date": "2022-03-30",
+      "dateEnd": "2022-04-03",
+      "kind": "liberation",
+      "side": "victory-a",
+      "order": 13,
+      "summary": "When Russian troops retreated from the outskirts of Kyiv, Ukrainian forces and journalists documented mass killings of civilians in Bucha and Irpin.",
+      "summaryTr": "Rus birlikleri Kyiv çevresinden çekilirken Ukrayna kuvvetleri ve gazeteciler Buça ve İrpin'de sivillere yönelik toplu öldürmeleri belgeledi.",
+      "story": "As Russian forces withdrew from the northern approaches to Kyiv between 30 March and 3 April 2022, Ukrainian soldiers and international journalists entered Bucha, Irpin and Hostomel. They found streets strewn with the bodies of civilians, many with their hands bound and showing signs of torture or summary execution. In Bucha alone, Ukrainian prosecutors eventually documented more than 450 civilian deaths during the month-long Russian occupation, including in basements that had served as torture sites. Drone footage captured the moment when cyclists and drivers were gunned down along Yablonska Street. Mass graves were identified beside the church of Saint Andrew. Ukrainian investigators collaborated with the International Criminal Court, whose prosecutor opened an investigation into war crimes and ultimately issued an arrest warrant against Vladimir Putin for the deportation of Ukrainian children. The revelations of Bucha profoundly shifted international opinion: governments that had hesitated on heavy weapons deliveries began to approve tanks, howitzers and multiple rocket systems. Within Ukraine, Bucha became shorthand for the nature of Russian occupation and reinforced the political consensus that no territorial concession to Russia could be considered. The town's name now stands alongside other twentieth-century atrocities and shapes the moral framework within which any postwar settlement will be negotiated.",
+      "storyTr": "Rus kuvvetleri 30 Mart ile 3 Nisan 2022 arasında Kyiv'in kuzey yaklaşımlarından çekilirken Ukraynalı askerler ve uluslararası gazeteciler Buça, İrpin ve Hostomel'e girdi. Sokakların elleri bağlı, işkence veya infaz izleri taşıyan sivil cesetleriyle dolu olduğunu gördüler. Sadece Buça'da Ukraynalı savcılar, bir aylık Rus işgali sırasında 450'den fazla sivil ölümünü—bazıları işkence merkezi olarak kullanılan bodrumlarda—belgeledi. İnsansız hava aracı görüntüleri, Yablonska Caddesi boyunca bisikletçilerin ve sürücülerin vurulduğu anları kaydetti. Aziz Andrei kilisesinin yanında toplu mezarlar tespit edildi. Ukraynalı müfettişler Uluslararası Ceza Mahkemesi ile işbirliği yaptı; savcı savaş suçları soruşturması açtı ve sonunda Ukraynalı çocukların sürgün edilmesi nedeniyle Vladimir Putin hakkında tutuklama kararı çıkardı. Buça'nın açığa çıkardıkları uluslararası kamuoyunu derinden değiştirdi: Ağır silah teslimatlarında tereddüt eden hükümetler tank, obüs ve çoklu roket sistemlerini onaylamaya başladı. Ukrayna içinde Buça, Rus işgalinin niteliğinin kısaltması oldu ve Rusya'ya toprak tavizi verilemeyeceği siyasi mutabakatını pekiştirdi. Kasabanın adı artık yirminci yüzyılın diğer vahşetleriyle birlikte anılıyor ve savaş sonrası herhangi bir uzlaşmanın müzakere edileceği ahlaki çerçeveyi şekillendiriyor.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Bucha_massacre",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Bu%C3%A7a_katliam%C4%B1"
+    },
+    {
+      "id": "mariupol-azovstal",
+      "name": "Siege of Mariupol and Azovstal",
+      "nameTr": "Mariupol ve Azovstal Kuşatması",
+      "lat": 47.0971,
+      "lng": 37.5434,
+      "date": "2022-02-24",
+      "dateEnd": "2022-05-20",
+      "kind": "siege",
+      "side": "victory-b",
+      "order": 14,
+      "summary": "Russian forces besieged the port city of Mariupol for nearly three months; its final defenders held the Azovstal steel works until May.",
+      "summaryTr": "Rus kuvvetleri Mariupol liman kentini neredeyse üç ay kuşattı; son savunucular Mayıs'a kadar Azovstal demir-çelik fabrikasında direndi.",
+      "story": "Mariupol, a strategic port of 430,000 on the Sea of Azov, was encircled by Russian and DNR forces in the first days of the invasion. A brutal urban siege followed, with Russian artillery and aviation flattening residential districts. On 9 March the Mariupol maternity hospital was struck, killing pregnant women and infants; a week later the Drama Theatre, sheltering hundreds of civilians beneath the Russian word for children painted in huge letters on the ground outside, was bombed. Estimates of civilians killed in Mariupol range from 20,000 to 25,000 or more, with the Associated Press documenting mass graves on the city's outskirts. Ukrainian defenders, including the 36th Marine Brigade and the Azov Regiment, retreated into the Azovstal steel works, a vast Soviet-era complex with deep bunkers. From late March through May 2022, they held out against continuous strikes while several thousand civilians sheltered in the underground levels. The defenders became global symbols of resistance, communicating via smuggled videos and starlink. On 16 May, on Zelensky's orders, the remaining 2,500 fighters surrendered to Russian forces and were transferred to prison camps, where they faced severe abuse. Many were later exchanged. Mariupol's fall gave Russia the land bridge from the Donbas to Crimea it had long sought but at enormous reputational cost. The city remains under Russian occupation and has been superficially rebuilt while deportations of residents continue.",
+      "storyTr": "Azak Denizi kıyısında 430.000 nüfuslu stratejik bir liman olan Mariupol, işgalin ilk günlerinde Rus ve DNR kuvvetleri tarafından kuşatıldı. Rus topçusu ve havacılığının konut mahallelerini yerle bir ettiği acımasız bir şehir kuşatması başladı. 9 Mart'ta Mariupol doğum hastanesi vuruldu; hamile kadınlar ve bebekler hayatını kaybetti; bir hafta sonra dışarıdaki zemine Rusça çocuklar yazılmış dev harflerin altına yüzlerce sivilin sığındığı Drama Tiyatrosu bombalandı. Mariupol'de öldürülen sivil sayısı 20.000 ile 25.000 arasında tahmin edilmektedir; Associated Press şehrin çevresinde toplu mezarları belgelemiştir. 36. Deniz Piyade Tugayı ve Azov Alayı dahil Ukraynalı savunucular, derin sığınakları bulunan Sovyet dönemi devasa Azovstal demir-çelik kompleksine çekildi. Mart sonundan Mayıs 2022'ye kadar binlerce sivilin yeraltı katlarında sığındığı sürekli saldırılara karşı direndiler. Savunucular, kaçakçılıkla aktarılan videolar ve Starlink aracılığıyla iletişim kurarak küresel direniş sembolleri haline geldi. 16 Mayıs'ta Zelenski'nin emriyle kalan 2.500 savaşçı Rus kuvvetlerine teslim oldu ve ağır muameleye maruz kaldıkları esir kamplarına nakledildi. Birçoğu daha sonra takas edildi. Mariupol'un düşüşü, Rusya'ya uzun zamandır istediği Donbas'tan Kırım'a uzanan kara köprüsünü verdi ama büyük bir itibar maliyeti pahasına. Şehir hâlâ Rus işgali altında; yüzeysel biçimde yeniden inşa edildi ve sakinlerinin sürgün edilmesi sürüyor.",
+      "forces": {
+        "sideA": 8000,
+        "sideB": 14000
+      },
+      "casualties": {
+        "sideA": 4000,
+        "sideB": 4500
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Siege_of_Mariupol",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Mariupol_Ku%C5%9Fatmas%C4%B1_(2022)"
     },
     {
       "id": "kharkiv-counteroffensive",
       "name": "Kharkiv Counteroffensive",
-      "nameTr": "Harkiv Karşı Taarruzu",
-      "lat": 49.9935, "lng": 36.2304,
-      "date": "2022-09-06", "dateEnd": "2022-09-12",
-      "kind": "battle", "side": "victory-a",
-      "summary": "A rapid Ukrainian offensive liberates 12,000 km² of territory in six days, collapsing Russian lines around Kharkiv. The war's most dramatic reversal.",
-      "summaryTr": "Hızlı bir Ukrayna taarruzu, altı günde 12.000 km²'lik bir alanı kurtarır; Harkiv çevresindeki Rus hatları çöker. Savaşın en dramatik geri dönüşü.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/2022_Ukrainian_Kharkiv_counteroffensive"
+      "nameTr": "Kharkiv Karşı Taarruzu",
+      "lat": 49.9935,
+      "lng": 36.2304,
+      "date": "2022-09-06",
+      "dateEnd": "2022-09-12",
+      "kind": "liberation",
+      "side": "victory-a",
+      "order": 15,
+      "summary": "A rapid Ukrainian thrust from Balakliia to Kupiansk and Izium collapsed the Russian front in Kharkiv oblast in six days.",
+      "summaryTr": "Balakliya'dan Kupyansk ve İzyum'a uzanan hızlı Ukrayna taarruzu, Kharkiv ilindeki Rus cephesini altı günde çökertti.",
+      "story": "In late summer 2022 Ukrainian forces publicly signalled a major counteroffensive in Kherson, drawing Russian reinforcements south. On 6 September, elite Ukrainian units including the 25th Airborne Brigade, 92nd Mechanised Brigade and the 80th Air Assault Brigade struck through thinly held lines east of Kharkiv toward Balakliia and Kupiansk. Russian defences, manned largely by under-strength units and Rosgvardia troops, disintegrated. By 10 September, Ukrainian forces had entered Izium, a major Russian logistics hub, capturing tanks, artillery and ammunition stockpiles left behind in the panicked withdrawal. Within six days, Ukraine liberated more than 6,000 square kilometres of territory in Kharkiv oblast and reached the Oskil river. The offensive demonstrated the battlefield benefits of HIMARS rocket artillery, which had systematically destroyed Russian ammunition depots and command posts over the preceding two months, as well as Western intelligence and mission planning support. Ukrainian forces discovered mass graves in Izium containing more than 400 bodies, many with signs of torture. Russia responded with renewed missile strikes against Ukrainian energy infrastructure and announced a partial mobilisation on 21 September. The Kharkiv counteroffensive was the turning point of 2022: it transformed the strategic narrative, ended speculation about a quick Russian win and confirmed Ukrainian offensive capability. Combined with the Kherson liberation two months later, it represented the high-water mark of Ukrainian success before the war reverted to attrition.",
+      "storyTr": "2022 yazının sonlarında Ukrayna kuvvetleri, Herson'da büyük bir karşı taarruzun işaretlerini alenen verdi ve Rus takviyelerini güneye çekti. 6 Eylül'de 25. Hava İndirme Tugayı, 92. Mekanize Tugay ve 80. Hava Saldırı Tugayı dahil seçkin Ukrayna birimleri, Kharkiv'in doğusundaki zayıf savunulan hatları yararak Balakliya ve Kupyansk'a doğru harekete geçti. Büyük ölçüde eksik kadrolu birliklerden ve Rosgvardia askerlerinden oluşan Rus savunmaları çöktü. 10 Eylül'e gelindiğinde Ukrayna kuvvetleri büyük bir Rus lojistik merkezi olan İzyum'a girerek paniklemiş çekilmede bırakılan tankları, topçuları ve mühimmat stoklarını ele geçirdi. Altı gün içinde Ukrayna, Kharkiv ilinde 6.000 km²'nin üzerinde toprağı kurtardı ve Oskil nehrine ulaştı. Taarruz, HIMARS roket topçusunun önceki iki ayda Rus mühimmat depolarını ve komuta merkezlerini sistematik olarak yok etmesinin faydalarını ve Batılı istihbarat ile görev planlama desteğini gözler önüne serdi. Ukrayna kuvvetleri İzyum'da, çoğu işkence izleri taşıyan 400'den fazla cesedi içeren toplu mezarlar buldu. Rusya, Ukrayna'nın enerji altyapısına yeniden füze saldırılarıyla karşılık verdi ve 21 Eylül'de kısmi seferberlik ilan etti. Kharkiv karşı taarruzu 2022'nin dönüm noktasıydı: stratejik anlatıyı dönüştürdü, hızlı bir Rus zaferi spekülasyonuna son verdi ve Ukrayna'nın saldırı kapasitesini doğruladı. İki ay sonraki Herson kurtuluşuyla birlikte Ukrayna başarısının, savaş yeniden yıpratmaya dönmeden önceki zirvesini temsil etti.",
+      "forces": {
+        "sideA": 20000,
+        "sideB": 15000
+      },
+      "casualties": {
+        "sideA": 500,
+        "sideB": 4500
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/2022_Kharkiv_counteroffensive",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/2022_Harkov_kar%C5%9F%C4%B1_taarruzu"
+    },
+    {
+      "id": "sham-referenda",
+      "name": "Sham Annexation Referenda",
+      "nameTr": "Sahte İlhak Referandumları",
+      "lat": 48.0158,
+      "lng": 37.8028,
+      "date": "2022-09-23",
+      "dateEnd": "2022-09-30",
+      "kind": "event",
+      "side": "political",
+      "order": 16,
+      "summary": "Russia staged referendums in four partially occupied Ukrainian regions and claimed to annex Donetsk, Luhansk, Zaporizhzhia and Kherson.",
+      "summaryTr": "Rusya, kısmen işgal altındaki dört Ukrayna bölgesinde referandumlar düzenleyerek Donetsk, Luhansk, Zaporijya ve Herson'u ilhak ettiğini iddia etti.",
+      "story": "In September 2022, as Ukrainian forces advanced in Kharkiv and began their build-up in Kherson, the Kremlin accelerated a legal fiction. Between 23 and 27 September, Russian-installed authorities in Donetsk, Luhansk, Zaporizhzhia and Kherson oblasts organised ballots in the territories they controlled, often conducted door-to-door with armed escorts. Reported turnout and support figures exceeded 87%, numbers widely dismissed as fabricated. On 30 September Vladimir Putin presided over a signing ceremony in the St George's Hall of the Kremlin, declaring four new subjects of the Russian Federation. He threatened the use of all available means, including nuclear weapons, to defend them. The United Nations General Assembly rejected the annexations 143 to 5. The annexations were legally significant but militarily embarrassing: large parts of each claimed oblast remained under Ukrainian control, including the regional capital Zaporizhzhia and, within six weeks, Kherson itself. Russia enshrined the four oblasts in its constitution, closing off any negotiated path that would involve returning them. The annexations hardened both sides' positions and made the war's territorial stakes existential. Zelensky responded by formally applying for accelerated NATO membership and signing a decree declaring negotiations with Putin impossible. The referendums exemplified the hybrid tactic Russia had used in Crimea in 2014, now on an industrial scale, and they ensured the conflict would be decided on the battlefield rather than at a conference table.",
+      "storyTr": "Eylül 2022'de Ukrayna kuvvetleri Kharkiv'te ilerlerken ve Herson'da yığınağa başlarken, Kremlin bir hukuki kurguyu hızlandırdı. 23–27 Eylül arasında Donetsk, Luhansk, Zaporijya ve Herson illerindeki Rusya'nın atadığı yetkililer, kontrolündeki topraklarda sıkça silahlı refakatçilerle kapı kapı yürütülen oylamalar düzenledi. Bildirilen katılım ve destek oranları yüzde 87'nin üzerindeydi ve bu rakamlar geniş çapta uydurulmuş olarak nitelendirildi. 30 Eylül'de Vladimir Putin Kremlin'in Aziz Yorgi Salonu'ndaki imza törenine başkanlık etti ve Rusya Federasyonu'nun dört yeni tebaasını ilan etti. Bunları savunmak için nükleer silahlar dahil mevcut tüm araçları kullanacağını tehdit etti. BM Genel Kurulu ilhakları 143'e karşı 5 oyla reddetti. İlhaklar hukuken önemliydi ancak askeri açıdan utanç vericiydi: İddia edilen her ilin büyük kısmı Ukrayna kontrolünde kalmaya devam etti; bunlara il merkezi Zaporijya ve altı hafta içinde Herson da dahildi. Rusya dört ili anayasasına yazdı; bu, geri verilmelerini içerecek herhangi bir müzakere yolunu kapattı. İlhaklar iki tarafın tutumlarını sertleştirdi ve savaşın toprak paylarını varoluşsal hale getirdi. Zelenski, NATO üyeliği için hızlandırılmış başvuruda bulundu ve Putin ile müzakerenin imkânsız olduğunu ilan eden bir kararname imzaladı. Referandumlar, Rusya'nın 2014'te Kırım'da kullandığı hibrit taktiğin sanayi çapındaki örneğiydi ve çatışmanın bir konferans masasında değil, savaş alanında karara bağlanacağını garantiledi.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Russian_annexation_of_Donetsk,_Kherson,_Luhansk_and_Zaporizhzhia_oblasts",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Rusya%27n%C4%B1n_Donetsk,_Luhansk,_Zaporijya_ve_Herson_illerini_ilhak%C4%B1"
     },
     {
       "id": "kherson-liberation",
       "name": "Liberation of Kherson",
-      "nameTr": "Herson'un Kurtuluşu",
-      "lat": 46.6354, "lng": 32.6169,
-      "date": "2022-11-11",
-      "kind": "liberation", "side": "victory-a",
-      "summary": "Ukrainian forces enter Kherson after an eight-month occupation, retaking the only regional capital Russia captured in 2022. Crowds greet soldiers with flags and flowers.",
-      "summaryTr": "Ukrayna kuvvetleri, sekiz aylık işgalden sonra Herson'a girer; Rusya'nın 2022'de ele geçirdiği tek bölge başkentini geri alır. Halk, askerleri bayrak ve çiçeklerle karşılar.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Liberation_of_Kherson"
+      "nameTr": "Herson'un Kurtarılması",
+      "lat": 46.6354,
+      "lng": 32.6169,
+      "date": "2022-08-29",
+      "dateEnd": "2022-11-11",
+      "kind": "liberation",
+      "side": "victory-a",
+      "order": 17,
+      "summary": "A methodical Ukrainian campaign cut off Russian forces on the west bank of the Dnipro, forcing a withdrawal and the liberation of Kherson city.",
+      "summaryTr": "Metodik bir Ukrayna harekâtı, Dinyeper'ın batı yakasındaki Rus kuvvetlerini kesti; çekilmeye ve Herson kentinin kurtuluşuna yol açtı.",
+      "story": "Kherson, the only regional capital captured by Russia in 2022, was taken in the first week of the invasion when local commanders allegedly allowed the bridges to remain intact. From late summer, Ukrainian forces targeted the Antonivskyi Bridge and the Nova Kakhovka dam crossings with HIMARS, gradually isolating the Russian grouping on the west bank of the Dnipro River. On 29 August the Armed Forces of Ukraine publicly announced the start of the Kherson counteroffensive, advancing cautiously against well-prepared Russian defences. The offensive was slower than Kharkiv but kept pressure on Russian logistics. By early November the Russian command, under newly appointed theatre commander Sergey Surovikin, concluded that sustaining the western bank was untenable. On 9 November Surovikin announced on state television that Russian forces would withdraw to the eastern bank of the Dnipro; Ukrainian troops entered Kherson city on 11 November to scenes of euphoric civilians waving flags and soldiers being showered with flowers. The liberation of Kherson was a political and emotional high point for Ukraine and an unambiguous Russian defeat: the first regional capital lost in the war. Yet the withdrawal also shortened the Russian defensive line and saved thousands of Russian troops for redeployment. The two banks of the Dnipro became the new fixed front, and Russian artillery and glide-bomb strikes would continue to torment Kherson city for years afterwards.",
+      "storyTr": "Rusya'nın 2014'ten sonra 2022'de ele geçirdiği tek il merkezi olan Herson, işgalin ilk haftasında—yerel komutanların köprülerin sağlam kalmasına izin verdiği iddia edilir—alındı. Yaz sonundan itibaren Ukrayna kuvvetleri Antonivskyi Köprüsü'nü ve Nova Kakhovka baraj geçişlerini HIMARS ile hedef aldı ve Dinyeper Nehri'nin batı yakasındaki Rus grubunu yavaş yavaş izole etti. 29 Ağustos'ta Ukrayna Silahlı Kuvvetleri, Herson karşı taarruzunun başladığını alenen duyurdu ve iyi hazırlanmış Rus savunmalarına karşı temkinli ilerledi. Taarruz, Kharkiv'den daha yavaştı ancak Rus lojistiği üzerindeki baskıyı sürdürdü. Kasım başında, yeni atanan saha komutanı Sergey Surovikin liderliğindeki Rus komutası, batı yakasını sürdürmenin imkânsız olduğunu kabul etti. 9 Kasım'da Surovikin devlet televizyonunda Rus kuvvetlerinin Dinyeper'ın doğu yakasına çekileceğini duyurdu; Ukraynalı askerler 11 Kasım'da bayrak sallayan sivillerin ve çiçeklere boğulan askerlerin coşkulu sahnelerine tanıklık ederek Herson kentine girdi. Herson'un kurtuluşu Ukrayna için siyasi ve duygusal bir zirveydi ve Rusya için tartışmasız bir yenilgiydi: Savaşta kaybedilen ilk il merkezi. Ancak çekilme Rus savunma hattını kısalttı ve yeniden konuşlandırılmak üzere binlerce Rus askerini korudu. Dinyeper'ın iki yakası yeni sabit cephe oldu; Rus topçusu ve planör bombası saldırıları Herson kentini yıllarca yıldırmaya devam edecekti.",
+      "forces": {
+        "sideA": 40000,
+        "sideB": 30000
+      },
+      "casualties": {
+        "sideA": 4000,
+        "sideB": 3000
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/2022_Kherson_counteroffensive",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/2022_Herson_kar%C5%9F%C4%B1_taarruzu"
+    },
+    {
+      "id": "finland-nato",
+      "name": "Finland Joins NATO",
+      "nameTr": "Finlandiya NATO'ya Katıldı",
+      "lat": 60.1699,
+      "lng": 24.9384,
+      "date": "2023-04-04",
+      "kind": "event",
+      "side": "political",
+      "order": 18,
+      "summary": "Finland, long neutral, formally joined NATO in April 2023, doubling the Alliance's border with Russia.",
+      "summaryTr": "Uzun süredir tarafsız olan Finlandiya, Nisan 2023'te NATO'ya resmen katılarak İttifak'ın Rusya sınırını iki katına çıkardı.",
+      "story": "Finland had maintained a policy of military non-alignment since the Second World War, balancing its 1,340 km border with Russia through careful neutrality. Russia's 2022 invasion of Ukraine and explicit demands for NATO rollback triggered a rapid shift in Finnish public opinion: support for NATO membership rose from around 25% before the war to more than 75% by May 2022. On 18 May 2022 Finland and Sweden jointly applied for membership. Turkey initially blocked their accession over concerns about Kurdish groups and arms restrictions; Ankara lifted its objections to Finland first. On 4 April 2023 Finland formally became the 31st member of NATO, raising its flag outside the Alliance's Brussels headquarters. Defence exercises with the United States, the United Kingdom and Nordic partners intensified, and new forward-operating plans shaped a northern front that would constrain Russian fleet and air force operations in the Baltic and Arctic. For Vladimir Putin, who had invaded Ukraine partly under the banner of preventing NATO expansion, the accession of Finland was a strategic reversal: NATO now effectively encircles the Gulf of Finland, and the Kola Peninsula's approaches are exposed. Finland began permitting permanent US basing through a 2023 defence cooperation agreement. The Finnish accession illustrated how Russia's war of choice ended the last corner of European neutrality that mattered to Moscow and transformed the strategic geography of the continent.",
+      "storyTr": "Finlandiya, İkinci Dünya Savaşı'ndan bu yana askeri bağlantısızlık politikasını sürdürerek 1.340 km'lik Rusya sınırını dikkatli bir tarafsızlıkla dengelemişti. Rusya'nın 2022'de Ukrayna'yı işgali ve NATO'nun geri çekilmesine yönelik açık talepleri, Finlandiya kamuoyunda hızlı bir kayma tetikledi: NATO üyeliği desteği savaş öncesi yaklaşık yüzde 25'ten Mayıs 2022'ye gelindiğinde yüzde 75'in üzerine çıktı. 18 Mayıs 2022'de Finlandiya ve İsveç birlikte üyelik başvurusunda bulundu. Türkiye başlangıçta Kürt grupları ve silah kısıtlamalarına ilişkin endişeleri gerekçe göstererek iki ülkenin katılımını engelledi; Ankara önce Finlandiya'ya yönelik itirazlarını kaldırdı. 4 Nisan 2023'te Finlandiya, NATO'nun Brüksel'deki karargâhının önünde bayrağını çekerek resmen İttifak'ın 31. üyesi oldu. ABD, İngiltere ve Kuzey Ülkeleri ortaklarıyla savunma tatbikatları yoğunlaştı ve yeni ileri operasyon planları, Rus donanması ile hava kuvvetlerinin Baltık ve Kutup operasyonlarını kısıtlayacak bir kuzey cephesini şekillendirdi. NATO'nun genişlemesini önlemek söylemiyle Ukrayna'yı işgal eden Vladimir Putin için Finlandiya'nın katılımı stratejik bir yenilgiydi: NATO artık Finlandiya Körfezi'ni fiilen kuşatıyor ve Kola Yarımadası'nın yaklaşımları açığa çıktı. Finlandiya 2023 savunma işbirliği anlaşması aracılığıyla ABD'nin kalıcı üs kullanımına izin vermeye başladı. Finlandiya'nın katılımı, Rusya'nın tercih ettiği savaşın, Moskova için önemli olan son Avrupa tarafsızlık köşesini nasıl ortadan kaldırdığını ve kıtanın stratejik coğrafyasını nasıl dönüştürdüğünü gösterdi.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Accession_of_Finland_to_NATO",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Finlandiya%27n%C4%B1n_NATO%27ya_kat%C4%B1l%C4%B1m%C4%B1"
     },
     {
       "id": "bakhmut",
       "name": "Battle of Bakhmut",
       "nameTr": "Bahmut Muharebesi",
-      "lat": 48.5950, "lng": 38.0003,
-      "date": "2022-08-01", "dateEnd": "2023-05-20",
-      "kind": "battle", "side": "victory-b",
-      "summary": "The longest and bloodiest battle of the war. Wagner mercenary forces take the ruined city at enormous cost. A grinding stalemate that defined 2023.",
-      "summaryTr": "Savaşın en uzun ve en kanlı muharebesi. Wagner paralı kuvvetleri, harabeye dönen şehri büyük kayıplar pahasına alır. 2023'ü tanımlayan tüketici cephe savaşı.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Bakhmut"
+      "lat": 48.5955,
+      "lng": 37.9994,
+      "date": "2022-08-01",
+      "dateEnd": "2023-05-20",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 19,
+      "summary": "The longest battle of the war ground on for ten months, turning a small Donbas city into the symbol of Russian attritional warfare and the Wagner Group.",
+      "summaryTr": "Savaşın en uzun muharebesi on ay sürerek küçük bir Donbas kasabasını Rus yıpratma savaşının ve Wagner Grubu'nun sembolü haline getirdi.",
+      "story": "Bakhmut, a small city famous before the war for sparkling wine and salt mines, became the epicentre of Russian offensive operations from summer 2022 onward. The Wagner Group, led by Yevgeny Prigozhin, took the lead in assaults on the city, using infantry waves largely composed of convicts recruited from Russian prisons in exchange for pardons. Ukrainian forces held the approaches through the Donets-Horlivka highway and the rail line, inflicting enormous losses while suffering heavy casualties themselves. Western officials described the Russian approach as a meat grinder strategy, trading lives for metres of ground. Prigozhin repeatedly attacked the Russian Ministry of Defence on social media, accusing Shoigu and Gerasimov of withholding ammunition and planning his men's deaths. After ten months of urban fighting, Russia finally declared the fall of Bakhmut on 20 May 2023. Ukrainian forces retained small positions on the outskirts and began counter-operations on the flanks. Estimates of Russian dead in Bakhmut range from 20,000 to 60,000, including more than 20,000 Wagner fighters by Prigozhin's own account; Ukrainian losses numbered in the thousands. The battle showcased the horrific character of the 2022–2023 front: drone-saturated, artillery-dominant and measured in city blocks. It also catalysed the Wagner mutiny weeks later, fundamentally destabilising the Russian military-political system.",
+      "storyTr": "Savaştan önce köpüren şarabı ve tuz madenleriyle ünlü küçük bir kasaba olan Bahmut, 2022 yazından itibaren Rus saldırı operasyonlarının merkez üssü haline geldi. Yevgeny Prigojin liderliğindeki Wagner Grubu, saldırılarda başı çekti ve büyük ölçüde Rus hapishanelerinden af karşılığında devşirilen mahkumlardan oluşan piyade dalgalarını kullandı. Ukrayna kuvvetleri Donets-Horlivka karayolu ve demiryolu hattı üzerinden yaklaşımları savunarak kendi ağır kayıplarını verirken büyük kayıplar verdirdi. Batılı yetkililer Rus yaklaşımını, metreler için canları takas eden bir kıyma makinesi stratejisi olarak tanımladı. Prigojin, Şoygu ve Gerasimov'u mühimmat vermemek ve adamlarının ölümlerini planlamakla suçlayarak sosyal medyada Rus Savunma Bakanlığı'na defalarca saldırdı. On ay süren şehir savaşının ardından Rusya, 20 Mayıs 2023'te Bahmut'un düşüşünü ilan etti. Ukrayna kuvvetleri kasabanın eteklerinde küçük mevziler koruyup kanatlarda karşı operasyonlar başlattı. Bahmut'taki Rus ölü sayısı tahminleri 20.000 ile 60.000 arasında değişiyor; buna Prigojin'in kendi ifadesine göre 20.000'den fazla Wagner savaşçısı dahildir; Ukrayna kayıpları binlerle ölçülüyordu. Muharebe, 2022–2023 cephesinin dehşet verici karakterini gösterdi: insansız hava aracı doymuş, topçu hakim ve şehir bloklarıyla ölçülen. Ayrıca haftalar sonraki Wagner isyanını tetikleyerek Rus askeri-siyasi sistemini kökten sarstı.",
+      "forces": {
+        "sideA": 40000,
+        "sideB": 80000
+      },
+      "casualties": {
+        "sideA": 10000,
+        "sideB": 40000
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Bakhmut",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Bahmut_Muharebesi"
+    },
+    {
+      "id": "ukrainian-2023-offensive",
+      "name": "Ukrainian 2023 Counteroffensive",
+      "nameTr": "Ukrayna 2023 Karşı Taarruzu",
+      "lat": 47.5,
+      "lng": 36.5,
+      "date": "2023-06-04",
+      "dateEnd": "2023-11-30",
+      "kind": "battle",
+      "side": "draw",
+      "order": 20,
+      "summary": "Ukraine's long-anticipated summer 2023 offensive toward Melitopol stalled against dense Russian minefields and defensive lines.",
+      "summaryTr": "Ukrayna'nın uzun zamandır beklenen 2023 yaz taarruzu Melitopol'a doğru ilerlerken yoğun Rus mayın tarlaları ve savunma hatlarına takıldı.",
+      "story": "Throughout spring 2023, Western allies delivered Leopard 2 and Challenger 2 tanks, Bradley and Marder fighting vehicles and additional long-range artillery to Ukraine. Nine new brigades were trained abroad under NATO supervision. On 4 June 2023 Ukrainian forces launched a broad-front offensive aimed at severing the Russian land bridge to Crimea, with main axes toward Melitopol via Tokmak and toward Berdiansk. They encountered the so-called Surovikin Line: multiple belts of dragon's teeth, trenches, anti-tank ditches, minefields averaging five mines per square metre and well-prepared defending brigades supported by helicopter gunships. Early assaults with Western equipment near Robotyne and Velyka Novosilka suffered heavy losses in a saturated minefield environment. Over the summer Ukraine shifted to dismounted infantry tactics and drone-led engagements, taking Robotyne and grinding toward Verbove by late August but failing to reach operational depth. By November the offensive had clearly stalled. Kyiv captured limited ground on the east bank of the Dnipro near Krynky and conducted spectacular long-range strikes on the Black Sea Fleet in Sevastopol. But the central objective—breaking through to the Sea of Azov—was not achieved. Commander-in-chief Valerii Zaluzhnyi published an essay admitting the war had entered a stalemate. The 2023 offensive revealed that Russian defensive preparation, air and missile superiority over the southern battlefield and Western hesitation on F-16s and long-range missiles had shifted the military balance away from rapid Ukrainian success.",
+      "storyTr": "2023 ilkbaharı boyunca Batılı müttefikler Ukrayna'ya Leopard 2 ve Challenger 2 tankları, Bradley ve Marder muharebe araçları ile ek uzun menzilli topçu sağladı. Dokuz yeni tugay yurt dışında NATO gözetiminde eğitildi. 4 Haziran 2023'te Ukrayna kuvvetleri, Rusya'nın Kırım'a kara köprüsünü kesmeyi hedefleyen, Tokmak üzerinden Melitopol ve Berdiansk yönünde ana eksenlerle geniş cepheli bir taarruz başlattı. Yoğun dragon dişleri, siperler, tanksavar hendekleri, metrekareye ortalama beş mayın düşen mayın tarlaları ve helikopter desteğiyle güçlendirilmiş savunma tugaylarından oluşan Surovikin Hattı ile karşılaştılar. Robotyne ve Velyka Novosilka yakınlarında Batılı ekipmanlarla yapılan erken saldırılar, mayın dolu bir ortamda ağır kayıplar verdi. Yaz boyunca Ukrayna, yaya piyade taktiklerine ve insansız hava aracı öncülüğündeki çatışmalara geçti; Ağustos sonuna kadar Robotyne'yi alıp Verbove'ye doğru ilerledi ancak operasyonel derinliğe ulaşamadı. Kasım'a gelindiğinde taarruz açıkça durmuştu. Kyiv Krynky yakınlarında Dinyeper'ın doğu yakasında sınırlı alan ele geçirdi ve Sivastopol'daki Karadeniz Filosu'na gösterişli uzun menzilli saldırılar düzenledi. Ancak asıl hedef—Azak Denizi'ne ulaşmak—başarılamadı. Başkomutan Valerii Zalujny, savaşın patt aşamasına girdiğini itiraf eden bir makale yayımladı. 2023 taarruzu, Rus savunma hazırlığının, güney savaş alanındaki hava ve füze üstünlüğünün ve Batı'nın F-16 ile uzun menzilli füzeler konusundaki tereddüdünün askeri dengeyi hızlı Ukrayna başarısından uzaklaştırdığını gösterdi.",
+      "forces": {
+        "sideA": 70000,
+        "sideB": 180000
+      },
+      "casualties": {
+        "sideA": 18000,
+        "sideB": 20000
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/2023_Ukrainian_counteroffensive",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/2023_Ukrayna_kar%C5%9F%C4%B1_taarruzu"
+    },
+    {
+      "id": "wagner-mutiny",
+      "name": "Wagner Mutiny",
+      "nameTr": "Wagner İsyanı",
+      "lat": 51.672,
+      "lng": 39.1843,
+      "date": "2023-06-23",
+      "dateEnd": "2023-06-24",
+      "kind": "event",
+      "side": "political",
+      "order": 21,
+      "summary": "Yevgeny Prigozhin led a march on Moscow that seized Rostov-on-Don before ending abruptly with a Belarus-brokered deal.",
+      "summaryTr": "Yevgeny Prigojin, Rostov na Donu'yu ele geçiren Moskova'ya yürüyüşünü Belarus aracılı bir anlaşmayla aniden sonlandırdı.",
+      "story": "On the night of 23–24 June 2023, after months of public feuding with the Russian Ministry of Defence, Wagner chief Yevgeny Prigozhin ordered his fighters to cross from Ukrainian fronts into Russia and seize the headquarters of the Southern Military District in Rostov-on-Don. He accused Sergei Shoigu and Valery Gerasimov of incompetence and of attacking Wagner camps; he called his advance a march of justice. By dawn Wagner convoys had taken Rostov without resistance, then rolled north up the M-4 highway toward Moscow. Russian air assets engaged the convoy and Wagner shot down several aircraft, killing more than a dozen aviators. Around 200 km from Moscow, with hasty defensive positions going up in the capital and Putin denouncing the mutiny as treason, a deal was brokered through Belarusian president Alexander Lukashenko. Prigozhin turned his forces back, ostensibly in exchange for exile in Belarus and no prosecution. The humiliation was severe: the state had failed to defend itself on its own roads, and fundamental cracks in the security system were exposed. Exactly two months later, on 23 August 2023, Prigozhin's private jet crashed north of Moscow, killing him and the Wagner senior leadership. Wagner was absorbed into regular Russian structures and deployed to Africa and Belarus; its mutiny remained the most serious internal challenge to Vladimir Putin's rule in over two decades.",
+      "storyTr": "23–24 Haziran 2023 gecesi, Rus Savunma Bakanlığı ile aylardır süren kamusal kavganın ardından Wagner şefi Yevgeny Prigojin, savaşçılarına Ukrayna cephelerinden Rusya'ya geçip Rostov na Donu'daki Güney Askeri Bölgesi karargâhını ele geçirme emri verdi. Şoygu ve Gerasimov'u yetersizlikle ve Wagner kamplarına saldırmakla suçladı; ilerleyişini adalet yürüyüşü olarak nitelendirdi. Şafakta Wagner konvoyları direnişle karşılaşmadan Rostov'u aldı, sonra M-4 karayolunda kuzeye, Moskova'ya doğru ilerledi. Rus hava unsurları konvoyu angaje etti ve Wagner birkaç uçak düşürerek bir düzineyi aşkın havacıyı öldürdü. Moskova'dan yaklaşık 200 km uzaklıkta, başkentte apar topar savunma mevzileri kurulurken ve Putin isyanı ihanet olarak kınarken, Belarus Cumhurbaşkanı Aleksandr Lukaşenko aracılığıyla bir anlaşma sağlandı. Prigojin, görünüşte Belarus'a sürgün ve kovuşturma yapılmaması karşılığında kuvvetlerini geri çevirdi. Küçük düşürücü sonuç ağırdı: Devlet kendi yollarında kendini savunamamış, güvenlik sistemindeki temel çatlaklar açığa çıkmıştı. Tam iki ay sonra, 23 Ağustos 2023'te Prigojin'in özel jeti Moskova'nın kuzeyinde düşerek kendisini ve Wagner üst yönetimini öldürdü. Wagner, düzenli Rus yapılarına katılarak Afrika ve Belarus'a konuşlandı; isyanı yirmi yılı aşkın süredir Vladimir Putin'in iktidarına yönelik en ciddi iç meydan okuma olarak kaldı.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Wagner_Group_rebellion",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Wagner_Grubu_ayaklanmas%C4%B1"
+    },
+    {
+      "id": "sweden-nato",
+      "name": "Sweden Joins NATO",
+      "nameTr": "İsveç NATO'ya Katıldı",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "date": "2024-03-07",
+      "kind": "event",
+      "side": "political",
+      "order": 22,
+      "summary": "Sweden, neutral for two centuries, formally joined NATO on 7 March 2024 after clearing vetoes from Turkey and Hungary.",
+      "summaryTr": "İki asırdır tarafsız olan İsveç, Türkiye ve Macaristan'ın vetolarını aşarak 7 Mart 2024'te NATO'ya resmen katıldı.",
+      "story": "Sweden had remained outside military alliances since 1814, a 200-year record of non-alignment broken by the 2022 Russian invasion of Ukraine. Stockholm applied alongside Finland on 18 May 2022. Sweden's accession took longer because Turkey demanded crackdowns on Kurdish diaspora groups and extraditions, and Hungary's Prime Minister Viktor Orbán added procedural delays. After multiple rounds of negotiation, including sales of F-16s to Turkey by the United States and bilateral gestures to Budapest, both parliaments ratified Sweden's accession by late February 2024. On 7 March 2024 Sweden formally became the 32nd member of NATO. The Swedish flag was raised at NATO headquarters later that month. Sweden brought significant assets to the Alliance: a domestic defence industry producing the Gripen fighter, Visby-class stealth corvettes, advanced submarines and submarine-hunting helicopters. Geographically, Swedish membership transformed the Baltic Sea into a NATO lake, closing the maritime space in which Russia's Baltic Fleet could operate freely. Together, Finnish and Swedish accession lengthened NATO's direct border with Russia by around 1,300 km and integrated Nordic defence planning under a single command structure. For Moscow, it was a second strategic defeat driven directly by its own choices in Ukraine; for Stockholm, it closed a historic chapter of neutrality and opened a new one of collective defence.",
+      "storyTr": "İsveç 1814'ten bu yana askeri ittifakların dışında kalmıştı; 200 yıllık bağlantısızlık rekoru, 2022'deki Rus Ukrayna işgaliyle bozuldu. Stockholm 18 Mayıs 2022'de Finlandiya ile birlikte başvuruda bulundu. İsveç'in katılımı daha uzun sürdü; çünkü Türkiye Kürt diaspora grupları üzerinde baskı ve iade talep etti, Macaristan Başbakanı Viktor Orbán ise prosedürel gecikmeler ekledi. ABD'nin Türkiye'ye F-16 satışı ve Budapeşte'ye yönelik ikili jestler dahil birden fazla müzakere turunun ardından her iki parlamento İsveç'in katılımını Şubat 2024 sonunda onayladı. 7 Mart 2024'te İsveç, NATO'nun 32. üyesi oldu. İsveç bayrağı aynı ayın ilerleyen günlerinde NATO karargâhında göndere çekildi. İsveç ittifaka önemli varlıklar getirdi: Gripen avcı uçağı, Visby sınıfı stealth korvetler, gelişmiş denizaltılar ve denizaltı avı helikopterleri üreten yerli savunma sanayii. Coğrafi olarak İsveç üyeliği Baltık Denizi'ni bir NATO gölüne dönüştürdü ve Rusya'nın Baltık Filosu'nun serbestçe hareket edebileceği deniz alanını kapattı. Finlandiya ve İsveç'in katılımı NATO'nun Rusya ile doğrudan sınırını yaklaşık 1.300 km uzattı ve Kuzey Avrupa savunma planlamasını tek bir komuta yapısı altında bütünleştirdi. Moskova için bu, Ukrayna'daki kendi tercihleri tarafından doğrudan yol açılan ikinci stratejik yenilgiydi; Stockholm için ise tarafsızlığın tarihi bir faslı kapanıp kolektif savunmanın yeni bir faslı açıldı.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Accession_of_Sweden_to_NATO",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/%C4%B0sve%C3%A7%27in_NATO%27ya_kat%C4%B1l%C4%B1m%C4%B1"
+    },
+    {
+      "id": "avdiivka",
+      "name": "Fall of Avdiivka",
+      "nameTr": "Avdiyivka'nın Düşüşü",
+      "lat": 48.1391,
+      "lng": 37.7447,
+      "date": "2023-10-10",
+      "dateEnd": "2024-02-17",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 23,
+      "summary": "After months of Russian pincer assaults and a gap in Western aid, Ukraine withdrew from the fortress town of Avdiivka in February 2024.",
+      "summaryTr": "Aylarca süren Rus kıskaç saldırılarından ve Batı yardımındaki boşluktan sonra Ukrayna, Şubat 2024'te kale kasabası Avdiyivka'dan çekildi.",
+      "story": "Avdiivka, a coke-plant town just north of Russian-occupied Donetsk city, had been fortified by Ukrainian forces ever since its liberation in 2014. A decade of trenches, bunkers and mined fields made it one of the strongest fortifications on the Donbas line. In October 2023 Russian forces launched a major pincer offensive, committing thousands of armoured vehicles and entire divisions to close around the town. Initial assaults produced extraordinary Russian losses, with satellite imagery showing hundreds of destroyed tanks and vehicles around the so-called Ukrainian fortress. Over the winter Russia maintained relentless pressure, aided by a severe shortage of Ukrainian artillery shells caused by blocked US aid in Congress and depleted European stocks. On 17 February 2024, with Russian forces infiltrating through the coke plant and southern districts, Ukraine's new commander-in-chief Oleksandr Syrskyi ordered a general withdrawal. Some wounded Ukrainian soldiers were left behind and reportedly executed. The fall of Avdiivka was Russia's most significant territorial gain since the capture of Bakhmut nine months earlier and the first major success of a campaign that would continue pressing Ukrainian lines throughout 2024. For Ukraine, the battle underscored the dangerous consequences of interrupted Western support; for Russia, it was a brutal victory costing tens of thousands of dead but demonstrating that attritional mass could still break Ukrainian defences if munitions shortages persisted.",
+      "storyTr": "Rus işgali altındaki Donetsk kentinin hemen kuzeyindeki koklaştırma fabrikası kasabası Avdiyivka, 2014'teki kurtuluşundan bu yana Ukrayna kuvvetleri tarafından tahkim edilmişti. On yıllık siperler, sığınaklar ve mayınlı alanlar onu Donbas hattının en güçlü tahkimatlarından biri haline getirmişti. Ekim 2023'te Rus kuvvetleri, kasabayı çevirmek için binlerce zırhlı araç ve tam tümenler konuşlandırarak büyük bir kıskaç taarruzu başlattı. İlk saldırılar olağanüstü Rus kayıplarıyla sonuçlandı; uydu görüntüleri Ukrayna kalesinin çevresinde tahrip edilmiş yüzlerce tank ve araç gösterdi. Kış boyunca Rusya, ABD Kongresi'nde tıkanan yardım ve tükenmiş Avrupa stokları nedeniyle Ukrayna topçu mermisinin ciddi şekilde azalmasının da yardımıyla aralıksız baskıyı sürdürdü. 17 Şubat 2024'te Rus kuvvetleri koklaştırma fabrikası ve güney mahallelerden sızarken, Ukrayna'nın yeni başkomutanı Oleksandr Sirskiy genel çekilmeyi emretti. Bazı yaralı Ukraynalı askerler geride bırakıldı ve rivayetlere göre infaz edildi. Avdiyivka'nın düşüşü, dokuz ay önce Bahmut'un ele geçirilmesinden bu yana Rusya'nın en önemli toprak kazanımıydı ve 2024 boyunca Ukrayna hatlarını zorlayacak harekâtın ilk büyük başarısıydı. Ukrayna için muharebe, kesintiye uğrayan Batılı desteğin tehlikeli sonuçlarının altını çizdi; Rusya için ise on binlerce ölüme mal olan acımasız bir zaferdi ve mühimmat sıkıntısı sürerse yıpratma kitleselliğinin Ukrayna savunmasını hâlâ kırabileceğini gösterdi.",
+      "forces": {
+        "sideA": 30000,
+        "sideB": 50000
+      },
+      "casualties": {
+        "sideA": 5000,
+        "sideB": 17000
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Avdiivka_(2022%E2%80%932024)",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Avdiyivka_Muharebesi_(2022%E2%80%932024)"
     },
     {
       "id": "kursk-incursion",
-      "name": "Kursk Incursion",
-      "nameTr": "Kursk Harekâtı",
-      "lat": 51.7373, "lng": 36.1893,
+      "name": "Ukrainian Incursion into Kursk",
+      "nameTr": "Ukrayna'nın Kursk'a Akını",
+      "lat": 51.3011,
+      "lng": 35.185,
       "date": "2024-08-06",
-      "kind": "battle", "side": "victory-a",
-      "summary": "Ukrainian forces cross into Russia's Kursk Oblast, seizing 1,000 km² of Russian soil. The first foreign military invasion of Russia since 1941.",
-      "summaryTr": "Ukrayna kuvvetleri Rusya'nın Kursk oblastına girer ve 1.000 km²'lik Rus toprağını ele geçirir. 1941'den bu yana Rusya'ya yapılan ilk yabancı askeri saldırı.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Kursk_offensive_(2024)"
+      "dateEnd": "2024-12-31",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 24,
+      "summary": "In August 2024 Ukrainian mechanised units crossed the border into Russia's Kursk oblast, seizing over a thousand square kilometres of Russian soil.",
+      "summaryTr": "Ağustos 2024'te Ukrayna mekanize birlikleri Rusya'nın Kursk iline girerek Rus topraklarından bin kilometrekareyi aşkın alanı ele geçirdi.",
+      "story": "On 6 August 2024 Ukrainian combined arms brigades, including elements of the 22nd, 82nd and 80th Air Assault Brigades, crossed the Russian border near Sudzha in Kursk oblast. The operation, planned in strict secrecy by General Oleksandr Syrskyi and intelligence chief Kyrylo Budanov, caught Russian conscript and border guard units by surprise. Within days Ukrainian forces advanced up to 35 km into Russian territory, seizing around 1,000 square kilometres and several dozen villages, including the gas-transit town of Sudzha. It was the first significant foreign occupation of Russian soil since the Second World War. President Zelensky framed the operation as a way to create a buffer zone, relieve pressure on Donbas, gain bargaining chips for future talks and shatter the taboo of striking Russia. The political effects in Russia were severe: tens of thousands of civilians were evacuated; several governors were criticised; Putin avoided visiting the area. Militarily, however, the Kremlin refused to divert major forces from Donbas and by late 2024 counter-attacks—reinforced by North Korean infantry—had begun reducing the Ukrainian salient. Throughout autumn and winter 2024 the battle became a high-tempo drone war on both sides of the border. The Kursk operation demonstrated that Ukraine retained strategic initiative even as its southern front lost ground, and it ensured that the 2025 phase of the war opened with active Ukrainian positions inside Russia.",
+      "storyTr": "6 Ağustos 2024'te 22., 82. ve 80. Hava Saldırı Tugayları'ndan unsurlar dahil Ukrayna birleşik silahlar tugayları, Kursk ilindeki Sudja yakınlarında Rus sınırını geçti. General Oleksandr Sirskiy ve istihbarat şefi Kirilo Budanov tarafından sıkı gizlilik içinde planlanan operasyon, Rus muvazzaf ve sınır muhafız birliklerini hazırlıksız yakaladı. Ukrayna kuvvetleri günler içinde Rus topraklarında 35 km'ye kadar ilerledi; gaz transit kasabası Sudja dahil 1.000 kilometrekareye yakın alan ve birkaç düzine köy ele geçirdi. Bu, İkinci Dünya Savaşı'ndan bu yana Rus topraklarının ilk önemli yabancı işgaliydi. Cumhurbaşkanı Zelenski operasyonu bir tampon bölge oluşturma, Donbas üzerindeki baskıyı hafifletme, gelecekteki görüşmeler için pazarlık kartları elde etme ve Rusya'yı vurma tabusunu yıkma aracı olarak sundu. Rusya'daki siyasi etkiler ağırdı: on binlerce sivil tahliye edildi; birkaç vali eleştirildi; Putin bölgeyi ziyaret etmekten kaçındı. Ancak askeri olarak Kremlin, Donbas'tan büyük kuvvetleri çekmeyi reddetti ve 2024 sonlarına doğru Kuzey Koreli piyade ile takviye edilen karşı saldırılar Ukrayna çıkıntısını azaltmaya başladı. 2024 sonbaharı ve kışı boyunca savaş, sınırın iki yanında yüksek tempolu bir insansız hava aracı savaşına dönüştü. Kursk operasyonu, Ukrayna'nın güney cephesinde toprak kaybederken stratejik inisiyatifi koruduğunu gösterdi ve savaşın 2025 evresinin Rusya içinde aktif Ukrayna mevzileriyle açılmasını sağladı.",
+      "forces": {
+        "sideA": 15000,
+        "sideB": 11000
+      },
+      "casualties": {
+        "sideA": 2000,
+        "sideB": 3500
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Russian_Kursk_Oblast_incursion_(2024%E2%80%93present)",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Kursk_oblast%C4%B1_muharebesi_(2024)"
+    },
+    {
+      "id": "north-korean-troops",
+      "name": "North Korean Troops Deployed",
+      "nameTr": "Kuzey Kore Askerlerinin Konuşlandırılması",
+      "lat": 51.3011,
+      "lng": 35.185,
+      "date": "2024-10-18",
+      "kind": "event",
+      "side": "political",
+      "order": 25,
+      "summary": "South Korean and NATO intelligence confirmed that roughly 10,000 North Korean soldiers had deployed to Russia to fight in the Kursk direction.",
+      "summaryTr": "Güney Kore ve NATO istihbaratı, yaklaşık 10.000 Kuzey Koreli askerin Kursk yönünde savaşmak üzere Rusya'ya konuşlandırıldığını doğruladı.",
+      "story": "In the summer and autumn of 2024 South Korea's National Intelligence Service and Ukrainian military intelligence detected the movement of North Korean Korean People's Army soldiers through Vladivostok into Russia. By mid-October approximately 10,000 to 12,000 DPRK troops, including elements of the elite 11th Corps known as the Storm Corps, had arrived at Russian training grounds. On 18 October 2024 NATO Secretary-General Mark Rutte publicly confirmed their deployment. The North Koreans were outfitted with Russian uniforms and equipment, given Russian documents identifying them as members of Buryat or Yakut minorities, and eventually committed to the Kursk battlefield against Ukrainian forces occupying Russian territory. Their tactics relied heavily on human-wave infantry assaults against fortified Ukrainian positions, suffering exceptionally high casualty rates. Captured and wounded North Korean soldiers were displayed in Ukrainian and Western media. In exchange, Pyongyang reportedly received fuel oil, food aid, ballistic-missile technology transfers and cash payments estimated in the hundreds of millions of dollars. The deployment represented the first major foreign infantry force committed to Russia's war. It deepened North Korea's integration into the Russian-Chinese-Iranian axis of convenience, further constrained the international sanctions regime and raised fears that combat experience against Western-armed Ukrainians would feed back into the Korean peninsula's own security dynamics. For Ukraine, it was also an argument for more Western air defence and long-range weapons.",
+      "storyTr": "2024 yaz ve sonbaharında Güney Kore Ulusal İstihbarat Servisi ve Ukrayna askeri istihbaratı, Kuzey Kore Kore Halk Ordusu askerlerinin Vladivostok üzerinden Rusya'ya hareket ettiğini tespit etti. Ekim ortasına gelindiğinde Fırtına Kolordusu olarak bilinen elit 11. Kolordu'dan unsurlar dahil yaklaşık 10.000 ila 12.000 KDHC askeri Rus eğitim sahalarına ulaşmıştı. 18 Ekim 2024'te NATO Genel Sekreteri Mark Rutte konuşlandırmayı alenen doğruladı. Kuzey Koreliler Rus üniforma ve teçhizatıyla donatıldı, Buryat veya Yakut azınlık mensubu olduklarını gösteren Rus belgeleri verildi ve sonunda Rus topraklarını işgal eden Ukrayna kuvvetlerine karşı Kursk cephesine sürüldü. Taktikleri, tahkimli Ukrayna mevzilerine karşı ağırlıklı olarak insan dalgası piyade saldırılarına dayanıyordu ve olağanüstü yüksek kayıp oranlarına uğradılar. Yakalanan ve yaralanan Kuzey Koreli askerler Ukrayna ve Batı medyasında gösterildi. Karşılığında Pyongyang'ın yakıt, gıda yardımı, balistik füze teknolojisi transferi ve yüz milyonlarca dolar olduğu tahmin edilen nakit ödemeler aldığı bildirildi. Konuşlandırma, Rusya'nın savaşına kararlı ilk büyük yabancı piyade kuvvetiydi. Kuzey Kore'nin Rusya-Çin-İran menfaat ekseniyle entegrasyonunu derinleştirdi, uluslararası yaptırım rejimini daha da kısıtladı ve Batı silahlı Ukraynalılara karşı savaş deneyiminin Kore yarımadasının kendi güvenlik dinamiklerine geri besleyeceği korkularını artırdı. Ukrayna için bu aynı zamanda daha fazla Batılı hava savunması ve uzun menzilli silah argümanıydı.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/North_Korean_involvement_in_the_Russo-Ukrainian_War",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Kuzey_Kore%27nin_Rus-Ukrayna_Sava%C5%9F%C4%B1%27na_m%C3%BCdahalesi"
+    },
+    {
+      "id": "energy-war-2024",
+      "name": "Russian Energy Strike Campaign",
+      "nameTr": "Rus Enerji Saldırısı Kampanyası",
+      "lat": 50.4501,
+      "lng": 30.5241,
+      "date": "2024-03-22",
+      "dateEnd": "2024-12-31",
+      "kind": "event",
+      "side": "victory-b",
+      "order": 26,
+      "summary": "Russia concentrated missile and drone strikes on Ukraine's power grid in 2024, destroying a majority of thermal generation capacity.",
+      "summaryTr": "Rusya 2024'te füze ve insansız hava aracı saldırılarını Ukrayna'nın enerji şebekesi üzerinde yoğunlaştırarak termik üretim kapasitesinin çoğunu yok etti.",
+      "story": "After largely failing to break the Ukrainian grid in 2022–2023 winters through attacks on transformer substations, in spring 2024 Russia pivoted to a more destructive strategy: direct strikes on generation infrastructure. Large thermal power plants like Trypilska, Zmiivska and Burshtyn were repeatedly hit with combinations of Kh-101 cruise missiles, Iskander ballistic missiles, hypersonic Kinzhal missiles and Iranian-designed Shahed drones. On 22 March and 11 April 2024, massive strike packages destroyed whole generation units. By the summer, Ukraine had lost approximately half of its pre-war generation capacity, leading to nationwide rolling blackouts of 8–12 hours and industrial shutdowns. International partners accelerated deliveries of Patriot, IRIS-T and NASAMS air defence systems, but they could not cover every critical site. Ukrainian energy companies dispersed, hardened and improvised replacement capacity; European countries contributed electricity through the ENTSO-E grid. Russia framed the strikes as retaliation for Ukrainian attacks on Russian oil refineries, which Kyiv had escalated from late 2023 with long-range drones. By late 2024 both sides had turned energy infrastructure into a primary strategic target, blurring the line between battlefield and economy. Ukrainian civilians spent another winter candle-lit; thousands more emigrated. The grid war demonstrated that even in a war of attrition, industrial-scale strategic bombing remains a potent tool, and that air defence, generation hardening and civilian morale are now as decisive as frontline offensives.",
+      "storyTr": "2022–2023 kışlarında transformatör istasyonlarına yönelik saldırılarla Ukrayna şebekesini büyük ölçüde kıramayan Rusya, 2024 ilkbaharında daha yıkıcı bir stratejiye yöneldi: üretim altyapısına doğrudan saldırılar. Trypilska, Zmiyivska ve Burşin gibi büyük termik santraller, Kh-101 seyir füzeleri, İskender balistik füzeleri, hipersonik Kinjal füzeleri ve İran tasarımı Şahed insansız hava araçlarının kombinasyonlarıyla defalarca vuruldu. 22 Mart ve 11 Nisan 2024'te devasa saldırı paketleri tüm üretim ünitelerini yok etti. Yaza gelindiğinde Ukrayna savaş öncesi üretim kapasitesinin yaklaşık yarısını kaybetti; bu ülke çapında 8–12 saatlik dönüşümlü kesintilere ve sanayi duruşlarına yol açtı. Uluslararası ortaklar Patriot, IRIS-T ve NASAMS hava savunma sistemlerinin tesliminden hızlandırdı ancak her kritik noktayı kapatmak mümkün değildi. Ukrayna enerji şirketleri kapasiteyi dağıttı, sertleştirdi ve doğaçlama çözümler ürettiler; Avrupa ülkeleri ENTSO-E şebekesi üzerinden elektrik katkısı sağladı. Rusya saldırıları, Kyiv'in 2023 sonlarından itibaren uzun menzilli insansız hava araçlarıyla tırmandırdığı Rus petrol rafinerilerine yönelik saldırılara misilleme olarak sundu. 2024 sonlarına gelindiğinde her iki taraf da enerji altyapısını birincil stratejik hedef haline getirerek savaş alanı ile ekonomi arasındaki sınırı bulanıklaştırdı. Ukraynalı siviller bir kışı daha mum ışığında geçirdi; binlerce kişi daha göç etti. Şebeke savaşı, yıpratma savaşında bile sanayi çapındaki stratejik bombardımanın güçlü bir araç olmaya devam ettiğini ve hava savunması, üretim sertleştirme ve sivil moralin artık cephe taarruzları kadar belirleyici olduğunu gösterdi.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Russian_strikes_against_Ukrainian_infrastructure_(2022%E2%80%93present)",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Ukrayna_altyap%C4%B1s%C4%B1na_y%C3%B6nelik_Rus_sald%C4%B1r%C4%B1lar%C4%B1"
+    },
+    {
+      "id": "ongoing-2025",
+      "name": "Ongoing War in 2025",
+      "nameTr": "2025'te Süren Savaş",
+      "lat": 48.3794,
+      "lng": 31.1656,
+      "date": "2025-01-01",
+      "dateEnd": "2025-04-18",
+      "kind": "event",
+      "side": "draw",
+      "order": 27,
+      "summary": "As of April 2025 the war continues; Russia controls roughly 19% of Ukraine while Ukraine still holds salients inside Kursk oblast.",
+      "summaryTr": "Nisan 2025 itibarıyla savaş sürüyor; Rusya Ukrayna'nın yaklaşık yüzde 19'unu kontrol ederken Ukrayna Kursk ilinde hâlâ çıkıntılara sahip.",
+      "story": "By early 2025 the Russo-Ukrainian War had become the longest European interstate conflict since the Second World War. Russia controlled approximately 19% of Ukraine's internationally recognised territory, including Crimea, most of Luhansk and Donetsk oblasts and parts of Zaporizhzhia and Kherson. Ukraine still held a shrinking salient inside Russia's Kursk oblast after its August 2024 incursion. The front line remained largely stationary in the north and east of Ukraine but Russian forces continued to advance slowly around Pokrovsk, Toretsk and Chasiv Yar at extraordinary human cost. Mediazona and BBC Russian service tracked Russian military deaths above 90,000 confirmed with estimates pushing totals well beyond 150,000. Ukrainian official casualty figures remained classified, but Western estimates suggested tens of thousands dead and many more wounded. UN OHCHR tallied well over 12,000 civilian dead, with actual totals likely higher in occupied territories. The incoming Trump administration in Washington opened direct talks with the Kremlin while threatening tariffs and renewed sanctions, pushing Kyiv toward negotiated positions it had previously refused. European states accelerated defence spending and launched joint procurement for 155mm shells and long-range drones. As of April 2025 the war remained unresolved: diplomatic proposals circulated around ceasefire lines, security guarantees short of NATO membership and conditional sanctions relief. Ukraine's statehood and Western-leaning trajectory were preserved, but at a terrible human and economic cost, with reconstruction estimates exceeding 500 billion US dollars.",
+      "storyTr": "2025'in başına gelindiğinde Rus-Ukrayna Savaşı, İkinci Dünya Savaşı'ndan bu yana Avrupa'nın en uzun devletlerarası çatışması haline gelmişti. Rusya, Kırım, Luhansk ve Donetsk illerinin büyük kısmı ve Zaporijya ile Herson'un bölümleri dahil Ukrayna'nın uluslararası olarak tanınan topraklarının yaklaşık yüzde 19'unu kontrol ediyordu. Ukrayna ise Ağustos 2024 akınının ardından Rusya'nın Kursk ilinde küçülen bir çıkıntıya sahipti. Cephe hattı Ukrayna'nın kuzeyi ve doğusunda büyük ölçüde sabit kalırken Rus kuvvetleri Pokrovsk, Toretsk ve Çasiv Yar çevresinde olağanüstü insan maliyetiyle yavaş yavaş ilerlemeye devam etti. Mediazona ve BBC Rusça servisi, 90.000'in üzerinde doğrulanmış Rus askeri ölümü izledi ve tahminler toplamları 150.000'in çok ötesine taşıdı. Ukrayna'nın resmi kayıp rakamları gizli kalsa da Batılı tahminler on binlerce ölü ve çok daha fazla yaralı olduğunu öne sürdü. BM OHCHR 12.000'i aşkın sivil ölü saydı; gerçek rakamların işgal altındaki topraklarda daha yüksek olduğu tahmin ediliyor. Washington'daki yeni Trump yönetimi Kremlin ile doğrudan görüşmeler başlatırken tarifeler ve yeni yaptırımlarla tehdit etti ve Kyiv'i daha önce reddettiği müzakere konumlarına itti. Avrupa devletleri savunma harcamalarını hızlandırdı ve 155 mm mermi ile uzun menzilli insansız hava araçları için ortak tedarik başlattı. Nisan 2025 itibarıyla savaş çözümlenmeden kaldı: diplomatik öneriler ateşkes hatları, NATO üyeliğinin altında güvenlik garantileri ve koşullu yaptırım rahatlatması etrafında dolaştı. Ukrayna'nın devlet varlığı ve Batı yönelimli yörüngesi korunmuş, ancak ağır bir insani ve ekonomik maliyetle: yeniden inşa tahminleri 500 milyar ABD dolarını aştı.",
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Russo-Ukrainian_War",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Rusya-Ukrayna_Sava%C5%9F%C4%B1"
     }
   ]
 }

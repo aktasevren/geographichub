@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import PageHeader from "@/components/PageHeader";
-import { useLocale } from "@/components/LocaleProvider";
+import SiteLogo from "@/components/SiteLogo";
+import { LocaleToggle, useLocale } from "@/components/LocaleProvider";
+import WarCard from "@/components/wars-noir/WarCard";
 import {
   type WarIndexEntry,
   type WarEra,
@@ -13,7 +14,7 @@ import {
 } from "@/lib/wars-types";
 
 export default function WarsIndexClient({ wars }: { wars: WarIndexEntry[] }) {
-  const { t, locale } = useLocale();
+  const { locale } = useLocale();
   const [q, setQ] = useState("");
   const [era, setEra] = useState<WarEra | "all">("all");
   const [region, setRegion] = useState<WarRegion | "all">("all");
@@ -44,7 +45,6 @@ export default function WarsIndexClient({ wars }: { wars: WarIndexEntry[] }) {
     });
   }, [wars, q, era, region]);
 
-  // Group filtered wars by era
   const grouped = useMemo(() => {
     const m = new Map<WarEra | "other", WarIndexEntry[]>();
     filtered.forEach((w) => {
@@ -66,33 +66,78 @@ export default function WarsIndexClient({ wars }: { wars: WarIndexEntry[] }) {
       .map((k) => ({ era: k, wars: m.get(k)! }));
   }, [filtered]);
 
-  return (
-    <div className="min-h-screen grain">
-      <PageHeader
-        theme="light"
-        breadcrumbs={[
-          { label: t("common.home"), href: "/" },
-          { label: t("wars.title") },
-        ]}
-      />
+  const totalEvents = wars.reduce((s, w) => s + w.eventCount, 0);
 
-      <section className="max-w-[1100px] mx-auto px-5 md:px-10 pt-8 md:pt-12 pb-4">
-        <h1 className="font-serif font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.0] tracking-tight">
-          {t("wars.indexHeroA")}{" "}
-          <span className="italic" style={{ color: "var(--accent)" }}>
-            {t("wars.indexHeroB")}
-          </span>
+  return (
+    <div
+      data-map="wars"
+      className="min-h-screen"
+      style={{ background: "var(--war-ink)", color: "var(--war-paper)" }}
+    >
+      {/* Noir header */}
+      <header
+        className="sticky top-0 z-40"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(10,10,10,0.95), rgba(10,10,10,0.75))",
+          borderBottom: "1px solid var(--war-rule)",
+        }}
+      >
+        <div className="flex justify-between items-center px-4 md:px-8 py-3 md:py-4 max-w-[1100px] mx-auto">
+          <SiteLogo />
+          <div className="flex items-center gap-4">
+            <Link
+              href="/"
+              className="font-mono text-[10px] uppercase tracking-[0.22em]"
+              style={{ color: "var(--war-paper-2)" }}
+            >
+              {locale === "tr" ? "← Anasayfa" : "← Home"}
+            </Link>
+            <LocaleToggle />
+          </div>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="max-w-[1100px] mx-auto px-5 md:px-10 pt-10 md:pt-14 pb-4">
+        <h1
+          className="font-serif font-light italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.0] tracking-tight"
+          style={{ color: "var(--war-paper)" }}
+        >
+          {locale === "tr" ? (
+            <>
+              Savaşın{" "}
+              <span style={{ color: "var(--war-gold)" }}>kırılım noktaları</span>
+            </>
+          ) : (
+            <>
+              The{" "}
+              <span style={{ color: "var(--war-gold)" }}>turning points</span>{" "}
+              of war
+            </>
+          )}
         </h1>
+        <div
+          className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em]"
+          style={{ color: "var(--war-paper-3)" }}
+        >
+          § {wars.length} {locale === "tr" ? "savaş" : "wars"} · {totalEvents}{" "}
+          {locale === "tr" ? "olay" : "events"}
+        </div>
       </section>
 
-      {/* Search + filter chips */}
-      <section className="max-w-[1100px] mx-auto px-5 md:px-10 pt-4 pb-8">
+      {/* Search + filters */}
+      <section className="max-w-[1100px] mx-auto px-5 md:px-10 pt-6 pb-8">
         <div className="flex flex-col gap-3">
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder={locale === "tr" ? "Savaş ara…" : "Search wars…"}
-            className="w-full px-4 py-3 rounded-full border border-[var(--line-2)] bg-transparent text-[15px] placeholder:text-[var(--muted)] focus:outline-none focus:border-[var(--accent)]"
+            className="w-full px-4 py-3 rounded-full bg-transparent text-[14px] focus:outline-none"
+            style={{
+              border: "1px solid var(--war-rule)",
+              color: "var(--war-paper)",
+            }}
           />
 
           {presentEras.length > 1 && (
@@ -101,7 +146,11 @@ export default function WarsIndexClient({ wars }: { wars: WarIndexEntry[] }) {
                 {locale === "tr" ? "Tüm dönemler" : "All eras"}
               </Chip>
               {presentEras.map((e) => (
-                <Chip key={e} active={era === e} onClick={() => setEra(e)}>
+                <Chip
+                  key={e}
+                  active={era === e}
+                  onClick={() => setEra(e)}
+                >
                   {ERA_LABEL[e][locale as "tr" | "en"]}
                 </Chip>
               ))}
@@ -110,11 +159,18 @@ export default function WarsIndexClient({ wars }: { wars: WarIndexEntry[] }) {
 
           {presentRegions.length > 1 && (
             <div className="flex flex-wrap gap-1.5">
-              <Chip active={region === "all"} onClick={() => setRegion("all")}>
+              <Chip
+                active={region === "all"}
+                onClick={() => setRegion("all")}
+              >
                 {locale === "tr" ? "Tüm bölgeler" : "All regions"}
               </Chip>
               {presentRegions.map((r) => (
-                <Chip key={r} active={region === r} onClick={() => setRegion(r)}>
+                <Chip
+                  key={r}
+                  active={region === r}
+                  onClick={() => setRegion(r)}
+                >
                   {REGION_LABEL[r][locale as "tr" | "en"]}
                 </Chip>
               ))}
@@ -123,16 +179,22 @@ export default function WarsIndexClient({ wars }: { wars: WarIndexEntry[] }) {
         </div>
       </section>
 
-      {/* Grouped war list */}
+      {/* Grouped list */}
       <section className="max-w-[1100px] mx-auto px-5 md:px-10 pb-20">
         {filtered.length === 0 ? (
-          <div className="text-center py-12 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">
+          <div
+            className="text-center py-12 font-mono text-[11px] uppercase tracking-[0.2em]"
+            style={{ color: "var(--war-paper-3)" }}
+          >
             {locale === "tr" ? "Eşleşen savaş yok." : "No matching wars."}
           </div>
         ) : (
           grouped.map(({ era: eraKey, wars: list }) => (
             <div key={eraKey} className="mb-10">
-              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-3">
+              <div
+                className="font-mono text-[10px] uppercase tracking-[0.3em] mb-3"
+                style={{ color: "var(--war-paper-3)" }}
+              >
                 {eraKey === "other"
                   ? locale === "tr"
                     ? "Diğer"
@@ -141,59 +203,33 @@ export default function WarsIndexClient({ wars }: { wars: WarIndexEntry[] }) {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                 {list.map((w) => (
-                  <Link
+                  <WarCard
                     key={w.slug}
-                    href={`/maps/wars/${w.slug}`}
-                    className="group block relative overflow-hidden rounded-xl border border-[var(--line-2)] hover:border-[var(--accent)] transition p-5 md:p-6 min-h-[180px]"
-                  >
-                    <div
-                      className="absolute inset-0 opacity-35 group-hover:opacity-55 transition-opacity pointer-events-none"
-                      style={{
-                        backgroundImage:
-                          "radial-gradient(circle at 25% 30%, rgba(220,38,38,0.25), transparent 45%), radial-gradient(circle at 75% 70%, rgba(245,158,11,0.2), transparent 45%)",
-                      }}
-                    />
-                    <div className="relative">
-                      <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--muted)] mb-2">
-                        {w.startYear}–{w.endYear} · {w.eventCount}{" "}
-                        {t("wars.eventsLabel")}
-                        {w.region && (
-                          <>
-                            {" · "}
-                            {REGION_LABEL[w.region][locale as "tr" | "en"]}
-                          </>
-                        )}
-                      </div>
-                      <h3 className="font-serif text-xl md:text-2xl leading-tight tracking-tight mb-2">
-                        {locale === "tr" && w.nameTr ? w.nameTr : w.name}
-                      </h3>
-                      <span className="inline-flex items-center gap-2 mt-3 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.22em] text-[var(--accent)] group-hover:gap-3 transition-all">
-                        {t("wars.openMap")}
-                        <span className="inline-block h-px w-5 bg-[var(--accent)] group-hover:w-8 transition-all" />
-                        <span>→</span>
-                      </span>
-                    </div>
-                  </Link>
+                    war={w}
+                    locale={locale as "tr" | "en"}
+                  />
                 ))}
               </div>
             </div>
           ))
         )}
-
-        {/* Coming next teaser */}
-        <div className="relative overflow-hidden rounded-xl border border-dashed border-[var(--line-2)] p-5 md:p-6 text-center mt-6">
-          <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--muted)] mb-2">
-            {t("wars.comingNext")}
-          </div>
-          <p className="font-serif text-lg text-[var(--text-2)] italic">
-            {t("wars.comingNextDesc")}
-          </p>
-        </div>
       </section>
 
-      <footer className="px-5 md:px-10 py-6 hair-t flex flex-wrap justify-between gap-4 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">
-        <span>{t("footer.copyright", { year: new Date().getFullYear() })}</span>
-        <span className="hidden md:inline">{t("wars.dataCredit")}</span>
+      <footer
+        className="px-5 md:px-10 py-6 flex flex-wrap justify-between gap-4 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.2em]"
+        style={{
+          color: "var(--war-paper-3)",
+          borderTop: "1px solid var(--war-rule)",
+        }}
+      >
+        <span>
+          © {new Date().getFullYear()} GeographicHub
+        </span>
+        <span className="hidden md:inline">
+          {locale === "tr"
+            ? "Wikipedia, Wikidata (CC BY-SA)"
+            : "Wikipedia, Wikidata (CC BY-SA)"}
+        </span>
       </footer>
     </div>
   );
@@ -211,11 +247,12 @@ function Chip({
   return (
     <button
       onClick={onClick}
-      className={`px-3 py-1.5 rounded-full border text-[11px] font-mono uppercase tracking-[0.15em] transition ${
-        active
-          ? "bg-[var(--accent)] text-black border-[var(--accent)]"
-          : "bg-transparent text-[var(--text-2)] border-[var(--line-2)] hover:border-[var(--text-2)]"
-      }`}
+      className="px-3 py-1.5 rounded-full text-[11px] font-mono uppercase tracking-[0.15em] transition"
+      style={{
+        background: active ? "var(--war-gold)" : "transparent",
+        color: active ? "var(--war-ink)" : "var(--war-paper-2)",
+        border: `1px solid ${active ? "var(--war-gold)" : "var(--war-rule)"}`,
+      }}
     >
       {children}
     </button>

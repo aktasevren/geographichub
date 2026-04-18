@@ -1,0 +1,106 @@
+/* Wars Noir design tokens — scoped to the wars map to avoid leaking into
+   other /maps routes. Every variable is consumed via var(--war-*). */
+
+[data-map="wars"] {
+  /* Ink — backgrounds, panels, surfaces */
+  --war-ink:      #0a0a0a;
+  --war-ink-2:    #141414;
+  --war-ink-3:    #1f1f1f;
+
+  /* Paper — primary and muted text tones */
+  --war-paper:    #e8e3d6;
+  --war-paper-2:  #b5b0a3;
+  --war-paper-3:  #6b665a;
+
+  /* Rule — hairlines / borders */
+  --war-rule:     #2a2720;
+
+  /* Gold — reserved for active state, dates, numeric meta */
+  --war-gold:     #c9a961;
+  --war-gold-dim: #7a663a;
+
+  /* Blood — reserved for casualty numbers */
+  --war-blood:    #5c1a1a;
+
+  /* Type stacks (re-exported for convenience inside scope) */
+  --war-serif: 'Fraunces', Georgia, serif;
+  --war-sans:  'Inter', system-ui, sans-serif;
+  --war-mono:  'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Flag treatment — period-accurate flag in grayscale, fades to color on hover. */
+[data-map="wars"] .war-flag {
+  filter: grayscale(100%) contrast(1.08) brightness(0.92);
+  border: 1px solid var(--war-rule);
+  aspect-ratio: 3 / 2;
+  width: 48px;
+  transition: filter 0.3s ease;
+  display: block;
+  object-fit: cover;
+}
+[data-map="wars"] .war-flag-group:hover .war-flag,
+[data-map="wars"] .war-flag:hover {
+  filter: none;
+}
+
+/* B&W photo treatment for bottom-sheet imagery. */
+[data-map="wars"] .war-photo {
+  filter: grayscale(100%) contrast(1.2) brightness(0.95);
+}
+
+/* Imperative marker rendering inside the globe.
+   These classes are consumed from canvas/overlay renderers that cannot
+   mount React components directly. */
+[data-map="wars"] .war-marker-medallion {
+  border-radius: 9999px;
+  background: var(--war-ink-2);
+  border: 2px solid var(--war-gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.55);
+}
+[data-map="wars"] .war-marker-num {
+  font-family: var(--font-mono, monospace);
+  color: var(--war-gold);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+[data-map="wars"] .war-marker-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  border: 2px solid var(--war-gold);
+  animation: warPulse 1.6s ease-out infinite;
+}
+@keyframes warPulse {
+  0%   { transform: scale(0.8); opacity: 0.9; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* Static film-grain overlay — subtle, not animated (battery). */
+[data-map="wars"] .war-grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 200;
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Vignette — radial darkening at edges for documentary framing. */
+[data-map="wars"] .war-vignette::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 199;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.5) 100%);
+}
+
+/* Hairline utility borders, scoped. */
+[data-map="wars"] .war-hair { border-color: var(--war-rule); }
+[data-map="wars"] .war-hair-b { border-bottom: 1px solid var(--war-rule); }
+[data-map="wars"] .war-hair-t { border-top: 1px solid var(--war-rule); }

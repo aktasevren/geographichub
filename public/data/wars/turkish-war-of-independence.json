@@ -1,0 +1,835 @@
+{
+  "slug": "turkish-war-of-independence",
+  "name": "Turkish War of Independence",
+  "nameTr": "Kurtuluş Savaşı",
+  "startYear": 1919,
+  "endYear": 1923,
+  "era": "20th-century",
+  "region": "middle-east",
+  "tags": [
+    "nationalism",
+    "post-wwi",
+    "anatolia",
+    "decolonization",
+    "republic",
+    "ataturk"
+  ],
+  "blurb": "A four-year struggle waged by the Turkish National Movement against the partition of Anatolia after the Ottoman defeat in World War I. Led from Ankara by Mustafa Kemal, Turkish forces resisted Greek, British, French, Italian, and Armenian occupations, overturned the Treaty of Sèvres, signed the Treaty of Lausanne, and founded the Republic of Turkey.",
+  "blurbTr": "Osmanlı Devleti'nin Birinci Dünya Savaşı'nda yenilmesinin ardından Anadolu'nun paylaşılmasına karşı Türk Milli Hareketi'nin yürüttüğü dört yıllık mücadele. Mustafa Kemal önderliğinde Ankara'dan yönetilen Türk kuvvetleri; Yunan, İngiliz, Fransız, İtalyan ve Ermeni işgallerine direndi, Sevr Antlaşması'nı geçersiz kıldı, Lozan Antlaşması'nı imzaladı ve Türkiye Cumhuriyeti'ni kurdu.",
+  "sides": [
+    {
+      "id": "A",
+      "label": "Turkish National Movement",
+      "labelTr": "Türk Milli Hareketi",
+      "countries": [
+        {
+          "name": "Grand National Assembly of Turkey",
+          "nameTr": "Türkiye Büyük Millet Meclisi",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Turkey.svg",
+          "flagFallback": "coat"
+        }
+      ],
+      "commanders": [
+        "Mustafa Kemal Atatürk",
+        "İsmet İnönü",
+        "Fevzi Çakmak",
+        "Kâzım Karabekir",
+        "Refet Bele",
+        "Ali Fuat Cebesoy",
+        "Nureddin Pasha",
+        "Yakup Şevki Subaşı"
+      ],
+      "result": "victor"
+    },
+    {
+      "id": "B",
+      "label": "Allied Occupiers and Associated States",
+      "labelTr": "İtilaf Devletleri ve Müttefikleri",
+      "countries": [
+        {
+          "name": "Kingdom of Greece",
+          "nameTr": "Yunanistan Krallığı",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Greece_(1822-1978).svg",
+          "flagFallback": "coat"
+        },
+        {
+          "name": "United Kingdom",
+          "nameTr": "Birleşik Krallık",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_Kingdom.svg",
+          "flagFallback": "coat"
+        },
+        {
+          "name": "French Third Republic",
+          "nameTr": "Fransa Üçüncü Cumhuriyeti",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_France.svg",
+          "flagFallback": "coat"
+        },
+        {
+          "name": "Kingdom of Italy",
+          "nameTr": "İtalya Krallığı",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Italy_(1861-1946).svg",
+          "flagFallback": "coat"
+        },
+        {
+          "name": "First Republic of Armenia",
+          "nameTr": "Ermenistan Birinci Cumhuriyeti",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Armenia.svg",
+          "flagFallback": "coat"
+        },
+        {
+          "name": "Ottoman Empire (Istanbul Government)",
+          "nameTr": "Osmanlı Devleti (İstanbul Hükümeti)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Ottoman_Empire_(1844%E2%80%931922).svg",
+          "flagFallback": "coat"
+        }
+      ],
+      "commanders": [
+        "Nikolaos Trikoupis",
+        "Anastasios Papoulas",
+        "Georgios Hatzianestis",
+        "George Milne",
+        "Henri Gouraud",
+        "Henri Gouraud",
+        "Drastamat Kanayan (Dro)",
+        "Movses Silikyan"
+      ],
+      "result": "defeated"
+    }
+  ],
+  "casualties": {
+    "militaryDead": 340000,
+    "civilianDead": 264000,
+    "wounded": 320000,
+    "pow": 35000,
+    "source": "Turkish General Staff archive (ATASE) and Erickson 2021, 'The Turkish War of Independence: A Military History, 1919–1923'"
+  },
+  "participantCount": 1200000,
+  "opening": "Signed aboard HMS Agamemnon on 30 October 1918, the Armistice of Mudros stripped the Ottoman Empire of its armies and opened its straits, ports, and railways to Allied occupation. Within weeks British warships anchored off Dolmabahçe, French Senegalese troops patrolled Adana, and Italian bersaglieri landed at Antalya. When a Greek expeditionary force stepped ashore at Smyrna on 15 May 1919 under the cover of British, French, and American dreadnoughts, a seven-hundred-year imperial order collapsed into partition. Four days later, an inspector-general of the Ninth Army named Mustafa Kemal Pasha disembarked at Samsun with orders to disband the remaining Turkish units. He did the opposite. From Amasya, Erzurum, and Sivas he summoned a parallel government; in April 1920 the Grand National Assembly opened in Ankara. Against it stood the Treaty of Sèvres, a Greek army of 200,000, Armenian divisions in the east, French colonial corps in the south, and a caliph-sultan whose writ ran only as far as Allied guns.",
+  "openingTr": "30 Ekim 1918'de HMS Agamemnon gemisinde imzalanan Mondros Mütarekesi, Osmanlı ordularını dağıttı ve boğazları, limanları, demiryollarını İtilaf işgaline açtı. Haftalar içinde İngiliz zırhlıları Dolmabahçe önünde demirledi, Fransız Senegalli birlikleri Adana sokaklarında devriye gezdi, İtalyan bersaglieri Antalya'ya çıktı. 15 Mayıs 1919'da Yunan sefer kuvveti İngiliz, Fransız ve Amerikan zırhlılarının himayesinde İzmir'e ayak bastığında yedi asırlık imparatorluk düzeni paylaşıma dönüştü. Dört gün sonra Dokuzuncu Ordu Müfettişi Mustafa Kemal Paşa, kalan Türk birliklerini terhis etme emriyle Samsun'a çıktı. Tam tersini yaptı. Amasya, Erzurum ve Sivas'tan paralel bir iktidar çağırdı; Nisan 1920'de Türkiye Büyük Millet Meclisi Ankara'da açıldı. Karşısında Sevr Antlaşması, 200.000 kişilik bir Yunan ordusu, doğuda Ermeni tümenleri, güneyde Fransız sömürge kolordusu ve hükmü ancak İtilaf toplarına kadar uzanan bir halife-sultan vardı.",
+  "outcome": "Four years later the map was redrawn. Greek Anatolia burned in the harbour of Smyrna on 9 September 1922; French columns had already withdrawn from Cilicia under the Ankara Accord; Armenian claims beyond Kars were extinguished at Gümrü; Italian units re-embarked from Antalya without firing a shot. The Armistice of Mudanya on 11 October 1922 handed Eastern Thrace back without another battle. At Lausanne in July 1923, Ismet Pasha negotiated a treaty that replaced Sèvres article by article, and on 29 October 1923 the Republic was proclaimed from the speaker's rostrum of the Grand National Assembly. The Ottoman Sultanate had been abolished a year earlier; the Caliphate would follow in March 1924. Turkey emerged with defensible borders, full sovereignty over the Straits after 1936, and a new capital in the Anatolian steppe. The cost was enormous — roughly 340,000 military dead across all sides, hundreds of thousands of civilian casualties, and a population exchange that uprooted 1.6 million Greeks and Turks.",
+  "outcomeTr": "Dört yıl sonra harita yeniden çizildi. Yunan Anadolusu 9 Eylül 1922'de İzmir limanında yandı; Fransız kolordusu Ankara İtilafnamesi ile Çukurova'dan çoktan çekilmişti; Kars'ın ötesine uzanan Ermeni talepleri Gümrü'de söndürüldü; İtalyan birlikleri tek kurşun atmadan Antalya'dan gemilere bindi. 11 Ekim 1922 Mudanya Mütarekesi, Doğu Trakya'yı yeni bir muharebeye gerek kalmadan geri verdi. Temmuz 1923'te Lozan'da İsmet Paşa, Sevr'i madde madde iptal eden bir antlaşma müzakere etti ve 29 Ekim 1923'te Cumhuriyet, Büyük Millet Meclisi kürsüsünden ilan edildi. Saltanat bir yıl önce kaldırılmıştı; Hilafet Mart 1924'te son bulacaktı. Türkiye; savunulabilir sınırları, 1936'dan sonra boğazlar üzerinde tam egemenliği ve Anadolu bozkırında yeni bir başkenti ile tarih sahnesine çıktı. Bedel ağırdı: tüm taraflardan yaklaşık 340.000 asker ölümü, yüz binlerce sivil kayıp ve 1,6 milyon Rum ile Türkü yerinden eden bir nüfus mübadelesi.",
+  "turningPointReason": "The Battle of Sakarya (23 August – 13 September 1921) was the hinge of the war. After the Kütahya-Eskişehir defeats, the Greek Army of Asia Minor pushed east across the salt-steppe toward Ankara; only the Sakarya River stood between Mustafa Kemal and total collapse. Assuming personal command as Commander-in-Chief, he adopted a hedgehog defence in depth along the bends of the river — 'There is no line of defence, there is a surface of defence, and that surface is the whole country.' For twenty-two days the Greeks bled themselves against dug-in Turkish infantry at Mangal Dağı, Çal Dağı, and Duatepe. When they finally withdrew on 13 September, they never attacked again. Strategically the river was the furthest Greek advance; politically it converted sceptics in Moscow and Paris, unlocked the Franklin-Bouillon agreement, and made Mustafa Kemal a Ghazi. Tactically it bought the year Turkey needed to build the reserve army that would execute the Great Offensive the following August.",
+  "turningPointReasonTr": "Sakarya Meydan Muharebesi (23 Ağustos – 13 Eylül 1921) savaşın menteşesiydi. Kütahya-Eskişehir hezimetinin ardından Yunan Anadolu Ordusu tuz bozkırını geçerek Ankara'ya doğru ilerledi; Mustafa Kemal ile tam çöküş arasında yalnızca Sakarya Nehri kalmıştı. Başkomutanlığı bizzat üstlenen Kemal, nehrin kıvrımları boyunca derinlemesine bir müdafaa düzeni kurdu: 'Hattı müdafaa yoktur, sathı müdafaa vardır. O satıh, bütün vatandır.' Yirmi iki gün boyunca Yunanlılar Mangal Dağı, Çal Dağı ve Duatepe'de siperlenmiş Türk piyadesine çarpıp kanadı. 13 Eylül'de nihayet çekildiklerinde bir daha hiç taarruz edemediler. Stratejik olarak nehir Yunan ilerleyişinin en uzak noktasıydı; siyasi olarak Moskova ve Paris'teki şüphecileri ikna etti, Franklin-Bouillon anlaşmasının kilidini açtı ve Mustafa Kemal'i Gazi yaptı. Taktik olarak ise ertesi yıl Büyük Taarruz'u yapacak ihtiyat ordusunu kurmak için gereken yılı kazandırdı.",
+  "events": [
+    {
+      "id": "mudros-armistice",
+      "name": "Armistice of Mudros",
+      "nameTr": "Mondros Mütarekesi",
+      "lat": 39.8564,
+      "lng": 25.2536,
+      "date": "1918-10-30",
+      "kind": "armistice",
+      "side": "armistice",
+      "order": 1,
+      "summary": "The Ottoman Empire signs an armistice aboard HMS Agamemnon at Mudros, surrendering control of the Straits and permitting Allied occupation of any point it deems strategic.",
+      "summaryTr": "Osmanlı Devleti, Mondros Limanı'nda HMS Agamemnon zırhlısında mütareke imzalayarak Boğazlar'ın denetimini teslim etti ve İtilaf Devletleri'ne stratejik gördüğü her noktayı işgal yetkisi verdi.",
+      "story": "Under a grey Aegean sky on 30 October 1918, Ottoman Navy Minister Rauf Bey, Foreign Office official Reşad Hikmet, and Colonel Sadullah climbed the gangway of HMS Agamemnon moored in Mudros harbour on the island of Lemnos. Facing them across the wardroom table sat Vice-Admiral Somerset Arthur Gough-Calthorpe. The Ottoman delegation had arrived with the approval of Sultan Mehmed VI, whose armies had collapsed in Palestine, Mesopotamia, and the Balkans. The armistice's twenty-five articles read like a death warrant: the Dardanelles and Bosphorus strait forts surrendered; Allied warships granted free passage; the Ottoman army demobilised except for frontier guards; all railways, ports, wireless stations, and merchant vessels placed at Allied disposal; and Article 7, the catch-all clause, allowed the occupation of any strategic point 'in case of disorder' — language elastic enough to cover the whole of Anatolia. Rauf believed he had secured a peace with honour; Gough-Calthorpe, sipping coffee, understood he had won an empire. Within forty-eight hours British troops occupied Mosul in violation of the armistice line. Within a month French colonial infantry had disembarked at Alexandretta and Adana. Within six weeks the combined Allied fleet — British, French, Italian, Greek, and a token American squadron — dropped anchor off Dolmabahçe Palace, its guns trained on the Sublime Porte. Mudros did not end the war for Turkey; it began a new one.",
+      "storyTr": "30 Ekim 1918'de Ege'nin kurşuni gökyüzü altında Bahriye Nazırı Rauf Bey, Hariciye'den Reşad Hikmet Bey ve Yarbay Sadullah, Limni Adası'nın Mondros Limanı'nda demirli HMS Agamemnon'un iskele merdivenini çıktı. Karşılarında, gemi salonunda Koramiral Somerset Arthur Gough-Calthorpe oturuyordu. Osmanlı heyeti, Filistin, Mezopotamya ve Balkanlar'da ordularının çökmesiyle yıkılan Sultan Vahdettin'in onayıyla gelmişti. Mütarekenin yirmi beş maddesi idam fermanı gibiydi: Çanakkale ve İstanbul Boğazı istihkâmları teslim edilecek, İtilaf donanmasına serbest geçiş verilecek, Osmanlı ordusu sınır muhafızları dışında terhis edilecek, tüm demiryolları, limanlar, telsiz istasyonları ve ticaret gemileri İtilaf emrine verilecek; her şeyi kapsayan 7. madde ise 'asayişin bozulması halinde' herhangi bir stratejik noktanın işgaline izin veriyordu — bu ifade tüm Anadolu'yu kaplayacak kadar esnekti. Rauf Bey onurlu bir barış elde ettiğine inanıyordu; kahvesini yudumlayan Gough-Calthorpe bir imparatorluk kazandığını biliyordu. Kırk sekiz saat içinde İngiliz birlikleri mütareke hattını çiğneyerek Musul'u işgal etti. Bir ay içinde Fransız sömürge piyadesi İskenderun ve Adana'ya çıktı. Altı hafta sonra İngiliz, Fransız, İtalyan, Yunan donanmalarıyla sembolik bir Amerikan filosundan oluşan müttefik donanma Dolmabahçe önünde demirledi, topları Babıali'ye çevrilmişti. Mondros, Türkiye için savaşı bitirmedi; yenisini başlattı. Belgenin altındaki imzalar henüz kurumadan İngiliz birlikleri Musul'a girdi; bu hareket mütareke hattının açıkça ihlaliydi ama Londra hiçbir protesto dinlemedi. Rauf Bey İstanbul'a döndüğünde halk tarafından 'müreffeh barış' getiren adam diye karşılandı, oysa elindeki metin işgal için hukuki çerçeve hazırlıyordu. Anadolu'nun dört bir yanında teslim olan Osmanlı kolordularından kalan silahlar, cephaneler, tüfekler titizlikle sayıldı ve Allied Control Commission'a teslim edildi; ancak sayımı yapan subayların önemli bir kısmı, silahların bir bölümünü gizlice iç bölgelere, Erzurum ve Sivas depolarına kaydırdı. İleride o tüfekler Kuva-yi Milliye'nin omuzunda düşmana ateş edecekti.",
+      "commanders": {
+        "sideA": [
+          "Rauf Bey",
+          "Reşad Hikmet"
+        ],
+        "sideB": [
+          "Admiral Gough-Calthorpe"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Armistice_of_Mudros",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Mondros_M%C3%BCtarekesi"
+    },
+    {
+      "id": "occupation-constantinople",
+      "name": "Allied Occupation of Constantinople",
+      "nameTr": "İstanbul'un İşgali",
+      "lat": 41.0082,
+      "lng": 28.9784,
+      "date": "1918-11-13",
+      "dateEnd": "1923-10-04",
+      "kind": "occupation",
+      "side": "occupation",
+      "order": 2,
+      "summary": "Fifty-five Allied warships drop anchor off Dolmabahçe on 13 November 1918, beginning a five-year occupation of the Ottoman capital that formally ends only when the last British troops sail in October 1923.",
+      "summaryTr": "13 Kasım 1918'de 55 İtilaf savaş gemisi Dolmabahçe önünde demir attı; Osmanlı başkentinin beş yıl sürecek işgali, son İngiliz birliklerinin Ekim 1923'te şehri terk etmesiyle resmen sona erecekti.",
+      "story": "On the morning of 13 November 1918, the citizens of Constantinople awoke to find fifty-five warships anchored in a line that stretched from Kadıköy to the Galata Bridge. British dreadnoughts, French cruisers, Italian destroyers, and a small Greek squadron flying the cross-and-stripe of the Kingdom of Greece rode at anchor with their guns trained on the Sublime Porte and the Yıldız Palace. Marines disembarked at Galata quay; Bengal Lancers rode up the Pera hill; Senegalese tirailleurs took position at Sirkeci station; Italian carabinieri garrisoned Taksim. The Greek battleship Averof — veteran of the Balkan Wars and symbol of the Megali Idea — paraded the Bosphorus, her decks crowded with Orthodox Greeks of the city who wept openly as they saw the blue-and-white flag return after four and a half centuries. Sultan Mehmed VI remained in his palace, a constitutional monarch in name only. Civil administration passed piece by piece to Allied high commissioners: Admiral Calthorpe, later Sir Horace Rumbold, for Britain; Franchet d'Espèrey, who entered the city on a white horse in imitation of Mehmed the Conqueror, for France; Count Sforza for Italy. Ottoman newspapers were censored, parliament dissolved in April 1920, nationalist officers arrested and deported to Malta. In reaction, every telegraph from Anatolia now ended with the same phrase — 'Heyeti Temsiliye, Ankara.' The old capital had become enemy territory; a new one was rising on the steppe.",
+      "storyTr": "13 Kasım 1918 sabahı İstanbullular uyandıklarında Kadıköy'den Galata Köprüsü'ne uzanan bir hat boyunca demir atmış 55 savaş gemisi gördüler. İngiliz zırhlıları, Fransız kruvazörleri, İtalyan muhripleri ve Yunanistan Krallığı'nın haç-şeritli bayrağını çeken küçük bir Yunan filosu, topları Babıali'ye ve Yıldız Sarayı'na çevrili halde beklemekteydi. Bahriyeliler Galata rıhtımına çıktı; Bengalli mızraklı süvariler Pera yokuşunu tırmandı; Senegalli tirayörler Sirkeci İstasyonu'nu tuttu; İtalyan karabinyerleri Taksim'e konuşlandı. Balkan Savaşları gazisi ve Megali İdea'nın simgesi Yunan zırhlısı Averof, Boğaz'da geçit resmi yaptı; güvertesinde şehrin Rum Ortodoksları, dört buçuk asırdır görmedikleri mavi-beyaz bayrağı görünce ağlaştılar. Sultan Vahdettin sarayında kaldı, artık yalnızca adı meşrutî hükümdardı. Sivil yönetim parça parça İtilaf yüksek komiserlerine geçti: Amiral Calthorpe, sonra Sir Horace Rumbold (İngiltere); Fatih'i taklit ederek şehre beyaz atla giren Franchet d'Espèrey (Fransa); Kont Sforza (İtalya). Osmanlı gazeteleri sansürlendi, meclis Nisan 1920'de feshedildi, milliyetçi subaylar tutuklanıp Malta'ya sürüldü. Buna tepki olarak Anadolu'dan gelen her telgraf aynı cümleyle bitmeye başladı: 'Heyet-i Temsiliye, Ankara.' Eski başkent düşman toprağı olmuştu; bozkırda yenisi yükseliyordu. İşgal süresince Sirkeci Garı'ndan kalkan her tren, Haydarpaşa'dan Anadolu'ya geçen her yolcu, İngiliz ve Fransız kontrol noktalarından geçmek zorundaydı. Bab-ı Âli'nin hariciye nazırı, basit bir ticaret sözleşmesini imzalamak için bile Allied High Commission'ın onayını bekliyordu. İstanbul basını çifte sansüre tabi tutuldu: Osmanlı matbuat nizamnamesi ve İtilaf askeri sansürü. Buna karşılık şehrin içinde gizli bir direniş ağı örüldü — Müdafaa-i Milliye Cemiyeti, Mim Mim Grubu ve Karakol Cemiyeti, Anadolu'ya silah, cephane ve subay kaçırdı. Felah Grubu'nun örgütlediği hatlarla binlerce genç subay Haydarpaşa'dan gizlice kaçıp Ankara'ya katıldı.",
+      "commanders": {
+        "sideA": [
+          "Sultan Mehmed VI (nominal)"
+        ],
+        "sideB": [
+          "Franchet d'Espèrey",
+          "Somerset Gough-Calthorpe",
+          "Carlo Sforza"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Occupation_of_Constantinople",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/%C4%B0stanbul%27un_i%C5%9Fgali"
+    },
+    {
+      "id": "french-cukurova",
+      "name": "French Occupation of Çukurova (Adana)",
+      "nameTr": "Fransız Çukurova İşgali",
+      "lat": 37,
+      "lng": 35.3213,
+      "date": "1918-12-17",
+      "dateEnd": "1921-10-20",
+      "kind": "occupation",
+      "side": "occupation",
+      "order": 3,
+      "summary": "French colonial troops and the Armenian Legion occupy Cilicia, triggering a three-year guerrilla war waged by Kuva-yi Milliye in Maraş, Urfa, and Antep that ends with the Ankara Accord of October 1921.",
+      "summaryTr": "Fransız sömürge birlikleri ve Ermeni Lejyonu Çukurova'yı işgal etti; Maraş, Urfa ve Antep'te Kuva-yi Milliye'nin yürüttüğü üç yıllık gerilla savaşı, Ekim 1921 Ankara İtilafnamesi ile son buldu.",
+      "story": "Seventeen days before Christmas 1918, French infantry battalions from Beirut and Port Said, reinforced by the Légion Arménienne — mostly Cilician Armenians in French uniform thirsting to return to their ancestral towns — began disembarking at Mersin and Dörtyol. By March 1919 the tricolour flew over Adana, Tarsus, Osmaniye, Maraş, Urfa, and Antep. The French called the zone 'Cilicie française' and imagined it as a southern anchor of a Greater Syria mandate. The local Muslim population, recently traumatised by wartime deportations and now forced to witness returning Armenians demanding stolen properties, experienced the occupation as a second catastrophe. Out of that fury emerged the Kuva-yi Milliye — irregular bands led by charismatic local commanders. In Maraş, Sütçü İmam fired the first shot in January 1920 and the city rose; after twenty-two days of street fighting the French withdrew in a blizzard that killed more colonial soldiers than bullets did. In Urfa, Ali Saip Bey encircled a French garrison; in Antep, a ten-month siege earned the city the epithet 'Gazi' by decree of the Ankara Assembly. Ankara's regular 2nd Army Corps under Selahattin Adil Pasha coordinated supplies from the north. By the summer of 1921 the French public had tired of casualties in a war they had never declared; Paris sent Henry Franklin-Bouillon to Ankara. His October 1921 accord restored the Hatay-Syrian frontier and freed twenty thousand Turkish troops for the Sakarya-Dumlupınar campaigns.",
+      "storyTr": "1918 Noel'inden on yedi gün önce Beyrut ve Port Said'den gelen Fransız piyade taburları ile ağırlıklı olarak Fransız üniforması giymiş ve atalarının kasabalarına dönmek için yanıp tutuşan Kilikya Ermenilerinden oluşan Légion Arménienne, Mersin ve Dörtyol'a çıkmaya başladı. Mart 1919'a gelindiğinde Adana, Tarsus, Osmaniye, Maraş, Urfa ve Antep'te Fransız bayrağı dalgalanıyordu. Fransızlar bu bölgeye 'Cilicie française' diyor ve onu Büyük Suriye mandasının güney çıpası olarak hayal ediyordu. Savaş dönemi tehcirinin travmasını taze taşıyan ve şimdi çalındığını iddia ettiği mülkleri talep eden Ermenileri karşısında gören yerli Müslüman halk, işgali ikinci bir felaket olarak yaşadı. Bu öfkeden Kuva-yi Milliye doğdu — karizmatik yerel komutanların liderliğindeki gayri nizami müfrezeler. Maraş'ta Sütçü İmam Ocak 1920'de ilk kurşunu sıktı ve şehir ayağa kalktı; yirmi iki günlük sokak çatışmasından sonra Fransızlar, mermilerden çok askerini donduran bir tipide çekildi. Urfa'da Ali Saip Bey Fransız garnizonunu kuşattı; Antep'te on aylık muhasara, şehre Ankara Meclisi kararıyla 'Gazi' unvanını kazandırdı. Selahattin Adil Paşa komutasındaki 2. Kolordu kuzeyden ikmali koordine etti. 1921 yazına gelindiğinde Fransız kamuoyu, hiç ilan etmediği bir savaştaki kayıplardan yorulmuştu; Paris, Henry Franklin-Bouillon'u Ankara'ya gönderdi. Ekim 1921 antlaşması Hatay-Suriye sınırını belirledi ve Sakarya-Dumlupınar seferleri için yirmi bin Türk askerini serbest bıraktı. Gaziantep direnişi on ay boyunca kadın erkek demeden şehrin tamamını savaş haline soktu; kadınlar ekmek taşıdı, yaralıları sırtladı, top mevzilerine su ve cephane ulaştırdı. Kilis yolu boyunca şehre giren her Fransız iaşe konvoyu, Karayılan ve Şahin Bey çeteleri tarafından pusuya düşürüldü. Şahin Bey, Elmalı Köprüsü'nde bir Fransız taburunu durdurup tek başına tutarak şehit düştüğünde, adı Mustafa Kemal'in sonradan Meclis'e gönderdiği telgrafa girdi: 'Antep müdafaası bir milletin ölmemekte ne kadar ısrarcı olabildiğinin ispatıdır.'",
+      "forces": {
+        "sideA": 12000,
+        "sideB": 60000
+      },
+      "casualties": {
+        "sideA": 5000,
+        "sideB": 8000
+      },
+      "commanders": {
+        "sideA": [
+          "Sütçü İmam",
+          "Ali Saip Ursavaş",
+          "Kılıç Ali",
+          "Şahin Bey"
+        ],
+        "sideB": [
+          "Henri Gouraud",
+          "Julien Dufieux"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Franco-Turkish_War",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/G%C3%BCney_Cephesi_(Kurtulu%C5%9F_Sava%C5%9F%C4%B1)"
+    },
+    {
+      "id": "smyrna-landing",
+      "name": "Greek Landing at Smyrna",
+      "nameTr": "Yunan Ordusu'nun İzmir'e Çıkışı",
+      "lat": 38.4237,
+      "lng": 27.1428,
+      "date": "1919-05-15",
+      "kind": "landing",
+      "side": "occupation",
+      "order": 4,
+      "summary": "Thirteen thousand men of the Greek 1st Division disembark at Smyrna under British, French, American, and Italian naval escort; the first shot is fired at the Konak by journalist Hasan Tahsin and a two-day massacre follows.",
+      "summaryTr": "Yunan 1. Tümeni'nden 13.000 asker İngiliz, Fransız, Amerikan ve İtalyan deniz eskortu altında İzmir'e çıktı; Konak Meydanı'nda ilk kurşunu gazeteci Hasan Tahsin sıktı ve iki gün süren bir katliam başladı.",
+      "story": "At 7:30 a.m. on 15 May 1919, the Greek steamer Patris lowered gangways at Punta pier. Metropolitan Chrysostomos, who had lobbied Venizelos and Lloyd George for years, blessed the banners of the Evzones as they formed column and wheeled right along the quay toward Konak Square. The waterfront mansions of the Armenian, Jewish, and Levantine bourgeoisie flew blue-and-white; Greek girls showered the disembarking troops with rose petals. A local journalist named Hasan Tahsin Recep, carrying a Parabellum under his jacket, walked up to the colour-bearer of the 38th Evzone Regiment and fired. The landing became a pogrom: three hundred to four hundred Turks — soldiers and civilians — were bayoneted or shot in the streets of Konak, Kemeraltı, and Basmane over the next forty-eight hours. The Allied Inter-Allied Commission of Inquiry, chaired by Admiral Bristol, later confirmed atrocities in a report Paris quietly suppressed. The political consequences were incalculable. Four days later, Mustafa Kemal stepped ashore at Samsun. Within months the empire's Muslim notables — who had welcomed the armistice as an end to war — began joining Kuva-yi Milliye bands. The Greek army, originally authorised only to occupy the sanjak of Smyrna, would within a year be pushing inland to Uşak, Bursa, and Eskişehir. May 15 became, in Turkish memory, the day the nation stopped mourning and started fighting; in Greek memory, the first step of the catastrophe.",
+      "storyTr": "15 Mayıs 1919 sabah saat 7:30'da Yunan vapuru Patris, Punta İskelesi'ne yanaştı. Venizelos ve Lloyd George'u yıllardır ikna etmeye çalışan Metropolit Hrisostomos, Konak Meydanı'na doğru sağa dönen Evzon alayının sancaklarını kutsadı. Rıhtım boyundaki Ermeni, Yahudi ve Levanten burjuvazinin konaklarında mavi-beyaz bayraklar dalgalanıyor, Rum kızlar çıkan askerlerin üzerine gül yaprakları serpiyordu. Ceketinin altında Parabellum taşıyan yerel gazeteci Hasan Tahsin Recep, 38. Evzon Alayı'nın bayraktarına doğru yürüdü ve ateş etti. Çıkarma pogroma dönüştü: Konak, Kemeraltı ve Basmane sokaklarında kırk sekiz saat içinde 300-400 Türk — asker ve sivil — süngülendi ya da kurşunlandı. Amiral Bristol başkanlığındaki İtilaf Tahkik Heyeti, Paris'in sessizce bastırdığı bir raporda vahşeti doğruladı. Siyasi sonuçları ölçülemezdi. Dört gün sonra Mustafa Kemal Samsun'a çıktı. Aylar içinde mütarekeyi savaşın sonu olarak karşılamış Müslüman eşraf, Kuva-yi Milliye müfrezelerine katılmaya başladı. Başlangıçta yalnızca İzmir sancağını işgal yetkisi olan Yunan ordusu, bir yıl içinde içerilere — Uşak, Bursa, Eskişehir'e — doğru ilerleyecekti. 15 Mayıs, Türk hafızasında milletin yas tutmayı bırakıp savaşa başladığı gün; Rum hafızasında ise büyük felaketin ilk adımı oldu. Ertesi sabah Türk gazeteleri kararttı manşetlerini; İstanbul'da Sultanahmet, Üsküdar ve Fatih meydanlarında on binler toplandı — Halide Edip, kadife pelerinini salıp kürsüye çıkarak 'Bugün en büyük akıbetimiz, yarın en büyük bayramımız olacaktır' diye haykırdı. Kuvâ-yi Milliye'nin ilk müfrezeleri Ayvalık'tan Aydın'a uzanan hatta Ege dağlarına süzüldü; Albay Kâzım Özalp, Albay Ali Bey Çetinkaya ve sonradan efsaneleşecek Demirci Mehmet Efe, Yörük Ali Efe gibi zeybek reisleri silaha sarıldı. İzmir'in işgali, mütareke mantığının çöktüğü, direnişin artık bir tercih değil zorunluluk olduğu an oldu.",
+      "forces": {
+        "sideA": 0,
+        "sideB": 13000
+      },
+      "casualties": {
+        "sideA": 400,
+        "sideB": 2
+      },
+      "commanders": {
+        "sideA": [
+          "Hasan Tahsin"
+        ],
+        "sideB": [
+          "Nikolaos Zafeiriou",
+          "Aristotelis Stergiadis"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Occupation_of_Smyrna",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/%C4%B0zmir%27in_i%C5%9Fgali"
+    },
+    {
+      "id": "amasya-circular",
+      "name": "Amasya Circular",
+      "nameTr": "Amasya Tamimi",
+      "lat": 40.6499,
+      "lng": 35.8353,
+      "date": "1919-06-22",
+      "kind": "event",
+      "side": "political",
+      "order": 5,
+      "summary": "In a two-storey wooden konak in Amasya, Mustafa Kemal, Rauf, Refet, and Ali Fuat sign a circular declaring that the nation's independence will be saved by the nation's own will — the founding document of the National Struggle.",
+      "summaryTr": "Amasya'daki iki katlı ahşap konakta Mustafa Kemal, Rauf, Refet ve Ali Fuat paşalar, milletin istiklalini yine milletin azim ve kararının kurtaracağını ilan eden bir tamim imzaladı — Milli Mücadele'nin kuruluş belgesi.",
+      "story": "Mustafa Kemal Pasha reached Amasya on the evening of 12 June 1919, a month after the Greek landing and three weeks after his own arrival in Samsun. He had already sent secret telegrams to Ali Fuat Cebesoy at Ankara, Kâzım Karabekir at Erzurum, Hüseyin Rauf at Ankara, and Refet Bele at Sivas instructing them to converge on this Pontic town whose narrow streets of half-timbered Ottoman houses climb the Yeşilırmak valley. For ten days the four men debated in the drawing room of the Saraydüzü barracks; their handwritten draft was corrected through the night of 21–22 June and transmitted at dawn as Circular No. 1 to every provincial governor and military commander still in post. Its six articles were revolutionary. The homeland's integrity and the nation's independence were in danger; the Istanbul government could not fulfil its responsibilities; the nation's independence would be saved by the nation's own will and resolve ('milletin istiklâlini yine milletin azim ve kararı kurtaracaktır'); a national congress would meet at Sivas; every sancak would send three delegates elected without the knowledge of the occupation authorities. There was no reference to the Sultan's command. There was no appeal to the Sublime Porte. For the first time since 1299, Turkish sovereignty was being located in the nation rather than the dynasty. When the telegraph clerk at Amasya tapped the code through to Anatolia that morning, he did not realise he was transmitting the birth certificate of a republic.",
+      "storyTr": "Mustafa Kemal Paşa, Yunan çıkarmasından bir ay, Samsun'a çıkışından üç hafta sonra, 12 Haziran 1919 akşamı Amasya'ya ulaştı. Ankara'da Ali Fuat Cebesoy'a, Erzurum'da Kâzım Karabekir'e, Ankara'da Hüseyin Rauf'a ve Sivas'ta Refet Bele'ye şifreli telgraflar çekerek dar sokakları Yeşilırmak vadisine tırmanan, yarı ahşap Osmanlı konaklarıyla dolu bu Pontus kasabasında buluşmalarını istemişti. Dört adam, Saraydüzü Kışlası'nın misafir salonunda on gün tartıştı; el yazmasıyla hazırlanan taslak 21-22 Haziran gecesi düzeltildi ve şafakla birlikte 1 Numaralı Tamim olarak görevdeki her valiye ve askeri komutana telgrafla iletildi. Altı maddesi devrimciydi. Vatanın bütünlüğü, milletin istiklali tehlikedeydi; İstanbul Hükümeti üzerine düşen sorumluluğu yerine getirememekteydi; milletin istiklalini yine milletin azim ve kararı kurtaracaktı; Sivas'ta millî bir kongre toplanacaktı; her sancak, işgal makamlarından habersiz seçilen üçer delegesini gönderecekti. Padişah buyruğuna atıf yoktu. Babıali'ye başvuru yoktu. 1299'dan beri ilk kez Türk egemenliği hanedanda değil millette aranıyordu. Amasya'daki telgraf memuru o sabah şifreyi Anadolu'ya tuşlarken bir cumhuriyetin doğum belgesini ilettiğini bilmiyordu. Tamim yalnız askerî ve mülkî amirlere değil, müftülere, belediye reislerine, Müdafaa-i Hukuk cemiyeti başkanlarına ve her sancakta itibar sahibi eşrafa aynı anda gönderildi. Telgrafların alındığına dair imzalı makbuzlar Amasya'ya geri dönmeye başladı: Samsun Jandarma Alayı, Trabzon Valisi, Balıkesir Mutasarrıfı, Edirne Kolordu Komutanı. Sekiz gün içinde yüzden fazla şehirden onay geldi. İstanbul Hükümeti, Mustafa Kemal'i görevden almaya çalıştı; tebligat Sivas'tan ileri geçemedi. Amasya Tamimi hem bir program, hem de bir örgütlenme kılavuzuydu — dört maddesi Kurtuluş Savaşı'nın takvimini çizdi: Erzurum Kongresi, Sivas Kongresi, Heyet-i Temsiliye ve nihayet Meclis.",
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal",
+          "Rauf Orbay",
+          "Ali Fuat Cebesoy",
+          "Refet Bele"
+        ],
+        "sideB": []
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Amasya_Circular",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Amasya_Tamimi"
+    },
+    {
+      "id": "erzurum-congress",
+      "name": "Erzurum Congress",
+      "nameTr": "Erzurum Kongresi",
+      "lat": 39.9043,
+      "lng": 41.2679,
+      "date": "1919-07-23",
+      "dateEnd": "1919-08-07",
+      "kind": "congress",
+      "side": "political",
+      "order": 6,
+      "summary": "Fifty-six delegates from the six eastern vilayets meet at an Armenian school in Erzurum, elect Mustafa Kemal president, and draft the first territorial charter of the National Pact.",
+      "summaryTr": "Altı doğu vilayetinden 56 delege, Erzurum'daki Ermeni okulunda toplandı; Mustafa Kemal'i başkan seçti ve Misak-ı Millî'nin ilk toprak beyannamesini kaleme aldı.",
+      "story": "On 8 July 1919, Mustafa Kemal resigned his imperial commission and stripped off the gold-braided uniform of an Ottoman Pasha on the steps of the Erzurum konak. Kâzım Karabekir, commander of the still-intact XV Corps of 18,000 veterans, turned to his 3,000 officers and soldiers and said, 'Pasha, I and my army are at your service.' That sentence almost single-handedly saved the resistance. Two weeks later, on 23 July — the anniversary of the 1908 Young Turk Revolution — fifty-six delegates representing Erzurum, Trabzon, Sivas, Bitlis, Van, and Diyarbekir convened at the Sanasaryan Armenian High School, whose owners had been deported in 1915. For sixteen days they debated under the chairmanship of Mustafa Kemal. The resulting manifesto declared that the eastern vilayets were an indivisible part of the Ottoman homeland; that no mandate or protectorate would be accepted; that if the Istanbul government failed to defend the country, a provisional administration would be formed. A nine-member Representative Committee (Heyet-i Temsiliye) was elected with Mustafa Kemal at its head. A young American reporter named Louis Browne, the only Western journalist present, cabled his Chicago paper that 'a new Turkey is being born in this mountain town.' The telegram was held for a week by the British censor in Batum, but the news reached London, Athens, and Paris anyway. Erzurum was local in its agenda and national in its consequences.",
+      "storyTr": "8 Temmuz 1919'da Mustafa Kemal, Erzurum konağının merdivenlerinde padişah fermanını reddederek paşa üniformasını çıkardı. Sapasağlam 18.000 gazili 15. Kolordu'nun komutanı Kâzım Karabekir, 3.000 subay ve erine dönerek 'Paşam, ben ve ordum emrinizdeyim' dedi. Bu cümle tek başına direnişi kurtardı. İki hafta sonra, 23 Temmuz'da — 1908 Meşrutiyeti'nin yıl dönümünde — Erzurum, Trabzon, Sivas, Bitlis, Van ve Diyarbekir'i temsil eden 56 delege, 1915'te sürülen sahiplerinden kalan Sanasaryan Ermeni Lisesi'nde toplandı. On altı gün Mustafa Kemal başkanlığında müzakere ettiler. Sonuç beyannamesi şunu ilan etti: doğu vilayetleri Osmanlı vatanının bölünmez parçasıydı; hiçbir manda ya da himaye kabul edilmeyecekti; İstanbul Hükümeti ülkeyi savunmakta aciz kalırsa geçici bir hükümet kurulacaktı. Dokuz kişilik Heyet-i Temsiliye seçildi; başına Mustafa Kemal getirildi. Orada bulunan tek Batılı gazeteci, genç Amerikalı Louis Browne, Chicago'daki gazetesine 'Bu dağ kasabasında yeni bir Türkiye doğuyor' diye telgraf çekti. Telgraf Batum'da İngiliz sansüründe bir hafta bekletildi, ama haber yine de Londra, Atina ve Paris'e ulaştı. Erzurum gündemi bakımından bölgesel, sonuçları bakımından ulusaldı. Kongre delegeleri arasında eski Meclis-i Mebusan üyeleri, muhasebe memurları, emekli paşalar, müftüler ve medrese hocaları vardı. Tartışmalar bazen sertleşti: Trabzon'dan gelen bazı delegeler Pontus meselesi yüzünden ayrı bir yerel politika istediler; Kemal sert bir dille ulusal birliği dayattı. Beyannamedeki 'Millî meclis derhal toplanmalı ve hükümetin icraatı bu meclisin murakabesine tabi olmalıdır' maddesi, sonraki on ayın siyasi projesini tek cümleyle özetliyordu. Erzurum'dan ayrılan heyet, eylül başında Sivas'a varmak üzere Kızılırmak boyunca at sırtında yola çıktı; her köyde namaz vakti mola verilip halkla konuşuldu ve milli hareketin tohumu Orta Anadolu'ya serpildi.",
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal",
+          "Kâzım Karabekir",
+          "Rauf Orbay",
+          "Raif Dinç"
+        ],
+        "sideB": []
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Erzurum_Congress",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Erzurum_Kongresi"
+    },
+    {
+      "id": "sivas-congress",
+      "name": "Sivas Congress",
+      "nameTr": "Sivas Kongresi",
+      "lat": 39.7477,
+      "lng": 37.0179,
+      "date": "1919-09-04",
+      "dateEnd": "1919-09-11",
+      "kind": "congress",
+      "side": "political",
+      "order": 7,
+      "summary": "Delegates from every region of Anatolia meet in Sivas, reject the American and British mandates, unify regional Defence-of-Rights societies into one national movement, and recognise Mustafa Kemal as its head.",
+      "summaryTr": "Anadolu'nun her bölgesinden gelen delegeler Sivas'ta toplandı; Amerikan ve İngiliz mandalarını reddetti, bölgesel Müdafaa-i Hukuk cemiyetlerini tek bir millî harekette birleştirdi ve Mustafa Kemal'i başkan olarak tanıdı.",
+      "story": "On the morning of 4 September 1919, thirty-eight elected delegates from every corner of Anatolia — Thrace, the Aegean, the Black Sea, Central Anatolia, and the East — gathered in the first-floor hall of Sivas Lycée, a building that had once been an Ottoman high school for sons of provincial notables. Outside, the city's military commander, Colonel Salahattin, had deployed his entire garrison to deter Istanbul's attempts to arrest Mustafa Kemal: Grand Vizier Damad Ferid, under British pressure, had formally declared the congress treasonous and ordered its dispersal. The delegates ignored him. Over seven stormy days they debated whether to accept an American mandate — some, like Halide Edib, thought Woodrow Wilson's protection preferable to partition. The motion was defeated by acclamation. The congress instead merged every regional Müdafaa-i Hukuk (Defence of Rights) society into the Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti — a single organisation with a single programme: full independence within the armistice lines of 30 October 1918. The Heyet-i Temsiliye was enlarged to represent the whole country, and Mustafa Kemal confirmed as president. An outcome the Istanbul government had not foreseen followed: telegraphists across Anatolia, as a body, severed direct telegraph communication between the Porte and the provinces. Within two weeks Damad Ferid's government fell. The centre of Turkish politics had shifted 1,200 kilometres east of the Golden Horn.",
+      "storyTr": "4 Eylül 1919 sabahı Anadolu'nun her köşesinden — Trakya, Ege, Karadeniz, Orta Anadolu ve Doğu'dan — seçilmiş 38 delege, bir zamanlar taşra eşrafının oğullarını okutan Sivas Lisesi'nin birinci katındaki büyük salonda toplandı. Dışarıda şehrin askerlik şube reisi Yarbay Salahattin, İstanbul'un Mustafa Kemal'i tutuklatma girişimlerini caydırmak için tüm garnizonu konuşlandırmıştı: Sadrazam Damat Ferit, İngiliz baskısıyla kongreyi resmen hainlik olarak ilan etmiş ve dağıtılmasını emretmişti. Delegeler onu görmezden geldi. Yedi fırtınalı gün boyunca Amerikan mandasının kabul edilip edilmeyeceğini tartıştılar — Halide Edip gibi bazıları, Wilson'un himayesini paylaşıma tercih ediyordu. Öneri oy birliğiyle reddedildi. Bunun yerine kongre, tüm bölgesel Müdafaa-i Hukuk cemiyetlerini Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti adı altında birleştirdi — tek bir örgüt, tek bir program: 30 Ekim 1918 mütareke hatları içinde tam bağımsızlık. Heyet-i Temsiliye tüm ülkeyi temsil edecek şekilde genişletildi; Mustafa Kemal başkan onaylandı. İstanbul Hükümeti'nin öngörmediği bir sonuç geldi: Anadolu'nun her yerindeki telgraf memurları, Babıali ile taşra arasındaki doğrudan telgraf hattını topluca kestiler. İki hafta içinde Damat Ferit Hükümeti düştü. Türk siyasetinin merkezi Haliç'ten 1.200 km doğuya kaymıştı. Kongre salonunda aynı zamanda bir yayın organı da kuruldu: İrade-i Milliye gazetesi 14 Eylül'de Sivas'ta ilk sayısını çıkardı ve Heyet-i Temsiliye'nin resmi sesi oldu. Kongrenin aldığı gizli kararlar arasında Anadolu demiryolu hatları üzerindeki telgrafhanelerin Müdafaa-i Hukuk mensuplarınca denetlenmesi, her sancağın Kuva-yi Milliye taburu kurması ve tüm paraların tek bir cephane fonunda toplanması vardı. Damat Ferit'in istifasından sonra göreve gelen Ali Rıza Paşa hükümeti Heyet-i Temsiliye ile Amasya'da resmi görüşme yapmak zorunda kaldı — böylece Ankara'nın meşruiyeti fiilen İstanbul tarafından da tanındı. Sivas, sadece bir kongre değil; paralel bir devletin resmen kurulduğu an oldu.",
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal",
+          "Rauf Orbay",
+          "Bekir Sami Kunduh",
+          "İsmail Fazıl"
+        ],
+        "sideB": []
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Sivas_Congress",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Sivas_Kongresi"
+    },
+    {
+      "id": "gna-opening",
+      "name": "Opening of the Grand National Assembly",
+      "nameTr": "Türkiye Büyük Millet Meclisi'nin Açılışı",
+      "lat": 39.9339,
+      "lng": 32.8597,
+      "date": "1920-04-23",
+      "kind": "event",
+      "side": "political",
+      "order": 8,
+      "summary": "One week after the Allied occupiers dissolve the Ottoman Parliament in Istanbul, 115 deputies gather in a half-finished Committee of Union and Progress clubhouse in Ankara and constitute the Grand National Assembly — a sovereign body that claims all legislative and executive power in the name of the nation.",
+      "summaryTr": "İtilaf işgalcilerinin İstanbul'daki Meclis-i Mebusan'ı dağıtmasından bir hafta sonra, 115 mebus Ankara'da yarım kalmış İttihat ve Terakki kulübünde toplandı ve millet adına yasama ile yürütme yetkisinin tamamını üstlenen egemen bir organ olan Türkiye Büyük Millet Meclisi'ni kurdu.",
+      "story": "On 16 March 1920 British marines had stormed the Ottoman Chamber of Deputies, arrested twelve nationalist parliamentarians including Rauf Orbay and shipped them to Malta. Within hours, Mustafa Kemal telegraphed every province: elect new deputies, add those who can escape Istanbul, and converge on Ankara. On the morning of 23 April — a Friday, chosen deliberately so delegates could pray the noon prayer at Hacı Bayram mosque before processing on foot to the assembly building — 115 deputies filed into a two-storey, half-finished brick hall belonging to the Committee of Union and Progress. Rain leaked through the roof; desks had been borrowed from the Ankara Lycée; inkwells were filled from a single bottle passed hand to hand. Mustafa Kemal, as eldest in parliamentary service, took the chair. In his opening speech he declared: 'Sovereignty belongs unconditionally to the nation' — a phrase that would become Article One of the 1921 and 1924 constitutions. The assembly elected him President the next day. Within a week it had passed the Law of Fundamental Organisation, concentrating all legislative, executive, and judicial authority in its own hands — the only government in the world to do so in the twentieth century. The Istanbul Sultanate did not recognise it; the Allies did not recognise it; but from this day forward, tax, troops, and treaties would flow from Ankara. The building still stands on Ulus Square as the Museum of the War of Independence.",
+      "storyTr": "16 Mart 1920'de İngiliz bahriyelileri Meclis-i Mebusan'ı basmış, Rauf Orbay dahil 12 milliyetçi mebusu tutuklayıp Malta'ya sürmüştü. Saatler içinde Mustafa Kemal her vilayete telgraf çekti: yeni mebuslar seçin, İstanbul'dan kaçabilenleri ekleyin, Ankara'da toplanın. 23 Nisan sabahı — bilinçli olarak Cuma seçilmişti ki delegeler Hacı Bayram Camii'nde öğle namazını kılıp yaya alayla meclis binasına geçsinler — 115 mebus, İttihat ve Terakki'ye ait iki katlı, yarım inşaatı tamamlanmış bir tuğla binaya girdi. Çatıdan yağmur damlıyor; sıralar Ankara Lisesi'nden ödünç alınmış; mürekkep hokkaları elden ele dolaşan tek bir şişeden dolduruluyordu. Parlamento kıdemi en fazla olan Mustafa Kemal başkanlığa geçti. Açılış konuşmasında 'Hakimiyet kayıtsız şartsız milletindir' dedi — bu cümle 1921 ve 1924 anayasalarının 1. maddesi olacaktı. Meclis ertesi gün onu kendisine reis seçti. Bir hafta içinde Teşkilat-ı Esasiye Kanunu'nu çıkararak yasama, yürütme ve yargı yetkisinin tamamını kendinde topladı — yirminci yüzyılda bunu yapan tek hükümet oldu. İstanbul saltanatı tanımadı, İtilaf Devletleri tanımadı; ama bu tarihten sonra vergi, asker ve antlaşmalar Ankara'dan akacaktı. Bina bugün Ulus Meydanı'nda Kurtuluş Savaşı Müzesi olarak ayakta duruyor. İlk Meclis'in 337 üyesi arasında altmış beş subay, seksen hukukçu, elliden fazla din adamı, doktorlar, çiftçiler, esnaflar ve ilk defa Türk tarihinde yetkili bir siyasi kürsüye çıkan Rumeli, Doğu Anadolu, Çukurova kökenli vekiller vardı. Açılıştan iki gün sonra çıkarılan ikinci kanun 'Büyük Millet Meclisi fevkinde bir kuvvet yoktur' ilkesini benimsedi. Mustafa Kemal Meclis Reisi sıfatıyla aynı zamanda hükümetin başıydı; İcra Vekilleri Heyeti adıyla on üç bakanlık kuruldu. İstanbul hükümetinin fetvasıyla Mustafa Kemal gıyabi idama mahkum edildiğinde, Ankara müftüsü Rifat Börekçi karşı fetvayı aynı gün yayımladı. 23 Nisan, Cumhuriyet'in kuruluşundan sonra Meclis'in aldığı özel bir kararla çocuklara armağan edildi — dünyada çocuklara ithaf edilen ilk resmi ulusal bayram oldu.",
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal",
+          "Celalettin Arif",
+          "Hasan Fehmi"
+        ],
+        "sideB": []
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Grand_National_Assembly_of_Turkey",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/T%C3%BCrkiye_B%C3%BCy%C3%BCk_Millet_Meclisi"
+    },
+    {
+      "id": "sevres-treaty",
+      "name": "Treaty of Sèvres Signed",
+      "nameTr": "Sevr Antlaşması",
+      "lat": 48.7731,
+      "lng": 2.2106,
+      "date": "1920-08-10",
+      "kind": "treaty",
+      "side": "treaty",
+      "order": 9,
+      "summary": "In a suburban porcelain-factory museum outside Paris, the Istanbul government signs a treaty partitioning Anatolia between Greece, Armenia, an autonomous Kurdistan, an Italian zone, a French zone, and an international Straits regime. The Ankara Assembly declares every signatory a traitor.",
+      "summaryTr": "Paris banliyösünde bir porselen fabrikası müzesinde İstanbul Hükümeti, Anadolu'yu Yunanistan, Ermenistan, özerk bir Kürdistan, İtalyan bölgesi, Fransız bölgesi ve uluslararası bir Boğazlar rejimi arasında paylaştıran bir antlaşma imzaladı. Ankara Meclisi her imzacıyı vatan haini ilan etti.",
+      "story": "On 10 August 1920, in the Manufacture nationale de Sèvres — a Bourbon-era porcelain factory on the Seine outside Paris — three Ottoman dignitaries placed their signatures on a 433-article treaty. Damat Ferid's foreign minister, Hadi Pasha, education minister Rıza Tevfik, and ambassador Reşad Halis had travelled knowing they were signing a death warrant. The terms dismembered the empire. Smyrna and its hinterland would be administered by Greece for five years, then annexed after a plebiscite all parties knew Greek troops would rig. Eastern Anatolia would become an independent Armenia whose borders would be arbitrated by Woodrow Wilson himself (his award, delivered three months later, reached from Trabzon to Lake Van). Kurdistan would receive regional autonomy and, within a year, a referendum on independence. Antalya and Konya fell into the Italian sphere; Cilicia into the French; the Straits would be demilitarised and administered by an international commission with its own flag. The Ottoman army would shrink to 50,000 men without aviation, armour, or warships. Capitulations were restored. Debt was placed under Allied financial control. Two days later the Grand National Assembly in Ankara passed Law No. 11: every Ottoman official who signed or ratified the treaty was stripped of citizenship and condemned to death in absentia. The Sultan never submitted it to his parliament because no such parliament existed. Sèvres was signed but never ratified. It became the anti-constitution of the republic to come — every subsequent Turkish victory was measured against its map.",
+      "storyTr": "10 Ağustos 1920'de Paris kıyılarındaki Seine Nehri üzerinde bulunan, Bourbon döneminden kalma Manufacture nationale de Sèvres porselen fabrikasında üç Osmanlı görevlisi 433 maddelik bir antlaşmanın altına imzalarını attı. Damat Ferit'in Hariciye Nazırı Hadi Paşa, Maarif Nazırı Rıza Tevfik ve Bern Sefiri Reşad Halis, bir idam fermanı imzaladıklarını bilerek gelmişlerdi. Hükümler imparatorluğu parçalıyordu. İzmir ve hinterlandı beş yıl Yunanistan tarafından yönetilecek, sonra tüm tarafların Yunan askerlerinin hile yapacağını bildiği bir referandumla ilhak edilecekti. Doğu Anadolu, sınırlarını bizzat Wilson'un çizeceği bağımsız bir Ermenistan olacaktı (üç ay sonra açıklanan karar Trabzon'dan Van Gölü'ne uzanıyordu). Kürdistan bölgesel özerklik alacak, bir yıl içinde bağımsızlık referandumuna gidecekti. Antalya ve Konya İtalyan, Çukurova Fransız nüfuz alanına düştü; Boğazlar silahsızlandırılacak ve kendi bayrağı olan uluslararası bir komisyon tarafından yönetilecekti. Osmanlı ordusu havacılık, zırhlı ve donanma olmaksızın 50.000 kişiye indirilecekti. Kapitülasyonlar geri geldi. Devlet borçları İtilaf mali denetimine alındı. İki gün sonra Ankara'daki Büyük Millet Meclisi 11 sayılı kanunu çıkardı: antlaşmayı imzalayan ya da onaylayan her Osmanlı memuru vatandaşlıktan çıkarıldı ve gıyabi idama mahkum edildi. Sultan, antlaşmayı meclisine sunmadı çünkü öyle bir meclis yoktu. Sevr imzalandı ama asla onaylanmadı. Doğacak cumhuriyetin karşıt anayasası oldu — bundan sonra kazanılan her Türk zaferi onun haritasıyla ölçüldü. Antlaşmanın İstanbul halkına duyurulduğu gün Bayezıt Meydanı'nda toplanan üniversite öğrencileri kara bayraklar astı; Darülfünun hocaları derslerini bir gün tatil etti. Antlaşma metninin Wilson Zonası haritası, Trabzon ve Erzurum'u içerdiği için Pontus taleplerini de kapsıyor, böylece Rumlara Karadeniz sahilinde özerk bir hattatlık vaat ediyordu. Kurdish Taşnak ve Ermeni-Amerikan lobisi metne kendi haritalarını ekletmiş, Suriye Fransız mandasıyla Çukurova birleştirilmiş, Batı Anadolu'da Yunanistan'a beş yıl içinde kesin ilhak taahhüdü verilmişti. İngiltere Irak petrol bölgesi dahil Musul vilayetini Mandater olarak kendine aldı. Ankara için Sevr, artık görüşülecek bir tartışma değil, reddedilecek bir emri vaki'ydi.",
+      "commanders": {
+        "sideA": [],
+        "sideB": [
+          "Hadi Pasha",
+          "Rıza Tevfik",
+          "David Lloyd George",
+          "Alexandre Millerand"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Treaty_of_S%C3%A8vres",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Sevr_Antla%C5%9Fmas%C4%B1"
+    },
+    {
+      "id": "eastern-front-armenia",
+      "name": "Eastern Front — Campaign against Armenia",
+      "nameTr": "Doğu Cephesi — Ermenistan Harekâtı",
+      "lat": 40.6013,
+      "lng": 43.0975,
+      "date": "1920-09-24",
+      "dateEnd": "1920-12-02",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 10,
+      "summary": "Kâzım Karabekir's XV Corps advances from Erzurum, retakes Sarıkamış, Kars, and Gümrü in ten weeks, and forces the First Republic of Armenia to sue for peace.",
+      "summaryTr": "Kâzım Karabekir komutasındaki 15. Kolordu Erzurum'dan ilerleyerek on hafta içinde Sarıkamış, Kars ve Gümrü'yü geri aldı; Ermenistan Birinci Cumhuriyeti'ni barış istemeye mecbur bıraktı.",
+      "story": "The Eastern Front was the Ankara government's first large-scale offensive, and it broke a six-month stalemate with the First Republic of Armenia over the districts of Kars, Sarıkamış, and Oltu that Russia had seized in 1877–78 and the Bolsheviks had handed back at Brest-Litovsk in 1918. On 24 September 1920, Karabekir's XV Corps of 18,000 men and 50 guns crossed the Aras. The Armenian army, equipped by France and the British but exhausted after two years of war and famine, defended Sarıkamış for only six days. Kars fell on 30 October after a brief artillery duel — the Armenian chief of staff, General Daniel Pirumyan, was captured along with twenty-six generals, 1,150 officers, and thirty days' worth of Allied supplies. The prize had strategic weight: Kars was the anchor of the armistice-line border, a fortress city whose Russian-engineered citadel covered the approaches to Erzurum. When Karabekir reached Gümrü (Alexandropol) on 7 November, the Armenian government fled to Yerevan. A week later Soviet Russia invaded from the north; caught between two fires, the Dashnak government signed the Treaty of Alexandropol on 3 December, ceding Kars and Ardahan back to Turkey. The Armenian republic itself fell to the Red Army two days later and was absorbed into the USSR. Karabekir's campaign cost Ankara perhaps 1,500 men but freed 30,000 veterans for the western front — a transfer that would prove decisive at İnönü and Sakarya.",
+      "storyTr": "Doğu Cephesi Ankara Hükümeti'nin ilk büyük ölçekli taarruzuydu ve Rusya'nın 1877-78'de aldığı, Bolşeviklerin 1918'de Brest-Litovsk'ta geri verdiği Kars, Sarıkamış ve Oltu sancakları üzerindeki altı aylık cephe durgunluğunu kırdı. 24 Eylül 1920'de Karabekir'in 50 topla 18.000 kişilik 15. Kolordusu Aras'ı geçti. Fransa ve İngiltere tarafından donatılmış ama iki yıllık savaş ve kıtlıktan bitap düşmüş Ermeni ordusu, Sarıkamış'ı yalnızca altı gün savundu. Kars, 30 Ekim'de kısa bir topçu düellosunun ardından düştü — Ermeni Genelkurmay Başkanı General Daniel Pirumyan, 26 general, 1.150 subay ve otuz günlük İtilaf ikmal stoklarıyla birlikte esir alındı. Ganimetin stratejik ağırlığı vardı: Kars, mütareke sınırının çapası; Rus mühendislerin yaptığı müstahkem mevkisi Erzurum'a uzanan yolları kapatan bir kale şehirdi. Karabekir 7 Kasım'da Gümrü'ye ulaştığında Ermeni hükümeti Erivan'a kaçtı. Bir hafta sonra Sovyet Rusya kuzeyden işgale başladı; iki ateş arasında kalan Taşnak hükümeti 3 Aralık'ta Gümrü Antlaşması'nı imzaladı; Kars ve Ardahan'ı Türkiye'ye bıraktı. Ermeni cumhuriyeti kendisi de iki gün sonra Kızıl Ordu'ya düştü ve SSCB'ye katıldı. Karabekir'in seferi Ankara'ya yaklaşık 1.500 asker kaybettirdi ama 30.000 gaziyi batı cephesine serbest bıraktı — bu transfer İnönü ve Sakarya'da belirleyici olacaktı. Karabekir, Kars'a girdiğinde şehirde ayakta kalmış tek Rus üretimi ağır top bataryasını sağlam buldu; Ermeni piyadesi cephaneliği ateşe vermeden kaçtığı için 12.000 tüfek, 2.000 süngü ve 40.000 sandık cephane ele geçirildi. Esir alınan General Pirumyan, Karabekir'e 'Sizin adamlarınız aç ama kararlı; bizimkiler tok ama umutsuz' demişti. Harekâtın en kritik anı, Oltu'da Dro komutasındaki çete birliklerinin Kağızman üzerinden geri döneceği haberiydi; Türk 9. Tümeni bu kuşatmayı otuz kilometrelik cebri yürüyüşle önledi. Kars'ta yapılan zafer geçidinden sonra Karabekir, askerlerine 'Artık Anadolu'nun sırtında doğudan gelen bir hançer yok' dedi.",
+      "forces": {
+        "sideA": 18000,
+        "sideB": 20000
+      },
+      "casualties": {
+        "sideA": 1500,
+        "sideB": 7500
+      },
+      "commanders": {
+        "sideA": [
+          "Kâzım Karabekir",
+          "Osman Nuri Köptagel"
+        ],
+        "sideB": [
+          "Daniel Pirumyan",
+          "Drastamat Kanayan"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Turkish%E2%80%93Armenian_War",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/T%C3%BCrk-Ermeni_Sava%C5%9F%C4%B1"
+    },
+    {
+      "id": "treaty-alexandropol-kars",
+      "name": "Treaty of Alexandropol / Treaty of Kars",
+      "nameTr": "Gümrü ve Kars Antlaşmaları",
+      "lat": 40.7833,
+      "lng": 43.8475,
+      "date": "1920-12-03",
+      "dateEnd": "1921-10-13",
+      "kind": "treaty",
+      "side": "treaty",
+      "order": 11,
+      "summary": "The Dashnak government of Armenia signs the Treaty of Alexandropol (Gümrü), ceding Kars and Ardahan to Ankara; the Soviet-era boundary is ratified at the Treaty of Kars on 13 October 1921.",
+      "summaryTr": "Ermenistan'ın Taşnak hükümeti Gümrü Antlaşması'nı imzalayarak Kars ve Ardahan'ı Ankara'ya bıraktı; Sovyet döneminin sınırı 13 Ekim 1921 Kars Antlaşması'yla onaylandı.",
+      "story": "The Treaty of Alexandropol, signed on the night of 2–3 December 1920 in the captured Armenian textile town of Gümrü, was the Ankara government's first international agreement. Bekir Sami Bey for Turkey and Alexander Khatisyan for Armenia negotiated for fourteen days. Armenia renounced the Treaty of Sèvres, cut its army to 1,500 men with twenty machine guns, surrendered Kars and Ardahan, and permitted Turkish troops passage across its remaining territory. Hours later the Bolshevik XI Red Army entered Yerevan; the Dashnak government fled and the treaty — never ratified — was repudiated by the incoming Soviet administration. To fix the frontier permanently, Ankara turned to Moscow. On 16 March 1921 the Treaty of Moscow recognised the Alexandropol line; on 13 October 1921 the complementary Treaty of Kars, signed by Turkey, Soviet Armenia, Soviet Azerbaijan, and Soviet Georgia in the citadel of Kars, set the final frontier. The Arpaçay and Aras rivers became the boundary; Nakhchivan was placed under Azerbaijani protection; Batumi went to Georgia; Turkey kept Kars, Ardahan, and Iğdır. Article Five handed Ankara the Mount Ararat massif in exchange for dropping all claim to southern Transcaucasia. Soviet Russia, desperate for a friendly southern flank against the British, accompanied the treaty with ten million gold roubles, 39,000 rifles, 327 machine guns, 54 artillery pieces, and 63 million cartridges — the bullets that would be fired at Sakarya and Dumlupınar. The Kars border has not moved since.",
+      "storyTr": "2-3 Aralık 1920 gecesi, alınan Ermeni dokuma şehri Gümrü'de imzalanan Gümrü Antlaşması, Ankara Hükümeti'nin ilk uluslararası anlaşmasıydı. Türkiye adına Bekir Sami Bey, Ermenistan adına Aleksandr Hatisyan on dört gün müzakere etti. Ermenistan Sevr'i reddetti, ordusunu yirmi makineli tüfekle 1.500 kişiye indirdi, Kars ve Ardahan'ı devretti ve Türk birliklerinin kendi topraklarından geçmesine izin verdi. Saatler sonra Bolşevik 11. Kızıl Ordu Erivan'a girdi; Taşnak hükümeti kaçtı ve antlaşma — hiç onaylanmadan — yeni Sovyet yönetimi tarafından reddedildi. Ankara sınırı kalıcı hale getirmek için Moskova'ya yöneldi. 16 Mart 1921 Moskova Antlaşması Gümrü hattını tanıdı; onu tamamlayan 13 Ekim 1921 Kars Antlaşması, Kars kalesinde Türkiye, Sovyet Ermenistan, Sovyet Azerbaycan ve Sovyet Gürcistan tarafından imzalanarak nihai sınırı belirledi. Arpaçay ve Aras nehirleri sınır oldu; Nahçıvan Azerbaycan himayesine alındı; Batum Gürcistan'a verildi; Türkiye Kars, Ardahan ve Iğdır'ı tuttu. 5. madde, Ankara'ya Güney Kafkasya üzerindeki tüm taleplerini bırakması karşılığında Ağrı Dağı masifini bıraktı. İngiltere'ye karşı dost bir güney kanadı arayan Sovyet Rusya, antlaşmaya on milyon altın ruble, 39.000 tüfek, 327 makineli tüfek, 54 top ve 63 milyon mermi ekledi — Sakarya ve Dumlupınar'da atılacak mermiler. Kars sınırı o günden beri değişmedi. Gümrü görüşmeleri sırasında Bekir Sami Bey, Ermeni heyetine iki harita sunmuştu: biri 1877 öncesi sınırı, diğeri Brest-Litovsk sınırını gösteriyordu. Hatisyan ikincisini seçti, çünkü Erivan'ı kurtaran yegâne seçenekti. Kars Antlaşması imzalandığı gün kalenin burçlarında dört devletin bayrağı yan yana dalgalandı: Türkiye'nin ay-yıldızı, Sovyet Azerbaycan'ın yıldızı, Sovyet Gürcistan'ın orak-çekici ve Sovyet Ermenistan'ın kızıl al bayrağı. Görüşmelere katılan Sovyet delegesi Budu Mdivani daha sonra hatıralarında, 'İki imparatorluğun enkazından, dört devletin ortak düşmana karşı tek bir savunma hattı kurduğunu o gün anladım' diye yazacaktı. Antlaşmanın mührü vurulurken Kars Kalesi'nden atılan yüz bir pare top sesi, sınırın artık kağıttan değil, toprağa çakılmış bir çividen ibaret olduğunu ilan etti.",
+      "commanders": {
+        "sideA": [
+          "Bekir Sami Kunduh",
+          "Yusuf Kemal Tengirşenk",
+          "Kâzım Karabekir"
+        ],
+        "sideB": [
+          "Alexander Khatisyan (Dashnak)",
+          "Askanaz Mravyan (Soviet)",
+          "Georgy Chicherin"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Treaty_of_Kars",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Kars_Antla%C5%9Fmas%C4%B1"
+    },
+    {
+      "id": "first-inonu",
+      "name": "First Battle of İnönü",
+      "nameTr": "Birinci İnönü Muharebesi",
+      "lat": 39.8167,
+      "lng": 30.1333,
+      "date": "1921-01-06",
+      "dateEnd": "1921-01-11",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 12,
+      "summary": "Colonel İsmet's newly consolidated Western Front stops a Greek reconnaissance-in-force at the railway station of İnönü west of Eskişehir — the first conventional victory of the regular Turkish army.",
+      "summaryTr": "Albay İsmet'in yeni birleştirilmiş Batı Cephesi, Eskişehir'in batısındaki İnönü tren istasyonunda bir Yunan keşif taarruzunu durdurdu — düzenli Türk ordusunun ilk nizami zaferi.",
+      "story": "The First Battle of İnönü was small in scale but enormous in symbolism. On 6 January 1921 — the anniversary of Epiphany in the Orthodox calendar — two Greek divisions under Anastasios Papoulas advanced east from Bursa along the Haydarpaşa-Eskişehir railway to probe Turkish defences. Their objective was intelligence, not territory; they believed the Ankara army was still a fragmented collection of Kuva-yi Milliye militias. What they met instead was the newly consolidated Western Front under a thirty-six-year-old colonel named İsmet, who had in December disbanded the irregular bands of Ethem the Circassian and absorbed their men into regular infantry divisions. At the twin ridges above the İnönü plain — Metris Tepe and Çalış Tepe — two Turkish divisions dug in with machine guns and mountain artillery. For five days the Greeks attacked up snow-covered slopes in temperatures of minus ten. On the night of 10 January, intercepted Turkish radio traffic suggested (falsely) that reserves were arriving from Afyon. Papoulas withdrew at dawn on the 11th. Casualties were modest — fewer than 200 Turkish dead, 350 Greek — but the political effect was detonating. Ankara sent a telegram to Moscow that secured the Treaty of Moscow within eight weeks. The London Conference invited an Ankara delegation for the first time. İsmet was promoted to brigadier general. A year later he would take the surname of the battlefield. The modern Turkish army now had a birthday, and a hero.",
+      "storyTr": "Birinci İnönü Muharebesi ölçek olarak küçük, simgesel olarak devasaydı. 6 Ocak 1921'de — Ortodoks takvimindeki Epifani yıl dönümünde — Anastasios Papoulas komutasındaki iki Yunan tümeni Bursa'dan doğuya, Haydarpaşa-Eskişehir demiryolu boyunca Türk savunmasını yoklamak için ilerledi. Hedefleri istihbarattı, arazi değil; Ankara ordusunun hâlâ dağınık Kuva-yi Milliye milislerinden ibaret olduğuna inanıyorlardı. Oysa karşılarına yeni birleştirilmiş Batı Cephesi çıktı. Otuz altı yaşındaki Albay İsmet, Aralık'ta Çerkez Ethem'in gayri nizami kuvvetlerini dağıtıp adamlarını nizami piyade tümenlerine katmıştı. İnönü ovasının üzerindeki Metris Tepe ve Çalış Tepe ikiz sırtlarında iki Türk tümeni makineli ve dağ topçusuyla siperlendi. Beş gün boyunca Yunanlılar eksi on derecede, karla kaplı yamaçlara saldırdı. 10 Ocak gecesi, yanlış çözümlenen bir Türk telsiz trafiği Afyon'dan ihtiyat geldiğini düşündürttü. Papoulas 11'i şafağında çekildi. Kayıplar mütevazıydı — 200'den az Türk, 350 Yunan ölüsü — ama siyasi etkisi bomba gibiydi. Ankara, Moskova'ya çektiği telgrafla sekiz hafta içinde Moskova Antlaşması'nı garantiledi. Londra Konferansı ilk kez Ankara heyetini davet etti. İsmet tuğgeneralliğe yükseldi. Bir yıl sonra muharebenin adını soyadı yapacaktı. Modern Türk ordusu artık doğum gününe ve kahramanına sahipti. Muharebe sırasında İsmet, muhabere merkezini Eskişehir'deki bir hububat deposunda kurmuş; Erkan-ı Harp subayları çuvalların üzerinde harita çizmişti. Cephe gerisinde Eskişehir demiryolu atölyesi, günde altı yüz el bombası üretimine geçti; Ankara'dan zırhlı tren olarak düzenlenmiş üç adet 75 mm Krupp dağ topu sabah seferi ile İnönü istasyonuna vardı ve muharebenin son gününde taarruza geçen Yunan 10. Tümeni'nin sol kanadına arkadan ateş açtı. Çalış Tepe'nin güney yamacındaki çatışmada Yedek Subay Nazmi, bir makineli tüfek başında şehit düştüğünde; yerine yaralı bir onbaşı geçip aynı tüfekle hücumu devam ettirdi. Bu küçük sahneler, orduya karşı bir milletin neden artık başka türlü kaybedemeyeceğini gösterdi.",
+      "forces": {
+        "sideA": 10000,
+        "sideB": 15000
+      },
+      "casualties": {
+        "sideA": 900,
+        "sideB": 1500
+      },
+      "commanders": {
+        "sideA": [
+          "İsmet İnönü",
+          "Mustafa Kemal",
+          "Fevzi Çakmak"
+        ],
+        "sideB": [
+          "Anastasios Papoulas",
+          "Nikolaos Trikoupis"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/First_Battle_of_%C4%B0n%C3%B6n%C3%BC",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Birinci_%C4%B0n%C3%B6n%C3%BC_Muharebesi"
+    },
+    {
+      "id": "treaty-moscow",
+      "name": "Treaty of Moscow",
+      "nameTr": "Moskova Antlaşması",
+      "lat": 55.7558,
+      "lng": 37.6173,
+      "date": "1921-03-16",
+      "kind": "treaty",
+      "side": "treaty",
+      "order": 13,
+      "summary": "Turkey and Soviet Russia, each isolated, sign a friendship treaty fixing the Caucasian frontier and opening a pipeline of gold, rifles, artillery, and ammunition from Moscow to Ankara.",
+      "summaryTr": "İzole edilmiş iki devlet — Türkiye ve Sovyet Rusya — Kafkasya sınırını belirleyen ve Moskova'dan Ankara'ya altın, tüfek, top ve cephane akıtan bir dostluk antlaşması imzaladı.",
+      "story": "After Karabekir's victory over Armenia, and days after İnönü had stopped the Greeks, the Ankara delegation led by Foreign Commissar Yusuf Kemal Tengirşenk arrived in a snowbound Moscow. On 16 March 1921 — deliberately the anniversary of the British occupation of Istanbul — the Treaty of Moscow was signed in the Kremlin by Chicherin and Karakhan for Soviet Russia and Yusuf Kemal and Rıza Nur for Ankara. Its sixteen articles turned the Caucasus. Article One declared that neither party recognised any treaty 'imposed upon the other by force' — a joint rejection of Sèvres and Brest-Litovsk in a single clause. Article Two fixed the Turkish-Soviet frontier along the line of the Kars Treaty seven months later. Article Four returned Batumi to Georgia in exchange for Soviet recognition of Kars and Ardahan as Turkish. Article Five placed Nakhchivan under Azerbaijani protection, a status it retains as an exclave of the Republic of Azerbaijan in 2026. Article Six unified the two governments against British imperialism. In secret annexes Moscow pledged ten million gold roubles and enough munitions to equip two corps. Chicherin would later write in his memoirs that the treaty saved Bolshevism in the Caucasus and Kemalism in Anatolia simultaneously. For the first time in a century a great power treated an independent Turkish government as an equal. News of the treaty reached Athens within seventy-two hours; the stock market fell, and Greek diplomats in London began asking, for the first time, whether full victory in Anatolia was possible.",
+      "storyTr": "Karabekir'in Ermenistan zaferinden ve İnönü'nün Yunan ordusunu durdurmasından günler sonra Hariciye Vekili Yusuf Kemal Tengirşenk başkanlığındaki Ankara heyeti karla kaplı Moskova'ya ulaştı. 16 Mart 1921'de — bilinçli olarak İstanbul'un İngiliz işgalinin yıl dönümünde — Moskova Antlaşması Kremlin'de Sovyet Rusya adına Çiçerin ve Karahan, Ankara adına Yusuf Kemal ve Rıza Nur tarafından imzalandı. On altı maddesi Kafkasya'yı yeniden kurdu. 1. madde hiçbir tarafın diğerine 'zorla dayatılmış' bir antlaşmayı tanımadığını ilan etti — tek cümlede hem Sevr'e hem de Brest-Litovsk'a ortak bir ret. 2. madde Türk-Sovyet sınırını yedi ay sonraki Kars Antlaşması hattı üzerinde belirledi. 4. madde, Batum'u Gürcistan'a bırakıp Kars ve Ardahan'ın Türklüğünü tanıttı. 5. madde Nahçıvan'ı Azerbaycan himayesine verdi; 2026'da Azerbaycan Cumhuriyeti'nin eksklavı olarak aynı statüyü taşımaktadır. 6. madde iki hükümeti İngiliz emperyalizmine karşı birleştirdi. Gizli eklerde Moskova on milyon altın ruble ve iki kolorduyu donatacak kadar mühimmat taahhüt etti. Çiçerin sonradan hatıralarında antlaşmanın Kafkasya'da Bolşevizmi, Anadolu'da Kemalizmi aynı anda kurtardığını yazacaktı. Bir asırdır ilk kez büyük bir devlet bağımsız bir Türk hükümetine eşit muamele ediyordu. Antlaşmanın haberi Atina'ya yetmiş iki saat içinde ulaştı; borsa düştü, Londra'daki Yunan diplomatları ilk kez Anadolu'da tam zaferin mümkün olup olmadığını sormaya başladı. Moskova görüşmeleri, Kremlin'in en soğuk salonlarından Andreyev Salonu'nda, radyatörler çalışmadığı için kürklü paltolarla yürütüldü. Lenin hastaydı ve müzakerelere doğrudan katılmadı ama Çiçerin'e günlük not gönderdi. Notların birinde 'Türklere güven ver; onların Anadolu'da tuttuğu her kilometre, İngiliz amirallerinin İstanbul'da bıraktığı bir bombadır' yazmıştı. Türk heyeti Moskova'dan ayrıldığında yanında yalnızca antlaşma metni değil, Kızıl Ordu'dan tahsis edilmiş yetmiş Rus topçu subayı, otuz telsiz teknisyeni ve bir sıhhiye bölüğü de getirdi. Bu kadro, Sakarya Meydan Muharebesi sırasında Türk topçu ateş kontrolünün modernleşmesinde belirleyici rol oynadı.",
+      "commanders": {
+        "sideA": [
+          "Yusuf Kemal Tengirşenk",
+          "Rıza Nur",
+          "Ali Fuat Cebesoy"
+        ],
+        "sideB": [
+          "Georgy Chicherin",
+          "Lev Karakhan",
+          "Joseph Stalin"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Treaty_of_Moscow_(1921)",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Moskova_Antla%C5%9Fmas%C4%B1_(1921)"
+    },
+    {
+      "id": "second-inonu",
+      "name": "Second Battle of İnönü",
+      "nameTr": "İkinci İnönü Muharebesi",
+      "lat": 39.8167,
+      "lng": 30.1333,
+      "date": "1921-03-23",
+      "dateEnd": "1921-04-01",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 14,
+      "summary": "A full Greek field army attacks İnönü with three divisions and fails again; İsmet telegraphs Mustafa Kemal 'the enemy has left its dead on the Metris Tepe,' and Kemal replies 'you have defeated not only the enemy but also the misfortune of the nation.'",
+      "summaryTr": "Üç tümenle saldıran bütün bir Yunan saha ordusu İnönü'de yine başarısız oldu; İsmet, Mustafa Kemal'e 'Düşman, Metris Tepe'de binlerce ölüsünü bırakıp kaçmıştır' telgrafını çekti, Kemal 'Siz yalnız düşmanı değil, milletin talihsizliğini de yendiniz' diye cevapladı.",
+      "story": "Athens treated the January defeat as a reconnaissance mishap. The real attack came on 23 March 1921 when three Greek divisions — the 3rd, 7th, and 10th, roughly 50,000 men with 160 guns — advanced simultaneously along the Bursa-Eskişehir and Uşak-Afyon axes under Papoulas. Their plan was to break İsmet's army at İnönü while Greek cavalry took Afyon from the south, then march on Ankara before the summer harvest. On paper the Greek force outnumbered the Turkish Western Front two to one. The terrain saved İsmet. The hills south of İnönü station — Metris Tepe again, plus Çalış and Bağcılar — were a natural bottleneck between marshes and the Porsuk river. For six days Turkish infantry fought trench warfare reminiscent of Gallipoli, losing positions by day and retaking them at bayonet point by night. On 31 March, Greek Colonel Kladas reported that Metris Tepe had finally fallen. It had not; a Turkish counter-attack that evening drove the 7th Division off the height with 800 killed. At dawn on 1 April the Greek army ordered general withdrawal. İsmet's telegram to Kemal — 'the enemy has left its dead on the Metris Tepe' — and Kemal's reply — 'you have defeated not only the enemy but also the misfortune of the nation' — became scripture in every Turkish school. The battle consolidated İsmet as the indispensable field commander, and delivered the final political argument for the Treaty of London revisions. For the Greek army, it was the last battle whose outcome Athens could still plausibly call a draw.",
+      "storyTr": "Atina, Ocak hezimetini bir keşif kazası olarak değerlendirdi. Gerçek taarruz 23 Mart 1921'de geldi: 3., 7. ve 10. Yunan tümenleri — yaklaşık 50.000 asker ve 160 top — Bursa-Eskişehir ve Uşak-Afyon istikametlerinde Papoulas komutasında eş zamanlı saldırıya geçti. Plan İnönü'de İsmet'in ordusunu kırmak, Yunan süvarisinin güneyden Afyon'u almak ve yaz hasadından önce Ankara'ya yürümekti. Kâğıt üzerinde Yunan gücü Türk Batı Cephesi'ne iki kat fazlaydı. Arazi İsmet'i kurtardı. İnönü istasyonunun güneyindeki tepeler — yine Metris Tepe, Çalış ve Bağcılar — bataklıklar ile Porsuk nehri arasında doğal bir boğazdı. Altı gün boyunca Türk piyadesi Gelibolu'yu andıran siper savaşı verdi, gündüz kaybettiği mevzileri geceleri süngü hücumuyla geri aldı. 31 Mart'ta Yunan Albay Kladas, Metris Tepe'nin sonunda düştüğünü bildirdi. Düşmemişti; o akşamki Türk karşı taarruzu 7. Tümen'i 800 ölü bırakarak zirveden attı. 1 Nisan şafağında Yunan ordusu genel çekilme emri verdi. İsmet'in Kemal'e çektiği 'Düşman, Metris Tepe'de binlerce ölüsünü bırakıp kaçmıştır' telgrafı ve Kemal'in cevabı — 'Siz yalnız düşmanı değil, milletin talihsizliğini de yendiniz' — her Türk okulunda kutsal metin oldu. Muharebe İsmet'i vazgeçilmez cephe komutanı olarak pekiştirdi ve Londra Konferansı'ndaki Sevr tadilatları için son siyasi argümanı verdi. Yunan ordusu için ise, Atina'nın hâlâ berabere sayabileceği son muharebeydi. Muharebenin beşinci günü Mustafa Kemal bizzat Eskişehir'e gelip İsmet ile cephede durumu inceledi; bu onun Sakarya'ya kadar cepheye yaptığı son ziyaret olacaktı. Batı Cephesi karargâhı, Kâzım Özalp'in önerisiyle karargâh merkezini trene taşıdı — seyyar bir lokomotif-vagon birleşimi, sürekli Eskişehir-Alayunt arasında dolaşarak Yunan uçaklarının bombalamasından korundu. Yarbay Arif Bey'in 1. Süvari Tümeni, Porsuk Çayı'ndan kuzeye ilerleyip Yunanlıların sağ kanadını yokladı ve çekilme emrini hızlandırdı. Ankara'daki Meclis, 1 Nisan akşamı, cepheden gelen telgraf okunurken uzun ayakta alkışla ayağa kalktı; Ankara Ziraat Bankası'ndan cepheye ulaştırılmak üzere altmış beş bin altın lira özel fon ayrıldı.",
+      "forces": {
+        "sideA": 30000,
+        "sideB": 40000
+      },
+      "casualties": {
+        "sideA": 5500,
+        "sideB": 8000
+      },
+      "commanders": {
+        "sideA": [
+          "İsmet İnönü",
+          "Refet Bele",
+          "Mustafa Kemal"
+        ],
+        "sideB": [
+          "Anastasios Papoulas",
+          "Aleksandros Kondoulis"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Second_Battle_of_%C4%B0n%C3%B6n%C3%BC",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/%C4%B0kinci_%C4%B0n%C3%B6n%C3%BC_Muharebesi"
+    },
+    {
+      "id": "treaty-ankara-france",
+      "name": "Treaty of Ankara (Franklin-Bouillon Agreement)",
+      "nameTr": "Ankara İtilafnamesi",
+      "lat": 39.9339,
+      "lng": 32.8597,
+      "date": "1921-10-20",
+      "kind": "treaty",
+      "side": "treaty",
+      "order": 15,
+      "summary": "France, the first Allied power to recognise the Ankara government, evacuates Cilicia in exchange for commercial guarantees, fixes the Syrian frontier along the Baghdad Railway, and detaches from the Allied coalition.",
+      "summaryTr": "Ankara Hükümeti'ni ilk tanıyan İtilaf devleti olan Fransa, ticari güvenceler karşılığında Çukurova'yı boşalttı, Suriye sınırını Bağdat demiryolu boyunca belirledi ve müttefik koalisyondan ayrıldı.",
+      "story": "Henry Franklin-Bouillon, a French senator and former minister of propaganda, had first visited Ankara in June 1921. He returned in October with full powers from Aristide Briand, who had decided that French blood and treasure were no longer worth spending on British geopolitics in the Levant. The treaty was signed on 20 October 1921 in the office of Foreign Minister Yusuf Kemal Tengirşenk. Its thirteen articles ended the French-Turkish war. France recognised the Ankara government as the lawful government of Turkey — the first Allied power to do so. The frontier with Syria was drawn along the Baghdad Railway, giving Turkey Antep, Urfa, Mardin, Nusaybin, and Cizre while leaving Aleppo and Hatay in French hands. (The sanjak of Alexandretta was granted cultural autonomy and, sixteen years later, joined Turkey as Hatay.) French economic interests in the Ergani copper mines and the Samsun-Sivas railway concession were preserved. Most crucially, France agreed to evacuate Cilicia within two months. Twenty thousand Turkish troops and 140 field guns were freed from the southern front and railed west in time for the summer 1922 build-up. In London, Lord Curzon was furious; the British ambassador in Paris warned that 'the Entente has lost its Near Eastern head.' For Ankara, the treaty was strategic oxygen: one enemy quit the field, weapons and veterans crossed the Taurus, and the legal fiction of a unified Allied camp collapsed.",
+      "storyTr": "Fransız senatörü ve eski propaganda bakanı Henry Franklin-Bouillon, Haziran 1921'de Ankara'ya ilk kez gelmişti. Ekim'de Levant'ta İngiliz jeopolitiği uğruna Fransız kanı ve hazinesi harcamanın artık yeterli olmadığına karar vermiş Aristide Briand'ın tam yetkisiyle geri döndü. Antlaşma 20 Ekim 1921'de Hariciye Vekili Yusuf Kemal Tengirşenk'in çalışma odasında imzalandı. On üç maddesi Fransız-Türk savaşını sona erdirdi. Fransa, Ankara Hükümeti'ni Türkiye'nin meşru hükümeti olarak tanıdı — bunu yapan ilk İtilaf devleti. Suriye sınırı Bağdat demiryolu boyunca çizildi; Türkiye Antep, Urfa, Mardin, Nusaybin ve Cizre'yi alırken Halep ve Hatay Fransızların elinde kaldı. (İskenderun sancağına kültürel özerklik tanındı ve on altı yıl sonra Hatay olarak Türkiye'ye katıldı.) Fransızların Ergani bakır madenleri ve Samsun-Sivas demiryolu imtiyazlarındaki ekonomik çıkarları korundu. En önemlisi Fransa, Çukurova'yı iki ay içinde boşaltmayı kabul etti. 20.000 Türk askeri ve 140 top güney cephesinden serbest kaldı ve 1922 yazındaki yığınak için demiryoluyla batıya sevk edildi. Londra'da Lord Curzon küplere bindi; Paris'teki İngiliz büyükelçisi 'İtilaf, Yakın Doğu'daki başını kaybetti' diye telgraf çekti. Ankara için antlaşma stratejik oksijendi: bir düşman cepheyi terk etti, silahlar ve gaziler Toros'u geçti, müttefik kampı kurgusu çöktü. Franklin-Bouillon, müzakereler sırasında ziyaret ettiği Anadolu köylerinde Mustafa Kemal'e hayran kaldığını özel yazışmalarında itiraf etti; Fransız basınına döndüğünde Le Temps gazetesinde 'Ankara, Paris'ten daha fazla Fransızca düşünüyor' başlıklı uzun bir yazı kaleme aldı. Antlaşmanın eklerinde Fransız askerî tesislerinin Türklere nakli, Rayak-Halep demiryolu üzerinden Türkiye'ye silah geçişinin serbest bırakılması ve iki hükümet arasında kalan savaş esirlerinin karşılıklı iadesi vardı. Antlaşmadan sadece dokuz gün sonra ilk Fransız iaşe treni Mersin limanından Ankara'ya silah taşımaya başladı — Çukurova'yı sömürge olarak tasavvur eden antlaşma, sonunda Anadolu'ya silah ikmal yolu açtı.",
+      "commanders": {
+        "sideA": [
+          "Yusuf Kemal Tengirşenk",
+          "Mustafa Kemal"
+        ],
+        "sideB": [
+          "Henry Franklin-Bouillon",
+          "Aristide Briand"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Treaty_of_Ankara_(1921)",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Ankara_%C4%B0tilafnamesi"
+    },
+    {
+      "id": "sakarya",
+      "name": "Battle of Sakarya",
+      "nameTr": "Sakarya Meydan Muharebesi",
+      "lat": 39.7667,
+      "lng": 31.4833,
+      "date": "1921-08-23",
+      "dateEnd": "1921-09-13",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 16,
+      "summary": "Over twenty-two days along a hundred-kilometre front east of Ankara, the Turkish army halts the Greek advance at the Sakarya river; Mustafa Kemal assumes personal command and earns the title 'Ghazi' from the Grand National Assembly.",
+      "summaryTr": "Ankara'nın doğusunda yüz kilometrelik bir cephede yirmi iki gün boyunca Türk ordusu, Yunan ilerleyişini Sakarya Nehri'nde durdurdu; Mustafa Kemal başkomutanlığı bizzat üstlendi ve Büyük Millet Meclisi'nden Gazi unvanını aldı.",
+      "story": "After the July disasters at Afyon, Kütahya, and Eskişehir, the Turkish Western Front retreated forty-five kilometres east of the Sakarya river, leaving Ankara only a single divisional screen in front of the capital. The Ankara Assembly considered moving to Kayseri; safes were packed at the Ottoman Bank. On 5 August Mustafa Kemal took the extraordinary step of having himself named Commander-in-Chief with full executive powers for three months. His 'National Obligation' tax orders — Tekâlif-i Milliye — requisitioned 40 percent of every household's grain, cloth, and draft animals. Every village blacksmith was ordered to produce one cartridge. Women carried artillery shells on ox-carts from Ankara station to the front through nights of mud and rain. On 23 August the Greek I, II, and III Corps — 120,000 men under Papoulas — crossed the Sakarya. Kemal refused to draw a linear defence. 'There is no line of defence; there is a surface of defence, and that surface is the whole country' — the doctrine became the battle's organising principle. For twenty-two days Greek divisions smashed themselves against dug-in Turkish positions at Mangal Dağı, Çal Dağı, Duatepe, and the eastern bank ridges. By 10 September the Greek army had captured the western heights but could not break the interior line. Logistics collapsed; mules died; typhus spread. On 13 September Papoulas ordered retreat to the Eskişehir-Afyon line he had started from. Greek losses: 23,000 killed, wounded, or missing. Turkish losses: 13,000. The Grand National Assembly voted Mustafa Kemal the rank of marshal and the title of 'Ghazi' — victorious warrior for the faith — by acclamation. The Greek offensive had reached its furthest point in Asia. It would never advance again.",
+      "storyTr": "Temmuz'daki Afyon, Kütahya ve Eskişehir felaketlerinin ardından Türk Batı Cephesi, Sakarya nehrinin kırk beş kilometre doğusuna çekildi; başkent önünde sadece bir tümenlik örtü kuvveti bıraktı. Büyük Millet Meclisi Kayseri'ye taşınmayı gündeme aldı; Osmanlı Bankası'nda kasalar paketlendi. 5 Ağustos'ta Mustafa Kemal olağanüstü bir adım atarak kendini üç ay süreyle tam yürütme yetkisine sahip Başkomutan ilan ettirdi. Çıkardığı 'Tekâlif-i Milliye' emirleri her hanenin tahıl, bez ve yük hayvanının yüzde kırkına el koydu. Her köy demircisine bir fişek üretme emri verildi. Kadınlar, Ankara istasyonundan cepheye çamurlu yağmur gecelerinde öküz arabalarıyla top mermisi taşıdı. 23 Ağustos'ta Papoulas komutasındaki Yunan 1., 2. ve 3. Kolorduları — 120.000 asker — Sakarya'yı geçti. Kemal doğrusal bir savunma kurmayı reddetti. 'Hattı müdafaa yoktur, sathı müdafaa vardır. O satıh, bütün vatandır.' — bu doktrin muharebenin kurucu ilkesi oldu. Yirmi iki gün boyunca Yunan tümenleri Mangal Dağı, Çal Dağı, Duatepe ve doğu yakası sırtlarındaki siperli Türk mevzilerine çarpıp parçalandı. 10 Eylül'de Yunan ordusu batı sırtlarını almıştı ama iç hattı kıramıyordu. Lojistik çöktü; katırlar öldü; tifüs yayıldı. 13 Eylül'de Papoulas, başladığı Eskişehir-Afyon hattına çekilme emri verdi. Yunan kaybı 23.000 ölü, yaralı, kayıp. Türk kaybı 13.000. Büyük Millet Meclisi Mustafa Kemal'e müşirlik rütbesi ve 'Gazi' unvanını oy birliğiyle verdi. Yunan taarruzu Asya'daki en uç noktasına ulaşmıştı. Bir daha hiç ilerleyemeyecekti.",
+      "forces": {
+        "sideA": 96000,
+        "sideB": 120000
+      },
+      "casualties": {
+        "sideA": 13000,
+        "sideB": 23000
+      },
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal Atatürk",
+          "Fevzi Çakmak",
+          "İsmet İnönü",
+          "Refet Bele"
+        ],
+        "sideB": [
+          "Anastasios Papoulas",
+          "Nikolaos Trikoupis",
+          "King Constantine I"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Sakarya",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Sakarya_Meydan_Muharebesi"
+    },
+    {
+      "id": "great-offensive",
+      "name": "Great Offensive (Büyük Taarruz)",
+      "nameTr": "Büyük Taarruz",
+      "lat": 38.75,
+      "lng": 30.5386,
+      "date": "1922-08-26",
+      "dateEnd": "1922-08-30",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 17,
+      "summary": "Before dawn on 26 August 1922, Turkish artillery opens fire on the Kocatepe–Afyon sector; within five days the Greek Army of Asia Minor is cut in two, encircled, and destroyed in the fields of Dumlupınar.",
+      "summaryTr": "26 Ağustos 1922 şafak öncesinde Türk topçusu Kocatepe-Afyon kesiminde ateş açtı; beş gün içinde Yunan Anadolu Ordusu ikiye bölündü, kuşatıldı ve Dumlupınar ovalarında imha edildi.",
+      "story": "For eleven months after Sakarya the front had been silent. Under the cover of that silence, Kemal and Fevzi Çakmak had moved an entire field army by night-rail from Eskişehir south to Afyon; seven reserve divisions had been raised and equipped with Soviet, French, and Italian rifles; Soviet gold paid for mountain artillery ferried across the Black Sea. The deception succeeded: Greek intelligence believed the Turkish main effort would fall on Eskişehir. At 5:30 a.m. on 26 August 1922, a thousand Turkish guns opened fire on the Greek 1st Corps's positions from Kalecik Sivrisi to Belentepe. Mustafa Kemal watched from Kocatepe, a 1,900-metre ridge overlooking Afyon. Within four hours Turkish infantry had carried Çiğiltepe; by nightfall Afyon was outflanked. On 27 August the Greeks abandoned Afyon. On 28–29 August the Greek 1st and 2nd Corps, retreating westwards in disorder, ran into a Turkish cavalry screen that had ridden eighty kilometres behind their lines. By the evening of the 30th, two Greek corps commanders — Nikolaos Trikoupis and Kimon Digenis — had been captured in a farmhouse near Uşak. When Trikoupis was led before Kemal, he learned for the first time that he had been promoted commander-in-chief of the Greek army three days earlier. Kemal offered him a cigarette. The Great Offensive, planned for a month, destroyed the Greek army in five days; it remains the textbook case of a concentrated breakthrough at an operational scale in the inter-war period.",
+      "storyTr": "Sakarya'dan sonra cephe on bir ay sessizdi. Bu sessizliğin örtüsünde Kemal ve Fevzi Çakmak, Eskişehir'den güneye Afyon'a bütün bir ordu gece treniyle kaydırmış; yedi ihtiyat tümeni kurulup Sovyet, Fransız ve İtalyan tüfekleriyle donatılmış; Karadeniz'den geçirilen dağ topçusunun bedelini Sovyet altını ödemişti. Aldatma başarılıydı: Yunan istihbaratı Türk ana taarruzunun Eskişehir'e yapılacağına inanıyordu. 26 Ağustos 1922 sabah 5:30'da bin Türk topu Kalecik Sivrisi'nden Belentepe'ye kadar Yunan 1. Kolordu mevzilerine ateş açtı. Mustafa Kemal, Afyon'a bakan 1.900 metrelik Kocatepe sırtından muharebeyi izledi. Dört saat içinde Türk piyadesi Çiğiltepe'yi aldı; gece yarısına kadar Afyon kuşatıldı. 27 Ağustos'ta Yunanlılar Afyon'u terk etti. 28-29 Ağustos'ta düzensizce batıya çekilen Yunan 1. ve 2. Kolorduları, hatlarının seksen kilometre gerisine gitmiş bir Türk süvari örtü kuvvetiyle karşılaştı. 30 akşamı iki Yunan kolordu komutanı — Nikolaos Trikoupis ve Kimon Digenis — Uşak yakınlarında bir çiftlik evinde esir alındı. Trikoupis, Kemal'in huzuruna çıkarıldığında, üç gün önce Yunan başkomutanlığına terfi ettiğini ilk kez öğrendi. Kemal ona sigara ikram etti. Bir ay için planlanan Büyük Taarruz, Yunan ordusunu beş günde imha etti; iki savaş arası dönemin operasyonel ölçekte yoğunlaştırılmış yarma taarruzu örneği olarak askeri akademilerin kitabına girdi. Taarruzun ilk saati Kocatepe'de, Mustafa Kemal, Fevzi Çakmak ve İsmet İnönü'nün yan yana durduğu taş masanın üzerinde cereyan etti — bu üçlü, sonraki yirmi yıl boyunca Cumhuriyet'in yüksek siyasetini de birlikte yönetecekti. Cephede Albay Reşat Bey'in komutasındaki 57. Alay, 'Çiğiltepe'yi saat 11.30'da alamazsam kendimi vururum' sözünü yerine getirdi — planladığı zamanda tepe düşmediği için intihar etti; tepe on beş dakika sonra onun askerleri tarafından ele geçirildi. Taarruzda kullanılan topçu cephanesi, büyük bölümü Sovyet ikmaliyle getirilen 80.000 mermi ve 16 milyon piyade fişeğiydi; Sakarya'da kurulan lojistik disiplin, ordunun ikinci dakikada bile ateş gücünden mahrum kalmamasını sağladı.",
+      "forces": {
+        "sideA": 208000,
+        "sideB": 225000
+      },
+      "casualties": {
+        "sideA": 13000,
+        "sideB": 100000
+      },
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal",
+          "Fevzi Çakmak",
+          "İsmet İnönü",
+          "Nureddin Pasha",
+          "Fahrettin Altay"
+        ],
+        "sideB": [
+          "Georgios Hatzianestis",
+          "Nikolaos Trikoupis",
+          "Kimon Digenis"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Great_Offensive",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/B%C3%BCy%C3%BCk_Taarruz"
+    },
+    {
+      "id": "dumlupinar",
+      "name": "Battle of Dumlupınar",
+      "nameTr": "Başkomutanlık Meydan Muharebesi (Dumlupınar)",
+      "lat": 38.6833,
+      "lng": 29.9333,
+      "date": "1922-08-30",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 18,
+      "summary": "At noon on 30 August 1922, four Turkish armies converge on the Greek 4th and 5th Divisions trapped in the Aslıhanlar valley; by nightfall the Greek Army of Asia Minor has ceased to exist as a coherent force.",
+      "summaryTr": "30 Ağustos 1922 öğle saatlerinde dört Türk ordusu, Aslıhanlar vadisinde sıkışan Yunan 4. ve 5. tümenlerini kuşattı; gece yarısına Yunan Anadolu Ordusu bütünlüğünü tamamen yitirmişti.",
+      "story": "Dumlupınar is the set-piece encirclement that finished the Greek army. By the evening of 29 August Trikoupis's and Digenis's two corps — the remnants of five divisions, perhaps 35,000 men — had concentrated in the marshy Aslıhanlar valley south-west of Dumlupınar, intending to break through to İzmir. At dawn on 30 August four Turkish armies — the 1st under Nureddin, the 2nd under Yakup Şevki, the 4th under Fahrettin, and Kocaeli Group — converged on them from north, south, east, and the west. Mustafa Kemal directed the battle personally from the village of Zafertepe, a hill whose name would soon change from 'Adatepe' to 'Victory Hill.' At 14:00 he issued the order that has since been printed on Turkish war academy walls: 'Armies, your first objective is the Mediterranean. Forward!' For six hours Turkish artillery pounded the trapped Greeks at point-blank range; cavalry under Fahrettin Altay cut the Banaz-Uşak railway and the Salihli road simultaneously. By dusk the Greek 4th Division had surrendered intact with all its guns, 12,000 men, and its commander, Gen. Dimaras. Trikoupis and Digenis fled north with a few hundred survivors; both were captured the next day. Greek losses in the valley alone reached 50,000 killed, wounded, or captured. Turkish losses were under 3,000. Dumlupınar became the date of the republic's military holiday, Zafer Bayramı, which remains the second most important Turkish national holiday after 29 October. It was the decisive land battle of the twentieth century in the Middle East — a Cannae delivered not by a single genius but by a general staff that had learned five painful years of war.",
+      "storyTr": "Dumlupınar, Yunan ordusunu sonlandıran kitap-düzeninde bir kuşatmadır. 29 Ağustos akşamı Trikoupis ve Digenis'in iki kolordusu — beş tümenin kalıntıları, yaklaşık 35.000 asker — Dumlupınar'ın güneybatısındaki bataklık Aslıhanlar vadisinde toplanmış, İzmir'e çıkış yolu arıyordu. 30 Ağustos şafağında dört Türk ordusu — Nureddin komutasındaki 1., Yakup Şevki komutasındaki 2., Fahrettin komutasındaki 4. Ordu ve Kocaeli Grubu — kuzey, güney, doğu ve batıdan onları sardı. Mustafa Kemal, muharebeyi bizzat 'Adatepe' adı 'Zafertepe' olarak değişecek bir tepeden yönetti. Saat 14:00'te Harp Akademisi'nin duvarlarına bugün yazılı olan emri verdi: 'Ordular, ilk hedefiniz Akdeniz'dir. İleri!' Altı saat boyunca Türk topçusu kuşatılmış Yunanlıları sıfır mesafeden dövdü; Fahrettin Altay komutasındaki süvari Banaz-Uşak demiryolunu ve Salihli yolunu eş zamanlı kesti. Akşama kadar Yunan 4. Tümeni tüm topları, 12.000 askeri ve komutanı General Dimaras ile birlikte silahlarıyla teslim oldu. Trikoupis ve Digenis birkaç yüz hayatta kalanla kuzeye kaçtı; ertesi gün ikisi de esir alındı. Yalnız vadideki Yunan kayıpları 50.000 ölü, yaralı ya da esire ulaştı. Türk kaybı 3.000'in altındaydı. Dumlupınar, Cumhuriyet'in Zafer Bayramı'nın tarihi oldu; 29 Ekim'den sonra ikinci en önemli ulusal bayramdır. Yirminci yüzyılın Orta Doğu'daki belirleyici kara muharebesiydi — tek bir dehanın değil, beş ağır savaş yılında ders almış bir genelkurmayın eseri. Zafertepe'deki karargâh telgraflarının arasında o gün saat 15:00'te Kemal'in İsmet'e yazdığı tek satır not bulunuyor: 'Meydan muharebesi kazanılmıştır; seferi bitirmek için süvari kanadını doğru hedefe kilitlemelisin.' Fahrettin Altay'ın süvarisi bu emri aldıktan sonra Salihli'ye doğru yüz kırk kilometrelik bir baskın başlattı, gece gündüz durmadan dörtnala sürdü. Muharebeden sonra tutulan esir kafilelerinin toplamı 30.000'i aştı; cepheden hayatını kurtaran son Yunan birlikleri, Kütahya-Eskişehir hattını arka hat olarak bırakmış olduğu için Marmara'ya değil, Ege'ye doğru kaçtı. 30 Ağustos günü akşamı, Mustafa Kemal Türk ordusuna yayımladığı emirde artık 'Akdeniz' yerine doğrudan 'İzmir' adını yazdı.",
+      "forces": {
+        "sideA": 120000,
+        "sideB": 35000
+      },
+      "casualties": {
+        "sideA": 2542,
+        "sideB": 50000
+      },
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal",
+          "Fevzi Çakmak",
+          "Nureddin Pasha",
+          "Yakup Şevki Subaşı",
+          "Fahrettin Altay"
+        ],
+        "sideB": [
+          "Nikolaos Trikoupis",
+          "Kimon Digenis",
+          "Ioannis Dimaras"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Dumlup%C4%B1nar",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Ba%C5%9Fkomutanl%C4%B1k_Meydan_Muharebesi"
+    },
+    {
+      "id": "liberation-smyrna",
+      "name": "Liberation of Smyrna / Great Fire of İzmir",
+      "nameTr": "İzmir'in Kurtuluşu ve İzmir Yangını",
+      "lat": 38.4237,
+      "lng": 27.1428,
+      "date": "1922-09-09",
+      "dateEnd": "1922-09-22",
+      "kind": "liberation",
+      "side": "victory-a",
+      "order": 19,
+      "summary": "Turkish cavalry under Fahrettin Altay enters İzmir on 9 September 1922; four days later a fire erupts in the Armenian quarter and consumes the Greek, Armenian, and European districts over four days, effectively ending the three-millennia-old Greek presence on the Aegean.",
+      "summaryTr": "Fahrettin Altay komutasındaki Türk süvarisi 9 Eylül 1922'de İzmir'e girdi; dört gün sonra Ermeni mahallesinde başlayan yangın dört gün boyunca Rum, Ermeni ve Avrupa mahallelerini kül etti; üç bin yıllık Rum Ege varlığı fiilen sona erdi.",
+      "story": "At 11:00 on 9 September 1922, the lancers of the Turkish 2nd Cavalry Division under Lt. Colonel Şerafettin Bey trotted down the Kordon of İzmir and raised the red-and-white flag over the Konak government building — the same square where Hasan Tahsin had fired three years and four months earlier. Greek soldiers still in the city boarded British, French, and American warships in the bay under the protection of a sixteen-ship Allied squadron. Two hundred thousand Greek and Armenian civilians packed the waterfront. On 13 September a fire broke out in the Armenian quarter of Basmane around two in the afternoon. Driven by a strong imbat wind from the south-west, it spread through the wooden mansions of Frenk, Armenian, and Greek neighbourhoods and burned for four days. Approximately two thirds of the city — 25,000 buildings — was destroyed; the Muslim and Jewish quarters, shielded by the wind direction, survived. Allied warships refused to admit Christian refugees onto their decks for almost forty-eight hours; American Methodist minister Asa Jennings eventually chartered Greek merchant ships and evacuated 250,000 souls to Lesbos and Chios. Mustafa Kemal entered the city on the evening of 10 September and lodged at the house of the Greek businessman Latife Uşşaki's family — he would marry Latife there in 1923. For Greece, the fire was the καταστροφή, the Catastrophe, which ended three thousand years of Aegean Hellenism and brought down the government of King Constantine. For Turkey, it was the kurtuluş, the liberation, that consummated three years of war. Both narratives are true; both carry scars that still shape eastern Mediterranean politics in 2026.",
+      "storyTr": "9 Eylül 1922 saat 11:00'de Yarbay Şerafettin Bey komutasındaki Türk 2. Süvari Tümeni mızraklıları İzmir Kordonu'nda dörtnala indi ve üç yıl dört ay önce Hasan Tahsin'in ateş ettiği aynı Konak Meydanı'ndaki hükümet binasına ay-yıldızlı bayrağı çekti. Şehirde kalan Yunan askerleri, on altı gemilik İtilaf filosunun himayesinde körfezdeki İngiliz, Fransız ve Amerikan savaş gemilerine bindi. İki yüz bin Rum ve Ermeni sivil rıhtımı doldurdu. 13 Eylül'de Basmane'nin Ermeni mahallesinde öğleden sonra saat iki civarı bir yangın çıktı. Güneybatıdan esen güçlü imbatla Frenk, Ermeni ve Rum mahallelerinin ahşap konaklarına yayıldı ve dört gün yandı. Şehrin üçte ikisi — 25.000 yapı — yıkıldı; Müslüman ve Yahudi mahalleleri rüzgâr yönü sayesinde kurtuldu. İtilaf savaş gemileri Hristiyan mültecileri neredeyse kırk sekiz saat güvertelerine almadı; Amerikalı Metodist rahip Asa Jennings sonunda Rum ticaret gemilerini kiralayarak 250.000 canı Midilli ve Sakız'a tahliye etti. Mustafa Kemal 10 Eylül akşamı şehre girdi ve Rum iş insanı ailesi olan Uşşakizade Latife'nin konağında kaldı — 1923'te Latife ile orada evlenecekti. Yunanistan için yangın καταστροφή, Büyük Felaket'ti; üç bin yıllık Ege Helenizmini bitirdi ve Kral Konstantin hükümetini düşürdü. Türkiye için ise üç yıllık savaşı taçlandıran Kurtuluş'tu. İki anlatım da doğrudur; her ikisi de 2026'da Doğu Akdeniz siyasetini hâlâ biçimleyen izler taşır. Yangın başladığında şehirde kalan Ermeni patriği Ghevont Turyan, Ermeni cemaatinin bir kısmını Saint Polycarp Kilisesi'ne toplamıştı; kilise ve çevresindeki iki sokak birkaç saat içinde yandı. Bir süre sonra Türk ordusundan gelen bir piyade müfrezesi, Rum Metropoliti Hrisostomos'u linç etmekten son anda kurtaramadı; cinayet, Nureddin Paşa'nın elbise ayrıntısı verdiği görgü tanıklıklarında dünya basınına geçti. Kordon'daki büyük otel ve Mavroudi Caddesi'ndeki büyük Frenk konakları yandığında, şehrin üç yüz yıllık ticaret hafızası — Levanten, Yahudi, Rum, Ermeni ve Müslüman iç içe geçmiş olan — yalnızca dört günde kül oldu. İzmir'in ertesi günkü fotoğrafları, Cumhuriyet'in doğumunu belgeleyen ilk ikonografi oldu.",
+      "forces": {
+        "sideA": 20000,
+        "sideB": 0
+      },
+      "casualties": {
+        "sideA": 100,
+        "sideB": 30000
+      },
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal",
+          "Fahrettin Altay",
+          "Nureddin Pasha",
+          "Şerafettin Aykut"
+        ],
+        "sideB": [
+          "Aristotelis Stergiadis"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Great_fire_of_Smyrna",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/%C4%B0zmir_Yang%C4%B1n%C4%B1"
+    },
+    {
+      "id": "mudanya-armistice",
+      "name": "Armistice of Mudanya",
+      "nameTr": "Mudanya Mütarekesi",
+      "lat": 40.3752,
+      "lng": 28.8811,
+      "date": "1922-10-11",
+      "kind": "armistice",
+      "side": "armistice",
+      "order": 20,
+      "summary": "In a small harbour on the Sea of Marmara, Britain, France, Italy, and Turkey sign an armistice ending hostilities; Eastern Thrace to the Maritsa river is returned to Ankara without another battle, and the Chanak crisis is defused.",
+      "summaryTr": "Marmara kıyısındaki küçük bir limanda İngiltere, Fransa, İtalya ve Türkiye düşmanlıkları sona erdiren bir mütareke imzaladı; Meriç Nehri'ne kadar Doğu Trakya yeni bir muharebeye gerek kalmadan Ankara'ya iade edildi ve Çanak Krizi önlendi.",
+      "story": "The collapse of Greek Anatolia in September 1922 left a political problem: Turkish troops were advancing on the neutral zone of the Straits, where 8,000 British, Indian, and French soldiers held the lines from Çanakkale to İzmit. Winston Churchill wanted to fight; Prime Minister Lloyd George backed him; but Canada, Australia, and New Zealand refused to commit troops, and the British cabinet balked. France and Italy quietly withdrew their contingents. Kemal, under Soviet pressure to avoid a new European war, agreed to negotiate. The conference opened on 3 October 1922 in Mudanya, the port of Bursa, in the Russian schoolhouse of the Austrian tobacco monopoly. İsmet Pasha represented Turkey; General Charles Harington represented Britain and the Allied commanders-in-chief; Greek General Aleksandros Mazarakis attended as observer but did not sign. İsmet — patient, deaf in one ear, holding the telegraph lines to Ankara open around the clock — refused compromise. On the night of 10–11 October, after eight days of wrangling, the four-article armistice was signed at 2 a.m. Greek forces would withdraw west of the Maritsa river within fifteen days. Eastern Thrace, including Edirne and Kırklareli, would be evacuated by Allied forces within thirty days and transferred to Turkish civil administration. The Turkish army would not cross into Europe until the peace conference. A general peace conference would convene at Lausanne. Churchill's war was averted; Britain's Near Eastern policy collapsed; the coalition government in London fell a week later. Mudanya, unlike Mudros four years earlier, was a Turkish victory signed by Turkish terms on Turkish soil.",
+      "storyTr": "Eylül 1922'deki Yunan Anadolusu'nun çöküşü siyasi bir sorun bıraktı: Türk birlikleri Boğazlar'ın tarafsız bölgesine ilerliyordu; orada Çanakkale'den İzmit'e kadar 8.000 İngiliz, Hint ve Fransız askeri hatları tutuyordu. Winston Churchill savaşmak istedi; Başbakan Lloyd George onu destekledi; ama Kanada, Avustralya ve Yeni Zelanda asker vermeyi reddetti ve İngiliz Kabinesi geri adım attı. Fransa ve İtalya kendi birliklerini sessizce çekti. Yeni bir Avrupa savaşından kaçınmak için Sovyet baskısı da gören Kemal müzakereye razı oldu. Konferans 3 Ekim 1922'de Bursa'nın limanı Mudanya'da, Avusturya tütün rejisinin Rus okul binasında açıldı. Türkiye'yi İsmet Paşa; İngiltere'yi ve İtilaf başkomutanlığını General Charles Harington; Yunanistan'ı imzasız gözlemci olarak General Aleksandros Mazarakis temsil etti. Bir kulağı sağır, sabırlı, Ankara telgraf hattını yirmi dört saat açık tutan İsmet, tavizi reddetti. 10-11 Ekim gecesi sekiz gün müzakereden sonra sabaha karşı 02:00'de dört maddelik mütareke imzalandı. Yunan kuvvetleri on beş gün içinde Meriç'in batısına çekilecek; Edirne ve Kırklareli dahil Doğu Trakya otuz gün içinde İtilaf kuvvetlerince boşaltılıp Türk sivil idaresine devredilecek; Türk ordusu barış konferansına kadar Avrupa'ya geçmeyecek; genel barış konferansı Lozan'da toplanacaktı. Churchill'in savaşı önlendi; İngiltere'nin Yakın Doğu siyaseti çöktü; Londra'daki koalisyon hükümeti bir hafta sonra düştü. Mudanya, dört yıl önceki Mondros'un aksine, Türk topraklarında Türk şartlarıyla imzalanan bir Türk zaferiydi.",
+      "commanders": {
+        "sideA": [
+          "İsmet İnönü",
+          "Asım Gündüz"
+        ],
+        "sideB": [
+          "Charles Harington",
+          "Maurice Pellé",
+          "Roberto Scialoia"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Armistice_of_Mudanya",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Mudanya_M%C3%BCtarekesi"
+    },
+    {
+      "id": "abolition-sultanate",
+      "name": "Abolition of the Sultanate",
+      "nameTr": "Saltanatın Kaldırılması",
+      "lat": 39.9339,
+      "lng": 32.8597,
+      "date": "1922-11-01",
+      "kind": "event",
+      "side": "political",
+      "order": 21,
+      "summary": "In a single-article vote, the Grand National Assembly abolishes the 623-year-old House of Osman's temporal power; Sultan Mehmed VI boards HMS Malaya on 17 November and leaves Istanbul forever.",
+      "summaryTr": "Tek maddelik bir oylamayla Büyük Millet Meclisi, 623 yıllık Osmanoğullarının dünyevi iktidarını kaldırdı; Sultan Vahdettin 17 Kasım'da HMS Malaya'ya binerek İstanbul'dan sonsuza dek ayrıldı.",
+      "story": "Lausanne was going to need a single Turkish delegation. The Allies — particularly the British — planned to invite both the Istanbul government of Sultan Mehmed VI and the Ankara government to the peace conference, hoping to play one against the other. Mustafa Kemal moved first. On 30 October 1922 a private commission of the Grand National Assembly debated a bill separating the Sultanate from the Caliphate. Conservative deputies, including the scholar Seyyid Bey of Urfa, objected on legal grounds. Kemal, arriving unannounced in civilian dress, mounted a bench in the hall and delivered one of the most famous speeches of his career: 'Sovereignty is not given, it is taken.' After a few clerical protests the question was called. By a show of hands the Sultanate was abolished on 1 November 1922 retroactively to the occupation of Istanbul on 16 March 1920 — a legal fiction that held that for thirty-one months the Ottoman state had already ceased to exist. The Caliphate was retained briefly as a spiritual office; the Assembly elected Crown Prince Abdülmecid Efendi as caliph. Sultan Mehmed VI — the thirty-sixth and last Ottoman sovereign — requested British asylum two weeks later. On 17 November 1922, in the grey dawn, he slipped out of Dolmabahçe Palace by the garden gate and boarded the British battleship HMS Malaya from the Dolmabahçe quay with five family members and two suitcases. He died in San Remo on 16 May 1926. The longest-reigning dynasty in Islamic history ended not on a battlefield but in the cargo hold of a Royal Navy battleship.",
+      "storyTr": "Lozan tek bir Türk heyetine ihtiyaç duyacaktı. İtilaf devletleri — özellikle İngilizler — Sultan Vahdettin'in İstanbul Hükümeti'ni ve Ankara Hükümeti'ni barış konferansına birlikte davet etmeyi, birini diğerine karşı kullanmayı planlıyordu. Mustafa Kemal önce davrandı. 30 Ekim 1922'de Büyük Millet Meclisi'nin özel komisyonu, Saltanat'ı Hilafet'ten ayıran bir kanun teklifini tartıştı. Urfalı Seyyid Bey gibi muhafazakâr mebuslar hukuki sebeplerle itiraz etti. Habersiz ve sivil kıyafetle salona gelen Kemal bir sıranın üzerine çıktı ve kariyerinin en ünlü konuşmalarından birini yaptı: 'Hâkimiyet ve saltanat verilmez, alınır.' Birkaç ulema itirazının ardından mesele oylamaya kondu. El kaldırılarak 1 Kasım 1922'de Saltanat kaldırıldı; tarih 16 Mart 1920 İstanbul işgaline geri işletildi — otuz bir aydır Osmanlı devletinin zaten yok olduğunu varsayan bir hukuki kurgu. Hilafet manevi bir makam olarak kısa süre daha tutuldu; Meclis, Veliaht Abdülmecid Efendi'yi halife seçti. Sultan Vahdettin — otuz altıncı ve son Osmanlı hükümdarı — iki hafta sonra İngiltere'den sığınma talep etti. 17 Kasım 1922 gri şafağında Dolmabahçe Sarayı'nın bahçe kapısından sessizce çıktı, beş aile mensubu ve iki bavulla Dolmabahçe rıhtımından İngiliz zırhlısı HMS Malaya'ya bindi. 16 Mayıs 1926'da San Remo'da öldü. İslam tarihinin en uzun süre tahtta kalan hanedanı bir savaş meydanında değil, bir Kraliyet Donanması zırhlısının ambarında sona erdi.",
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal",
+          "Rauf Orbay",
+          "Seyyid Bey"
+        ],
+        "sideB": [
+          "Sultan Mehmed VI Vahdettin",
+          "Tevfik Pasha"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Abolition_of_the_Ottoman_sultanate",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Saltanat%C4%B1n_kald%C4%B1r%C4%B1lmas%C4%B1"
+    },
+    {
+      "id": "lausanne-treaty",
+      "name": "Treaty of Lausanne",
+      "nameTr": "Lozan Antlaşması",
+      "lat": 46.5197,
+      "lng": 6.6323,
+      "date": "1923-07-24",
+      "kind": "treaty",
+      "side": "treaty",
+      "order": 22,
+      "summary": "After eight months of negotiation in the Château d'Ouchy on Lake Geneva, İsmet Pasha signs a treaty that replaces Sèvres, recognises the Republic of Turkey's sovereignty over Anatolia and Eastern Thrace, and provides for a compulsory population exchange with Greece.",
+      "summaryTr": "Cenevre Gölü kıyısındaki Château d'Ouchy'de sekiz ay süren müzakerelerin ardından İsmet Paşa, Sevr'i geçersiz kılan, Türkiye Cumhuriyeti'nin Anadolu ve Doğu Trakya üzerindeki egemenliğini tanıyan ve Yunanistan ile zorunlu nüfus mübadelesini öngören antlaşmayı imzaladı.",
+      "story": "The Lausanne Conference opened on 20 November 1922 in the Hôtel du Château at Ouchy, the lakeside suburb of Lausanne, under the chairmanship of Lord Curzon. The Turkish delegation — İsmet Pasha, Rıza Nur, and Hasan Saka — faced six Allied delegations, forty-seven working sub-commissions, and 122 experts. The conference broke down on 4 February 1923 over the Mosul question (handed to the League of Nations in a side protocol) and the Ottoman debt. Curzon stalked out, writing in his diary that İsmet was 'the most exasperating negotiator I have ever faced: deaf in one ear, so he simply reads from his brief; when you argue, he smiles, adjusts his hearing aid, and reads the same brief again.' After a four-month suspension the conference resumed on 23 April; the final treaty was signed on 24 July 1923. Its forty-three articles wiped out Sèvres. Turkey received Eastern Thrace, Imbros and Tenedos, and full sovereignty over Anatolia. The Straits were demilitarised but placed under Turkish administration. The capitulations were abolished — the first time in 350 years that foreigners in Turkey lost consular legal immunity. The Ottoman debt was apportioned among successor states. Mosul remained disputed but would within eighteen months be assigned to Iraq. A separate convention mandated a compulsory exchange of populations: 1.2 million Orthodox Christians from Anatolia for 400,000 Muslims from Greece, the first population exchange in modern international law. It uprooted villages that had been bilingual for a thousand years. Lausanne remains, in 2026, the oldest functioning peace treaty of the First World War era — the only one of 1919-1923 that was never rewritten by war.",
+      "storyTr": "Lozan Konferansı 20 Kasım 1922'de Lozan'ın göl kıyısı banliyösü Ouchy'deki Hôtel du Château'da Lord Curzon başkanlığında açıldı. Türk heyeti — İsmet Paşa, Rıza Nur, Hasan Saka — altı İtilaf heyeti, kırk yedi alt komisyon ve 122 uzmanla karşılaştı. Konferans 4 Şubat 1923'te Musul meselesi (ileride Milletler Cemiyeti'ne bırakılacak bir ek protokolle) ve Osmanlı borçları üzerinde kesildi. Curzon ayak vurarak salonu terk ederken günlüğüne şöyle yazdı: 'İsmet şimdiye kadar karşılaştığım en yıpratıcı müzakereci: bir kulağı sağır, kendi notunu okuyor; tartıştığınızda gülümsüyor, işitme cihazını ayarlıyor ve aynı notu tekrar okuyor.' Dört aylık aradan sonra 23 Nisan'da konferans yeniden açıldı; antlaşma 24 Temmuz 1923'te imzalandı. Kırk üç maddesi Sevr'i silip attı. Türkiye Doğu Trakya, Gökçeada ve Bozcaada ile Anadolu üzerinde tam egemenlik aldı. Boğazlar silahsızlandırıldı ama Türk yönetimine verildi. Kapitülasyonlar kaldırıldı — 350 yıldır ilk kez Türkiye'deki yabancılar konsolosluk hukuki dokunulmazlığını kaybetti. Osmanlı borçları ardıl devletler arasında paylaştırıldı. Musul tartışmalı kaldı, on sekiz ay içinde Irak'a verilecekti. Ayrı bir sözleşme zorunlu nüfus mübadelesini emretti: Anadolu'dan 1,2 milyon Ortodoks Hristiyan, Yunanistan'dan 400.000 Müslüman — modern uluslararası hukukun ilk nüfus mübadelesi. Bin yıldır iki dilli olan köyleri kökünden söktü. Lozan, 2026'da hâlâ I. Dünya Savaşı dönemi barış antlaşmalarının en uzun ömürlüsüdür — 1919-1923 arası imzalananlar içinde yeni bir savaşla yeniden yazılmamış tek antlaşmadır.",
+      "commanders": {
+        "sideA": [
+          "İsmet İnönü",
+          "Rıza Nur",
+          "Hasan Saka"
+        ],
+        "sideB": [
+          "Lord Curzon",
+          "Raymond Poincaré",
+          "Eleftherios Venizelos",
+          "Benito Mussolini"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Treaty_of_Lausanne",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Lozan_Antla%C5%9Fmas%C4%B1"
+    },
+    {
+      "id": "republic-declaration",
+      "name": "Declaration of the Republic",
+      "nameTr": "Cumhuriyet'in İlanı",
+      "lat": 39.9339,
+      "lng": 32.8597,
+      "date": "1923-10-29",
+      "kind": "event",
+      "side": "political",
+      "order": 23,
+      "summary": "At 8:30 p.m. on 29 October 1923, the Grand National Assembly amends Article One of its constitution to read 'The Turkish state is a republic.' Mustafa Kemal is elected its first president by unanimous acclamation.",
+      "summaryTr": "29 Ekim 1923 akşamı saat 20:30'da Büyük Millet Meclisi anayasasının 1. maddesini 'Türkiye Devleti bir Cumhuriyettir' olarak değiştirdi. Mustafa Kemal oy birliğiyle ilk cumhurbaşkanı seçildi.",
+      "story": "For ten days after Lausanne the government in Ankara was paralysed. The Assembly had dismissed Fethi Okyar's cabinet but could not agree on a successor; the Constitution of 1921 had not defined a head of state to whom a prime minister could submit his government. Istanbul monarchists — with Caliph Abdülmecid II still on the throne of the Caliphate — watched the deadlock hungrily. On the evening of 28 October 1923, Mustafa Kemal invited İsmet, Fethi Okyar, Kâzım Özalp, and Kemalettin Sami to dinner at the Çankaya villa. Over the soup course he said, 'Tomorrow we shall declare the republic.' At dawn he and İsmet drafted six lines that amended Article One of the constitution. By evening the measure was on the Assembly floor. At 8:30 p.m. — after three hours of debate in which only two opposition deputies spoke — the vote was taken by show of hands. 158 deputies voted yes; none voted no. The amendment read: 'The form of the Turkish state is a republic. The religion of the Turkish state is Islam. Its official language is Turkish.' At 8:45 p.m. Mustafa Kemal Ghazi Pasha was elected by unanimous ballot the first President of the Republic of Turkey. 101-gun salutes thundered from Ankara citadel, Istanbul's Selimiye barracks, and İzmir's Kadifekale. When the news reached European capitals the next morning, the Foreign Office in London recorded: 'Caliph remains in place. No further action for now.' The Caliphate itself would last only until 3 March 1924. But the clocks of Anatolia were already set to a new era — the republic that had begun, four years and eight months earlier, as a circular tapped out on the telegraph of Amasya.",
+      "storyTr": "Lozan'dan sonraki on gün boyunca Ankara'da hükümet felçli kaldı. Meclis Fethi Okyar kabinesini düşürmüş ama yerine bir halef bulamamıştı; 1921 Teşkilat-ı Esasiye Kanunu başvekilin hükümetini sunacağı bir devlet başkanı tanımlamamıştı. İstanbul monarşistleri — Halife Abdülmecid Efendi hâlâ hilafet makamındaydı — bu tıkanıklığı iştahla izledi. 28 Ekim 1923 akşamı Mustafa Kemal, İsmet, Fethi Okyar, Kâzım Özalp ve Kemalettin Sami'yi Çankaya köşküne akşam yemeğine davet etti. Çorba faslında 'Yarın cumhuriyeti ilan edeceğiz' dedi. Şafakta İsmet ile birlikte anayasanın 1. maddesini değiştiren altı satırlık bir teklif hazırladı. Akşama doğru teklif meclis salonundaydı. 20:30'da — yalnızca iki muhalefet mebusunun söz aldığı üç saatlik tartışmadan sonra — el kaldırılarak oylandı. 158 mebus evet dedi; hayır oyu çıkmadı. Değişiklik şöyleydi: 'Türkiye devletinin şekl-i hükümeti Cumhuriyettir. Türkiye devletinin dini dini İslamdır. Resmî lisanı Türkçedir.' 20:45'te Gazi Mustafa Kemal Paşa oy birliğiyle Türkiye Cumhuriyeti'nin ilk Cumhurbaşkanı seçildi. Ankara Kalesi'nden, İstanbul Selimiye Kışlası'ndan ve İzmir Kadifekale'den 101 pare top atışı yankılandı. Haber ertesi sabah Avrupa başkentlerine ulaştığında Londra'daki Foreign Office defterine 'Halife yerinde. Şimdilik ilave bir işlem yok' diye yazıldı. Hilafet de 3 Mart 1924'e kadar sürecekti. Ama Anadolu'nun saatleri yeni bir çağa göre kurulmuştu — dört yıl sekiz ay önce Amasya telgrafhanesinden geçen bir tamim olarak başlayan cumhuriyet.",
+      "commanders": {
+        "sideA": [
+          "Mustafa Kemal Atatürk",
+          "İsmet İnönü",
+          "Fethi Okyar",
+          "Kâzım Özalp"
+        ],
+        "sideB": []
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Republic_Day_(Turkey)",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Cumhuriyet_Bayram%C4%B1"
+    }
+  ]
+}

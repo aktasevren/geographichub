@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate:wars": "tsx scripts/validate-wars.ts",
+    "build:wars-index": "tsx scripts/build-wars-index.ts",
+    "check:wars-flags": "tsx scripts/check-flag-urls.ts"
   },
   "dependencies": {
     "next": "^15.0.0",
@@ -14,7 +17,8 @@
     "react-dom": "^19.0.0",
     "react-globe.gl": "^2.37.1",
     "satellite.js": "^5.0.0",
-    "three": "^0.183.2"
+    "three": "^0.183.2",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
@@ -23,6 +27,7 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.21.0",
     "typescript": "^5.6.0"
   }
 }

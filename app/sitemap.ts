@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { allPassports, getCountryMeta } from "@/lib/visa-data";
 import { loadBrands } from "@/lib/brand-data";
+import { loadWarIndex } from "@/lib/wars";
 
 const BASE =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
@@ -36,12 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/maps/pilot-game", priority: 0.85, changeFrequency: "monthly" },
     { url: "/maps/biography", priority: 0.85, changeFrequency: "monthly" },
     { url: "/maps/wars", priority: 0.9, changeFrequency: "monthly" },
-    { url: "/maps/wars/turkish-independence", priority: 0.85, changeFrequency: "monthly" },
-    { url: "/maps/wars/world-war-2", priority: 0.85, changeFrequency: "monthly" },
-    { url: "/maps/wars/world-war-1", priority: 0.85, changeFrequency: "monthly" },
-    { url: "/maps/wars/american-civil-war", priority: 0.85, changeFrequency: "monthly" },
-    { url: "/maps/wars/napoleonic-wars", priority: 0.85, changeFrequency: "monthly" },
-    { url: "/maps/wars/russo-ukrainian-war", priority: 0.8, changeFrequency: "weekly" },
     { url: "/maps/alliances", priority: 0.85, changeFrequency: "monthly" },
     { url: "/maps/anthems", priority: 0.85, changeFrequency: "monthly" },
     { url: "/maps/squad", priority: 0.85, changeFrequency: "monthly" },
@@ -93,6 +88,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.75,
     });
+  }
+
+  // Per-war landing pages (data-driven; _mockup route is not in the index
+  // and therefore never appears in the sitemap)
+  try {
+    for (const w of loadWarIndex()) {
+      entries.push({
+        url: `${BASE}/maps/wars/${w.slug}`,
+        lastModified: now,
+        changeFrequency: w.slug === "russo-ukrainian-war" ? "weekly" : "monthly",
+        priority: 0.85,
+      });
+    }
+  } catch {
+    // If the index is mid-migration and fails validation, skip war entries.
+    // Build will fail elsewhere and surface the real problem.
   }
 
   return entries;

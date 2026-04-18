@@ -1,0 +1,889 @@
+{
+  "slug": "gulf-and-iraq-wars",
+  "name": "Gulf War and Iraq War",
+  "nameTr": "Körfez Savaşı ve Irak Savaşı",
+  "startYear": 1990,
+  "endYear": 2011,
+  "era": "21st-century",
+  "region": "middle-east",
+  "tags": [
+    "cold-war-aftermath",
+    "us-led-coalition",
+    "oil",
+    "saddam-hussein",
+    "insurgency",
+    "regime-change"
+  ],
+  "blurb": "Two US-led campaigns against Ba'athist Iraq: the 1990–1991 Gulf War expelled Saddam Hussein from Kuwait, and the 2003–2011 Iraq War toppled his regime and triggered a protracted insurgency and sectarian conflict.",
+  "blurbTr": "ABD önderliğindeki iki harekât: 1990–1991 Körfez Savaşı Saddam Hüseyin'i Kuveyt'ten çıkardı; 2003–2011 Irak Savaşı ise rejimi devirerek uzun soluklu bir isyan ve mezhepsel çatışma dönemini başlattı.",
+  "sides": [
+    {
+      "id": "A",
+      "label": "US-led Coalition",
+      "labelTr": "ABD Önderliğindeki Koalisyon",
+      "countries": [
+        {
+          "name": "United States",
+          "nameTr": "Amerika Birleşik Devletleri",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_States.svg"
+        },
+        {
+          "name": "United Kingdom",
+          "nameTr": "Birleşik Krallık",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_Kingdom.svg"
+        },
+        {
+          "name": "Saudi Arabia",
+          "nameTr": "Suudi Arabistan",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Saudi_Arabia.svg"
+        },
+        {
+          "name": "France",
+          "nameTr": "Fransa",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_France.svg"
+        },
+        {
+          "name": "Kuwait",
+          "nameTr": "Kuveyt",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Kuwait.svg"
+        },
+        {
+          "name": "Egypt",
+          "nameTr": "Mısır",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Egypt.svg"
+        },
+        {
+          "name": "Syria",
+          "nameTr": "Suriye",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Syria.svg"
+        },
+        {
+          "name": "United Arab Emirates",
+          "nameTr": "Birleşik Arap Emirlikleri",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_Arab_Emirates.svg"
+        },
+        {
+          "name": "Australia",
+          "nameTr": "Avustralya",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Australia_(converted).svg"
+        },
+        {
+          "name": "Poland",
+          "nameTr": "Polonya",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Poland.svg"
+        }
+      ],
+      "commanders": [
+        "George H. W. Bush",
+        "Colin Powell",
+        "Norman Schwarzkopf",
+        "George W. Bush",
+        "Donald Rumsfeld",
+        "Tommy Franks",
+        "David Petraeus",
+        "Barack Obama",
+        "Tony Blair"
+      ],
+      "result": "victor"
+    },
+    {
+      "id": "B",
+      "label": "Ba'athist Iraq",
+      "labelTr": "Baas Partisi Irak'ı",
+      "countries": [
+        {
+          "name": "Iraq (1991, takbir flag)",
+          "nameTr": "Irak (1991, tekbirli bayrak)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Iraq%2C_1991-2004.svg"
+        },
+        {
+          "name": "Iraq (2004–2008, Saddam-era variant)",
+          "nameTr": "Irak (2004–2008, Saddam dönemi varyantı)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Iraq_(2004%E2%80%932008).svg",
+          "flagFallback": "coat"
+        },
+        {
+          "name": "Iraq (post-2008)",
+          "nameTr": "Irak (2008 sonrası)",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Iraq.svg"
+        }
+      ],
+      "commanders": [
+        "Saddam Hussein",
+        "Ali Hassan al-Majid (Chemical Ali)",
+        "Izzat Ibrahim al-Douri"
+      ],
+      "result": "defeated"
+    }
+  ],
+  "casualties": {
+    "militaryDead": 60000,
+    "civilianDead": 200000,
+    "wounded": 300000,
+    "pow": 100000,
+    "source": "Iraq Body Count + Brown University Costs of War 2020"
+  },
+  "participantCount": 1500000,
+  "opening": "On 2 August 1990, Iraqi armored divisions rolled across the Kuwaiti border, annexing the emirate within hours and provoking the largest international military coalition since the Second World War.",
+  "openingTr": "2 Ağustos 1990'da Irak zırhlı birlikleri Kuveyt sınırını geçip emirliği birkaç saat içinde ilhak etti ve İkinci Dünya Savaşı'ndan bu yana kurulan en büyük uluslararası askeri koalisyonu tetikledi.",
+  "outcome": "Kuwait was liberated in 1991 but Saddam survived; a 2003 US-led invasion toppled his regime, triggering an insurgency and sectarian civil war that ended with the US withdrawal in December 2011, leaving a fragile Iraqi state.",
+  "outcomeTr": "Kuveyt 1991'de kurtarıldı fakat Saddam ayakta kaldı; 2003'te ABD önderliğinde yapılan işgal rejimi devirdi, ardından gelen isyan ve mezhep iç savaşı ABD'nin Aralık 2011'deki çekilmesiyle kırılgan bir Irak devleti bırakarak sona erdi.",
+  "turningPointReason": "The fall of Baghdad on 9 April 2003 symbolically ended Saddam's regime in three weeks, but the failure to plan for occupation produced the insurgency that defined the next eight years.",
+  "turningPointReasonTr": "9 Nisan 2003'te Bağdat'ın düşüşü Saddam rejimini üç haftada sembolik olarak bitirdi; ancak işgal sonrası planlamanın yapılmaması, sonraki sekiz yıla damgasını vuran isyanı doğurdu.",
+  "events": [
+    {
+      "id": "invasion-of-kuwait",
+      "name": "Iraqi Invasion of Kuwait",
+      "nameTr": "Irak'ın Kuveyt İşgali",
+      "lat": 29.3759,
+      "lng": 47.9774,
+      "date": "1990-08-02",
+      "dateEnd": "1990-08-04",
+      "kind": "occupation",
+      "side": "victory-b",
+      "order": 1,
+      "summary": "Iraq invades and annexes Kuwait in a lightning 48-hour campaign.",
+      "summaryTr": "Irak, 48 saatlik yıldırım harekâtıyla Kuveyt'i işgal edip ilhak eder.",
+      "story": "At 02:00 local time on 2 August 1990, three divisions of the Iraqi Republican Guard crossed the Kuwaiti border, supported by special forces helicoptered into Kuwait City. Saddam Hussein justified the attack with long-standing grievances: Kuwait's alleged slant-drilling of the Rumaila oilfield, overproduction that depressed oil prices, and a historical claim that Kuwait was Iraq's nineteenth province. Iraq's army of nearly a million, battle-hardened by eight years of war with Iran, swamped Kuwait's 16,000-strong defense force within hours. Emir Jaber Al-Ahmad Al-Sabah fled to Saudi Arabia while his half-brother Fahd was killed defending Dasman Palace. By 4 August organized resistance had collapsed, and on 8 August Baghdad formally annexed Kuwait as its nineteenth governorate. The invasion stunned Washington and Riyadh: Iraqi armored columns were now less than 300 miles from the vital Saudi oilfields at Dhahran. Within hours President George H. W. Bush declared 'this will not stand,' Margaret Thatcher urged resolve at Aspen, and the UN Security Council passed Resolution 660 demanding immediate withdrawal. The invasion set in motion the largest coalition-building effort since 1945 and marked the first major post-Cold War test of collective security, aligning the United States, NATO allies, the Soviet Union, and key Arab states against a single aggressor.",
+      "storyTr": "2 Ağustos 1990'da yerel saatle 02:00'de Irak Cumhuriyet Muhafızları'nın üç tümeni Kuveyt sınırını geçti; Kuveyt Şehri'ne helikopterlerle indirilen özel kuvvetler de onlara destek verdi. Saddam Hüseyin saldırıyı uzun süredir dile getirdiği şikâyetlerle meşrulaştırdı: Kuveyt'in Rumaila petrol sahasında yan sondajla petrol çaldığı iddiası, fiyatları düşüren aşırı üretim ve Kuveyt'in Irak'ın on dokuzuncu vilayeti olduğuna dair tarihsel iddia. İran'la sekiz yıllık savaşın pişirdiği yaklaşık bir milyonluk Irak ordusu, 16.000 kişilik Kuveyt savunma kuvvetini saatler içinde ezdi. Emir Jaber El-Ahmed El-Sabah Suudi Arabistan'a kaçarken üvey kardeşi Şeyh Fahd, Dasman Sarayı'nı savunurken öldü. 4 Ağustos'a gelindiğinde örgütlü direniş çökmüştü; 8 Ağustos'ta Bağdat Kuveyt'i resmen on dokuzuncu vilayet olarak ilan etti. İşgal Washington ve Riyad'ı şoke etti: Irak zırhlı kolları artık Dahran'daki hayati Suudi petrol sahalarına 300 milden daha yakındı. Başkan George H. W. Bush saatler içinde 'buna izin verilmeyecek' dedi, Margaret Thatcher Aspen'de kararlılık çağrısı yaptı ve BM Güvenlik Konseyi derhal çekilmeyi isteyen 660 sayılı kararı kabul etti. İşgal, 1945'ten bu yana en büyük koalisyon kurma sürecini başlattı ve Soğuk Savaş sonrası ilk büyük toplu güvenlik sınavı oldu.",
+      "forces": {
+        "sideA": 16000,
+        "sideB": 100000
+      },
+      "casualties": {
+        "sideA": 4200,
+        "sideB": 295
+      },
+      "commanders": {
+        "sideA": [
+          "Emir Jaber Al-Ahmad"
+        ],
+        "sideB": [
+          "Saddam Hussein",
+          "Ali Hassan al-Majid"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Invasion_of_Kuwait",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Kuveyt%27in_i%C5%9Fgali"
+    },
+    {
+      "id": "un-resolutions-660-678",
+      "name": "UN Security Council Resolutions 660 and 678",
+      "nameTr": "BM Güvenlik Konseyi 660 ve 678 Sayılı Kararları",
+      "lat": 40.7499,
+      "lng": -73.968,
+      "date": "1990-08-02",
+      "dateEnd": "1990-11-29",
+      "kind": "treaty",
+      "side": "political",
+      "order": 2,
+      "summary": "The UN demands Iraqi withdrawal and authorizes 'all necessary means' to enforce it.",
+      "summaryTr": "BM, Irak'tan çekilme talep eder ve bunu sağlamak için 'gerekli tüm araçların' kullanılmasına yetki verir.",
+      "story": "Hours after Iraqi tanks crossed into Kuwait, the United Nations Security Council convened in emergency session and passed Resolution 660 by fourteen votes to zero, with Yemen abstaining. The resolution condemned the invasion and demanded Iraq's immediate, unconditional withdrawal. Over the following four months the Council layered on additional measures: Resolution 661 imposed comprehensive economic sanctions; Resolution 662 declared the annexation null and void; Resolution 665 authorized a naval blockade. The centerpiece came on 29 November 1990 with Resolution 678, which set a 15 January 1991 deadline for withdrawal and authorized member states cooperating with Kuwait to use 'all necessary means' to restore international peace and security. The phrase was diplomatic code for military force. The vote, 12–2 with China abstaining and only Cuba and Yemen opposing, reflected an astonishing level of Cold War consensus: Mikhail Gorbachev's Soviet Union, once Iraq's primary arms supplier, voted in favor. Secretary of State James Baker had personally visited nine of the fifteen Council members to secure the outcome. The resolutions gave the coalition unambiguous legal authority, distinguishing Desert Storm from later interventions that lacked Security Council cover. For many observers, it seemed that the UN, long paralyzed by superpower vetoes, had finally begun functioning as its founders envisioned.",
+      "storyTr": "Irak tankları Kuveyt'e girdikten saatler sonra BM Güvenlik Konseyi olağanüstü oturum yapıp 660 sayılı kararı 14 'evet' ve Yemen'in çekimserliğiyle kabul etti. Karar işgali kınadı ve Irak'ın derhal, koşulsuz çekilmesini istedi. Sonraki dört ayda Konsey yeni tedbirler ekledi: 661 sayılı karar kapsamlı ekonomik yaptırımları getirdi; 662 sayılı karar ilhakı geçersiz ilan etti; 665 sayılı karar deniz ablukasına yetki verdi. Merkez karar 29 Kasım 1990 tarihli 678 sayılı kararla geldi: 15 Ocak 1991'e kadar çekilme tanındı ve üye devletlere uluslararası barış ve güvenliği sağlamak için 'gerekli tüm araçları' kullanma yetkisi tanındı. Bu ifade askeri gücün diplomatik şifresiydi. Çin'in çekimser, Küba ile Yemen'in olumsuz oy kullandığı 12–2'lik sonuç, Soğuk Savaş döneminde görülmemiş bir uzlaşı yansıtıyordu: Irak'ın eski baş silah tedarikçisi Gorbaçov'un Sovyetler Birliği 'evet' oyu verdi. Dışişleri Bakanı James Baker sonucu almak için 15 konsey üyesinin dokuzunu bizzat ziyaret etmişti. Kararlar koalisyona net bir hukuki yetki sağladı ve Çöl Fırtınası'nı, sonraki yetkisiz müdahalelerden ayırdı. Pek çok gözlemciye göre BM, nihayet kurucularının hayal ettiği biçimde işlemeye başlamıştı.",
+      "commanders": {
+        "sideA": [
+          "George H. W. Bush",
+          "James Baker"
+        ],
+        "sideB": [
+          "Saddam Hussein",
+          "Tariq Aziz"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_678",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Birle%C5%9Fmi%C5%9F_Milletler_G%C3%BCvenlik_Konseyi_660_No%27lu_Karar%C4%B1"
+    },
+    {
+      "id": "desert-shield",
+      "name": "Operation Desert Shield",
+      "nameTr": "Çöl Kalkanı Harekâtı",
+      "lat": 26.2361,
+      "lng": 50.0393,
+      "date": "1990-08-07",
+      "dateEnd": "1991-01-16",
+      "kind": "event",
+      "side": "political",
+      "order": 3,
+      "summary": "The US and allies deploy nearly 700,000 troops to Saudi Arabia to deter further Iraqi aggression.",
+      "summaryTr": "ABD ve müttefikleri, daha fazla Irak saldırganlığını caydırmak için Suudi Arabistan'a yaklaşık 700.000 asker konuşlandırır.",
+      "story": "On 7 August 1990, five days after the invasion, King Fahd of Saudi Arabia formally requested American protection, overriding domestic religious concerns about non-Muslim troops on the peninsula. Within hours, F-15C fighters of the 1st Tactical Fighter Wing departed Langley Air Force Base for Dhahran, and the 82nd Airborne Division began deploying to Saudi Arabia as the initial tripwire. Over the next five months, the US military executed the largest strategic airlift and sealift since the Korean War. Aircraft of Military Airlift Command flew more than 15,000 missions; fast sealift ships delivered hundreds of M1 Abrams tanks and Bradley fighting vehicles from Atlantic ports. By mid-January 1991, nearly 700,000 coalition troops, including 540,000 Americans, had assembled in theater. General Norman Schwarzkopf, commander of US Central Command, orchestrated the buildup from a Riyadh bunker while Colin Powell, the Chairman of the Joint Chiefs, coordinated in Washington. The coalition eventually included 39 nations, with major combat contributions from Britain (Operation Granby), France (Opération Daguet), Egypt, Syria, and Saudi Arabia. The Saudi-funded effort cost approximately $60 billion, most of it borne by Riyadh, Tokyo, and Bonn. Desert Shield's scale was designed both to defend Saudi Arabia and to give diplomacy time, while constructing the overwhelming force required to expel Iraq if diplomacy failed.",
+      "storyTr": "İşgalden beş gün sonra, 7 Ağustos 1990'da Suudi Arabistan Kralı Fahd, yarımadada gayrimüslim askerlerin bulunmasına yönelik iç dinî kaygıları bir kenara bırakarak resmi olarak Amerikan koruması istedi. Saatler içinde 1. Taktik Avcı Kanadı'nın F-15C avcıları Langley Hava Üssü'nden Dahran'a hareket etti; 82. Hava İndirme Tümeni ilk caydırıcı unsur olarak Suudi Arabistan'a konuşlanmaya başladı. Sonraki beş ayda ABD ordusu, Kore Savaşı'ndan bu yana en büyük stratejik hava ve deniz taşımacılığını gerçekleştirdi. Askeri Hava Ulaştırma Komutanlığı 15.000'den fazla uçuş yaptı; hızlı kargo gemileri Atlantik limanlarından yüzlerce M1 Abrams tankı ve Bradley aracı taşıdı. Ocak 1991 ortasında Amerikalılar dahil 700.000'e yakın koalisyon askeri bölgede toplanmıştı. ABD Merkez Kuvvetleri Komutanı Norman Schwarzkopf, yığınağı Riyad'daki bir sığınaktan yönetirken Genelkurmay Başkanı Colin Powell Washington'dan koordinasyonu sağladı. Koalisyon sonunda 39 ülkeyi kapsadı; İngiltere (Granby Harekâtı), Fransa (Daguet Harekâtı), Mısır, Suriye ve Suudi Arabistan önemli muharip katkılar sağladı. Suudilerin finanse ettiği harekât yaklaşık 60 milyar dolara mal oldu; yükün büyüğünü Riyad, Tokyo ve Bonn karşıladı. Çöl Kalkanı, hem Suudi Arabistan'ı savunmak hem de diplomasiye zaman tanımak için tasarlandı.",
+      "forces": {
+        "sideA": 700000,
+        "sideB": 540000
+      },
+      "commanders": {
+        "sideA": [
+          "Norman Schwarzkopf",
+          "Colin Powell",
+          "Chuck Horner"
+        ],
+        "sideB": [
+          "Saddam Hussein",
+          "Aladdin Janabi"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Gulf_War#Build-up_of_coalition_forces",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/K%C3%B6rfez_Sava%C5%9F%C4%B1"
+    },
+    {
+      "id": "desert-storm-air-campaign",
+      "name": "Operation Desert Storm Air Campaign",
+      "nameTr": "Çöl Fırtınası Hava Harekâtı",
+      "lat": 33.3152,
+      "lng": 44.3661,
+      "date": "1991-01-17",
+      "dateEnd": "1991-02-23",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 4,
+      "summary": "A 39-day air campaign destroys Iraq's command, air defense, and armored forces.",
+      "summaryTr": "39 günlük hava harekâtı Irak komuta, hava savunma ve zırhlı kuvvetlerini yok eder.",
+      "story": "At 02:38 local time on 17 January 1991, eight AH-64 Apache helicopters of Task Force Normandy fired Hellfire missiles at two Iraqi early-warning radars, opening a hole through which F-117 Nighthawk stealth fighters slipped to strike Baghdad. By dawn, F-117s had hit the Iraqi Air Force headquarters, the central telecommunications exchange, and the presidential palace, while Tomahawk cruise missiles launched from Red Sea and Persian Gulf warships hammered fixed targets across the country. Lieutenant General Chuck Horner's integrated air tasking order orchestrated over 1,000 sorties per day, the largest aerial operation since Vietnam. The campaign had four phases: strategic strikes against Iraqi leadership and infrastructure, suppression of the Kuwait theater air defenses, attrition of fielded Iraqi ground forces, and direct support to the coming ground offensive. Iraq's response was limited to Scud missile launches against Israel and Saudi Arabia, designed to draw Tel Aviv into the war and shatter the coalition. American Patriot missile batteries deployed to Israel, and intensive 'Scud hunts' by F-15Es and British SAS teams, kept Israel out of the conflict. Over 39 days the coalition flew 100,000 sorties, dropped 88,500 tons of bombs, and destroyed roughly half of Iraq's deployed armor and most of its fixed facilities, all while losing fewer than 40 aircraft. The campaign became the textbook demonstration of American post-Vietnam airpower doctrine.",
+      "storyTr": "17 Ocak 1991'de yerel saatle 02:38'de Normandy Görev Kuvveti'ne bağlı sekiz AH-64 Apache helikopteri, iki Irak erken uyarı radarına Hellfire füzeleri fırlatarak F-117 Gece Atmacası hayalet avcılarına Bağdat'a sızmak için delik açtı. Şafakta F-117'ler Irak Hava Kuvvetleri karargâhını, merkezi iletişim santralini ve Cumhurbaşkanlığı sarayını vurmuş, Kızıldeniz ve Basra Körfezi'ndeki gemilerden atılan Tomahawk seyir füzeleri sabit hedefleri ezmişti. Korgeneral Chuck Horner'ın bütünleşik hava görev emri günde 1.000'den fazla sorti yönetti; bu Vietnam'dan bu yana en büyük hava operasyonuydu. Harekâtın dört aşaması vardı: Irak liderliği ve altyapısına stratejik saldırılar, Kuveyt sahası hava savunmalarının bastırılması, konuşlu kara kuvvetlerinin yıpratılması ve kara taarruzuna doğrudan destek. Irak'ın yanıtı, İsrail ile Suudi Arabistan'a Scud füzeleri atmakla sınırlı kaldı; amaç Tel Aviv'i savaşa çekip koalisyonu parçalamaktı. İsrail'e konuşlandırılan Patriot bataryaları ile F-15E'ler ve İngiliz SAS ekiplerinin yoğun 'Scud avı', İsrail'i savaşın dışında tuttu. 39 günde koalisyon 100.000 sorti yapıp 88.500 ton bomba attı, Irak zırhının yaklaşık yarısını ve sabit tesislerinin çoğunu yok etti; kayıpları 40 uçağın altında kaldı.",
+      "forces": {
+        "sideA": 2250,
+        "sideB": 750
+      },
+      "casualties": {
+        "sideA": 75,
+        "sideB": 20000
+      },
+      "commanders": {
+        "sideA": [
+          "Chuck Horner",
+          "Buster Glosson"
+        ],
+        "sideB": [
+          "Muzahim Sa'b Hassan",
+          "Saddam Hussein"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Gulf_War_air_campaign",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/K%C3%B6rfez_Sava%C5%9F%C4%B1"
+    },
+    {
+      "id": "battle-of-khafji",
+      "name": "Battle of Khafji",
+      "nameTr": "Hafci Muharebesi",
+      "lat": 28.4247,
+      "lng": 48.492,
+      "date": "1991-01-29",
+      "dateEnd": "1991-02-01",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 5,
+      "summary": "Iraq's only major ground offensive of the war is crushed at a deserted Saudi border town.",
+      "summaryTr": "Irak'ın savaştaki tek büyük kara taarruzu, boşaltılmış bir Suudi sınır kasabasında ezilir.",
+      "story": "Late on 29 January 1991, Saddam Hussein ordered three mechanized divisions of the Iraqi 3rd Corps to cross into Saudi Arabia in a bid to bloody the coalition, seize prisoners, and rally Arab opinion before the ground war. The Iraqi 5th Mechanized Division seized the evacuated coastal town of Khafji, 12 kilometers south of the Kuwaiti border, after overrunning light Saudi and Qatari screening forces. Two US Marine reconnaissance teams were trapped inside the town, calling in precise airstrikes from rooftops while Iraqi armor moved through the streets below. Over 36 hours, coalition airpower savaged the follow-on Iraqi columns: AC-130 Spectre gunships, A-10 Warthogs, B-52s, and British GR-1s destroyed hundreds of vehicles, including elements of two additional Iraqi divisions attempting to reinforce. On 31 January, the Saudi Arabian National Guard, supported by Qatari AMX-30 tanks and Marine LAV-25s, counterattacked. House-to-house fighting cleared Khafji by the afternoon of 1 February. Saudi forces lost 18 dead; two Marine reconnaissance teams survived in hiding; Iraqi losses exceeded 2,000 dead and captured, with over 300 vehicles destroyed. The engagement exposed the brittleness of Iraqi ground forces under concentrated airpower and confirmed that the Republican Guard, not front-line conscripts, would be the coalition's real adversary. Politically, it proved Arab troops would fight Iraqis, undermining Saddam's hope to fracture the coalition along sectarian lines.",
+      "storyTr": "29 Ocak 1991 gecesi Saddam Hüseyin, Irak 3. Kolordusu'nun üç mekanize tümenine Suudi Arabistan'a girmelerini emretti; amaç koalisyonu kanatmak, esir almak ve kara savaşı öncesi Arap kamuoyunu harekete geçirmekti. Irak 5. Mekanize Tümeni, hafif Suudi ve Katar perdeleme kuvvetlerini ezdikten sonra, Kuveyt sınırının 12 kilometre güneyindeki boşaltılmış kıyı kasabası Hafci'yi aldı. İki Amerikan Deniz Piyadeleri keşif ekibi kasaba içinde sıkışıp kaldı; Irak zırhlıları sokaklardan geçerken damlardan hassas hava saldırıları yönlendirdiler. 36 saat boyunca koalisyon hava gücü, peş peşe gelen Irak kollarını ezdi: AC-130 Spectre uçakları, A-10 Warthog'lar, B-52'ler ve İngiliz GR-1'leri yüzlerce aracı tahrip etti. 31 Ocak'ta Suudi Milli Muhafızları, Katar AMX-30 tankları ve Deniz Piyadesi LAV-25'lerinin desteğiyle karşı taarruza geçti. 1 Şubat öğleden sonra Hafci sokak sokak temizlendi. Suudi kayıpları 18 ölüydü; iki Deniz Piyadesi ekibi saklanarak sağ kurtuldu; Irak kayıpları 2.000'i aşan ölü ve esir, 300'den fazla yok edilmiş araçtı. Muharebe, Irak kara kuvvetlerinin yoğun hava gücü altındaki kırılganlığını gözler önüne serdi ve Cumhuriyet Muhafızları'nın asıl rakip olacağını doğruladı.",
+      "forces": {
+        "sideA": 20000,
+        "sideB": 15000
+      },
+      "casualties": {
+        "sideA": 43,
+        "sideB": 2100
+      },
+      "commanders": {
+        "sideA": [
+          "Khaled bin Sultan",
+          "Walter Boomer"
+        ],
+        "sideB": [
+          "Salah Aboud Mahmoud"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Khafji",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Hafci_Muharebesi"
+    },
+    {
+      "id": "battle-of-73-easting",
+      "name": "Battle of 73 Easting",
+      "nameTr": "73 Easting Muharebesi",
+      "lat": 29.2,
+      "lng": 46.8,
+      "date": "1991-02-26",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 6,
+      "summary": "American armor annihilates Iraq's elite Tawakalna Division in a blinding sandstorm.",
+      "summaryTr": "Amerikan zırhlıları, göz açamayan bir kum fırtınasında Irak'ın seçkin Tavakalna Tümeni'ni imha eder.",
+      "story": "On the afternoon of 26 February 1991, the US Army's 2nd Armored Cavalry Regiment under Colonel Don Holder advanced eastward through a blowing sandstorm in southern Iraq, screening for the VII Corps heavy divisions behind it. Captain H. R. McMaster's Eagle Troop, nine M1A1 Abrams tanks and twelve Bradley fighting vehicles, crested a low ridge at map grid line 73 Easting and discovered the dug-in armor of the Tawakalna Division of the Iraqi Republican Guard, one of Iraq's best formations, equipped with Soviet T-72 tanks. McMaster ordered an immediate charge. In the next 23 minutes Eagle Troop destroyed roughly 28 T-72s, 16 personnel carriers, and 39 trucks without losing a single vehicle. Thermal sights saw through the sandstorm while Iraqi crews, blinded by dust and relying on optical sights, could not engage at range. Ghost and Iron Troops joined, and the regimental battle carried on for hours: depleted-uranium rounds penetrated Iraqi armor at ranges exceeding 2,500 meters; Bradleys killed vehicles with TOW missiles. By nightfall the 2nd ACR had shattered the Tawakalna's forward brigades. The 1st and 3rd Armored Divisions exploited the breach the next morning. Captain McMaster's tactical clinic became a Fort Benning case study, and the battle demonstrated the decisive overmatch American armor held over Soviet-equipped opponents. It was the largest tank engagement since the Second World War.",
+      "storyTr": "26 Şubat 1991 öğleden sonra Albay Don Holder komutasındaki ABD Ordusu 2. Zırhlı Süvari Alayı, güney Irak'taki şiddetli kum fırtınasında doğuya ilerledi ve arkasındaki VII. Kolordu'nun ağır tümenleri için perdeleme yaptı. Yüzbaşı H. R. McMaster'ın komutasındaki dokuz M1A1 Abrams tankı ve 12 Bradley'den oluşan Eagle Birliği, 73 Easting harita hattındaki alçak bir sırtı aşınca Irak Cumhuriyet Muhafızları'nın en iyi birliklerinden Tavakalna Tümeni'nin Sovyet yapımı T-72 tanklarıyla mevzilenmiş zırhına rastladı. McMaster anında taarruz emri verdi. Sonraki 23 dakikada Eagle Birliği yaklaşık 28 T-72, 16 personel taşıyıcı ve 39 kamyonu tek bir araç kaybetmeden imha etti. Termal nişangâhlar kum fırtınasını gördü; toz yüzünden kör olan Irak mürettebatı optik nişangâhlarla uzak menzilde ateş edemedi. Ghost ve Iron Birlikleri de katıldı; alay muharebesi saatlerce sürdü: zayıflatılmış uranyumlu mermiler 2.500 metreyi aşan menzillerde Irak zırhını deldi; Bradley'ler TOW füzeleriyle araçları vurdu. Gece çökerken 2. ACR Tavakalna'nın ileri tugaylarını parçalamıştı. Ertesi sabah 1. ve 3. Zırhlı Tümenler gediği değerlendirdi. Muharebe, İkinci Dünya Savaşı'ndan bu yana en büyük tank çarpışması oldu.",
+      "forces": {
+        "sideA": 4500,
+        "sideB": 2500
+      },
+      "casualties": {
+        "sideA": 6,
+        "sideB": 600
+      },
+      "commanders": {
+        "sideA": [
+          "Don Holder",
+          "H. R. McMaster"
+        ],
+        "sideB": [
+          "Salah Aboud Mahmoud"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_73_Easting",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/73_Easting_Muharebesi"
+    },
+    {
+      "id": "highway-of-death",
+      "name": "Highway of Death",
+      "nameTr": "Ölüm Karayolu",
+      "lat": 29.53,
+      "lng": 47.75,
+      "date": "1991-02-26",
+      "dateEnd": "1991-02-27",
+      "kind": "event",
+      "side": "victory-a",
+      "order": 7,
+      "summary": "Retreating Iraqi convoys are pulverized on Highway 80 out of Kuwait City.",
+      "summaryTr": "Kuveyt Şehri'nden çekilen Irak konvoyları 80 numaralı karayolunda ezilir.",
+      "story": "On the night of 26 February 1991, Saddam Hussein ordered a general Iraqi withdrawal from Kuwait. Tens of thousands of soldiers, looted civilian vehicles, trucks, buses, and stolen luxury cars streamed north on Highway 80, the six-lane expressway connecting Kuwait City to Basra. At the Mutla Ridge pass, US Navy A-6 Intruders dropped mines and Rockeye cluster munitions on the lead and rear vehicles, bottling the convoy. Over the next 10 hours, successive waves of A-10s, F-16s, F/A-18s, AV-8B Harriers, and B-52s struck the stalled column. Photographs of more than 1,400 burned-out vehicles stretching for kilometers, many with occupants dead or vaporized, flashed around the world. Though most soldiers had abandoned their vehicles before the first strike and fled on foot across the desert, the scale of destruction shocked global audiences and some coalition commanders. Journalists nicknamed it the 'Highway of Death,' and Colin Powell reportedly warned the White House that continued strikes risked 'looking like butchers.' The imagery contributed directly to President Bush's decision, on 27 February, to halt offensive operations and declare a ceasefire after just 100 hours of ground war. The Highway of Death became a moral and operational reference point in later conflicts, encapsulating the disproportionate lethality of airpower against a broken, retreating army.",
+      "storyTr": "26 Şubat 1991 gecesi Saddam Hüseyin Kuveyt'ten genel çekilme emri verdi. On binlerce asker, yağmalanmış sivil araçlar, kamyonlar, otobüsler ve çalınmış lüks otomobiller Kuveyt Şehri'ni Basra'ya bağlayan altı şeritli 80 numaralı karayolundan kuzeye aktı. Mutla sırtı geçidinde ABD Deniz Kuvvetleri'ne ait A-6 Intruder'lar öncü ve artçı araçlara mayın ve Rockeye kümeli mühimmat attı; konvoy tıkandı. Sonraki 10 saatte art arda gelen A-10, F-16, F/A-18, AV-8B Harrier ve B-52'ler duran kolonu vurdu. 1.400'den fazla yanmış aracın kilometrelerce uzanan fotoğrafları -pek çoğunun içinde ölü ya da buharlaşmış yolcularla- dünyaya yayıldı. Askerlerin çoğu ilk saldırıdan önce araçlarını bırakıp çölde yürüyerek kaçsa da yıkımın boyutu küresel izleyicileri ve bazı koalisyon komutanlarını şoke etti. Gazeteciler yere 'Ölüm Karayolu' adını verdi; Colin Powell'ın Beyaz Saray'ı 'kasap gibi görüneceğiz' diye uyardığı söylendi. Bu görüntüler, Başkan Bush'un 27 Şubat'ta yalnızca 100 saatlik kara savaşının ardından ateşkes ilan etme kararını doğrudan etkiledi.",
+      "casualties": {
+        "sideA": 1,
+        "sideB": 1000
+      },
+      "commanders": {
+        "sideA": [
+          "Norman Schwarzkopf",
+          "Walter Boomer"
+        ],
+        "sideB": [
+          "Saddam Hussein"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Highway_of_Death",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/%C3%96l%C3%BCm_Otoyolu"
+    },
+    {
+      "id": "liberation-of-kuwait",
+      "name": "Liberation of Kuwait and Ceasefire",
+      "nameTr": "Kuveyt'in Kurtuluşu ve Ateşkes",
+      "lat": 29.3759,
+      "lng": 47.9774,
+      "date": "1991-02-27",
+      "dateEnd": "1991-02-28",
+      "kind": "liberation",
+      "side": "victory-a",
+      "order": 8,
+      "summary": "Kuwait is freed after 100 hours of ground combat; Bush declares a ceasefire.",
+      "summaryTr": "Kuveyt, 100 saatlik kara muharebesi sonunda kurtulur; Bush ateşkes ilan eder.",
+      "story": "Marines of the 1st and 2nd Marine Divisions breached the Iraqi minefield-and-berm defenses along the Kuwaiti border on 24 February 1991 and drove north in a drive of extraordinary speed, joined by Saudi, Kuwaiti, Egyptian, and Syrian formations of Joint Forces Command East. By 26 February, Task Force Shepherd reached Kuwait International Airport and fought a tank battle against the Iraqi 3rd Armored Division, destroying 100 Iraqi tanks without loss. That afternoon Kuwaiti and Saudi units rolled into Kuwait City, greeted by ecstatic civilians, retreating Iraqi soldiers, and scenes of torched oil wells, looted banks, and executed resistance members. Sheikh Saad Al-Abdullah Al-Sabah, the crown prince and prime minister, returned to his restored capital within days. At 08:00 local time on 28 February 1991, exactly 100 hours after the ground war began, a coalition ceasefire took effect. At Safwan airfield in southern Iraq on 3 March, General Schwarzkopf dictated armistice terms to a delegation of Iraqi generals: prisoner releases, mine-field maps, and a no-fly zone for Iraqi aircraft. Coalition casualties were astonishingly light: 292 Americans killed, about 470 coalition dead overall. Iraqi military deaths are estimated between 20,000 and 35,000. Kuwait was free but Saddam remained in Baghdad, with his Republican Guard battered but intact, a limitation imposed by the coalition's narrow UN mandate that would haunt the region for a decade.",
+      "storyTr": "1. ve 2. Deniz Piyade Tümenleri 24 Şubat 1991'de Kuveyt sınırındaki Irak mayın tarlası ve kum setlerini aşıp olağanüstü hızla kuzeye ilerledi; Suudi, Kuveytli, Mısırlı ve Suriyeli Müşterek Doğu Kuvvetleri birlikleri de onlara katıldı. 26 Şubat'ta Shepherd Görev Kuvveti Kuveyt Uluslararası Havaalanı'na ulaşarak Irak 3. Zırhlı Tümeni'yle tank muharebesine girdi ve 100 Irak tankını kayıpsız imha etti. Aynı gün öğleden sonra Kuveytli ve Suudi birlikler Kuveyt Şehri'ne girdi; coşkulu siviller, çekilen Irak askerleri ve yanan petrol kuyularıyla yağmalanmış bankalar, idam edilmiş direnişçiler manzaralarıyla karşılaştılar. Veliaht Prens ve Başbakan Şeyh Saad El-Abdullah El-Sabah günler içinde başkente döndü. 28 Şubat 1991'de yerel saatle 08:00'de, kara savaşının başlamasından tam 100 saat sonra koalisyon ateşkesi yürürlüğe girdi. 3 Mart'ta güney Irak'taki Safvan havaalanında General Schwarzkopf, Irak generallerine esir mübadelesi, mayın haritaları ve uçuş yasakları gibi mütareke koşullarını dikte etti. Koalisyon kayıpları şaşırtıcı derecede hafifti: 292 Amerikan ölüsü, toplam yaklaşık 470 koalisyon ölüsü. Irak askeri kayıpları 20.000–35.000 arasında tahmin edilir. Kuveyt özgürdü ama Saddam Bağdat'ta kalmıştı.",
+      "forces": {
+        "sideA": 540000,
+        "sideB": 350000
+      },
+      "casualties": {
+        "sideA": 470,
+        "sideB": 25000
+      },
+      "commanders": {
+        "sideA": [
+          "Norman Schwarzkopf",
+          "Khaled bin Sultan"
+        ],
+        "sideB": [
+          "Saddam Hussein",
+          "Salah Aboud Mahmoud"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Liberation_of_Kuwait_campaign",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/K%C3%B6rfez_Sava%C5%9F%C4%B1"
+    },
+    {
+      "id": "no-fly-zones-uprisings",
+      "name": "No-Fly Zones and the 1991 Uprisings",
+      "nameTr": "Uçuşa Yasak Bölgeler ve 1991 Ayaklanmaları",
+      "lat": 36.1911,
+      "lng": 44.0091,
+      "date": "1991-03-01",
+      "dateEnd": "1991-04-10",
+      "kind": "event",
+      "side": "victory-b",
+      "order": 9,
+      "summary": "Saddam crushes Shia and Kurdish uprisings; coalition imposes northern and southern no-fly zones.",
+      "summaryTr": "Saddam Şii ve Kürt ayaklanmalarını ezer; koalisyon kuzey ve güney uçuşa yasak bölgeleri ilan eder.",
+      "story": "In the final days of the Gulf War, President Bush publicly encouraged 'the Iraqi people to take matters into their own hands.' Within a week, revolts erupted in 14 of Iraq's 18 provinces. In the Shia south, starting in Basra on 1 March 1991, crowds tore down posters of Saddam and attacked Ba'ath Party headquarters; deserting conscripts joined the rebellion. In the Kurdish north, peshmerga guerrillas of the KDP and PUK seized Kirkuk, Erbil, and Sulaymaniyah by mid-March. But the coalition stood aside: the ceasefire terms left Iraq with operational helicopter gunships, which Saddam's elite Republican Guard used to strafe rebel cities. Chemical Ali, Ali Hassan al-Majid, directed the reconquest of the south with characteristic brutality, leveling parts of Najaf and Karbala and executing tens of thousands. Over 1.5 million Kurds fled into the mountains of Turkey and Iran in freezing conditions, provoking a humanitarian catastrophe broadcast on global television. On 5 April the UN passed Resolution 688; two days later Operation Provide Comfort established a coalition safe haven in northern Iraq, and no-fly zones were declared above the 36th parallel and, in August 1992, below the 32nd. For the next 12 years, US, British, and French aircraft patrolled Iraqi skies almost daily, enforcing effective autonomy for Iraqi Kurds and constant low-level war against Iraqi air defenses.",
+      "storyTr": "Körfez Savaşı'nın son günlerinde Başkan Bush 'Irak halkını işleri kendi eline almaya' çağırdı. Bir hafta içinde Irak'ın 18 vilayetinden 14'ünde isyanlar patlak verdi. 1 Mart 1991'de Basra'da başlayan Şii güneyde kalabalıklar Saddam posterlerini yırtıp Baas Partisi karargâhlarına saldırdı; firar eden askerler de isyana katıldı. Kürt kuzeyde, KDP ve YNK peşmergeleri mart ortasında Kerkük, Erbil ve Süleymaniye'yi aldı. Ancak koalisyon geri durdu: ateşkes koşulları Irak'a helikopter kullanma hakkı bırakmıştı ve Saddam'ın Cumhuriyet Muhafızları isyancı şehirleri bunlarla vurdu. Kimyasal Ali lakaplı Ali Hassan el-Mecid, güneyi hain bir zulümle yeniden fethetti; Necef ve Kerbela'nın bazı bölümlerini yerle bir etti, on binlerce kişiyi idam ettirdi. 1,5 milyondan fazla Kürt dondurucu soğukta Türkiye ve İran dağlarına kaçtı; küresel televizyonda insani bir felaket sergilendi. 5 Nisan'da BM 688 sayılı kararı aldı; iki gün sonra Rahatlık Harekâtı kuzey Irak'ta güvenli bölge kurdu; 36. paralelin üstünde ve Ağustos 1992'de 32. paralelin altında uçuşa yasak bölgeler ilan edildi. Sonraki 12 yıl boyunca ABD, İngiliz ve Fransız uçakları Irak semalarını neredeyse her gün devriye gezdi.",
+      "casualties": {
+        "sideA": 0,
+        "sideB": 80000
+      },
+      "commanders": {
+        "sideA": [
+          "George H. W. Bush",
+          "John Major"
+        ],
+        "sideB": [
+          "Saddam Hussein",
+          "Ali Hassan al-Majid"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/1991_Iraqi_uprisings",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/1991_Irak_ayaklanmalar%C4%B1"
+    },
+    {
+      "id": "operation-desert-fox",
+      "name": "Operation Desert Fox",
+      "nameTr": "Çöl Tilkisi Harekâtı",
+      "lat": 33.3152,
+      "lng": 44.3661,
+      "date": "1998-12-16",
+      "dateEnd": "1998-12-19",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 10,
+      "summary": "Four nights of US–UK airstrikes after Iraq expels UN weapons inspectors.",
+      "summaryTr": "Irak'ın BM silah müfettişlerini sınır dışı etmesinin ardından dört gecelik ABD–İngiltere hava saldırıları.",
+      "story": "Throughout the 1990s the UN Special Commission (UNSCOM), led by Rolf Ekeus and later Richard Butler, worked to verify the dismantling of Iraq's chemical, biological, and nuclear programs mandated by UN Resolution 687. Baghdad obstructed inspectors repeatedly, triggering crises in 1996, 1997, and 1998. In November 1998 Iraq suspended cooperation entirely, and on 15 December Butler's report declared inspections unworkable. On the evening of 16 December 1998, US and British forces launched Operation Desert Fox. Over four nights, the USS Enterprise carrier group, Royal Navy Tomahawk-equipped submarines, and B-1B bombers flying from Oman and Diego Garcia struck 97 targets: suspected WMD facilities, Republican Guard barracks, command bunkers, and intelligence headquarters. The campaign fired over 400 cruise missiles and dropped 600 laser-guided bombs. Notable strikes destroyed the Special Republican Guard headquarters in Baghdad's Radwaniyah complex and the Abu Ghraib presidential palace. President Clinton, then in the middle of House impeachment proceedings, faced accusations of 'wag-the-dog' timing. Militarily, Desert Fox degraded Iraqi missile and WMD-related programs but also ended the inspection regime: UNSCOM was replaced in 1999 with UNMOVIC, which Iraq refused to admit for years. By removing Western eyes inside Iraq, the operation arguably made the 2003 WMD intelligence failure possible, as analysts thereafter relied on defectors and inference rather than site inspections.",
+      "storyTr": "1990'lar boyunca Rolf Ekeus ve ardından Richard Butler öncülüğündeki BM Özel Komisyonu (UNSCOM), BM 687 sayılı kararı gereği Irak'ın kimyasal, biyolojik ve nükleer programlarının söküldüğünü doğrulamaya çalıştı. Bağdat müfettişleri defalarca engelledi; 1996, 1997 ve 1998'de krizler çıktı. Kasım 1998'de Irak iş birliğini tamamen askıya aldı; 15 Aralık'ta Butler'ın raporu denetimleri 'uygulanamaz' ilan etti. 16 Aralık 1998 akşamı ABD ve İngiliz kuvvetleri Çöl Tilkisi Harekâtı'nı başlattı. Dört gecede USS Enterprise uçak gemisi, Kraliyet Donanması'nın Tomahawk'lı denizaltıları ve Umman ile Diego Garcia'dan uçan B-1B bombardıman uçakları 97 hedefi vurdu: kitle imha silahı tesisleri, Cumhuriyet Muhafızları kışlaları, komuta sığınakları ve istihbarat karargâhı. Harekâtta 400'den fazla seyir füzesi atıldı, 600 lazer güdümlü bomba bırakıldı. Bağdat Radvaniye kompleksindeki Özel Cumhuriyet Muhafızları karargâhı ve Ebu Garib Cumhurbaşkanlığı Sarayı özellikle hedeflendi. Harekât, Irak füze ve KİS programlarını yıpratsa da denetim rejimini bitirdi: UNSCOM 1999'da UNMOVIC ile değiştirildi, ancak Irak yıllarca onu kabul etmedi. Harekât, Batı gözlerini Irak'tan çekerek 2003 KİS istihbarat çöküşünün zeminini hazırladı.",
+      "forces": {
+        "sideA": 25000,
+        "sideB": 375000
+      },
+      "casualties": {
+        "sideA": 0,
+        "sideB": 1400
+      },
+      "commanders": {
+        "sideA": [
+          "Bill Clinton",
+          "Tony Blair",
+          "Anthony Zinni"
+        ],
+        "sideB": [
+          "Saddam Hussein"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Desert_Fox",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/%C3%87%C3%B6l_Tilkisi_Harek%C3%A2t%C4%B1"
+    },
+    {
+      "id": "september-11",
+      "name": "September 11 Attacks and the 'Axis of Evil'",
+      "nameTr": "11 Eylül Saldırıları ve 'Şer Ekseni'",
+      "lat": 40.7115,
+      "lng": -74.0134,
+      "date": "2001-09-11",
+      "dateEnd": "2002-01-29",
+      "kind": "event",
+      "side": "political",
+      "order": 11,
+      "summary": "Al-Qaeda's attacks on the US redirect Washington toward a doctrine of pre-emptive war.",
+      "summaryTr": "El-Kaide'nin ABD'ye saldırıları Washington'u önleyici savaş doktrinine yönlendirir.",
+      "story": "On 11 September 2001, nineteen al-Qaeda hijackers commandeered four airliners and crashed them into the World Trade Center, the Pentagon, and a Pennsylvania field, killing 2,977 people. The attacks, planned by Khalid Sheikh Mohammed and approved by Osama bin Laden from his Afghan sanctuary, transformed American strategic thinking overnight. Within weeks Operation Enduring Freedom toppled the Taliban in Afghanistan, but senior Bush administration officials, notably Vice President Dick Cheney, Defense Secretary Donald Rumsfeld, and Deputy Secretary Paul Wolfowitz, had already begun pressing for a broader campaign against state sponsors of terrorism. Saddam Hussein, though not involved in 9/11, topped their list because of his WMD history, hostility to the US, and long-standing oppression of his own people. On 29 January 2002, in his State of the Union address, President Bush labeled Iraq, Iran, and North Korea an 'axis of evil,' declaring that 'I will not wait on events while dangers gather.' The September 2002 National Security Strategy formalized the 'Bush Doctrine' of pre-emptive military action. Neoconservative intellectuals at the Project for a New American Century had long advocated regime change in Iraq, and 9/11 lowered the political threshold dramatically. Polling showed Americans willing to believe Saddam had links to al-Qaeda even when no credible evidence emerged. The moral shock of 9/11 thus became the indispensable political fuel for the march toward Baghdad over the following 18 months.",
+      "storyTr": "11 Eylül 2001'de 19 el-Kaide korsanı dört yolcu uçağını kaçırıp Dünya Ticaret Merkezi'ne, Pentagon'a ve bir Pennsylvania tarlasına çarptı; 2.977 kişi öldü. Usame bin Ladin'in Afganistan'daki sığınağından onayladığı, Halid Şeyh Muhammed'in planladığı saldırılar, Amerikan stratejik düşüncesini bir gecede dönüştürdü. Haftalar içinde Ebedi Özgürlük Harekâtı Afganistan'daki Taliban'ı devirdi, ancak Bush yönetiminin üst düzey isimleri, özellikle Başkan Yardımcısı Dick Cheney, Savunma Bakanı Donald Rumsfeld ve yardımcısı Paul Wolfowitz, terör destekçisi devletlere karşı daha geniş bir sefer için baskı yapmaya başlamıştı. Saddam Hüseyin, 11 Eylül'le ilgili olmasa da KİS geçmişi, ABD karşıtlığı ve halkına yönelik baskıları nedeniyle listelerinin başındaydı. 29 Ocak 2002'deki Birliğin Durumu konuşmasında Başkan Bush Irak, İran ve Kuzey Kore'yi 'şer ekseni' ilan etti ve 'tehlikeler birikirken beklemeyeceğim' dedi. Eylül 2002 Ulusal Güvenlik Stratejisi önleyici askeri eylem doktrinini resmileştirdi. Yeni Amerikan Yüzyılı Projesi'ndeki neocon düşünürler uzun süredir Irak'ta rejim değişikliğini savunuyorlardı; 11 Eylül siyasi eşiği dramatik biçimde düşürdü.",
+      "commanders": {
+        "sideA": [
+          "George W. Bush",
+          "Dick Cheney",
+          "Donald Rumsfeld"
+        ],
+        "sideB": [
+          "Saddam Hussein"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/September_11_attacks",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/11_Eyl%C3%BCl_sald%C4%B1r%C4%B1lar%C4%B1"
+    },
+    {
+      "id": "un-resolution-1441",
+      "name": "UN Security Council Resolution 1441",
+      "nameTr": "BM Güvenlik Konseyi 1441 Sayılı Kararı",
+      "lat": 40.7499,
+      "lng": -73.968,
+      "date": "2002-11-08",
+      "kind": "treaty",
+      "side": "political",
+      "order": 12,
+      "summary": "The UN gives Iraq a 'final opportunity' on WMD compliance; diplomacy splinters over whether it authorized force.",
+      "summaryTr": "BM, Irak'a KİS konusunda 'son fırsat' tanır; kararın güç kullanımına yetki verip vermediği konusunda diplomasi çatlar.",
+      "story": "Through the summer of 2002, the Bush administration debated whether to pursue a UN mandate or invade Iraq unilaterally. Secretary of State Colin Powell convinced Bush to give diplomacy a chance, and on 12 September Bush addressed the UN General Assembly, challenging the body to prove its relevance. Eight weeks of intense negotiation, led by Powell, French Foreign Minister Dominique de Villepin, Russian Foreign Minister Igor Ivanov, and British Ambassador Jeremy Greenstock, produced Resolution 1441, passed unanimously on 8 November 2002. The text declared Iraq in 'material breach' of its disarmament obligations, afforded Baghdad a 'final opportunity' to comply, and established a reinforced inspection regime under UNMOVIC, led by Hans Blix, and the IAEA under Mohamed ElBaradei. Crucially, the resolution warned of 'serious consequences' for further non-compliance but did not specifically authorize the use of force. This ambiguity reflected a compromise: Washington and London read it as triggering their right to act if Iraq failed to disarm; Paris, Moscow, and Beijing insisted a second resolution would be required. Iraq admitted inspectors on 18 November, filing a 12,000-page declaration. Inspections resumed but produced neither clear proof of WMD nor clear proof of disarmament. The diplomatic fracture over whether 1441 sufficed for war dominated the winter of 2002–2003 and ultimately led the United States, Britain, Australia, and Poland to invade without a second resolution in March 2003.",
+      "storyTr": "2002 yazında Bush yönetimi BM yetkisi mi alacağını yoksa Irak'a tek taraflı mı saldıracağını tartıştı. Dışişleri Bakanı Colin Powell, Bush'u diplomasiye şans vermeye ikna etti; 12 Eylül'de Bush BM Genel Kurulu'na seslenerek örgütü uygunluğunu kanıtlamaya çağırdı. Powell, Fransa Dışişleri Bakanı Dominique de Villepin, Rusya Dışişleri Bakanı Igor İvanov ve İngiliz Büyükelçisi Jeremy Greenstock tarafından yürütülen sekiz haftalık yoğun görüşmelerin ardından 8 Kasım 2002'de 1441 sayılı karar oybirliğiyle kabul edildi. Metin Irak'ı silahsızlanma yükümlülüklerinde 'esaslı ihlal' ilan etti, Bağdat'a uyum için 'son fırsat' tanıdı ve Hans Blix yönetimindeki UNMOVIC ile Muhammed ElBaradey başkanlığındaki UAEA altında güçlendirilmiş bir denetim rejimi kurdu. Daha da önemlisi karar, ihlal sürerse 'ciddi sonuçlar' uyarısı yaptı ancak güç kullanımına açıkça yetki vermedi. Bu muğlaklık bir uzlaşmaydı: Washington ve Londra bunu hareket hakkı olarak okudu; Paris, Moskova ve Pekin ikinci bir karar gerekeceğini savundu. Irak 18 Kasım'da müfettişleri kabul etti, 12.000 sayfalık bir beyan sundu. Denetimler yeniden başladı ama ne KİS'in varlığını ne de silahsızlanmayı net kanıtladı. 1441'in savaşa yeterli olup olmadığı üzerindeki diplomatik çatlak, 2002–2003 kışına hâkim oldu.",
+      "commanders": {
+        "sideA": [
+          "Colin Powell",
+          "Jack Straw",
+          "Dominique de Villepin"
+        ],
+        "sideB": [
+          "Saddam Hussein",
+          "Tariq Aziz"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_1441",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Birle%C5%9Fmi%C5%9F_Milletler_G%C3%BCvenlik_Konseyi_1441_No%27lu_Karar%C4%B1"
+    },
+    {
+      "id": "iraqi-freedom-invasion",
+      "name": "Operation Iraqi Freedom – Invasion",
+      "nameTr": "Irak Özgürlük Harekâtı – İşgal",
+      "lat": 30.5085,
+      "lng": 47.7804,
+      "date": "2003-03-20",
+      "dateEnd": "2003-04-09",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 13,
+      "summary": "A 150,000-strong US-led force invades Iraq from Kuwait and races 500 kilometers to Baghdad in 21 days.",
+      "summaryTr": "150.000 kişilik ABD önderliğindeki güç Kuveyt'ten Irak'a girer ve 21 günde 500 kilometre ilerleyerek Bağdat'a ulaşır.",
+      "story": "On 19 March 2003, President Bush's 48-hour ultimatum to Saddam Hussein and his sons to leave Iraq expired. At 05:34 local time on 20 March, F-117 stealth fighters dropped 2,000-pound bombs on the Dora Farms compound south of Baghdad, in an unsuccessful 'decapitation' strike aimed at Saddam. Ground operations began the same day: Lieutenant General David McKiernan's Coalition Forces Land Component Command sent the US 3rd Infantry Division west around Nasiriyah while Lieutenant General James Conway's 1st Marine Expeditionary Force pushed up Highway 1, and the British 1st Armoured Division wheeled east toward Basra. The initial invasion force numbered roughly 148,000 American, 45,000 British, 2,000 Australian, and 194 Polish special forces. Iraqi resistance from Fedayeen Saddam irregulars in southern towns proved unexpectedly fierce, ambushing convoys at Nasiriyah and inflicting US losses including the captured 507th Maintenance Company, among them Private Jessica Lynch. A three-day sandstorm on 25–28 March slowed but did not stop the advance, during which precision airstrikes destroyed Republican Guard divisions south of Baghdad. On 3 April the 3rd Infantry Division seized Saddam International Airport; a 'thunder run' of M1A1 Abrams tanks through downtown Baghdad on 5 April stunned the Iraqi leadership, and a second thunder run on 7 April seized the presidential palaces. Major combat ended on 9 April with the fall of Baghdad. The coalition had marched 500 kilometers in 21 days with 172 dead, an operational triumph that masked the absence of any post-war plan.",
+      "storyTr": "19 Mart 2003'te Başkan Bush'un Saddam Hüseyin ve oğullarına Irak'ı terk etmeleri için verdiği 48 saatlik ültimatom doldu. 20 Mart'ta yerel saatle 05:34'te F-117 hayalet avcıları, Saddam'ı hedef alan başarısız bir 'kafa kesme' saldırısında Bağdat güneyindeki Dora Çiftliği'ne 2.000 librelik bombalar attı. Kara harekâtı aynı gün başladı: Korgeneral David McKiernan'ın Koalisyon Kara Bileşen Komutanlığı, ABD 3. Piyade Tümeni'ni Nasıriye'nin batısından, Korgeneral James Conway'in 1. Deniz Piyadeleri Seferi Kuvveti'ni 1 numaralı karayolundan kuzeye ve İngiliz 1. Zırhlı Tümeni'ni doğuya, Basra'ya sevk etti. Başlangıçtaki işgal gücü yaklaşık 148.000 Amerikan, 45.000 İngiliz, 2.000 Avustralyalı ve 194 Polonyalı özel kuvvetten oluşuyordu. Fedailer Saddam adlı düzensiz birliklerin güney kasabalarındaki direnişi beklenenden sert çıktı; Nasıriye'de konvoylar pusuya düştü; ABD kayıpları arasında er Jessica Lynch'in de bulunduğu 507. Bakım Bölüğü esir alındı. 25–28 Mart'taki üç günlük kum fırtınası ilerlemeyi yavaşlattı ama durdurmadı; bu süreçte hassas hava saldırıları Bağdat güneyindeki Cumhuriyet Muhafızları tümenlerini imha etti. 3 Nisan'da 3. Piyade Tümeni Saddam Uluslararası Havaalanı'nı aldı; 5 Nisan'daki M1A1 'gök gürültüsü akını' Bağdat merkezini salladı; 7 Nisan'daki ikinci akın Cumhurbaşkanlığı saraylarını ele geçirdi. Büyük çatışmalar 9 Nisan'da Bağdat'ın düşüşüyle bitti.",
+      "forces": {
+        "sideA": 200000,
+        "sideB": 375000
+      },
+      "casualties": {
+        "sideA": 172,
+        "sideB": 9200
+      },
+      "commanders": {
+        "sideA": [
+          "Tommy Franks",
+          "David McKiernan",
+          "James Conway"
+        ],
+        "sideB": [
+          "Saddam Hussein",
+          "Qusay Hussein"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/2003_invasion_of_Iraq",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Irak_Sava%C5%9F%C4%B1"
+    },
+    {
+      "id": "fall-of-baghdad",
+      "name": "Fall of Baghdad",
+      "nameTr": "Bağdat'ın Düşüşü",
+      "lat": 33.3128,
+      "lng": 44.3615,
+      "date": "2003-04-09",
+      "kind": "occupation",
+      "side": "victory-a",
+      "order": 14,
+      "summary": "US Marines topple the Firdos Square Saddam statue as Baghdad falls without a fight.",
+      "summaryTr": "Bağdat savaşmadan düşerken ABD Deniz Piyadeleri Firdevs Meydanı'ndaki Saddam heykelini devirir.",
+      "story": "By the morning of 9 April 2003, three days after the second thunder run, Saddam Hussein's government had dissolved. Regime ministers disappeared, television broadcasts went dark, and Republican Guard divisions melted away rather than fight within the city. Marines of the 3rd Battalion, 4th Regiment reached Firdos Square in central Baghdad around midday and were greeted by a small crowd of Iraqis who began attacking a 12-meter statue of Saddam erected for his 65th birthday. When a sledgehammer proved inadequate, a Marine M88 recovery vehicle looped a chain around the statue's neck. A Corporal briefly draped a US flag over the bronze head, then hastily replaced it with a pre-1991 Iraqi flag after realizing the image would read as conquest, not liberation. At 18:50 local time the statue fell. Live broadcasts on CNN, BBC, and Al Jazeera framed the moment as the defining image of the war, analogous to the Berlin Wall. Within 48 hours, however, Baghdad descended into mass looting: the National Museum was stripped of thousands of artifacts, hospitals stripped of equipment, ministries stripped of files. American commanders, under orders to focus on combat rather than law and order, watched. Rumsfeld's now-infamous line, 'stuff happens,' encapsulated the administration's insouciance. Firdos Square, filmed by only a few dozen Iraqis and packed into a camera frame by journalists, became both icon and myth: the moment of liberation, and simultaneously the prologue to an occupation already losing the peace.",
+      "storyTr": "9 Nisan 2003 sabahı, ikinci gök gürültüsü akınından üç gün sonra, Saddam Hüseyin'in hükümeti dağılmıştı. Rejim bakanları ortadan kayboldu, televizyon yayınları kesildi, Cumhuriyet Muhafızları tümenleri şehirde savaşmak yerine eriyip gitti. 4. Alay 3. Taburu Deniz Piyadeleri öğle saatlerinde Bağdat merkezindeki Firdevs Meydanı'na ulaştı; Saddam'ın 65. doğum günü için dikilmiş 12 metrelik heykelini yıkmaya çalışan küçük bir Iraklı topluluğuyla karşılaştı. Balyoz yetersiz kalınca bir M88 kurtarıcı zinciri heykelin boynuna doladı. Bir onbaşı önce bronz başa bir ABD bayrağı attı, ardından fotoğrafın fetih olarak okunacağını fark edince 1991 öncesi Irak bayrağıyla değiştirdi. Yerel saat 18:50'de heykel devrildi. CNN, BBC ve El Cezire'nin canlı yayınları bu anı Berlin Duvarı'na benzer savaşın simge sahnesi olarak çerçeveledi. Ancak 48 saat içinde Bağdat kitlesel yağmaya sürüklendi: Ulusal Müze binlerce eserden, hastaneler ekipmandan, bakanlıklar evraktan arındırıldı. Amerikan komutanlar yalnızca muharebeye odaklanma emri aldıkları için olayları izlediler. Rumsfeld'in kötü bir şöhret kazanan 'böyle şeyler olur' sözü yönetimin kayıtsızlığını özetledi. Firdevs Meydanı, kurtuluş anı olduğu kadar barışı kaybeden bir işgalin de önsözü oldu.",
+      "forces": {
+        "sideA": 20000,
+        "sideB": 15000
+      },
+      "casualties": {
+        "sideA": 34,
+        "sideB": 2000
+      },
+      "commanders": {
+        "sideA": [
+          "David Perkins",
+          "James Mattis"
+        ],
+        "sideB": [
+          "Saddam Hussein"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Baghdad_(2003)",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Ba%C4%9Fdat_Muharebesi_(2003)"
+    },
+    {
+      "id": "mission-accomplished",
+      "name": "'Mission Accomplished' Speech",
+      "nameTr": "'Görev Başarıldı' Konuşması",
+      "lat": 32.6747,
+      "lng": -117.2495,
+      "date": "2003-05-01",
+      "kind": "event",
+      "side": "political",
+      "order": 15,
+      "summary": "Bush declares end of major combat operations on the USS Abraham Lincoln.",
+      "summaryTr": "Bush, USS Abraham Lincoln üzerinde büyük çatışma operasyonlarının sona erdiğini ilan eder.",
+      "story": "On 1 May 2003, President George W. Bush co-piloted an S-3B Viking aircraft, call sign 'Navy One,' onto the flight deck of the aircraft carrier USS Abraham Lincoln, returning from a ten-month deployment in the Persian Gulf. He emerged in a flight suit, helmet in hand, for a walk across the deck that was choreographed for maximum visual effect. That evening, before a crowd of sailors and beneath a large banner reading 'Mission Accomplished,' Bush declared: 'Major combat operations in Iraq have ended. In the battle of Iraq, the United States and our allies have prevailed.' The banner had been produced at the White House's suggestion for the ship's return home but was positioned directly behind the president during the televised speech, with the enduring implication that the Iraq War itself had been won. Bush's approval rating rose to 71 percent in the days following. Yet the insurgency had already begun: on 28 April in Fallujah, US paratroopers had fired on a protest, killing 17 Iraqis, and guerrilla attacks on convoys were multiplying weekly. Within a year more American soldiers would die than during the initial invasion, and within five years the phrase 'Mission Accomplished' would become the most common shorthand for hubris in American political vocabulary. Bush later expressed regret about the banner, which he said had been meant to refer specifically to the ship's deployment, though it would forever be associated with his misreading of the war.",
+      "storyTr": "1 Mayıs 2003'te Başkan George W. Bush, Basra Körfezi'nden on aylık göreviyle dönen USS Abraham Lincoln uçak gemisinin uçuş güvertesine 'Navy One' çağrı işaretli bir S-3B Viking uçağıyla inen ekibin yardımcı pilotu olarak indi. Uçuş takımıyla çıktı, kaskı elindeydi; güvertede maksimum görsel etki için koreografisi yapılmış bir yürüyüş yaptı. Akşam denizcilerin önünde ve 'Görev Başarıldı' yazılı büyük bir pankartın altında 'Irak'taki büyük muharebe operasyonları sona erdi. Irak savaşında ABD ve müttefikleri galip geldi' dedi. Pankart Beyaz Saray'ın önerisiyle geminin eve dönüşü için hazırlanmıştı ancak konuşma sırasında doğrudan başkanın arkasına yerleştirildi; bu, Irak Savaşı'nın kazanıldığı izlenimini verdi. Bush'un onayı sonraki günlerde yüzde 71'e çıktı. Ancak isyan çoktan başlamıştı: 28 Nisan'da Felluce'de ABD paraşütçüleri bir protestoya ateş açmış, 17 Iraklıyı öldürmüştü; konvoylara yapılan gerilla saldırıları her hafta artıyordu. Bir yıl içinde işgalin ilk evresinden daha fazla Amerikan askeri ölecekti; beş yıl içinde 'Görev Başarıldı' ifadesi Amerikan siyasi sözlüğünde kibrin en yaygın kısaltmasına dönüşecekti.",
+      "commanders": {
+        "sideA": [
+          "George W. Bush",
+          "Donald Rumsfeld"
+        ],
+        "sideB": []
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Mission_Accomplished_speech",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Irak_Sava%C5%9F%C4%B1"
+    },
+    {
+      "id": "capture-of-saddam",
+      "name": "Capture of Saddam Hussein",
+      "nameTr": "Saddam Hüseyin'in Yakalanışı",
+      "lat": 34.4314,
+      "lng": 43.6793,
+      "date": "2003-12-13",
+      "kind": "event",
+      "side": "victory-a",
+      "order": 16,
+      "summary": "US troops pull Saddam from a spider hole near Tikrit.",
+      "summaryTr": "ABD askerleri Saddam'ı Tikrit yakınındaki bir toprak deliğinden çıkarır.",
+      "story": "Saddam Hussein had vanished on 9 April 2003 and remained the most wanted man in the world for eight months. The CIA's Iraq Survey Group and the US Army's Task Force 121 pieced together networks of Tikriti relatives and former bodyguards on whom the deposed leader depended. On 13 December 2003 a source under interrogation identified a farmhouse near the village of ad-Dawr, 15 kilometers south of Tikrit. At 20:00 local time, roughly 600 soldiers of the 4th Infantry Division, led by Colonel James Hickey and supported by Task Force 121 special operators, launched Operation Red Dawn. Inside a two-room mud hut they found Saddam's cook but no Saddam; outside, near a concrete pigsty, a soldier noticed a polystyrene square concealing a 2-meter-deep 'spider hole.' Saddam emerged bearded, disoriented, and armed with a pistol he did not use, muttering in English, 'I am Saddam Hussein, the President of Iraq, and I am willing to negotiate.' A US soldier replied, 'President Bush sends his regards.' Coalition commander Lieutenant General Ricardo Sanchez and Ambassador Paul Bremer announced the capture the next day with the line 'Ladies and gentlemen, we got him.' DNA tests confirmed identity within hours. Saddam was held at Camp Cropper at Baghdad International Airport. His capture briefly raised coalition hopes of defusing the insurgency, but attacks continued to escalate. Saddam would eventually stand trial before the Iraqi Special Tribunal for crimes against humanity, most notably the 1982 Dujail massacre.",
+      "storyTr": "Saddam Hüseyin 9 Nisan 2003'te ortadan kaybolmuş, sekiz ay boyunca dünyanın en çok aranan adamı olmuştu. CIA'nın Irak Araştırma Grubu ve ABD Ordusu'nun 121 Görev Kuvveti, devrik liderin güvendiği Tikritli akrabalar ve eski korumalar ağını çözdü. 13 Aralık 2003'te sorguda bir kaynak, Tikrit'in 15 kilometre güneyindeki Ed-Dur köyü yakınlarındaki bir çiftlik evini işaret etti. Yerel saat 20:00'de Albay James Hickey komutasındaki yaklaşık 600 kişilik 4. Piyade Tümeni askeri ve Görev Kuvveti 121 özel birimleri Kızıl Şafak Harekâtı'nı başlattı. İki odalı kerpiç bir kulübede Saddam'ın aşçısını buldular ama Saddam yoktu; dışarıda bir beton domuz ahırı yakınında bir asker, iki metre derinliğindeki bir 'örümcek deliğini' gizleyen polistiren bir kare fark etti. Saddam sakallı, şaşkın ve ateş etmediği bir tabancayla çıktı; İngilizce mırıldandı: 'Saddam Hüseyin, Irak Cumhurbaşkanıyım ve müzakereye hazırım.' Bir ABD askeri 'Başkan Bush selam söylüyor' diye yanıtladı. Koalisyon komutanı Korgeneral Ricardo Sanchez ve Büyükelçi Paul Bremer yakalanmayı ertesi gün 'Hanımefendiler ve beyefendiler, onu yakaladık' diye duyurdu. DNA testi saatler içinde kimliği doğruladı. Saddam, Bağdat Uluslararası Havaalanı'ndaki Cropper Kampı'nda tutuldu. Sonunda 1982 Dücayl katliamı başta olmak üzere insanlığa karşı suçlardan Irak Özel Mahkemesi önünde yargılanacaktı.",
+      "forces": {
+        "sideA": 600,
+        "sideB": 1
+      },
+      "casualties": {
+        "sideA": 0,
+        "sideB": 0
+      },
+      "commanders": {
+        "sideA": [
+          "Raymond Odierno",
+          "James Hickey"
+        ],
+        "sideB": [
+          "Saddam Hussein"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Operation_Red_Dawn",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Saddam_H%C3%BCseyin%27in_yakalanmas%C4%B1"
+    },
+    {
+      "id": "first-fallujah",
+      "name": "First Battle of Fallujah",
+      "nameTr": "Birinci Felluce Muharebesi",
+      "lat": 33.3477,
+      "lng": 43.7773,
+      "date": "2004-04-04",
+      "dateEnd": "2004-05-01",
+      "kind": "siege",
+      "side": "victory-b",
+      "order": 17,
+      "summary": "US Marines lay siege to Fallujah after four contractors are killed and hanged from a bridge.",
+      "summaryTr": "Dört Amerikan yüklenicinin öldürülüp köprüye asılmasının ardından ABD Deniz Piyadeleri Felluce'yi kuşatır.",
+      "story": "On 31 March 2004, four American contractors from Blackwater USA, escorting food trucks, were ambushed on Fallujah's main road, killed, burned, and hung from a girder bridge over the Euphrates. Images broadcast worldwide prompted outraged calls from Washington to 'pacify' the Sunni city, a pre-war Ba'athist stronghold that had largely escaped US presence during the invasion. On 4 April Marine Expeditionary Force I, led by Lieutenant General James Conway and Major General James Mattis, launched Operation Vigilant Resolve, sealing the city of 300,000 and attacking with four infantry battalions. Urban combat against insurgents of Tawhid wal-Jihad (the predecessor of al-Qaeda in Iraq), Jaysh al-Mahdi cells, and former regime fighters proved savage. AC-130 gunships pounded neighborhoods at night; Marine snipers stalked rooftops. By 9 April the Marines controlled a third of the city, but Arab satellite channels broadcast civilian casualties in grinding detail, and Iraq's interim Governing Council, including Sunni members, threatened mass resignation. Under political pressure, the White House ordered a ceasefire on 9 April. After weeks of standoff, US commanders agreed to withdraw in exchange for the stand-up of a 'Fallujah Brigade' of former Iraqi soldiers to secure the city, a force that promptly defected en masse to the insurgents. By early May, Fallujah was an insurgent-run sanctuary and jihadi recruiting magnet. The first battle became a textbook case of political interference in military operations and a prelude to the far larger November assault.",
+      "storyTr": "31 Mart 2004'te Blackwater USA'nın dört Amerikan yüklenicisi, yiyecek kamyonlarına eşlik ederken Felluce'nin ana caddesinde pusuya düşürüldü, öldürüldü, yakıldı ve Fırat üzerindeki bir kiriş köprüye asıldı. Dünyaya yayılan görüntüler Washington'da öfkeli çağrılar yarattı; işgalde büyük ölçüde Amerikan varlığından uzak kalmış bu savaş öncesi Baasçı Sünni kenti 'pasifize' edilmeliydi. 4 Nisan'da Korgeneral James Conway ve Tümgeneral James Mattis komutasındaki I. Deniz Piyadeleri Seferi Kuvveti, Uyanık Kararlılık Harekâtı'nı başlattı; 300.000 nüfuslu kenti kuşatarak dört piyade taburuyla saldırdı. Tevhid vel-Cihad (Irak El-Kaidesi'nin öncüsü), Mehdi Ordusu hücreleri ve eski rejim savaşçılarıyla süren şehir muharebesi şiddetli geçti. AC-130'lar geceleri mahalleleri dövdü; Deniz Piyadesi nişancılar çatılarda avlandı. 9 Nisan'da Deniz Piyadeleri kentin üçte birini kontrol ediyordu; ancak Arap uyduları sivil kayıpları ayrıntılı biçimde yayınladı, Irak Geçici Hükümet Konseyi'nin Sünni üyeleri toplu istifayla tehdit etti. Beyaz Saray siyasi baskı altında 9 Nisan'da ateşkes emretti. ABD komutanları, kenti korumak için eski Irak askerlerinden oluşan bir 'Felluce Tugayı'nın kurulması karşılığında çekilmeyi kabul etti; bu tugay hemen topluca isyancılara katıldı. Mayıs başında Felluce isyancıların yönettiği bir sığınaktı.",
+      "forces": {
+        "sideA": 4000,
+        "sideB": 2000
+      },
+      "casualties": {
+        "sideA": 40,
+        "sideB": 220
+      },
+      "commanders": {
+        "sideA": [
+          "James Conway",
+          "James Mattis"
+        ],
+        "sideB": [
+          "Abu Musab al-Zarqawi",
+          "Omar Hadid"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/First_Battle_of_Fallujah",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Birinci_Felluce_Muharebesi"
+    },
+    {
+      "id": "second-fallujah",
+      "name": "Second Battle of Fallujah",
+      "nameTr": "İkinci Felluce Muharebesi",
+      "lat": 33.3477,
+      "lng": 43.7773,
+      "date": "2004-11-07",
+      "dateEnd": "2004-12-23",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 18,
+      "summary": "US Marines and soldiers storm Fallujah in the bloodiest urban combat since Hue.",
+      "summaryTr": "ABD Deniz Piyadeleri ve askerleri, Hue'den bu yana en kanlı şehir muharebesinde Felluce'yi basar.",
+      "story": "With Fallujah serving as Abu Musab al-Zarqawi's headquarters, beheading videos emerging from its streets, and a US election behind them, the Bush administration authorized a second assault. Operation Phantom Fury began at 19:00 local time on 7 November 2004 with six American battalions, two Iraqi battalions, and a British Black Watch cordon to the south, supported by F/A-18s, AC-130s, and M1A1 tanks. By dawn on 8 November, two Marine regimental combat teams had breached the northern Jolan and Askari districts; the Army's 2-7 Cavalry and 2-2 Infantry raced south along the main streets, splitting the city. Insurgents had prepared booby-trapped houses, sniper nests, tunnel networks, and car bombs in anticipation. Fighting was house-by-house, room-by-room: Marines of 1st Battalion 8th Marines cleared 300 structures in three weeks. Journalists embedded with the Marines described 'hell blocks' where ten men died clearing a single building. Kevin Sites filmed a Marine shooting a wounded insurgent in a mosque, briefly igniting international controversy. By mid-December, organized resistance had collapsed; Fallujah, a city of 300,000, had been effectively emptied, two-thirds of its buildings damaged, and 1,350 insurgents reported killed. US casualties were 82 dead and 600 wounded, making Fallujah II the bloodiest US urban battle since Hue in 1968. The victory re-established coalition control and dealt al-Qaeda in Iraq a sharp blow, yet the insurgent ideology and network simply dispersed into Ramadi, Baqubah, and Mosul, metastasizing for years to come.",
+      "storyTr": "Felluce Ebu Musab ez-Zerkavi'nin karargâhı haline gelmiş, kafa kesme videoları sokaklarından yayılmış ve ABD seçimleri geride kalmışken Bush yönetimi ikinci saldırıyı onayladı. Hayalet Öfke Harekâtı 7 Kasım 2004'te yerel saatle 19:00'da altı ABD taburu, iki Irak taburu ve güneyde İngiliz Black Watch kordonuyla, F/A-18, AC-130 ve M1A1 desteğinde başladı. 8 Kasım şafağında iki Deniz Piyadesi alay muharebe timi, kuzeydeki Colan ve Askeri mahallelerine girdi; Ordu'nun 2-7 Süvari ve 2-2 Piyade birlikleri ana caddelerden güneye doğru ilerleyerek şehri ikiye böldü. İsyancılar tuzaklı evler, keskin nişancı yuvaları, tünel ağları ve bomba yüklü araçlar hazırlamıştı. Çatışma ev ev, oda oda sürdü: 8. Alay 1. Taburu üç haftada 300 yapı temizledi. Gazeteciler, 'cehennem blokları' diye tanımladıkları yerlerde tek bir binayı temizlerken on adamın öldüğünü yazdı. Kevin Sites, bir caminin içinde yaralı bir isyancıyı vuran bir Deniz Piyadesi'nin görüntülerini yayınladı ve uluslararası bir tartışma çıkardı. Aralık ortasında örgütlü direniş çökmüştü; 300.000 nüfuslu Felluce fiilen boşaltılmış, binaların üçte ikisi hasar görmüş, 1.350 isyancının öldürüldüğü bildirilmişti. ABD kayıpları 82 ölü, 600 yaralıydı.",
+      "forces": {
+        "sideA": 13500,
+        "sideB": 3500
+      },
+      "casualties": {
+        "sideA": 95,
+        "sideB": 1500
+      },
+      "commanders": {
+        "sideA": [
+          "Richard Natonski",
+          "John Sattler"
+        ],
+        "sideB": [
+          "Abu Musab al-Zarqawi",
+          "Omar Hadid"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Second_Battle_of_Fallujah",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/%C4%B0kinci_Felluce_Muharebesi"
+    },
+    {
+      "id": "askari-shrine-bombing",
+      "name": "Al-Askari Shrine Bombing",
+      "nameTr": "Askeriye Türbesi Bombalaması",
+      "lat": 34.1985,
+      "lng": 43.8743,
+      "date": "2006-02-22",
+      "kind": "event",
+      "side": "victory-b",
+      "order": 19,
+      "summary": "Sunni jihadists bomb the golden-domed Shia shrine at Samarra, igniting sectarian civil war.",
+      "summaryTr": "Sünni cihatçılar Samarra'daki altın kubbeli Şii türbeyi bombalar, mezhepsel iç savaşı ateşler.",
+      "story": "At 06:55 on 22 February 2006, men in Iraqi police uniforms entered the Al-Askari Shrine in Samarra, a 1,200-year-old Shia site housing the tombs of the 10th and 11th imams, handcuffed the four guards, and placed explosives under the golden dome. The blast leveled the dome, once one of the most distinctive landmarks in Iraq. Al-Qaeda in Iraq, under Abu Musab al-Zarqawi, was widely believed to be responsible, though it did not claim the attack directly. Ayatollah Ali al-Sistani, who had long counseled Shia restraint, called for peaceful protest, but rage swept the country. Within 24 hours, more than 100 Sunni mosques were attacked, some burned, some bombed. Shia militias, principally Muqtada al-Sadr's Mahdi Army and Badr Corps death squads embedded in the Interior Ministry, began systematic neighborhood cleansing in Baghdad, executing Sunni men and dumping bodies in the Tigris. Sunni insurgents retaliated with car bombs against Shia markets and pilgrims. Monthly civilian deaths, which had averaged 1,500 in 2005, climbed to over 3,000 by mid-2006 and peaked at roughly 3,800 in October 2006 per UN and Iraq Body Count estimates. Baghdad's mixed neighborhoods split into Shia-only and Sunni-only zones separated by blast walls. Many analysts identify the Samarra bombing as the precise moment the Iraq War shifted from an insurgency against the US into a full-blown civil war, a shift that eventually forced the Bush administration to replace its strategy with the Surge.",
+      "storyTr": "22 Şubat 2006'da saat 06:55'te Irak polis üniforması giymiş adamlar, Samarra'daki 1.200 yıllık Askeriye Türbesi'ne -10. ve 11. İmamların kabirlerine- girdi; dört muhafızı kelepçeleyip altın kubbenin altına patlayıcı yerleştirdi. Patlama Irak'ın en ayırt edici sembollerinden birini yerle bir etti. Saldırıyı üstlenmese de Ebu Musab ez-Zerkavi önderliğindeki Irak El-Kaidesi'nin sorumlu olduğu düşünüldü. Uzun süredir Şii itidali savunan Ayetullah Ali es-Sistani barışçıl protesto çağırdı; ama öfke ülkeyi sardı. 24 saat içinde 100'den fazla Sünni camiye saldırıldı, bazıları yakıldı, bazıları bombalandı. Şii milisler -başta Mukteda es-Sadr'ın Mehdi Ordusu ve İçişleri Bakanlığı'na sızmış Bedir Tugayı ölüm mangaları- Bağdat'ta sistematik mahalle temizliği başlattı; Sünni erkekleri idam edip cesetleri Dicle'ye attı. Sünni isyancılar Şii pazar ve hacılara bomba yüklü araçlarla karşılık verdi. 2005'te ortalama 1.500 olan aylık sivil ölüm, 2006 ortasında 3.000'i aştı, Ekim 2006'da BM ve Irak Body Count tahminlerine göre yaklaşık 3.800 ile zirve yaptı. Bağdat'ın karışık mahalleleri, bomba duvarlarıyla ayrılan yalnızca Şii ve yalnızca Sünni bölgelere bölündü.",
+      "casualties": {
+        "sideA": 0,
+        "sideB": 0
+      },
+      "commanders": {
+        "sideA": [
+          "George W. Bush",
+          "George Casey"
+        ],
+        "sideB": [
+          "Abu Musab al-Zarqawi",
+          "Muqtada al-Sadr"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/2006_al-Askari_mosque_bombing",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/El-Askeri_Camii_sald%C4%B1r%C4%B1s%C4%B1"
+    },
+    {
+      "id": "execution-of-saddam",
+      "name": "Execution of Saddam Hussein",
+      "nameTr": "Saddam Hüseyin'in İdamı",
+      "lat": 33.348,
+      "lng": 44.45,
+      "date": "2006-12-30",
+      "kind": "event",
+      "side": "political",
+      "order": 20,
+      "summary": "Saddam is hanged at dawn on the first day of Eid al-Adha.",
+      "summaryTr": "Saddam, Kurban Bayramı'nın ilk gününün şafağında idam edilir.",
+      "story": "Saddam Hussein's trial before the Iraqi Special Tribunal for the 1982 Dujail massacre, in which 148 Shia villagers were executed after a failed assassination attempt, began on 19 October 2005 and ran for 38 sessions amid security chaos; three defense lawyers were murdered during proceedings. On 5 November 2006 Saddam was convicted and sentenced to death by hanging. Appeals were dismissed on 26 December, and the sentence was scheduled with haste. At approximately 06:00 on 30 December 2006, the first day of the Sunni Eid al-Adha, Saddam was taken to a former Ba'athist military intelligence headquarters in Kadhimiya, northern Baghdad. He wore a black overcoat and carried a Quran. A noose was placed around his neck; masked witnesses, mostly Shia officials, jeered at him, chanting 'Moqtada, Moqtada.' Saddam replied calmly, 'Do you consider this bravery?' An unauthorized mobile phone video leaked within hours, transforming the execution into a sectarian spectacle for global audiences. The video enraged Sunni opinion across the region and undermined the legitimacy of the Maliki government; in Iraq's Sunni provinces, Saddam was reframed from dictator to martyr. Human rights observers criticized the trial's due process failures, and the hasty, holiday-eve timing was widely condemned. His half-brother Barzan and Revolutionary Court judge Awad al-Bandar were hanged weeks later; Chemical Ali would be executed in 2010. Saddam was buried in his birthplace of Al-Awja, near Tikrit, where his grave became a pilgrimage site until destroyed in later fighting.",
+      "storyTr": "Saddam Hüseyin'in, 1982 Dücayl katliamında 148 Şii köylünün başarısız bir suikast girişimi sonrası idam edilmesi nedeniyle Irak Özel Mahkemesi'ndeki yargılaması 19 Ekim 2005'te başladı ve güvenlik kaosu içinde 38 oturum sürdü; üç savunma avukatı yargılama süresince öldürüldü. 5 Kasım 2006'da Saddam mahkûm edildi ve asılarak idama çarptırıldı. Temyiz 26 Aralık'ta reddedildi ve karar aceleyle infaz programına alındı. 30 Aralık 2006'da, Sünni Kurban Bayramı'nın ilk günü, saat 06:00 civarında Saddam, kuzey Bağdat'ın Kazımiye semtindeki eski bir Baas askeri istihbarat karargâhına götürüldü. Siyah bir palto giymişti ve elinde bir Kuran taşıyordu. Boynuna ilmik geçirildi; çoğu Şii yetkililerden oluşan maskeli tanıklar 'Mukteda, Mukteda' diye bağırarak onunla alay etti. Saddam sakin bir sesle 'Bunu yiğitlik mi sayıyorsunuz?' dedi. Saatler içinde sızan izinsiz bir cep telefonu videosu idamı küresel izleyiciler için mezhepsel bir gösteri haline getirdi. Video, bölge genelinde Sünni kamuoyunu öfkelendirdi ve Maliki hükümetinin meşruiyetini sarstı. Sünni vilayetlerinde Saddam diktatörden şehit konumuna getirildi. İnsan hakları gözlemcileri yargılamanın adil yargılanma kusurlarını eleştirdi; tarihin bayram arifesine denk getirilmesi geniş çapta kınandı.",
+      "casualties": {
+        "sideA": 0,
+        "sideB": 1
+      },
+      "commanders": {
+        "sideA": [
+          "Nouri al-Maliki"
+        ],
+        "sideB": [
+          "Saddam Hussein"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Execution_of_Saddam_Hussein",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Saddam_H%C3%BCseyin%27in_idam%C4%B1"
+    },
+    {
+      "id": "the-surge",
+      "name": "The Surge",
+      "nameTr": "Askeri Takviye (The Surge)",
+      "lat": 33.3128,
+      "lng": 44.3615,
+      "date": "2007-01-10",
+      "dateEnd": "2008-07-31",
+      "kind": "event",
+      "side": "victory-a",
+      "order": 21,
+      "summary": "Bush deploys 30,000 extra troops and Petraeus shifts to population-centric counterinsurgency.",
+      "summaryTr": "Bush 30.000 ek asker konuşlandırır; Petraeus nüfus-merkezli isyan bastırma doktrinine geçer.",
+      "story": "By late 2006, Iraq had descended into full sectarian war and American domestic support for the conflict had collapsed; the Iraq Study Group recommended phased withdrawal. President Bush chose the opposite course. On 10 January 2007 he announced a 'New Way Forward': five additional US Army brigades (about 30,000 troops) would surge into Baghdad, while Marine forces reinforced Anbar Province. Critically, Bush replaced George Casey with General David Petraeus, co-author of Field Manual 3-24 on counterinsurgency, and paired him with Ambassador Ryan Crocker. Petraeus implemented a population-centric strategy: American units moved out of massive forward operating bases into 77 small Joint Security Stations and Combat Outposts inside Baghdad neighborhoods; concrete T-walls divided the capital by sect to freeze ethnic cleansing; partnered operations embedded US platoons with Iraqi units. Simultaneously, the 'Sunni Awakening' (Sahwa), begun in Anbar by Sheikh Abdul Sattar Abu Risha in September 2006, accelerated: tribal sheikhs who had tired of al-Qaeda's extremism accepted US payments and took up arms against their former allies. By summer 2007, nearly 100,000 'Sons of Iraq' were on US payroll. Violence peaked during spring, with US deaths at 126 in May 2007, then fell sharply. Monthly Iraqi civilian deaths dropped from roughly 3,000 in January 2007 to about 500 by early 2008. Al-Qaeda in Iraq was driven out of Anbar and parts of Baghdad. The surge did not produce political reconciliation between Shia and Sunni elites, but it bought the time and security to allow US withdrawal on more honorable terms.",
+      "storyTr": "2006 sonlarında Irak tam bir mezhep savaşına sürüklenmiş, Amerikan kamuoyu desteği çökmüş, Irak İnceleme Grubu aşamalı çekilmeyi önermişti. Başkan Bush tam tersini seçti. 10 Ocak 2007'de 'Yeni İleri Yol'u açıkladı: beş ek ABD Ordusu tugayı (yaklaşık 30.000 asker) Bağdat'a takviye olacak, Deniz Piyadeleri Anbar'ı güçlendirecekti. Bush, George Casey'nin yerine isyan bastırma elkitabı FM 3-24'ün ortak yazarı General David Petraeus'u geçirdi; yanına Büyükelçi Ryan Crocker'ı verdi. Petraeus nüfus-merkezli strateji uyguladı: Amerikan birlikleri büyük ileri harekât üslerinden çıkıp Bağdat mahallelerindeki 77 küçük Müşterek Güvenlik İstasyonu ve Muharebe Üssü'ne yerleşti; beton T-duvarlar başkenti mezhebe göre ayırarak etnik temizliği dondurdu; ortaklı operasyonlar ABD takımlarını Irak birliklerine yerleştirdi. Eylül 2006'da Şeyh Abdülsettar Ebu Risha'nın Anbar'da başlattığı 'Sünni Uyanışı' (Sahva) hızlandı: El-Kaide'nin aşırılığından bıkmış kabile şeyhleri ABD maaşlarını kabul edip eski müttefiklerine karşı silahlandı. 2007 yazında yaklaşık 100.000 'Irak Oğlu' ABD maaş bordrosundaydı. Şiddet ilkbaharda zirve yaptı -Mayıs 2007'de 126 ABD ölüsü- sonra keskin biçimde düştü. Aylık Irak sivil ölümleri Ocak 2007'de 3.000'den 2008 başında 500'e geriledi.",
+      "forces": {
+        "sideA": 170000,
+        "sideB": 70000
+      },
+      "casualties": {
+        "sideA": 1100,
+        "sideB": 20000
+      },
+      "commanders": {
+        "sideA": [
+          "David Petraeus",
+          "Raymond Odierno",
+          "Ryan Crocker"
+        ],
+        "sideB": [
+          "Abu Ayyub al-Masri",
+          "Muqtada al-Sadr"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Iraq_War_troop_surge_of_2007",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/2007_Irak_Sava%C5%9F%C4%B1_asker_takviyesi"
+    },
+    {
+      "id": "status-of-forces-agreement",
+      "name": "US–Iraq Status of Forces Agreement",
+      "nameTr": "ABD–Irak Kuvvet Statüsü Anlaşması",
+      "lat": 33.3128,
+      "lng": 44.3615,
+      "date": "2008-11-17",
+      "dateEnd": "2008-12-14",
+      "kind": "treaty",
+      "side": "political",
+      "order": 22,
+      "summary": "Bush and Maliki sign the SOFA mandating US withdrawal by 31 December 2011.",
+      "summaryTr": "Bush ve Maliki, ABD'nin 31 Aralık 2011'e kadar çekilmesini emreden KSA'yı imzalar.",
+      "story": "With violence falling sharply and the Bush presidency ending, Washington and Baghdad faced a legal deadline: the UN Security Council mandate under which coalition forces operated in Iraq would expire on 31 December 2008. Prime Minister Nouri al-Maliki, riding a wave of political confidence and pressured by Shia political parties close to Iran, demanded a bilateral agreement with a firm departure date rather than an open-ended status of forces agreement like those in Germany or South Korea. Months of negotiation between Ambassador Ryan Crocker and Iraqi Foreign Minister Hoshyar Zebari produced a text signed on 17 November 2008. The agreement required US combat forces to leave Iraqi cities by 30 June 2009 and all US forces to withdraw from Iraq by 31 December 2011. It subjected US contractors to Iraqi jurisdiction, required Iraqi approval for operations outside bases, and ended extraterritorial legal rights that had caused particular friction after the Nisour Square massacre. The Iraqi Council of Representatives ratified the SOFA on 27 November, and a companion Strategic Framework Agreement was signed days later. On 14 December 2008, during a farewell press conference in Baghdad, Iraqi journalist Muntadhar al-Zaidi threw both his shoes at President Bush, shouting 'This is a farewell kiss from the Iraqi people, you dog' in an iconic protest. The SOFA set the legal clock running on the entire American military presence, and it was this deadline, inherited and ultimately enforced by Barack Obama, that drove the December 2011 withdrawal.",
+      "storyTr": "Şiddet keskin biçimde düşerken Bush dönemi bitmek üzereydi; Washington ve Bağdat yasal bir takvimle karşı karşıyaydı: Koalisyonun Irak'ta faaliyet gösterdiği BM Güvenlik Konseyi yetkisi 31 Aralık 2008'de sona erecekti. Başbakan Nuri el-Maliki, siyasi özgüvenle ve İran'a yakın Şii partilerin baskısıyla, Almanya veya Güney Kore'dekiler gibi açık uçlu bir statü anlaşması yerine net bir çekilme tarihi içeren ikili bir anlaşma istedi. Büyükelçi Ryan Crocker ile Irak Dışişleri Bakanı Hoşyar Zebari arasındaki aylarca süren müzakereler 17 Kasım 2008'de imzalanan metinle sonuçlandı. Anlaşma, ABD muharip birliklerinin 30 Haziran 2009'a kadar Irak şehirlerinden çıkmasını ve tüm ABD kuvvetlerinin 31 Aralık 2011'e kadar Irak'tan çekilmesini şart koşuyordu. ABD yüklenicilerini Irak yargı yetkisine tabi kıldı, üs dışı operasyonlar için Irak onayı gerektirdi ve Nisur Meydanı katliamından sonra özellikle sürtüşme yaratan diplomatik bağışıklıkları kaldırdı. Irak Temsilciler Konseyi KSA'yı 27 Kasım'da onayladı; günler sonra bir Stratejik Çerçeve Anlaşması da imzalandı. 14 Aralık 2008'de Bağdat'taki veda basın toplantısında Iraklı gazeteci Muntazar ez-Zeydi Başkan Bush'a iki ayakkabısını fırlatarak 'Bu, Iraklıların veda öpücüğüdür köpek' diye bağırdı; bu ikonik protestoydu.",
+      "commanders": {
+        "sideA": [
+          "George W. Bush",
+          "Ryan Crocker"
+        ],
+        "sideB": [
+          "Nouri al-Maliki",
+          "Hoshyar Zebari"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/U.S.%E2%80%93Iraq_Status_of_Forces_Agreement",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Irak-Amerika_Birle%C5%9Fik_Devletleri_ili%C5%9Fkileri"
+    },
+    {
+      "id": "us-withdrawal-2011",
+      "name": "US Withdrawal from Iraq",
+      "nameTr": "ABD'nin Irak'tan Çekilişi",
+      "lat": 30.5085,
+      "lng": 47.7804,
+      "date": "2011-12-15",
+      "dateEnd": "2011-12-18",
+      "kind": "event",
+      "side": "political",
+      "order": 23,
+      "summary": "The last US combat convoys cross into Kuwait on 18 December 2011.",
+      "summaryTr": "Son ABD muharip konvoyları 18 Aralık 2011'de Kuveyt'e geçer.",
+      "story": "In October 2011 President Barack Obama announced that all remaining US military personnel would leave Iraq by 31 December in compliance with the SOFA, after negotiations for a residual force broke down over Maliki's refusal to grant renewed legal immunities. US troop numbers, which had peaked at 170,000 in 2007, had already been reduced to about 40,000 by the end of 2010. Over autumn 2011 bases were handed to Iraqi forces, equipment was shipped out or transferred, and contractors were drawn down. On 15 December 2011, at Al-Faw Palace in Baghdad, Defense Secretary Leon Panetta presided over a formal end-of-mission ceremony in which General Lloyd Austin cased the colors of US Forces–Iraq. Vice President Joe Biden and Prime Minister Maliki attended. At 04:30 on 18 December 2011, the last convoy of 110 Mine-Resistant Ambush Protected vehicles carrying 500 soldiers of the 3rd Brigade Combat Team, 1st Cavalry Division departed Contingency Operating Base Adder near Nasiriyah and rolled south down the same Highway 80 that Iraqi tanks had taken in 1990. At 07:38 local time they crossed into Kuwait, ending 8 years, 8 months, and 28 days of war. The final American tally: 4,491 US military dead, 32,226 wounded, and roughly 800 billion dollars spent. Iraqi dead, military and civilian combined, are estimated between 150,000 and 300,000. Within days, political conflict in Baghdad reignited; within three years the Islamic State would overrun Mosul, revealing that the withdrawal had ended America's war but not Iraq's.",
+      "storyTr": "Ekim 2011'de Başkan Barack Obama, Maliki'nin yenilenmiş yasal bağışıklıkları reddetmesi nedeniyle artık kuvvet için müzakereler çökünce kalan tüm ABD askerlerinin KSA gereği 31 Aralık'a kadar Irak'tan ayrılacağını duyurdu. 2007'de 170.000 ile zirveye ulaşan ABD asker sayısı 2010 sonunda yaklaşık 40.000'e düşmüştü. 2011 sonbaharı boyunca üsler Irak kuvvetlerine devredildi, ekipman taşındı ya da transfer edildi, yükleniciler azaltıldı. 15 Aralık 2011'de Bağdat'taki Faw Sarayı'nda Savunma Bakanı Leon Panetta'nın başkanlığında resmi bir görev sonu töreni yapıldı; General Lloyd Austin ABD Kuvvetleri–Irak sancaklarını kılıfladı. Başkan Yardımcısı Joe Biden ve Başbakan Maliki katıldı. 18 Aralık 2011'de saat 04:30'da, 1. Süvari Tümeni 3. Tugay Muharebe Timi'nin 500 askerini taşıyan 110 mayına dayanıklı araçtan oluşan son konvoy, Nasıriye yakınındaki Adder Muharebe Üssü'nden ayrıldı ve 1990'da Irak tanklarının geçtiği aynı 80 numaralı karayolundan güneye ilerledi. Yerel saatle 07:38'de Kuveyt'e geçtiler; 8 yıl, 8 ay ve 28 gün süren savaş bitti. Son Amerikan hesabı: 4.491 asker ölüsü, 32.226 yaralı ve yaklaşık 800 milyar dolar. Askeri ve sivil toplamı Irak ölüleri 150.000 ile 300.000 arasında tahmin edilir.",
+      "forces": {
+        "sideA": 40000,
+        "sideB": 0
+      },
+      "casualties": {
+        "sideA": 0,
+        "sideB": 0
+      },
+      "commanders": {
+        "sideA": [
+          "Barack Obama",
+          "Leon Panetta",
+          "Lloyd Austin"
+        ],
+        "sideB": [
+          "Nouri al-Maliki"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Withdrawal_of_United_States_troops_from_Iraq_(2007%E2%80%932011)",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Irak_Sava%C5%9F%C4%B1"
+    }
+  ]
+}

@@ -26,39 +26,45 @@ export default function Home() {
         </div>
       </header>
 
+      {/* 1. War Maps — hero */}
       <section className="px-5 md:px-10 pt-3 md:pt-6 pb-5 flex-1 flex flex-col">
-        <div className="max-w-[1200px] w-full mx-auto flex-1 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 min-h-[72vh]">
-          <div className="md:col-span-2 flex">
-            <FeaturedMap title={title} tag={tag} t={t} />
-          </div>
-          <div className="md:col-span-1 flex flex-col gap-4 md:gap-5">
-            <TastePassportTile t={t} locale={locale} />
-            <IssTile t={t} locale={locale} />
-          </div>
+        <div className="max-w-[1200px] w-full mx-auto flex-1 flex min-h-[72vh]">
+          <FeaturedMap title={title} tag={tag} t={t} locale={locale} />
         </div>
       </section>
 
-      <section className="px-5 md:px-10 pb-5">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          <PilotTile t={t} locale={locale} />
-          <AlliancesTile t={t} locale={locale} />
-        </div>
-      </section>
-
+      {/* 2. National Anthems */}
       <section className="px-5 md:px-10 pb-5">
         <div className="max-w-[1200px] mx-auto">
           <AnthemsTile t={t} locale={locale} />
         </div>
       </section>
 
+      {/* 3. Alliances */}
+      <section className="px-5 md:px-10 pb-5">
+        <div className="max-w-[1200px] mx-auto">
+          <AlliancesTile t={t} locale={locale} />
+        </div>
+      </section>
+
+      {/* 4. Squads */}
       <section className="px-5 md:px-10 pb-5">
         <div className="max-w-[1200px] mx-auto">
           <SquadTile t={t} locale={locale} />
         </div>
       </section>
 
+      {/* Rest — order is less deliberate */}
+      <section className="px-5 md:px-10 pb-5">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          <TastePassportTile t={t} locale={locale} />
+          <IssTile t={t} locale={locale} />
+        </div>
+      </section>
+
       <section className="px-5 md:px-10 pb-12">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          <PilotTile t={t} locale={locale} />
           <GeoGuessTile locale={locale} t={t} />
         </div>
       </section>
@@ -99,56 +105,142 @@ function BrandMark() {
   );
 }
 
+// Wars hero stats — regenerate via `npm run build:wars-index` when data changes
+const WARS_STATS = {
+  count: 8,
+  events: 214,
+  militaryDead: 16_550_000,
+  startYear: -218,
+  endYear: 2025,
+};
+
 function FeaturedMap({
-  title,
-  tag,
   t,
+  locale,
 }: {
   title: string;
   tag: string;
   t: (k: any) => string;
+  locale?: string;
 }) {
-  const parts = tag.split(" · ");
+  const lang = (locale === "tr" ? "tr" : "en") as "tr" | "en";
+  const fmtCompact = (n: number) =>
+    new Intl.NumberFormat(lang === "tr" ? "tr-TR" : "en-US", {
+      notation: "compact",
+      maximumFractionDigits: 1,
+    }).format(n);
+
+  const eraRange =
+    lang === "tr"
+      ? `MÖ ${Math.abs(WARS_STATS.startYear)} – ${WARS_STATS.endYear}`
+      : `${Math.abs(WARS_STATS.startYear)} BCE – ${WARS_STATS.endYear}`;
+
+  const headingA = lang === "tr" ? "Savaşın" : "The";
+  const headingB = lang === "tr" ? "kırılım noktaları" : "turning points of war";
+  const blurb =
+    lang === "tr"
+      ? "Pön savaşlarından Rusya-Ukrayna'ya — dünyanın kaderini değiştiren savaşlar, belgesel anlatıyla haritalandı."
+      : "From the Punic Wars to Russo-Ukraine — the wars that redrew the world, mapped with documentary precision.";
+  const cta = lang === "tr" ? "Haritayı Aç" : "Open Map";
+  const deadLabel = lang === "tr" ? "asker ölü" : "military dead";
+  const warsLabel = lang === "tr" ? "savaş" : "wars";
+  const eventsLabel = lang === "tr" ? "olay" : "events";
+
   return (
     <Link
       href="/maps/wars"
-      className="group relative overflow-hidden rounded-2xl md:rounded-3xl border border-[var(--line-2)] hover:border-white/40 transition-all duration-500 block flex-1 w-full min-h-[52vh] md:min-h-0"
+      data-map="wars"
+      className="group relative overflow-hidden rounded-2xl md:rounded-3xl transition-all duration-500 block flex-1 w-full min-h-[52vh] md:min-h-0"
+      style={{
+        background: "#0a0a0a",
+        border: "1px solid #2a2720",
+        color: "#e8e3d6",
+      }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a0806] via-[#2a0f0a] to-[#3d1d12]" />
+      {/* Atmosphere — subtle gold + blood radial wash */}
       <div
-        className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+        className="absolute inset-0 opacity-90 group-hover:opacity-100 transition-opacity duration-700"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 30% 30%, rgba(245,158,11,0.45), transparent 55%), radial-gradient(circle at 75% 75%, rgba(245,158,11,0.35), transparent 55%)",
+            "radial-gradient(ellipse at 18% 28%, rgba(201,169,97,0.10), transparent 55%), radial-gradient(ellipse at 82% 82%, rgba(92,26,26,0.20), transparent 55%)",
         }}
       />
       <WarsPreview />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.35) 45%, rgba(10,10,10,0.15) 100%)",
+        }}
+      />
 
-      <div className="absolute inset-0 p-5 md:p-8 lg:p-10 flex flex-col justify-between text-white">
-        {/* Top tags — chips, more prominent */}
-        <div className="flex flex-wrap gap-2">
-          {parts.map((p) => (
-            <span
-              key={p}
-              className="font-mono text-[11px] md:text-[12px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full border border-[#fcd34d]/45 bg-[#fcd34d]/10 text-[#fcd34d] backdrop-blur-sm"
-            >
-              {p}
-            </span>
-          ))}
+      <div className="absolute inset-0 p-5 md:p-8 lg:p-10 flex flex-col justify-between">
+        {/* Top meta: stats pill row */}
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.25em]">
+          <span
+            className="px-2.5 py-1 rounded-full"
+            style={{
+              color: "#c9a961",
+              border: "1px solid rgba(201,169,97,0.4)",
+              background: "rgba(201,169,97,0.06)",
+            }}
+          >
+            § {WARS_STATS.count} {warsLabel} · {WARS_STATS.events} {eventsLabel}
+          </span>
+          <span style={{ color: "#6b665a" }}>{eraRange}</span>
         </div>
 
+        {/* Center: subtle label */}
+        <div className="hidden md:block" />
+
         <div>
-          <h2 className="font-serif leading-[0.95] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[96px]">
-            {title}
-          </h2>
-          {/* Big primary CTA button */}
-          <div className="mt-6 md:mt-8">
-            <span className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-8 py-3 md:py-4 rounded-full bg-[#fcd34d] text-black font-mono text-[13px] md:text-[15px] uppercase tracking-[0.22em] font-semibold group-hover:gap-5 transition-all shadow-lg shadow-black/40">
-              {t("tile.enter")}
-              <span className="inline-block h-px w-8 md:w-10 bg-black/60 group-hover:w-14 md:group-hover:w-16 transition-all" />
-              <span className="text-lg md:text-xl">→</span>
+          <div
+            className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.32em] mb-2 md:mb-3"
+            style={{ color: "rgba(201,169,97,0.7)" }}
+          >
+            [ war · maps ]
+          </div>
+          <h2 className="font-serif font-light leading-[0.95] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[86px]">
+            {headingA}{" "}
+            <span className="italic" style={{ color: "#c9a961" }}>
+              {headingB}
             </span>
+          </h2>
+          <p
+            className="mt-4 max-w-[620px] font-sans text-[13px] md:text-[15px] leading-relaxed"
+            style={{ color: "#b5b0a3" }}
+          >
+            {blurb}
+          </p>
+
+          <div className="mt-6 md:mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <span
+              className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-7 py-3 md:py-3.5 rounded-full font-mono text-[12px] md:text-[13px] uppercase tracking-[0.25em] font-medium group-hover:gap-5 transition-all"
+              style={{
+                background: "#c9a961",
+                color: "#0a0a0a",
+              }}
+            >
+              {cta}
+              <span
+                className="inline-block h-px w-8 md:w-10 group-hover:w-14 md:group-hover:w-16 transition-all"
+                style={{ background: "rgba(10,10,10,0.55)" }}
+              />
+              <span className="text-base md:text-lg">→</span>
+            </span>
+
+            <div
+              className="flex items-baseline gap-2 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.22em]"
+              style={{ color: "#6b665a" }}
+            >
+              <span
+                className="text-[16px] md:text-[18px]"
+                style={{ color: "#7f1d1d" }}
+              >
+                {fmtCompact(WARS_STATS.militaryDead)}
+              </span>
+              <span>{deadLabel}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1049,49 +1141,49 @@ function TasteSmallPreview() {
 function WarsPreview() {
   return (
     <svg
-      className="absolute inset-0 w-full h-full opacity-70 group-hover:opacity-95 transition-opacity duration-700 pointer-events-none"
+      className="absolute inset-0 w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
       viewBox="0 0 1200 800"
       preserveAspectRatio="xMidYMid slice"
       aria-hidden
     >
       <defs>
-        {/* Sepia parchment wash */}
+        {/* Noir wash — charcoal deepening at corners */}
         <radialGradient id="parchmentBg" cx="50%" cy="45%" r="85%">
-          <stop offset="0%" stopColor="#4a2614" stopOpacity="0" />
-          <stop offset="60%" stopColor="#2a0f0a" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#0e0503" stopOpacity="0.75" />
+          <stop offset="0%" stopColor="#1a1a1a" stopOpacity="0" />
+          <stop offset="60%" stopColor="#141414" stopOpacity="0.4" />
+          <stop offset="100%" stopColor="#000000" stopOpacity="0.8" />
         </radialGradient>
 
-        {/* Parchment noise texture */}
+        {/* Film grain texture */}
         <filter id="grain">
           <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="7" />
-          <feColorMatrix values="0 0 0 0 0.4  0 0 0 0 0.24  0 0 0 0 0.1  0 0 0 0.35 0" />
+          <feColorMatrix values="0 0 0 0 0.91  0 0 0 0 0.89  0 0 0 0 0.84  0 0 0 0.18 0" />
         </filter>
 
-        {/* Red arrow marker — advancing force */}
+        {/* Gold arrow — advance */}
         <marker id="arrowRed" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto">
-          <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#dc2626" />
+          <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#c9a961" />
         </marker>
-        {/* Amber arrow marker */}
+        {/* Paper arrow — secondary */}
         <marker id="arrowAmber" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto">
-          <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#f59e0b" />
+          <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#b5b0a3" />
         </marker>
-        {/* Blue arrow marker — defending force */}
+        {/* Blood arrow — counter */}
         <marker id="arrowBlue" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto">
-          <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#3b82f6" />
+          <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#7f1d1d" />
         </marker>
 
-        {/* Radial glow for explosions */}
+        {/* Muzzle flash / explosion glow — desaturated */}
         <radialGradient id="boom" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#fbbf24" stopOpacity="0.9" />
-          <stop offset="40%" stopColor="#ea580c" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="#7c2d12" stopOpacity="0" />
+          <stop offset="0%" stopColor="#c9a961" stopOpacity="0.75" />
+          <stop offset="40%" stopColor="#7f1d1d" stopOpacity="0.45" />
+          <stop offset="100%" stopColor="#000000" stopOpacity="0" />
         </radialGradient>
       </defs>
 
-      {/* parchment + noise */}
+      {/* noir wash + grain */}
       <rect width="1200" height="800" fill="url(#parchmentBg)" />
-      <rect width="1200" height="800" filter="url(#grain)" opacity="0.25" />
+      <rect width="1200" height="800" filter="url(#grain)" opacity="0.22" />
 
       {/* Topographic contour lines */}
       {[
@@ -1105,53 +1197,55 @@ function WarsPreview() {
         <path
           key={i}
           d={d}
-          stroke="#d4a574"
-          strokeOpacity="0.22"
+          stroke="#c9a961"
+          strokeOpacity="0.18"
           strokeWidth="0.8"
           fill="none"
         />
       ))}
 
-      {/* Front line — jagged dashed */}
+      {/* Front line — jagged dashed (gold) */}
       <path
         d="M 80 440 L 180 420 L 240 460 L 340 430 L 420 470 L 520 440 L 620 480 L 720 450 L 820 490 L 920 460 L 1020 500 L 1120 470"
-        stroke="#fcd34d"
+        stroke="#c9a961"
         strokeWidth="2.5"
         strokeDasharray="12 6"
         fill="none"
-        opacity="0.7"
+        opacity="0.55"
       />
 
       {/* Major tactical arrows — offensives */}
-      <g fill="none" strokeLinecap="round" opacity="0.9">
-        {/* big red offensive sweeping east */}
+      <g fill="none" strokeLinecap="round" opacity="0.85">
+        {/* big gold offensive sweeping east */}
         <path
           d="M 160 380 C 280 280, 440 260, 580 320 S 780 420, 940 340"
-          stroke="#dc2626"
+          stroke="#c9a961"
           strokeWidth="5"
           markerEnd="url(#arrowRed)"
         />
-        {/* amber offensive southeast */}
+        {/* paper offensive southeast */}
         <path
           d="M 420 220 C 520 280, 620 320, 760 400"
-          stroke="#f59e0b"
+          stroke="#b5b0a3"
           strokeWidth="4"
           markerEnd="url(#arrowAmber)"
+          opacity="0.65"
         />
-        {/* blue counter from east */}
+        {/* blood counter from east */}
         <path
           d="M 1060 250 C 960 300, 880 320, 780 350"
-          stroke="#3b82f6"
+          stroke="#7f1d1d"
           strokeWidth="3.5"
           markerEnd="url(#arrowBlue)"
+          opacity="0.85"
         />
-        {/* amber sweep south */}
+        {/* paper sweep south */}
         <path
           d="M 300 560 C 340 640, 460 680, 620 620"
-          stroke="#f59e0b"
+          stroke="#b5b0a3"
           strokeWidth="3"
           markerEnd="url(#arrowAmber)"
-          opacity="0.85"
+          opacity="0.55"
         />
       </g>
 
@@ -1165,130 +1259,122 @@ function WarsPreview() {
         <circle key={i} cx={b.x} cy={b.y} r={b.r} fill="url(#boom)" />
       ))}
 
-      {/* NATO-style unit markers — infantry boxes with X */}
+      {/* Numbered campaign pins — echoing the /maps/wars/[slug] markers */}
       {[
-        { x: 240, y: 380, c: "#dc2626" },
-        { x: 420, y: 340, c: "#dc2626" },
-        { x: 600, y: 380, c: "#f59e0b" },
-        { x: 820, y: 420, c: "#f59e0b" },
-        { x: 960, y: 320, c: "#3b82f6" },
-        { x: 1040, y: 380, c: "#3b82f6" },
+        { x: 240, y: 380, n: 1 },
+        { x: 420, y: 340, n: 2 },
+        { x: 600, y: 380, n: 3 },
+        { x: 820, y: 420, n: 4 },
+        { x: 960, y: 320, n: 5 },
+        { x: 1040, y: 380, n: 6 },
       ].map((u, i) => (
-        <g key={i} transform={`translate(${u.x - 20},${u.y - 12})`} opacity="0.88">
-          <rect
-            width="40"
-            height="24"
-            fill="rgba(10,5,3,0.72)"
-            stroke={u.c}
-            strokeWidth="1.5"
-          />
-          <line x1="0" y1="0" x2="40" y2="24" stroke={u.c} strokeWidth="1.2" />
-          <line x1="40" y1="0" x2="0" y2="24" stroke={u.c} strokeWidth="1.2" />
+        <g key={i} transform={`translate(${u.x},${u.y})`} opacity="0.95">
+          <circle r="18" fill="#141414" stroke="#c9a961" strokeWidth="1.5" />
+          <text
+            textAnchor="middle"
+            dominantBaseline="central"
+            fontFamily="ui-monospace, monospace"
+            fontSize="13"
+            fontWeight="500"
+            fill="#c9a961"
+            letterSpacing="0.6"
+          >
+            {String(u.n).padStart(2, "0")}
+          </text>
         </g>
       ))}
 
-      {/* Cavalry / armor marker — oval with slash */}
+      {/* Cavalry / armor marker — oval with slash, muted */}
       {[
-        { x: 310, y: 440, c: "#dc2626" },
-        { x: 700, y: 460, c: "#f59e0b" },
+        { x: 310, y: 440, c: "#7f1d1d" },
+        { x: 700, y: 460, c: "#b5b0a3" },
       ].map((c, i) => (
-        <g key={i} transform={`translate(${c.x},${c.y})`} opacity="0.88">
-          <ellipse rx="22" ry="11" fill="rgba(10,5,3,0.7)" stroke={c.c} strokeWidth="1.5" />
-          <line x1="-22" y1="0" x2="22" y2="0" stroke={c.c} strokeWidth="1" strokeDasharray="3 2" />
+        <g key={i} transform={`translate(${c.x},${c.y})`} opacity="0.75">
+          <ellipse rx="22" ry="11" fill="rgba(10,10,10,0.7)" stroke={c.c} strokeWidth="1.2" />
+          <line x1="-22" y1="0" x2="22" y2="0" stroke={c.c} strokeWidth="0.9" strokeDasharray="3 2" />
         </g>
       ))}
 
       {/* Artillery range circles (dashed bombardment zones) */}
-      <g fill="none" stroke="#fcd34d" strokeDasharray="4 4" opacity="0.35">
+      <g fill="none" stroke="#c9a961" strokeDasharray="4 4" opacity="0.3">
         <circle cx="580" cy="330" r="90" strokeWidth="1" />
         <circle cx="760" cy="400" r="75" strokeWidth="1" />
       </g>
 
       {/* Flag planted on a hill — top-right */}
       <g transform="translate(1020, 160)">
-        {/* hill */}
-        <path d="M -70 50 Q -20 10, 30 25 Q 70 35, 100 50 Z" fill="#3a1f10" opacity="0.85" />
-        {/* pole */}
-        <line x1="10" y1="50" x2="10" y2="-20" stroke="#d4a574" strokeWidth="2" />
-        {/* flag cloth */}
+        <path d="M -70 50 Q -20 10, 30 25 Q 70 35, 100 50 Z" fill="#141414" opacity="0.85" />
+        <line x1="10" y1="50" x2="10" y2="-20" stroke="#c9a961" strokeWidth="1.5" />
         <path
           d="M 10 -20 L 55 -10 L 50 0 L 55 10 L 10 0 Z"
-          fill="#dc2626"
-          stroke="#7f1d1d"
+          fill="#7f1d1d"
+          stroke="#2a2720"
           strokeWidth="0.8"
         />
-        <circle cx="10" cy="-20" r="2" fill="#fcd34d" />
+        <circle cx="10" cy="-20" r="2" fill="#c9a961" />
       </g>
 
-      {/* Crossed swords + laurel — central emblem, top-left area */}
-      <g transform="translate(160, 200)" opacity="0.75">
-        {/* laurel left */}
+      {/* Crossed swords + laurel — noir variant */}
+      <g transform="translate(160, 200)" opacity="0.7">
         <path
           d="M -35 0 Q -45 -10 -40 -25 M -35 0 Q -42 5 -38 18 M -35 0 Q -48 -2 -52 12"
-          stroke="#d4a574"
+          stroke="#c9a961"
           strokeWidth="1"
           fill="none"
         />
-        {/* laurel right */}
         <path
           d="M 35 0 Q 45 -10 40 -25 M 35 0 Q 42 5 38 18 M 35 0 Q 48 -2 52 12"
-          stroke="#d4a574"
+          stroke="#c9a961"
           strokeWidth="1"
           fill="none"
         />
-        {/* sword left (blade going up-right) */}
         <g transform="rotate(-30)">
-          <line x1="-30" y1="0" x2="28" y2="0" stroke="#e8d4b0" strokeWidth="3" strokeLinecap="round" />
-          <rect x="-34" y="-4" width="6" height="8" fill="#7f1d1d" />
-          <line x1="-38" y1="-8" x2="-38" y2="8" stroke="#d4a574" strokeWidth="3" strokeLinecap="round" />
+          <line x1="-30" y1="0" x2="28" y2="0" stroke="#e8e3d6" strokeWidth="2.5" strokeLinecap="round" opacity="0.85" />
+          <rect x="-34" y="-4" width="6" height="8" fill="#2a2720" />
+          <line x1="-38" y1="-8" x2="-38" y2="8" stroke="#c9a961" strokeWidth="2.5" strokeLinecap="round" />
         </g>
-        {/* sword right (blade going up-left) */}
         <g transform="rotate(30)">
-          <line x1="-28" y1="0" x2="30" y2="0" stroke="#e8d4b0" strokeWidth="3" strokeLinecap="round" />
-          <rect x="28" y="-4" width="6" height="8" fill="#7f1d1d" />
-          <line x1="38" y1="-8" x2="38" y2="8" stroke="#d4a574" strokeWidth="3" strokeLinecap="round" />
+          <line x1="-28" y1="0" x2="30" y2="0" stroke="#e8e3d6" strokeWidth="2.5" strokeLinecap="round" opacity="0.85" />
+          <rect x="28" y="-4" width="6" height="8" fill="#2a2720" />
+          <line x1="38" y1="-8" x2="38" y2="8" stroke="#c9a961" strokeWidth="2.5" strokeLinecap="round" />
         </g>
       </g>
 
-      {/* Cannons silhouette */}
-      <g transform="translate(180, 640)" opacity="0.75">
-        {/* barrel */}
-        <rect x="-4" y="-8" width="52" height="9" fill="#0f0704" />
-        {/* wheel */}
-        <circle cx="8" cy="14" r="14" fill="#0f0704" />
-        <circle cx="8" cy="14" r="6" fill="none" stroke="#d4a574" strokeWidth="1" />
-        <circle cx="8" cy="14" r="14" fill="none" stroke="#d4a574" strokeWidth="0.8" />
-        {/* second wheel */}
-        <circle cx="40" cy="14" r="14" fill="#0f0704" />
-        <circle cx="40" cy="14" r="6" fill="none" stroke="#d4a574" strokeWidth="1" />
-        {/* smoke puff */}
-        <circle cx="58" cy="-6" r="8" fill="#d4a574" opacity="0.35" />
-        <circle cx="70" cy="-14" r="6" fill="#d4a574" opacity="0.22" />
+      {/* Cannons silhouette — desaturated noir */}
+      <g transform="translate(180, 640)" opacity="0.65">
+        <rect x="-4" y="-8" width="52" height="9" fill="#0a0a0a" />
+        <circle cx="8" cy="14" r="14" fill="#0a0a0a" />
+        <circle cx="8" cy="14" r="6" fill="none" stroke="#c9a961" strokeWidth="0.8" />
+        <circle cx="8" cy="14" r="14" fill="none" stroke="#c9a961" strokeWidth="0.7" />
+        <circle cx="40" cy="14" r="14" fill="#0a0a0a" />
+        <circle cx="40" cy="14" r="6" fill="none" stroke="#c9a961" strokeWidth="0.8" />
+        <circle cx="58" cy="-6" r="8" fill="#c9a961" opacity="0.25" />
+        <circle cx="70" cy="-14" r="6" fill="#c9a961" opacity="0.16" />
       </g>
-      <g transform="translate(960, 640)" opacity="0.65" style={{ transform: "translate(960px, 640px) scaleX(-1)" }}>
-        <rect x="-4" y="-8" width="52" height="9" fill="#0f0704" />
-        <circle cx="8" cy="14" r="14" fill="#0f0704" />
-        <circle cx="8" cy="14" r="14" fill="none" stroke="#d4a574" strokeWidth="0.8" />
-        <circle cx="40" cy="14" r="14" fill="#0f0704" />
+      <g transform="translate(960, 640) scale(-1, 1)" opacity="0.55">
+        <rect x="-4" y="-8" width="52" height="9" fill="#0a0a0a" />
+        <circle cx="8" cy="14" r="14" fill="#0a0a0a" />
+        <circle cx="8" cy="14" r="14" fill="none" stroke="#c9a961" strokeWidth="0.7" />
+        <circle cx="40" cy="14" r="14" fill="#0a0a0a" />
       </g>
 
-      {/* Compass rose — bottom-left */}
-      <g transform="translate(120, 140)" opacity="0.7">
-        <circle r="30" fill="none" stroke="#d4a574" strokeWidth="1" />
-        <circle r="22" fill="none" stroke="#d4a574" strokeWidth="0.5" strokeDasharray="2 3" />
-        <path d="M 0 -28 L 4 0 L 0 28 L -4 0 Z" fill="#d4a574" opacity="0.85" />
-        <path d="M -28 0 L 0 -4 L 28 0 L 0 4 Z" fill="#d4a574" opacity="0.45" />
-        <text y="-34" textAnchor="middle" fontSize="10" fontFamily="serif" fill="#d4a574" fontWeight="700">N</text>
+      {/* Compass rose — top-left */}
+      <g transform="translate(120, 140)" opacity="0.65">
+        <circle r="30" fill="none" stroke="#c9a961" strokeWidth="1" />
+        <circle r="22" fill="none" stroke="#c9a961" strokeWidth="0.5" strokeDasharray="2 3" />
+        <path d="M 0 -28 L 4 0 L 0 28 L -4 0 Z" fill="#c9a961" opacity="0.85" />
+        <path d="M -28 0 L 0 -4 L 28 0 L 0 4 Z" fill="#c9a961" opacity="0.4" />
+        <text y="-34" textAnchor="middle" fontSize="10" fontFamily="serif" fill="#c9a961" fontWeight="700">N</text>
       </g>
 
-      {/* Fallen flag / banner tear accent — bottom-right */}
-      <g transform="translate(1060, 560) rotate(15)" opacity="0.55">
-        <rect x="0" y="0" width="60" height="3" fill="#d4a574" />
-        <path d="M 0 3 L 55 3 L 50 16 L 40 10 L 30 18 L 20 11 L 10 19 L 0 14 Z" fill="#7f1d1d" />
+      {/* Fallen banner — bottom-right */}
+      <g transform="translate(1060, 560) rotate(15)" opacity="0.45">
+        <rect x="0" y="0" width="60" height="3" fill="#c9a961" />
+        <path d="M 0 3 L 55 3 L 50 16 L 40 10 L 30 18 L 20 11 L 10 19 L 0 14 Z" fill="#2a2720" />
       </g>
 
       {/* Bird silhouettes in sky */}
-      <g opacity="0.5" fill="none" stroke="#d4a574" strokeWidth="1.2" strokeLinecap="round">
+      <g opacity="0.4" fill="none" stroke="#c9a961" strokeWidth="1.1" strokeLinecap="round">
         <path d="M 380 120 Q 386 112, 392 120 Q 398 112, 404 120" />
         <path d="M 420 100 Q 425 94, 430 100 Q 435 94, 440 100" />
         <path d="M 680 80 Q 686 72, 692 80 Q 698 72, 704 80" />

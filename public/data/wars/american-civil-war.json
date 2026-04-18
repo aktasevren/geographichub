@@ -4,107 +4,966 @@
   "nameTr": "Amerikan İç Savaşı",
   "startYear": 1861,
   "endYear": 1865,
-  "blurb": "The conflict between the Union and the secessionist Confederacy over the expansion of slavery. The bloodiest war in US history — it ended slavery and reshaped the republic.",
-  "blurbTr": "Köleliğin yayılması üzerine Birlik ile ayrılıkçı Konfederasyon arasında çıkan çatışma. ABD tarihinin en kanlı savaşı — köleliği sona erdirdi ve cumhuriyeti yeniden şekillendirdi.",
+  "era": "19th-century",
+  "region": "americas",
+  "tags": [
+    "civil-war",
+    "slavery",
+    "secession",
+    "industrial-warfare",
+    "usa",
+    "confederacy"
+  ],
+  "blurb": "A four-year civil war (1861-1865) between the United States and eleven seceded Southern states that formed the Confederacy, fought primarily over the expansion of slavery. It ended with Union victory, the abolition of slavery, and roughly 620,000-750,000 military dead, making it the deadliest conflict in American history.",
+  "blurbTr": "Amerika Birleşik Devletleri ile köleliği sürdürmek amacıyla ayrılan on bir güney eyaletinin kurduğu Konfederasyon arasında 1861-1865 yılları arasında süren dört yıllık iç savaş. Birliğin zaferi, köleliğin kaldırılması ve yaklaşık 620.000-750.000 askeri ölümle ABD tarihinin en kanlı çatışması olarak son buldu.",
+  "sides": [
+    {
+      "id": "A",
+      "label": "United States (Union)",
+      "labelTr": "Amerika Birleşik Devletleri (Birlik)",
+      "countries": [
+        {
+          "name": "United States",
+          "nameTr": "Amerika Birleşik Devletleri",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/US_flag_35_stars.svg",
+          "flagFallback": "emblem"
+        }
+      ],
+      "commanders": [
+        "Abraham Lincoln",
+        "Ulysses S. Grant",
+        "William T. Sherman",
+        "George G. Meade",
+        "Philip Sheridan",
+        "David G. Farragut",
+        "George B. McClellan",
+        "Winfield Scott"
+      ],
+      "result": "victor"
+    },
+    {
+      "id": "B",
+      "label": "Confederate States of America",
+      "labelTr": "Amerika Konfedere Devletleri",
+      "countries": [
+        {
+          "name": "Confederate States",
+          "nameTr": "Konfedere Devletler",
+          "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Confederate_States_of_America_(1861%E2%80%931863).svg",
+          "flagFallback": "emblem"
+        }
+      ],
+      "commanders": [
+        "Jefferson Davis",
+        "Robert E. Lee",
+        "Thomas J. \"Stonewall\" Jackson",
+        "James Longstreet",
+        "Nathan Bedford Forrest",
+        "P.G.T. Beauregard",
+        "Joseph E. Johnston",
+        "Braxton Bragg"
+      ],
+      "result": "defeated"
+    }
+  ],
+  "casualties": {
+    "militaryDead": 700000,
+    "civilianDead": 50000,
+    "wounded": 475000,
+    "pow": 409000,
+    "source": "Hacker 2011 (revised demographic consensus, ~620,000-750,000)"
+  },
+  "participantCount": 3900000,
+  "opening": "The election of Abraham Lincoln in November 1860 on a platform opposing the extension of slavery into the western territories triggered the secession of seven Deep South states. By February 1861 they had formed the Confederate States of America with Jefferson Davis as president. When Confederate batteries opened fire on the federal garrison at Fort Sumter in Charleston Harbor on April 12, 1861, the Union answered with a call for 75,000 volunteers, four more states seceded, and the nation plunged into the bloodiest war in its history.",
+  "openingTr": "Kasım 1860'ta Abraham Lincoln'ün köleliğin batı topraklarına yayılmasına karşı çıkan bir programla seçilmesi, yedi Derin Güney eyaletinin ayrılmasını tetikledi. Şubat 1861'de bu eyaletler, Jefferson Davis'i başkan seçerek Amerika Konfedere Devletleri'ni kurdu. 12 Nisan 1861'de Charleston Limanı'ndaki Fort Sumter'deki federal garnizona Konfederasyon topları ateş açınca, Birlik 75.000 gönüllü çağrısıyla karşılık verdi, dört eyalet daha ayrıldı ve ülke tarihinin en kanlı savaşına sürüklendi.",
+  "outcome": "After four years of industrial-scale warfare, the Confederacy collapsed in the spring of 1865. Lee surrendered the Army of Northern Virginia to Grant at Appomattox Court House on April 9, 1865, and remaining Confederate armies capitulated over the following weeks. The Union was preserved, slavery was abolished by the Thirteenth Amendment, and the federal government emerged dramatically strengthened, but the nation buried some 700,000 soldiers and entered a troubled Reconstruction era shadowed by Lincoln's assassination.",
+  "outcomeTr": "Dört yıl süren endüstriyel ölçekte savaşın ardından Konfederasyon 1865 baharında çöktü. Lee, 9 Nisan 1865'te Appomattox Court House'da Kuzey Virginia Ordusu'nu Grant'e teslim etti; kalan Konfederasyon orduları da sonraki haftalarda teslim oldu. Birlik korundu, Onüçüncü Anayasa Değişikliği ile kölelik kaldırıldı, federal hükümet çok güçlendi; ancak ülke yaklaşık 700.000 askerini gömdü ve Lincoln suikastının gölgesinde sancılı bir Yeniden Yapılanma dönemine girdi.",
+  "turningPointReason": "The strategic turning point came in the first week of July 1863, when Lee's second invasion of the North was crushed at Gettysburg and Grant simultaneously forced the surrender of Vicksburg on the Mississippi. Together these victories ended Confederate offensive capacity, split the South in two, and convinced foreign powers that European recognition of Richmond was no longer viable, making eventual Union victory a matter of attrition and time.",
+  "turningPointReasonTr": "Stratejik dönüm noktası, Temmuz 1863'ün ilk haftasında geldi: Lee'nin kuzeye yönelik ikinci işgali Gettysburg'da ezildi ve Grant aynı anda Mississippi üzerindeki Vicksburg'u teslim olmaya zorladı. Bu iki zafer birlikte Konfederasyon'un saldırı kapasitesini bitirdi, Güney'i ikiye böldü ve yabancı güçleri Richmond'u tanımanın artık mümkün olmadığına ikna ederek nihai Birlik zaferini yalnızca bir yıpranma ve zaman meselesine dönüştürdü.",
   "events": [
     {
       "id": "fort-sumter",
-      "name": "Fall of Fort Sumter",
-      "nameTr": "Fort Sumter'in Düşüşü",
-      "lat": 32.7525, "lng": -79.8746,
-      "date": "1861-04-12", "dateEnd": "1861-04-14",
-      "kind": "battle", "side": "victory-b",
-      "summary": "Confederate forces shell the Union garrison at Fort Sumter, Charleston harbour. Union surrenders after 34 hours — the war begins with no casualties on either side.",
-      "summaryTr": "Konfederasyon kuvvetleri, Charleston limanındaki Fort Sumter'deki Birlik garnizonunu topa tutar. Birlik 34 saat sonra teslim olur — savaş kayıpsız başlar.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Fort_Sumter"
+      "name": "Battle of Fort Sumter",
+      "nameTr": "Fort Sumter Muharebesi",
+      "lat": 32.7522,
+      "lng": -79.8746,
+      "date": "1861-04-12",
+      "dateEnd": "1861-04-14",
+      "kind": "siege",
+      "side": "victory-b",
+      "order": 1,
+      "summary": "Confederate batteries open fire on the federal garrison at Fort Sumter in Charleston Harbor, beginning the Civil War.",
+      "summaryTr": "Konfederasyon topları Charleston Limanı'ndaki Fort Sumter federal garnizonuna ateş açarak İç Savaş'ı başlatır.",
+      "story": "At 4:30 on the morning of April 12, 1861, a mortar shell arced across Charleston Harbor and burst above the walls of Fort Sumter, a brick pentagon rising from a sandbar at the entrance to the city. Inside, Major Robert Anderson and a garrison of fewer than ninety soldiers had held out for four months as South Carolina, then six other states, declared themselves sovereign. President Lincoln, inaugurated only weeks earlier, had refused to surrender the fort and dispatched a supply expedition. Confederate commander P.G.T. Beauregard, acting on orders from Jefferson Davis, demanded evacuation and, when refused, ordered his batteries to fire. For thirty-four hours, shells and red-hot shot poured onto the fort from Cummings Point, Fort Moultrie, and floating batteries ringing the harbor. Anderson's men, short of powder and rations, answered with a token return fire while Charleston's citizens watched from rooftops as if at a theatrical spectacle. By the afternoon of April 13 the wooden barracks were burning, the flagstaff had been shot down, and the powder magazines were in danger. Anderson accepted terms and on April 14 marched out with drums beating and colors flying, firing a fifty-gun salute to the flag. Astonishingly, no soldier on either side had been killed in combat, though one Union gunner died in the salute. The bombardment electrified the nation: Lincoln called for 75,000 volunteers, four more slave states seceded, and what had been a constitutional crisis became open war.",
+      "storyTr": "12 Nisan 1861 sabahı saat 04.30'da bir havan mermisi Charleston Limanı'nı aştı ve şehrin girişindeki bir kum bankının üzerinde yükselen tuğla beşgen Fort Sumter'in duvarları üzerinde patladı. İçeride, Binbaşı Robert Anderson ve doksandan az askeri, önce Güney Carolina'nın, ardından altı eyaletin daha kendilerini egemen ilan ettiği dört ay boyunca direnmişti. Birkaç hafta önce göreve başlayan Başkan Lincoln, kaleyi teslim etmeyi reddetmiş ve bir ikmal seferi göndermişti. Jefferson Davis'in emriyle hareket eden Konfederasyon komutanı P.G.T. Beauregard, tahliye istedi; reddedilince bataryalarına ateş emri verdi. Otuz dört saat boyunca Cummings Point'ten, Fort Moultrie'den ve limanı çevreleyen yüzer bataryalardan kaleye mermiler ve kızgın gülleler yağdı. Anderson'ın barutu ve erzağı azalan adamları semboliktir bir cevapla karşılık verirken Charleston halkı çatılardan bir tiyatro gösterisi seyreder gibi izledi. 13 Nisan öğleden sonra ahşap kışlalar yanıyor, bayrak direği vurulmuş ve cephanelikler tehlike altındaydı. Anderson koşulları kabul etti; 14 Nisan'da davul sesleri ve bayrak altında dışarı çıkarak sancağa elli pare top atışıyla selam verdi. Şaşırtıcı biçimde iki tarafta da çatışmada kimse ölmedi; yalnızca selam atışı sırasında bir Birlik topçusu hayatını kaybetti. Bombardıman ulusu elektriklendirdi: Lincoln 75.000 gönüllü çağrısı yaptı, dört köle eyalet daha ayrıldı ve anayasal bir kriz açık savaşa dönüştü.",
+      "forces": {
+        "sideA": 85,
+        "sideB": 500
+      },
+      "casualties": {
+        "sideA": 1,
+        "sideB": 0
+      },
+      "commanders": {
+        "sideA": [
+          "Robert Anderson"
+        ],
+        "sideB": [
+          "P.G.T. Beauregard"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Fort_Sumter",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Fort_Sumter_Muharebesi"
     },
     {
       "id": "first-bull-run",
-      "name": "First Battle of Bull Run",
+      "name": "First Battle of Bull Run (First Manassas)",
       "nameTr": "Birinci Bull Run Muharebesi",
-      "lat": 38.8140, "lng": -77.5219,
+      "lat": 38.8137,
+      "lng": -77.5222,
       "date": "1861-07-21",
-      "kind": "battle", "side": "victory-b",
-      "summary": "The first major land battle of the war. Union troops retreat in panic to Washington. 'Stonewall' Jackson earns his nickname — the war will not be short.",
-      "summaryTr": "Savaşın ilk büyük kara muharebesi. Birlik askerleri panik içinde Washington'a çekilir. 'Taş Duvar' Jackson, lakabını bu günde kazanır — savaş kısa sürmeyecek.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/First_Battle_of_Bull_Run"
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 2,
+      "summary": "The first major land battle of the war ends in a chaotic Union rout near Manassas, Virginia.",
+      "summaryTr": "Savaşın ilk büyük kara muharebesi, Virginia'nın Manassas yakınlarında kaotik bir Birlik bozgunuyla sonuçlanır.",
+      "story": "Three months after Fort Sumter, Northern newspapers demanded an end to the Confederate presence at Manassas Junction, a railroad crossroads less than thirty miles from Washington. Brigadier General Irvin McDowell marched south with 35,000 inexperienced volunteers on July 16, 1861, trailed by congressmen, journalists, and picnickers who expected to witness a brief, glorious victory. Opposite him, Beauregard held the line of Bull Run creek with a force rapidly reinforced by Joseph E. Johnston's army, which slipped away from Winchester and traveled by rail, the first strategic use of railroads in warfare. On July 21 McDowell's flanking attack across Sudley Ford initially pushed the Confederates up Matthews and Henry Hill. There Thomas J. Jackson's Virginia brigade stood, in Brigadier General Barnard Bee's reported words, \"like a stone wall,\" earning him his immortal nickname. By mid-afternoon fresh Confederate brigades arrived by train, a screaming countercharge broke the Union right, and the retreat became a panic as raw soldiers, caissons, and civilian carriages tangled on the Warrenton Turnpike. Union losses reached roughly 2,900; Confederate, 2,000. The defeat shocked the North, ending illusions of a ninety-day war and prompting Lincoln to replace McDowell with George B. McClellan and begin building the Army of the Potomac. For the Confederacy, victory bred a dangerous overconfidence that would help shape the strategies of both sides for years to come.",
+      "storyTr": "Fort Sumter'dan üç ay sonra Kuzey basını, Washington'a otuz milden daha yakın bir demiryolu kavşağı olan Manassas Junction'daki Konfederasyon varlığının sona erdirilmesini istedi. Tuğgeneral Irvin McDowell, 16 Temmuz 1861'de 35.000 deneyimsiz gönüllüsüyle güneye yürüdü; arkasından kısa ve şanlı bir zafere tanıklık bekleyen kongre üyeleri, gazeteciler ve piknikçiler geliyordu. Karşısında Beauregard, Joseph E. Johnston'ın Winchester'dan sıyrılıp trenle gelen ordusuyla hızla takviye edilen Bull Run deresi hattını tutuyordu; bu, savaş tarihinde demiryollarının ilk stratejik kullanımıydı. 21 Temmuz'da McDowell'in Sudley Geçidi üzerinden yaptığı kuşatma saldırısı önce Konfederasyonları Matthews ve Henry Tepesi'ne doğru itti. Orada Thomas J. Jackson'ın Virginia tugayı, Tuğgeneral Barnard Bee'nin dediği gibi \"bir taş duvar gibi\" durdu ve ona ölümsüz lakabını kazandırdı. Öğleden sonra trenle gelen taze Konfederasyon tugayları, çığlıklarla karşı saldırıya geçerek Birlik sağ kanadını kırdı; geri çekilme, acemi askerler, top arabaları ve sivil arabaların Warrenton Yolu'nda birbirine dolanmasıyla paniğe dönüştü. Birlik kayıpları yaklaşık 2.900, Konfederasyon 2.000 oldu. Yenilgi, Kuzey'i sarstı; doksan günlük savaş yanılsamasını bitirdi ve Lincoln'ü McDowell'i George B. McClellan ile değiştirip Potomac Ordusu'nu kurmaya itti. Konfederasyon için zafer, önümüzdeki yıllarda her iki tarafın stratejilerini etkileyecek tehlikeli bir aşırı güveni doğurdu.",
+      "forces": {
+        "sideA": 28450,
+        "sideB": 32230
+      },
+      "casualties": {
+        "sideA": 2896,
+        "sideB": 1982
+      },
+      "commanders": {
+        "sideA": [
+          "Irvin McDowell"
+        ],
+        "sideB": [
+          "P.G.T. Beauregard",
+          "Joseph E. Johnston"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/First_Battle_of_Bull_Run",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Birinci_Bull_Run_Muharebesi"
+    },
+    {
+      "id": "forts-henry-donelson",
+      "name": "Forts Henry and Donelson",
+      "nameTr": "Fort Henry ve Donelson Muharebeleri",
+      "lat": 36.4872,
+      "lng": -87.8561,
+      "date": "1862-02-06",
+      "dateEnd": "1862-02-16",
+      "kind": "siege",
+      "side": "victory-a",
+      "order": 3,
+      "summary": "Ulysses S. Grant and the Union river fleet crack open the Confederate defense of Tennessee, earning Grant the nickname 'Unconditional Surrender'.",
+      "summaryTr": "Ulysses S. Grant ve Birlik nehir filosu Tennessee'nin Konfederasyon savunmasını kırar; Grant 'Kayıtsız Şartsız Teslim' lakabını kazanır.",
+      "story": "In the war's first winter, the Confederate line across southern Kentucky rested on two earthen forts guarding the Tennessee and Cumberland rivers. Brigadier General Ulysses S. Grant, then an obscure West Pointer rebuilding a shadowed career, proposed a joint army-navy strike. On February 6, 1862, Flag Officer Andrew Foote's ironclad gunboats pounded Fort Henry into submission before Grant's infantry could even deploy; most of the garrison escaped east to Fort Donelson. Ten days later, after slogging through freezing rain and mud, Grant invested Donelson with 25,000 men. A Confederate sortie on February 15 briefly opened an escape route, but indecisive leadership by John B. Floyd and Gideon Pillow allowed Grant to counterattack and close the trap. When Brigadier General Simon Bolivar Buckner asked for terms the next morning, Grant's reply became one of the war's most famous lines: \"No terms except an unconditional and immediate surrender can be accepted.\" Some 12,000 to 15,000 Confederates laid down their arms, the largest capitulation in American history to that point. The twin victories cracked open the entire Confederate western defensive line, forced the evacuation of Nashville, opened two major rivers as Union highways deep into the Confederacy, and made \"Unconditional Surrender\" Grant a household name. Coming just seven months after Bull Run, the victories also gave the war-weary North its first real taste of momentum.",
+      "storyTr": "Savaşın ilk kışında, güney Kentucky boyunca uzanan Konfederasyon hattı Tennessee ve Cumberland nehirlerini koruyan iki toprak kaleye dayanıyordu. O sırada gölgede kalmış kariyerini yeniden kuran belirsiz bir West Point mezunu olan Tuğgeneral Ulysses S. Grant, ortak bir kara-deniz saldırısı önerdi. 6 Şubat 1862'de Bayrak Subayı Andrew Foote'un zırhlı gambotları, Grant'ın piyadesi daha konuşlanamadan Fort Henry'yi teslim olmaya zorladı; garnizonun çoğu doğuya, Fort Donelson'a kaçtı. On gün sonra, dondurucu yağmur ve çamurda ilerleyen Grant, 25.000 adamıyla Donelson'u kuşattı. 15 Şubat'ta Konfederasyonların yaptığı bir huruç harekâtı kısa süreliğine bir kaçış yolu açtı; ancak John B. Floyd ve Gideon Pillow'un kararsız liderliği, Grant'ın karşı saldırıyla tuzağı yeniden kapatmasına izin verdi. Ertesi sabah Tuğgeneral Simon Bolivar Buckner şartlar istediğinde Grant'ın cevabı savaşın en ünlü sözlerinden biri oldu: \"Kayıtsız şartsız ve derhal teslim dışında hiçbir şart kabul edilemez.\" 12.000-15.000 Konfederasyon askeri silah bıraktı; bu o güne kadarki en büyük Amerikan teslimiydi. Ikiz zaferler batıdaki Konfederasyon savunma hattını tamamen kırdı, Nashville'in tahliyesine yol açtı, iki büyük nehri Birlik için Konfederasyon'un derinliklerine uzanan otoyollara çevirdi ve \"Kayıtsız Şartsız Teslim\" Grant'ı tanınmış bir isim yaptı. Bull Run'dan yalnızca yedi ay sonra gelen bu zaferler, savaştan yorgun Kuzey'e ilk gerçek ivme tadını verdi.",
+      "forces": {
+        "sideA": 25000,
+        "sideB": 21000
+      },
+      "casualties": {
+        "sideA": 2832,
+        "sideB": 13846
+      },
+      "commanders": {
+        "sideA": [
+          "Ulysses S. Grant",
+          "Andrew H. Foote"
+        ],
+        "sideB": [
+          "John B. Floyd",
+          "Gideon Pillow",
+          "Simon B. Buckner"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Fort_Donelson"
+    },
+    {
+      "id": "shiloh",
+      "name": "Battle of Shiloh",
+      "nameTr": "Shiloh Muharebesi",
+      "lat": 35.139,
+      "lng": -88.3432,
+      "date": "1862-04-06",
+      "dateEnd": "1862-04-07",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 4,
+      "summary": "A surprise Confederate attack along the Tennessee River produces the bloodiest battle in American history up to that point; Grant recovers to win.",
+      "summaryTr": "Tennessee Nehri boyunca sürpriz bir Konfederasyon saldırısı, o güne kadarki en kanlı Amerikan muharebesini doğurur; Grant toparlanarak zafer kazanır.",
+      "story": "In early April 1862, Grant's Army of the Tennessee was camped on a wooded plateau above Pittsburg Landing on the Tennessee River, waiting for Don Carlos Buell's army to arrive before advancing on the vital Confederate rail junction at Corinth. The Confederate commander, Albert Sidney Johnston, saw his chance to strike before the union armies united. At dawn on April 6, 40,000 Confederates burst from the woods around a small log church called Shiloh Meeting House. Union troops, many of them cooking breakfast, were driven back in chaos. Pockets of resistance formed in an oak thicket that became known as the Hornet's Nest, where Brigadier General Benjamin Prentiss held on for eight hours under artillery fire heavier than any American had experienced. Johnston himself was killed leading a charge and bled to death from a severed artery beneath his knee. By nightfall the Confederates, now under Beauregard, had pushed Grant to within a mile of the river, but Lew Wallace's division and Buell's Army of the Ohio arrived overnight. The next morning 45,000 fresh Union troops rolled over the exhausted Confederates and recaptured every inch of lost ground. Roughly 23,700 men fell in two days, more than in all previous American wars combined. The scale of Shiloh shocked both sides, taught the North that victory in the West would be slow and terrible, and confirmed Grant's willingness to absorb losses and keep fighting, qualities that would define his later campaigns.",
+      "storyTr": "Nisan 1862'nin başında Grant'ın Tennessee Ordusu, hayati Konfederasyon demiryolu kavşağı Corinth'e ilerlemek için Don Carlos Buell'in ordusunu beklerken Tennessee Nehri'nin üzerindeki Pittsburg Landing'in üstündeki ormanlık platoda kamp kurmuştu. Konfederasyon komutanı Albert Sidney Johnston, birlik ordularının birleşmesinden önce vurma fırsatını gördü. 6 Nisan şafağında 40.000 Konfederasyon askeri Shiloh Toplantı Evi adlı küçük bir kütük kilisenin etrafındaki ormandan fırladı. Çoğu kahvaltı pişiren Birlik askerleri kaosla geri çekildi. Meşe çalılıklarında oluşan direniş noktaları \"Eşek Arısı Yuvası\" adını aldı; Tuğgeneral Benjamin Prentiss burada hiçbir Amerikan'ın daha önce yaşamadığı ağırlıkta topçu ateşi altında sekiz saat dayandı. Johnston, bir saldırıya önderlik ederken dizinin altındaki kesik bir damardan kan kaybederek öldü. Geceye doğru artık Beauregard komutasındaki Konfederasyonlar Grant'ı nehre bir mil uzaklığa itmişti; ancak Lew Wallace'ın tümeni ve Buell'in Ohio Ordusu gece boyunca geldi. Ertesi sabah 45.000 taze Birlik askeri yorgun Konfederasyonları ezdi ve kaybedilen her karış toprağı geri aldı. Iki günde yaklaşık 23.700 adam düştü; bu, önceki tüm Amerikan savaşlarının toplamından fazlaydı. Shiloh'nun büyüklüğü her iki tarafı da sarstı, Kuzey'e Batı'daki zaferin yavaş ve korkunç olacağını öğretti ve Grant'ın kayıpları kabullenme ve savaşmaya devam etme iradesini doğruladı.",
+      "forces": {
+        "sideA": 65000,
+        "sideB": 44700
+      },
+      "casualties": {
+        "sideA": 13047,
+        "sideB": 10699
+      },
+      "commanders": {
+        "sideA": [
+          "Ulysses S. Grant",
+          "Don Carlos Buell"
+        ],
+        "sideB": [
+          "Albert Sidney Johnston",
+          "P.G.T. Beauregard"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Shiloh"
+    },
+    {
+      "id": "hampton-roads",
+      "name": "Battle of Hampton Roads",
+      "nameTr": "Hampton Roads Muharebesi",
+      "lat": 36.9735,
+      "lng": -76.3266,
+      "date": "1862-03-08",
+      "dateEnd": "1862-03-09",
+      "kind": "battle",
+      "side": "draw",
+      "order": 5,
+      "summary": "The ironclads USS Monitor and CSS Virginia fight to a draw in Chesapeake Bay, opening the age of iron warships.",
+      "summaryTr": "USS Monitor ve CSS Virginia zırhlıları Chesapeake Körfezi'nde berabere kalır ve demir savaş gemileri çağını açar.",
+      "story": "On the afternoon of March 8, 1862, the wooden warships of the Union blockading squadron at Hampton Roads were watching the horizon when a strange dark shape emerged from the Elizabeth River. The CSS Virginia, rebuilt from the scuttled frigate USS Merrimack and sheathed in four inches of iron, steamed slowly toward them. Shells bounced off her sloped casemate like pebbles. By sunset the Virginia had rammed and sunk USS Cumberland, burned USS Congress, and driven USS Minnesota aground. Panic reached Washington; Secretary of War Edwin Stanton feared the Virginia would steam up the Potomac and shell the capital. That same night, a bizarre little vessel towed down from Brooklyn arrived, the USS Monitor, designed by Swedish immigrant John Ericsson with a revolving iron turret housing two eleven-inch Dahlgren guns on a barely-visible hull that observers called a \"cheesebox on a raft.\" At dawn on March 9 the two ironclads closed at point-blank range in the waters of Hampton Roads and hammered each other for four hours while thousands of soldiers, sailors, and civilians watched from the shore. Neither ship could penetrate the other's armor; Virginia withdrew to Norfolk with a battered pilothouse, Monitor to shallow water with her commander blinded by a shell strike on her viewing slit. The duel was tactically indecisive, but strategically it revolutionized naval warfare: within a generation every major navy in the world had abandoned wooden walls for iron and steel.",
+      "storyTr": "8 Mart 1862 öğleden sonra Hampton Roads'taki Birlik abluka filosunun ahşap savaş gemileri ufku izlerken Elizabeth Nehri'nden garip karanlık bir şekil belirdi. Batırılmış firkateyn USS Merrimack'tan yeniden inşa edilen ve dört inç demirle kaplanmış CSS Virginia, yavaşça üzerlerine ilerledi. Eğimli top kulesinden mermiler çakıl taşı gibi sekiyordu. Gün batımına kadar Virginia; USS Cumberland'i toslayıp batırmış, USS Congress'i yakmış ve USS Minnesota'yı karaya oturtmuştu. Panik Washington'a ulaştı; Savaş Bakanı Edwin Stanton, Virginia'nın Potomac'a çıkıp başkenti bombalamasından korktu. Aynı gece Brooklyn'den çekilerek getirilen tuhaf küçük gemi USS Monitor geldi; İsveçli göçmen John Ericsson tarafından tasarlanan, zor görünen bir gövde üzerine iki adet on bir inçlik Dahlgren topu barındıran dönen demir bir top kulesi vardı; gözlemciler ona \"salın üstündeki peynir kutusu\" dedi. 9 Mart şafağında iki zırhlı Hampton Roads sularında çok yakın mesafede kapıştı ve binlerce asker, denizci ve sivil kıyıdan izlerken dört saat boyunca birbirini dövdü. Hiçbiri diğerinin zırhını delemedi; Virginia hasarlı bir güverte kulesiyle Norfolk'a, Monitor ise komutanı gözetleme yarığına isabet eden bir mermiyle kör olmuş halde sığ suya çekildi. Düello taktik olarak belirsizdi ama stratejik olarak deniz savaşını devrim niteliğinde değiştirdi.",
+      "forces": {
+        "sideA": 2,
+        "sideB": 1
+      },
+      "casualties": {
+        "sideA": 409,
+        "sideB": 24
+      },
+      "commanders": {
+        "sideA": [
+          "John L. Worden",
+          "Louis M. Goldsborough"
+        ],
+        "sideB": [
+          "Franklin Buchanan",
+          "Catesby ap R. Jones"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Hampton_Roads"
+    },
+    {
+      "id": "peninsula-campaign",
+      "name": "Peninsula Campaign",
+      "nameTr": "Yarımada Seferi",
+      "lat": 37.5407,
+      "lng": -77.436,
+      "date": "1862-03-17",
+      "dateEnd": "1862-07-01",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 6,
+      "summary": "McClellan's grand amphibious campaign to capture Richmond is defeated by Robert E. Lee in the Seven Days Battles.",
+      "summaryTr": "McClellan'ın Richmond'u almak için düzenlediği büyük amfibi seferi, Yedi Gün Muharebelerinde Robert E. Lee tarafından bozguna uğratılır.",
+      "story": "In March 1862 George B. McClellan loaded more than 100,000 men onto 400 vessels and landed them on the Virginia Peninsula between the York and James rivers, intending to march up the neck of land and take Richmond by flank rather than through the overland route from Washington. The plan was brilliant on paper but McClellan was cautious, repeatedly overestimating enemy numbers reported by Allan Pinkerton's detectives. A month was lost besieging the thin earthworks of Yorktown held by John B. Magruder's theatrical bluff. After a sharp fight at Williamsburg, the Army of the Potomac inched up the peninsula to within six miles of Richmond. On May 31 at Seven Pines, Confederate commander Joseph Johnston was wounded; President Davis replaced him with his military adviser, Robert E. Lee. Over the next four weeks Lee transformed the defensive Confederate force into the Army of Northern Virginia and launched the Seven Days Battles (June 25-July 1, 1862): Mechanicsville, Gaines's Mill, Savage's Station, Glendale, and finally Malvern Hill, where Union artillery annihilated Confederate charges. Tactically the Confederates suffered more casualties than the Union, but strategically Lee drove McClellan down to Harrison's Landing on the James and saved Richmond. The campaign dashed Northern hopes of ending the war in 1862, discredited McClellan with Lincoln, and elevated Lee into the legend he would remain for the rest of the war.",
+      "storyTr": "Mart 1862'de George B. McClellan 100.000'den fazla askeri 400 gemiye yükledi ve York ile James nehirleri arasındaki Virginia Yarımadası'na çıkardı; amacı Washington'dan karadan yürümek yerine bu dar toprak parçasından ilerleyerek Richmond'u yan yan yakalamaktı. Plan kağıt üzerinde parlaktı, ancak McClellan temkinliydi ve Allan Pinkerton'ın dedektiflerinin verdiği düşman sayılarını defalarca abartıyordu. John B. Magruder'ın teatral blöfüyle tutulan Yorktown'un ince topraktahkimatlarını kuşatmak bir ay kaybettirdi. Williamsburg'da sert bir çarpışmanın ardından Potomac Ordusu yarımadayı tırmanıp Richmond'a altı mil yaklaştı. 31 Mayıs Seven Pines'da Konfederasyon komutanı Joseph Johnston yaralandı; Başkan Davis onun yerine askeri danışmanı Robert E. Lee'yi atadı. Sonraki dört hafta içinde Lee savunmacı Konfederasyon gücünü Kuzey Virginia Ordusu'na dönüştürdü ve Yedi Gün Muharebelerini başlattı (25 Haziran-1 Temmuz 1862): Mechanicsville, Gaines's Mill, Savage's Station, Glendale ve son olarak Birlik topçusunun Konfederasyon saldırılarını imha ettiği Malvern Hill. Taktik olarak Konfederasyonlar daha çok kayıp verdi ama stratejik olarak Lee, McClellan'ı James üzerindeki Harrison's Landing'e sürdü ve Richmond'u kurtardı.",
+      "forces": {
+        "sideA": 105000,
+        "sideB": 92000
+      },
+      "casualties": {
+        "sideA": 23119,
+        "sideB": 29298
+      },
+      "commanders": {
+        "sideA": [
+          "George B. McClellan"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "Joseph E. Johnston"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Peninsula_campaign"
+    },
+    {
+      "id": "second-bull-run",
+      "name": "Second Battle of Bull Run",
+      "nameTr": "İkinci Bull Run Muharebesi",
+      "lat": 38.8137,
+      "lng": -77.5222,
+      "date": "1862-08-28",
+      "dateEnd": "1862-08-30",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 7,
+      "summary": "Lee and Jackson crush John Pope's Army of Virginia near the old Manassas battlefield and clear the way for an invasion of the North.",
+      "summaryTr": "Lee ve Jackson, eski Manassas savaş alanı yakınında John Pope'un Virginia Ordusu'nu ezer ve Kuzey'in işgalinin önünü açar.",
+      "story": "Emboldened by victory on the Peninsula, Robert E. Lee turned north in August 1862 to destroy John Pope's newly formed Army of Virginia before McClellan's troops could join it. Dividing his army, a move that shocked orthodox military theorists, Lee sent Stonewall Jackson on a blistering fifty-mile march around Pope's flank. On August 26 Jackson's men overran the Union supply depot at Manassas Junction, feasted on captured rations, and then vanished into the woods near Groveton. When Pope finally located Jackson on August 28, he threw his divisions piecemeal against an unfinished railroad cut where Jackson's men were dug in. For two days Confederates fought off assaults with rocks when their ammunition ran low. On August 30, Pope, convinced Jackson was retreating, ordered a pursuit. At that moment James Longstreet's 28,000 men, which Pope did not even realize were on the field, slammed into the exposed Union left flank in the largest simultaneous charge of the war. Pope's army reeled backward across Bull Run in a second rout on nearly the same ground as the first. Union losses reached 14,000; Confederate, 8,000. Lincoln relieved Pope and reluctantly returned McClellan to command of the combined armies. Lee, meanwhile, saw an opportunity to carry the war north of the Potomac for the first time, hoping a battlefield victory on Northern soil might force European recognition, depress Northern morale, and draw Maryland into the Confederacy.",
+      "storyTr": "Yarımada'daki zaferden cesaret alan Robert E. Lee, Ağustos 1862'de John Pope'un yeni kurulan Virginia Ordusu'nu McClellan'ın birlikleri ona katılmadan imha etmek için kuzeye döndü. Ortodoks askeri teorisyenleri şaşırtan bir hamleyle ordusunu böldü ve Stonewall Jackson'ı Pope'un kanatını aşmak için ellik millik yakıcı bir yürüyüşe gönderdi. 26 Ağustos'ta Jackson'ın adamları Manassas Junction'daki Birlik ikmal deposunu bastı, ele geçirilen erzaklarla ziyafet çekti ve Groveton yakınındaki ormanlarda kayboldu. Pope Jackson'ı ancak 28 Ağustos'ta bulabildi ve tümenlerini Jackson'ın askerlerinin siperlendiği yarım kalmış bir demiryolu kesimine parça parça saldırttı. İki gün boyunca Konfederasyonlar mühimmatları bittiğinde taşlarla saldırıları püskürttü. 30 Ağustos'ta Pope, Jackson'ın çekildiğinden emin, takip emri verdi. O anda Pope'un sahada olduğunu bile fark etmediği James Longstreet'in 28.000 adamı, savaşın en büyük eş zamanlı saldırısıyla savunmasız Birlik sol kanadına çarptı. Pope'un ordusu Bull Run boyunca geri sarsıldı; neredeyse aynı zeminde ikinci bir bozgun yaşandı. Birlik kayıpları 14.000'e, Konfederasyon 8.000'e ulaştı.",
+      "forces": {
+        "sideA": 62000,
+        "sideB": 50000
+      },
+      "casualties": {
+        "sideA": 13830,
+        "sideB": 8353
+      },
+      "commanders": {
+        "sideA": [
+          "John Pope"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "Thomas J. Jackson",
+          "James Longstreet"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Second_Battle_of_Bull_Run"
     },
     {
       "id": "antietam",
       "name": "Battle of Antietam",
       "nameTr": "Antietam Muharebesi",
-      "lat": 39.4706, "lng": -77.7440,
+      "lat": 39.473,
+      "lng": -77.744,
       "date": "1862-09-17",
-      "kind": "battle", "side": "draw",
-      "summary": "The bloodiest single day in American history — 22,717 casualties. Lee's invasion of the North is halted, giving Lincoln the opening to issue the Emancipation Proclamation.",
-      "summaryTr": "Amerikan tarihinin en kanlı tek günü — 22.717 kayıp. Lee'nin Kuzey'e yaptığı saldırı durdurulur ve Lincoln'a Azatlık Bildirgesi'ni ilan etme fırsatı doğar.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Antietam"
+      "kind": "battle",
+      "side": "draw",
+      "order": 8,
+      "summary": "The single bloodiest day in American history halts Lee's first invasion of the North and gives Lincoln the victory he needs to issue the Emancipation Proclamation.",
+      "summaryTr": "Amerikan tarihinin tek günlük en kanlı muharebesi, Lee'nin kuzeye ilk işgalini durdurur ve Lincoln'e Köleliğin Kaldırılması Bildirgesi'ni yayımlaması için gerekli zaferi verir.",
+      "story": "On September 17, 1862, along a sluggish creek named the Antietam near Sharpsburg, Maryland, Robert E. Lee with fewer than 40,000 men met George B. McClellan's 75,000. Lee had crossed the Potomac to bring the war to Northern soil, but a copy of his orders, Special Order 191, had been found wrapped around three cigars in an abandoned Confederate campsite and handed to McClellan, giving the Union commander an extraordinary intelligence windfall. Even with this, McClellan attacked piecemeal. At dawn Joseph Hooker's corps smashed into Jackson's line through a cornfield near the Dunker Church; by mid-morning the stalks had been scythed flat and the cornfield choked with bodies. Fighting shifted south to a sunken farm lane forever after called Bloody Lane, where 5,500 men fell in three hours. In the afternoon Ambrose Burnside's repeated assaults finally carried a stone bridge over the creek, only to be driven back by A. P. Hill's division, which had marched seventeen miles from Harpers Ferry in eight hours to arrive just in time. By nightfall some 22,700 Americans lay dead, wounded, or missing, the bloodiest single day in the nation's history. Lee's battered army slipped back across the Potomac the next night; McClellan declined to pursue. Strategically Antietam was a draw, but Lincoln seized it as the victory he had waited for and five days later issued the preliminary Emancipation Proclamation, transforming the war into a struggle to end slavery.",
+      "storyTr": "17 Eylül 1862'de Maryland'in Sharpsburg yakınlarındaki Antietam adlı ağır akan bir derenin boyunca Robert E. Lee, 40.000'den az askerle George B. McClellan'ın 75.000 askerine karşı geldi. Lee, savaşı kuzey topraklarına taşımak için Potomac'ı geçmişti; ancak özel emir 191'in bir kopyası, terkedilmiş bir Konfederasyon kampında üç puroya sarılı halde bulunup McClellan'a verilmiş ve Birlik komutanına olağanüstü bir istihbarat avantajı sağlamıştı. Buna rağmen McClellan parça parça saldırdı. Şafakta Joseph Hooker'ın kolordusu Dunker Kilisesi yakınındaki mısır tarlasından Jackson'ın hattına çarptı; sabaha doğru saplar tırpanlanmış gibi yere serilmiş, tarla cesetlerle dolmuştu. Çarpışma, üç saatte 5.500 askerin düştüğü ve sonsuza dek Kanlı Yol olarak anılacak çökmüş bir çiftlik yoluna kaydı. Öğleden sonra Ambrose Burnside'ın tekrarlayan saldırıları nihayet dere üzerindeki taş köprüyü aldı; ama sekiz saatte Harpers Ferry'den on yedi mil yürüyerek tam zamanında yetişen A. P. Hill'in tümeni tarafından geri püskürtüldü. Geceye doğru yaklaşık 22.700 Amerikalı ölmüş, yaralanmış ya da kayıptı; ülke tarihinin tek günlük en kanlı günü. Lee'nin yıpranmış ordusu ertesi gece Potomac'ı geri geçti; McClellan takip etmeyi reddetti. Stratejik olarak Antietam berabere olsa da Lincoln bunu beklediği zafer olarak benimsedi ve beş gün sonra ön Köleliğin Kaldırılması Bildirgesi'ni yayımlayarak savaşı köleliği sona erdirme mücadelesine dönüştürdü.",
+      "forces": {
+        "sideA": 75500,
+        "sideB": 38000
+      },
+      "casualties": {
+        "sideA": 12401,
+        "sideB": 10316
+      },
+      "commanders": {
+        "sideA": [
+          "George B. McClellan"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "Thomas J. Jackson",
+          "James Longstreet"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Antietam",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Antietam_Muharebesi"
     },
     {
-      "id": "emancipation",
+      "id": "emancipation-proclamation",
       "name": "Emancipation Proclamation",
-      "nameTr": "Azatlık Bildirgesi",
-      "lat": 38.8977, "lng": -77.0365,
+      "nameTr": "Köleliğin Kaldırılması Bildirgesi",
+      "lat": 38.8977,
+      "lng": -77.0365,
       "date": "1863-01-01",
-      "kind": "event", "side": "political",
-      "summary": "Lincoln declares all enslaved people in Confederate territory to be free. The war becomes explicitly a war against slavery; Europe will not recognise the Confederacy.",
-      "summaryTr": "Lincoln, Konfederasyon topraklarındaki tüm köleleri özgür ilan eder. Savaş artık açıkça köleliğe karşı bir savaştır; Avrupa, Konfederasyon'u tanımayacaktır.",
+      "kind": "event",
+      "side": "political",
+      "order": 9,
+      "summary": "President Lincoln's executive order declares enslaved people in Confederate-held territory to be free, transforming the war's purpose.",
+      "summaryTr": "Başkan Lincoln'ün yürütme emri, Konfederasyon elindeki topraklardaki köleleri özgür ilan eder ve savaşın amacını dönüştürür.",
+      "story": "Abraham Lincoln had waited nearly eighteen months for the right moment. The president believed secession had given him war powers to strike at slavery where it sustained the Confederate war effort, but he needed a Union battlefield success to avoid appearing desperate. Antietam provided it. On September 22, 1862, he announced the preliminary proclamation; on January 1, 1863, he signed the final Emancipation Proclamation in the Cabinet Room after spending three hours shaking hands at the New Year's reception. \"If my name ever goes into history,\" he told his secretary as he dipped the pen, \"it will be for this act, and my whole soul is in it.\" The order declared all enslaved persons in states \"in rebellion against the United States\" to be \"then, thenceforward, and forever free.\" It exempted the loyal border states and areas already under Union control, so it freed almost no one on the day it was issued. But its significance was immense. It reframed the war as a struggle against slavery as well as for the Union, destroyed any remaining chance of European recognition of the Confederacy (Britain having abolished slavery in 1833), and authorized the enlistment of Black men into the Union army and navy. By war's end nearly 200,000 African Americans would serve under the U.S. flag, roughly 10% of Union forces. The proclamation did not abolish slavery permanently; that would require the Thirteenth Amendment, ratified December 1865. But it made emancipation a Union war aim and placed the nation irrevocably on the road to a new birth of freedom.",
+      "storyTr": "Abraham Lincoln doğru anı yaklaşık on sekiz aydır bekliyordu. Başkan, ayrılmanın kendisine köleliği Konfederasyon savaş çabasını beslediği yerde vurma savaş yetkileri verdiğine inanıyordu; ancak çaresiz görünmemek için bir Birlik savaş alanı başarısına ihtiyacı vardı. Antietam bunu sağladı. 22 Eylül 1862'de ön bildirgeyi açıkladı; 1 Ocak 1863'te Yeni Yıl resepsiyonunda üç saat el sıkıştıktan sonra Kabine Odası'nda nihai Köleliğin Kaldırılması Bildirgesi'ni imzaladı. Kalemi daldırırken sekreterine \"Eğer adım tarihe geçerse, bu eylem yüzünden olacaktır ve tüm ruhum bunun içindedir\" dedi. Emir, \"Amerika Birleşik Devletleri'ne isyan halindeki\" eyaletlerdeki tüm köleleri \"bu andan itibaren ve sonsuza dek özgür\" ilan etti. Sadık sınır eyaletlerini ve zaten Birlik kontrolündeki bölgeleri hariç tuttuğu için yayımlandığı gün neredeyse kimseyi özgürleştirmedi. Ancak önemi çok büyüktü. Savaşı Birlik için olduğu kadar köleliğe karşı bir mücadele olarak yeniden çerçeveledi, Konfederasyon'un Avrupa tarafından tanınma şansını yok etti (İngiltere 1833'te köleliği kaldırmıştı) ve Siyah erkeklerin Birlik ordusu ile donanmasına katılımına izin verdi. Savaşın sonuna kadar yaklaşık 200.000 Afrikalı Amerikalı ABD bayrağı altında hizmet edecek, Birlik kuvvetlerinin yaklaşık %10'unu oluşturacaktı.",
+      "commanders": {
+        "sideA": [
+          "Abraham Lincoln",
+          "William H. Seward"
+        ],
+        "sideB": []
+      },
       "wikipediaEn": "https://en.wikipedia.org/wiki/Emancipation_Proclamation"
     },
     {
-      "id": "gettysburg",
-      "name": "Battle of Gettysburg",
-      "nameTr": "Gettysburg Muharebesi",
-      "lat": 39.8309, "lng": -77.2311,
-      "date": "1863-07-01", "dateEnd": "1863-07-03",
-      "kind": "battle", "side": "victory-a",
-      "summary": "The turning point of the war. Meade's Union Army repels Pickett's Charge on the third day. Lee's second invasion of the North is broken — the Confederacy never recovers.",
-      "summaryTr": "Savaşın dönüm noktası. Meade'in Birlik Ordusu, üçüncü günde Pickett'in Saldırısı'nı püskürtür. Lee'nin ikinci Kuzey seferi kırılır — Konfederasyon bir daha toparlanamaz.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Gettysburg"
+      "id": "fredericksburg",
+      "name": "Battle of Fredericksburg",
+      "nameTr": "Fredericksburg Muharebesi",
+      "lat": 38.2929,
+      "lng": -77.4672,
+      "date": "1862-12-11",
+      "dateEnd": "1862-12-15",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 10,
+      "summary": "Ambrose Burnside's futile frontal assaults against Lee's entrenched army on Marye's Heights produce one of the Union's worst defeats.",
+      "summaryTr": "Ambrose Burnside'ın Marye's Heights'taki Lee'nin siperli ordusuna karşı nafile cepheden saldırıları, Birlik'in en ağır yenilgilerinden birine yol açar.",
+      "story": "After relieving McClellan in November 1862, Lincoln gave command of the Army of the Potomac to Ambrose Burnside, a genial officer who privately admitted he was not equal to the task. Burnside proposed a rapid march to the small river town of Fredericksburg, Virginia, where he would cross the Rappahannock River on pontoon bridges and interpose his army between Lee and Richmond. But the pontoons arrived a week late, giving Lee time to entrench 78,000 men on the heights behind the town. When Burnside finally crossed on December 11 under the covering fire of 147 guns, Confederate sharpshooters contested the bridgeheads from houses along the waterfront, a novel urban battle that ended with Union troops looting the evacuated town. On December 13 Burnside ordered a two-pronged attack: on the Union left Meade's division briefly punctured Jackson's line south of town before being driven back. On the right, fourteen Union brigades made successive charges across 400 yards of open ground against a stone wall and sunken road on Marye's Heights, where Longstreet's infantry and artillery waited. Not a single man reached the wall. By nightfall the slope was carpeted with nearly 8,000 Union casualties. Lee, watching from a hill that would bear his name, reportedly remarked, \"It is well that war is so terrible, or we should grow too fond of it.\" Burnside withdrew across the river two days later. The battle devastated Northern morale at Christmas and reinforced doubts that the Union could ever break Lee's army in Virginia.",
+      "storyTr": "Kasım 1862'de McClellan'ı görevden alan Lincoln, Potomac Ordusu'nun komutasını özel olarak bu işe uygun olmadığını kabul eden cana yakın subay Ambrose Burnside'a verdi. Burnside, Virginia'nın küçük nehir kasabası Fredericksburg'a hızlı bir yürüyüş önerdi; orada Rappahannock Nehri'ni tombaz köprüler üzerinden geçecek ve ordusunu Lee ile Richmond'un arasına sokacaktı. Ancak tombazlar bir hafta geç geldi ve Lee 78.000 askeri kasabanın arkasındaki tepelere siperletebildi. Burnside 11 Aralık'ta 147 topun ateş desteğiyle nihayet geçtiğinde, Konfederasyon keskin nişancıları su kıyısındaki evlerden köprübaşlarını dövdü; bu tuhaf kentsel muharebe, Birlik askerlerinin tahliye edilen kasabayı yağmalamasıyla sonuçlandı. 13 Aralık'ta Burnside çift yönlü saldırı emri verdi: solda Meade'in tümeni kasabanın güneyindeki Jackson hattını kısa süreliğine delip geri püskürtüldü. Sağda on dört Birlik tugayı, Longstreet'in piyadesi ve topçusunun beklediği Marye's Heights'taki taş duvara ve çökük yola doğru 400 yardalık açık araziden ardarda saldırdı. Hiçbir asker duvara ulaşamadı. Geceye kadar yamaç yaklaşık 8.000 Birlik zayiatıyla kaplanmıştı. Lee, daha sonra adını alacak tepeden izleyerek \"Savaşın bu kadar korkunç olması iyi, yoksa onu fazla severdik\" demişti.",
+      "forces": {
+        "sideA": 114000,
+        "sideB": 72500
+      },
+      "casualties": {
+        "sideA": 12653,
+        "sideB": 5377
+      },
+      "commanders": {
+        "sideA": [
+          "Ambrose Burnside"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "James Longstreet",
+          "Thomas J. Jackson"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Fredericksburg"
+    },
+    {
+      "id": "chancellorsville",
+      "name": "Battle of Chancellorsville",
+      "nameTr": "Chancellorsville Muharebesi",
+      "lat": 38.3096,
+      "lng": -77.6373,
+      "date": "1863-04-30",
+      "dateEnd": "1863-05-06",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 11,
+      "summary": "Lee's tactical masterpiece defeats a Union army twice his size, but Stonewall Jackson is mortally wounded by his own men.",
+      "summaryTr": "Lee'nin taktik başyapıtı, iki katı büyüklüğündeki Birlik ordusunu mağlup eder; ancak Stonewall Jackson kendi askerleri tarafından ölümcül şekilde yaralanır.",
+      "story": "Joseph Hooker replaced Burnside in January 1863 and spent the winter rebuilding the Army of the Potomac into what he boasted was \"the finest army on the planet.\" In late April he marched 134,000 men upriver, crossed the Rappahannock, and advanced into the dense second-growth woodland called the Wilderness, intending to fall on Lee's flank. On May 1 Lee, with only 60,000 men, did the unthinkable: he divided his army in the enemy's presence and sent Stonewall Jackson on a twelve-mile flanking march through the Wilderness. At dusk on May 2, just as Hooker's unsuspecting right-wing corps was cooking supper, Jackson's 28,000 men erupted from the woods screaming the rebel yell. Two full divisions were swept away before darkness and confusion halted the attack. Riding ahead of his lines to scout by moonlight, Jackson was shot by his own North Carolina sentries, his left arm shattered. On May 3 Lee renewed the attack with four converging columns and drove Hooker's army back against the river; after further fighting on May 6, Hooker retreated. Union losses were 17,000; Confederate, 13,000. It was Lee's most audacious and brilliant victory, but it came at a shattering cost: Jackson died eight days later of pneumonia following amputation, depriving Lee of his most gifted lieutenant just as he began planning his second invasion of the North. \"I have lost my right arm,\" Lee mourned.",
+      "storyTr": "Joseph Hooker Ocak 1863'te Burnside'ın yerine geçti ve kışı Potomac Ordusu'nu övündüğü şekilde \"dünyanın en iyi ordusuna\" dönüştürerek geçirdi. Nisan sonunda 134.000 askeriyle nehir yukarı yürüdü, Rappahannock'u geçti ve Lee'nin kanadına düşmek amacıyla Vahşi Arazi (Wilderness) olarak bilinen yoğun ikincil büyüme ormanlık alanına ilerledi. 1 Mayıs'ta sadece 60.000 askeri olan Lee düşünülemezi yaptı: düşman önünde ordusunu böldü ve Stonewall Jackson'ı Vahşi Arazi boyunca on iki millik kuşatma yürüyüşüne gönderdi. 2 Mayıs akşamüstü, Hooker'ın şüphelenmeyen sağ kanat kolordusu akşam yemeği pişirirken Jackson'ın 28.000 askeri isyan çığlıklarıyla ormandan fırladı. Karanlık ve karmaşa saldırıyı durdurana kadar iki tam tümen süpürüldü. Mehtapta hatlarının önünde keşif yapan Jackson, kendi Kuzey Carolina nöbetçileri tarafından vuruldu; sol kolu parçalandı. 3 Mayıs'ta Lee dört yakınsayan kolla saldırıyı yeniledi ve Hooker'ın ordusunu nehre doğru geri sürdü; 6 Mayıs'taki çarpışmaların ardından Hooker çekildi. Birlik kayıpları 17.000, Konfederasyon 13.000'di. Bu Lee'nin en cesur ve parlak zaferiydi ama yıkıcı bir bedeli vardı: Jackson sekiz gün sonra ampütasyonu takip eden zatürreden öldü ve Lee kuzeyin ikinci işgalini planlarken en yetenekli generalini kaybetti.",
+      "forces": {
+        "sideA": 133868,
+        "sideB": 60892
+      },
+      "casualties": {
+        "sideA": 17197,
+        "sideB": 13303
+      },
+      "commanders": {
+        "sideA": [
+          "Joseph Hooker"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "Thomas J. Jackson"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Chancellorsville"
     },
     {
       "id": "vicksburg",
       "name": "Siege of Vicksburg",
       "nameTr": "Vicksburg Kuşatması",
-      "lat": 32.3527, "lng": -90.8780,
-      "date": "1863-05-18", "dateEnd": "1863-07-04",
-      "kind": "siege", "side": "victory-a",
-      "summary": "Grant's 47-day siege takes the last Confederate stronghold on the Mississippi. The Union now controls the river — the Confederacy is cut in two.",
-      "summaryTr": "Grant'in 47 günlük kuşatması, Mississippi üzerindeki son Konfederasyon kalesini ele geçirir. Birlik artık nehri kontrol eder — Konfederasyon ikiye bölünür.",
+      "lat": 32.3526,
+      "lng": -90.8779,
+      "date": "1863-05-18",
+      "dateEnd": "1863-07-04",
+      "kind": "siege",
+      "side": "victory-a",
+      "order": 12,
+      "summary": "Grant's masterful campaign along the Mississippi ends with the surrender of the 'Gibraltar of the Confederacy' on July 4, splitting the South in two.",
+      "summaryTr": "Grant'ın Mississippi boyunca yürüttüğü ustaca seferi, 'Konfederasyon'un Cebelitarık'ı'nın 4 Temmuz'da teslim olmasıyla sona erer ve Güney'i ikiye böler.",
+      "story": "Vicksburg, Mississippi, sat on a 200-foot bluff overlooking a hairpin bend in the Mississippi River. For Lincoln it was \"the key\" to the Confederacy, the last barrier preventing the Union from cutting the rebellion in half along its greatest river. Grant had spent the winter of 1862-63 failing at six different schemes to get behind the city. In late April 1863 he tried something audacious: he marched his army down the Louisiana bank, ran the river batteries with David Porter's gunboats on moonless nights, ferried across below Vicksburg, and in a month-long campaign abandoned his supply line, defeated five Confederate armies in five battles, captured the state capital of Jackson, and drove John C. Pemberton's Confederates back into the Vicksburg defenses. After two bloody failed assaults on May 19 and 22, Grant settled into a formal siege. For forty-seven days Pemberton's 30,000 soldiers and Vicksburg's civilian population lived in caves dug into the yellow loess hillsides as Union artillery and Porter's ironclads pounded the city. Mules, horses, dogs, and eventually rats appeared on dinner tables. On July 3 Pemberton asked for terms; on July 4, 1863, Independence Day, his army stacked its arms in front of Grant's headquarters tent. Combined with Gettysburg the same day, the fall of Vicksburg was the decisive turning point of the war. Lincoln proclaimed, \"The Father of Waters again goes unvexed to the sea.\" The Confederacy was cut in two, Grant's reputation sealed, and the road to supreme command opened.",
+      "storyTr": "Mississippi eyaletindeki Vicksburg, Mississippi Nehri'nin tokat dönüşüne bakan 200 fitlik bir yamacın üzerindeydi. Lincoln için Konfederasyon'un \"anahtarı\", Birlik'in isyanı en büyük nehri boyunca ikiye bölmesinin önündeki son engeldi. Grant, 1862-63 kışını şehrin arkasına geçmek için altı farklı planda başarısız olarak geçirdi. Nisan 1863 sonunda cesur bir şey denedi: ordusunu Louisiana kıyısı boyunca yürüttü, ay ışığı olmayan gecelerde David Porter'ın gambotlarıyla nehir bataryalarını geçti, Vicksburg'un altından karşıya geçirdi ve bir aylık bir seferde ikmal hattını terk etti, beş çarpışmada beş Konfederasyon ordusunu yendi, eyalet başkenti Jackson'ı ele geçirdi ve John C. Pemberton'ı Vicksburg savunmalarına geri sürdü. 19 ve 22 Mayıs'ta iki kanlı başarısız saldırıdan sonra Grant resmi bir kuşatmaya girdi. Kırk yedi gün boyunca Pemberton'ın 30.000 askeri ve Vicksburg sivilleri, Birlik topçusu ve Porter'ın zırhlıları şehri dövdüğü sırada sarı losun tepelere oyulmuş mağaralarda yaşadı. Katırlar, atlar, köpekler ve sonunda fareler yemek masalarında belirdi. 3 Temmuz'da Pemberton şartlar istedi; 4 Temmuz 1863 Bağımsızlık Günü'nde ordusu silahlarını Grant'ın karargâh çadırının önünde bıraktı. Aynı gün gerçekleşen Gettysburg ile birlikte Vicksburg'un düşüşü savaşın belirleyici dönüm noktasıydı.",
+      "forces": {
+        "sideA": 77000,
+        "sideB": 33000
+      },
+      "casualties": {
+        "sideA": 4910,
+        "sideB": 32697
+      },
+      "commanders": {
+        "sideA": [
+          "Ulysses S. Grant",
+          "William T. Sherman",
+          "David D. Porter"
+        ],
+        "sideB": [
+          "John C. Pemberton",
+          "Joseph E. Johnston"
+        ]
+      },
       "wikipediaEn": "https://en.wikipedia.org/wiki/Siege_of_Vicksburg"
     },
     {
-      "id": "sherman-march",
+      "id": "gettysburg",
+      "name": "Battle of Gettysburg",
+      "nameTr": "Gettysburg Muharebesi",
+      "lat": 39.8309,
+      "lng": -77.2311,
+      "date": "1863-07-01",
+      "dateEnd": "1863-07-03",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 13,
+      "summary": "The largest battle ever fought in North America ends Lee's second invasion of the North and becomes the war's defining engagement.",
+      "summaryTr": "Kuzey Amerika'da yapılan en büyük muharebe, Lee'nin kuzeye ikinci işgalini sona erdirir ve savaşın belirleyici çarpışması olur.",
+      "story": "Emboldened by Chancellorsville, Lee carried his 75,000-strong Army of Northern Virginia across the Potomac again in June 1863, foraging across southern Pennsylvania and threatening Harrisburg, Philadelphia, and Baltimore. Lincoln replaced Hooker with George G. Meade on June 28; three days later Meade's 93,000 Federals and Lee's columns collided by accident at the small road-junction town of Gettysburg. Over three days they fought the largest battle ever waged in North America. On July 1 Confederates drove Union forces through the town onto the fishhook-shaped high ground of Cemetery Hill and Culp's Hill. On July 2 Longstreet's corps assaulted the Union left, where bitter fighting raged through Devil's Den, Little Round Top (held by Joshua Chamberlain's 20th Maine in a desperate downhill bayonet charge), the Wheatfield, and the Peach Orchard. On July 3 Lee ordered a final assault against the Union center: 12,500 Confederates under George Pickett, Isaac Trimble, and J. Johnston Pettigrew stepped off across nearly a mile of open ground under converging artillery fire. For a few desperate minutes they pierced the stone wall at the Angle, but the charge was smashed and barely half returned. Combined casualties reached 51,000, the costliest battle of the war. Lee withdrew through driving rain on July 4, the same day Vicksburg surrendered. The Army of Northern Virginia never again attempted to invade the North. Four months later, standing in the new national cemetery, Lincoln redefined the war's meaning in 272 words: \"that government of the people, by the people, for the people, shall not perish from the earth.\"",
+      "storyTr": "Chancellorsville'dan cesaretlenen Lee, Haziran 1863'te 75.000 kişilik Kuzey Virginia Ordusu'nu tekrar Potomac'tan geçirdi; güney Pensilvanya'da yiyecek topladı ve Harrisburg, Philadelphia ve Baltimore'u tehdit etti. Lincoln 28 Haziran'da Hooker'ı George G. Meade ile değiştirdi; üç gün sonra Meade'in 93.000 Birlik askeri ile Lee'nin kolları, küçük yol kavşağı kasabası Gettysburg'da tesadüfen çarpıştı. Üç gün boyunca Kuzey Amerika'da yapılan en büyük muharebeyi sürdürdüler. 1 Temmuz'da Konfederasyonlar Birlik kuvvetlerini kasabadan Cemetery Hill ve Culp's Hill'in kanca biçimli yüksek zeminine sürdü. 2 Temmuz'da Longstreet'in kolordusu Devil's Den, Little Round Top (Joshua Chamberlain'in 20. Maine'i tarafından umutsuz bir yokuş aşağı süngü hücumuyla tutulan), Buğday Tarlası ve Şeftali Bahçesi boyunca şiddetli çarpışmalarla Birlik solunu dövdü. 3 Temmuz'da Lee Birlik merkezine son bir saldırı emri verdi: George Pickett, Isaac Trimble ve J. Johnston Pettigrew komutasındaki 12.500 Konfederasyon askeri birleşen topçu ateşi altında yaklaşık bir mil açık araziye adım attı. Birkaç çaresiz dakika için taş duvarı Köşe'den deldiler ama saldırı parçalandı ve zar zor yarısı döndü. Toplam kayıplar 51.000'e ulaştı. Lee 4 Temmuz'da yağmurda geri çekildi; aynı gün Vicksburg teslim oldu. Dört ay sonra yeni ulusal mezarlıkta Lincoln, savaşın anlamını 272 kelimeyle yeniden tanımladı.",
+      "forces": {
+        "sideA": 93921,
+        "sideB": 71699
+      },
+      "casualties": {
+        "sideA": 23049,
+        "sideB": 28063
+      },
+      "commanders": {
+        "sideA": [
+          "George G. Meade",
+          "John F. Reynolds",
+          "Winfield S. Hancock",
+          "Joshua L. Chamberlain"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "James Longstreet",
+          "George Pickett",
+          "J.E.B. Stuart"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Gettysburg",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Gettysburg_Muharebesi"
+    },
+    {
+      "id": "chickamauga",
+      "name": "Battle of Chickamauga",
+      "nameTr": "Chickamauga Muharebesi",
+      "lat": 34.9386,
+      "lng": -85.2608,
+      "date": "1863-09-19",
+      "dateEnd": "1863-09-20",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 14,
+      "summary": "Braxton Bragg's Confederates shatter William Rosecrans's Army of the Cumberland in the bloodiest battle in the western theater.",
+      "summaryTr": "Braxton Bragg'in Konfederasyonları, William Rosecrans'ın Cumberland Ordusu'nu batı cephesinin en kanlı muharebesinde paramparça eder.",
+      "story": "Through the summer of 1863 William Rosecrans had brilliantly maneuvered Braxton Bragg's Confederate Army of Tennessee out of middle Tennessee and into the mountains without a major battle, culminating in the bloodless capture of Chattanooga on September 9. But Rosecrans pushed his scattered corps too far into northern Georgia, and Bragg, reinforced by two divisions from Lee's army under Longstreet, turned to strike. Along West Chickamauga Creek, the name meant \"River of Death\" in Cherokee, the two armies collided on September 19 in dense woods that limited visibility to yards. Fighting surged back and forth through brush thick with laurel and rhododendron. On September 20 Rosecrans, misreading his own lines, ordered a division to close a gap that did not exist, opening a real quarter-mile hole in his center just as Longstreet's eight-brigade column happened to attack that exact spot. The Union right wing disintegrated; Rosecrans and a third of his army fled toward Chattanooga. Only George Thomas, \"the Rock of Chickamauga,\" held his ground on Snodgrass Hill with a patchwork corps until nightfall, saving the army from annihilation. Combined casualties topped 34,000, second only to Gettysburg. Bragg, however, failed to pursue aggressively. The defeated Federals fell back into Chattanooga, where Bragg followed and laid siege, cutting the railroads and nearly starving the city. Lincoln consolidated the western armies, relieved Rosecrans, and dispatched Grant to restore the situation.",
+      "storyTr": "1863 yazı boyunca William Rosecrans, Braxton Bragg'in Konfederasyon Tennessee Ordusu'nu büyük bir muharebe yapmadan orta Tennessee'den çıkarıp dağlara sürmüş, 9 Eylül'de Chattanooga'yı kansız ele geçirmişti. Ancak Rosecrans dağınık kolordularını kuzey Georgia'ya fazla ittirdi ve Longstreet komutasında Lee'nin ordusundan iki tümenle takviye edilen Bragg karşı saldırı için döndü. West Chickamauga Deresi boyunca, isim Çerokice \"Ölüm Nehri\" anlamına geliyordu, iki ordu 19 Eylül'de görüşü metrelerle sınırlayan yoğun ormanlarda çarpıştı. Çarpışma defne ve rododendronla kaplı çalılar arasında ileri geri sürdü. 20 Eylül'de Rosecrans, kendi hatlarını yanlış okuyarak, var olmayan bir boşluğu kapatmak için bir tümene emir verdi ve tam da Longstreet'in sekiz tugaylık kolunun saldırdığı noktada merkezde gerçek çeyrek millik bir delik açtı. Birlik sağ kanadı dağıldı; Rosecrans ve ordusunun üçte biri Chattanooga'ya kaçtı. Sadece \"Chickamauga'nın Kayası\" George Thomas, Snodgrass Tepesi'nde geceye kadar dayanıp orduyu imhadan kurtardı. Toplam kayıplar 34.000'i aştı. Ancak Bragg agresif takip yapmadı. Yenilen Federaller Chattanooga'ya çekildi; Bragg takip edip demiryollarını keserek kuşatmaya aldı.",
+      "forces": {
+        "sideA": 60000,
+        "sideB": 65000
+      },
+      "casualties": {
+        "sideA": 16170,
+        "sideB": 18454
+      },
+      "commanders": {
+        "sideA": [
+          "William Rosecrans",
+          "George H. Thomas"
+        ],
+        "sideB": [
+          "Braxton Bragg",
+          "James Longstreet"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Chickamauga"
+    },
+    {
+      "id": "chattanooga",
+      "name": "Battles for Chattanooga",
+      "nameTr": "Chattanooga Muharebeleri",
+      "lat": 35.0456,
+      "lng": -85.3097,
+      "date": "1863-11-23",
+      "dateEnd": "1863-11-25",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 15,
+      "summary": "Grant breaks the Confederate siege with dramatic assaults up Lookout Mountain and Missionary Ridge, opening the door to Atlanta.",
+      "summaryTr": "Grant, Lookout Mountain ve Missionary Ridge'e yapılan çarpıcı saldırılarla Konfederasyon kuşatmasını kırar ve Atlanta'nın kapısını açar.",
+      "story": "After Chickamauga, Bragg's Confederates held the heights around Chattanooga and sealed the city from easy supply. Inside, the Army of the Cumberland subsisted on quarter rations; thousands of horses and mules starved to death. Lincoln gave Grant command of all western armies. Grant arrived on October 23, 1863, replaced Rosecrans with Thomas, and within five days engineers had opened the so-called Cracker Line by seizing Brown's Ferry and linking supply routes via Chattanooga Creek. Reinforced by Hooker with two corps from Virginia and Sherman with four divisions from Vicksburg, Grant struck back. On November 24 Hooker's men scaled the steep northern face of 1,500-foot Lookout Mountain in driving fog, the so-called \"Battle Above the Clouds,\" and cleared Confederate defenders from its slopes. The next day, November 25, Sherman hammered the Confederate right at Tunnel Hill while Thomas's four divisions were to make a demonstration against the rifle pits at the base of Missionary Ridge. The Union soldiers, humiliated since Chickamauga, overran the rifle pits and then without orders climbed the 600-foot ridge straight into Bragg's center, scrambling up gullies and overwhelming his surprised line. Bragg's army broke and streamed south into Georgia. The Confederate western theater collapsed; Tennessee was firmly in Union hands; and the stage was set for Sherman's spring 1864 campaign against Atlanta. Four months later Lincoln called Grant to Washington and promoted him to lieutenant general, general-in-chief of all the armies of the United States.",
+      "storyTr": "Chickamauga'dan sonra Bragg'in Konfederasyonları Chattanooga çevresindeki yükseklikleri tuttu ve şehri kolay ikmalden mahrum bıraktı. İçeride Cumberland Ordusu çeyrek tayınla yaşadı; binlerce at ve katır açlıktan öldü. Lincoln Grant'a tüm batı ordularının komutasını verdi. Grant 23 Ekim 1863'te geldi, Rosecrans'ı Thomas ile değiştirdi ve beş gün içinde istihkamcılar Brown's Ferry'yi ele geçirerek Cracker Line denen ikmal hattını açtı. Virginia'dan iki kolorduyla Hooker ve Vicksburg'dan dört tümenle Sherman ile takviye edilen Grant karşı saldırıya geçti. 24 Kasım'da Hooker'ın adamları 1.500 fitlik Lookout Mountain'ın dik kuzey yüzüne sisler içinde tırmanıp sözde \"Bulutlar Üstü Muharebe\"yi kazandı. Ertesi gün 25 Kasım'da Sherman, Tunnel Hill'deki Konfederasyon sağ kanadını döverken Thomas'ın dört tümeni Missionary Ridge eteğindeki tüfek çukurlarına gösteri saldırısı yapacaktı. Chickamauga'dan beri aşağılanmış Birlik askerleri tüfek çukurlarını ele geçirdi ve emirsizce 600 fitlik sırta doğrudan Bragg'in merkezine tırmandı. Bragg'in ordusu kırıldı ve Georgia'ya güneye doğru aktı.",
+      "forces": {
+        "sideA": 56000,
+        "sideB": 44000
+      },
+      "casualties": {
+        "sideA": 5824,
+        "sideB": 6667
+      },
+      "commanders": {
+        "sideA": [
+          "Ulysses S. Grant",
+          "George H. Thomas",
+          "William T. Sherman",
+          "Joseph Hooker"
+        ],
+        "sideB": [
+          "Braxton Bragg"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Chattanooga_campaign"
+    },
+    {
+      "id": "wilderness",
+      "name": "Battle of the Wilderness",
+      "nameTr": "Vahşi Arazi Muharebesi",
+      "lat": 38.3229,
+      "lng": -77.7391,
+      "date": "1864-05-05",
+      "dateEnd": "1864-05-07",
+      "kind": "battle",
+      "side": "draw",
+      "order": 16,
+      "summary": "Grant's Overland Campaign opens with two days of confused fighting in the tangled woods south of the Rapidan; rather than retreat, Grant presses on.",
+      "summaryTr": "Grant'ın Kara Seferi, Rapidan'ın güneyindeki karmakarışık ormanlarda iki günlük kafası karışık çarpışmayla başlar; Grant geri çekilmek yerine ilerlemeyi seçer.",
+      "story": "On May 4, 1864, newly promoted Lieutenant General Ulysses S. Grant sent George Meade's Army of the Potomac, 118,000 strong, across the Rapidan River with a single objective: destroy Lee's Army of Northern Virginia. Grant's strategy differed from every predecessor: he would not return to Washington to regroup after battles but remain engaged continuously until Lee broke. Lee, outnumbered nearly two to one, chose to fight in the Wilderness, the same tangled second-growth woods where he had crushed Hooker a year earlier. Fifty-mile front roads vanished into underbrush so thick artillery was useless and units fired by the flashes of opposing muskets. On May 5 and 6, 1864 brush fires swept across the battlefield, burning hundreds of wounded men alive where they lay. On the morning of May 6 Longstreet's corps arrived on the Orange Plank Road just in time to turn back a collapsing Confederate right wing; Longstreet himself was shot by his own men not four miles from the spot where Jackson had been hit almost exactly a year earlier, this time surviving but sidelined for months. After two days of slaughter, the armies were spent. Union losses reached 18,000, Confederate perhaps 11,000. Every previous Army of the Potomac commander would have retreated north across the Rapidan. Instead, on the night of May 7, Grant ordered the army south. When the soldiers realized their direction of march, they cheered him. The war of grinding attrition had begun.",
+      "storyTr": "4 Mayıs 1864'te yeni terfi eden Korgeneral Ulysses S. Grant, George Meade'in 118.000 kişilik Potomac Ordusu'nu Rapidan Nehri'ni geçirerek tek bir hedefe yöneltti: Lee'nin Kuzey Virginia Ordusu'nu yok etmek. Grant'ın stratejisi her seleflerden farklıydı: muharebelerden sonra toparlanmak için Washington'a dönmeyecek, Lee kırılana kadar sürekli angajman halinde kalacaktı. Neredeyse iki kattan az sayıda olan Lee, bir yıl önce Hooker'ı ezdiği aynı karmakarışık orman olan Vahşi Arazi'de savaşmayı seçti. Elli millik cephe yolları çalılıklar arasında kayboluyor; çalılıklar o kadar sıktı ki topçu işe yaramıyor, birlikler karşıdaki tüfek parıltılarına göre ateş ediyordu. 5 ve 6 Mayıs'ta çalı yangınları savaş alanını süpürdü; yüzlerce yaralı yattıkları yerde diri diri yandı. 6 Mayıs sabahı Longstreet'in kolordusu Orange Plank Yolu'na tam çöken Konfederasyon sağ kanadını geri çevirmek için zamanında geldi; Longstreet'in kendisi Jackson'ın tam bir yıl önce vurulduğu yere dört milden daha az mesafede kendi askerleri tarafından vuruldu, bu sefer sağ kaldı ama aylarca hizmet dışı kaldı. İki günlük mezbahadan sonra orduların ikisi de tükenmişti. Birlik kayıpları 18.000'e, Konfederasyon belki 11.000'e ulaştı. Her önceki komutan kuzeye çekilirdi. Grant 7 Mayıs gecesi orduya güneye yürüyüş emri verdi.",
+      "forces": {
+        "sideA": 101895,
+        "sideB": 61025
+      },
+      "casualties": {
+        "sideA": 17666,
+        "sideB": 11125
+      },
+      "commanders": {
+        "sideA": [
+          "Ulysses S. Grant",
+          "George G. Meade"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "James Longstreet",
+          "Richard S. Ewell",
+          "A.P. Hill"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_the_Wilderness"
+    },
+    {
+      "id": "spotsylvania",
+      "name": "Battle of Spotsylvania Court House",
+      "nameTr": "Spotsylvania Muharebesi",
+      "lat": 38.2196,
+      "lng": -77.6147,
+      "date": "1864-05-08",
+      "dateEnd": "1864-05-21",
+      "kind": "battle",
+      "side": "draw",
+      "order": 17,
+      "summary": "Grant and Lee grind through two weeks of trench warfare that foreshadow the Western Front fifty years later.",
+      "summaryTr": "Grant ve Lee, elli yıl sonra Batı Cephesi'ni öngören iki haftalık siper savaşı sürdürür.",
+      "story": "Grant hoped to slip past Lee's right flank after the Wilderness and place his army between Lee and Richmond, but Lee, correctly guessing his move, marched by a shorter interior road and reached the crossroads at Spotsylvania Court House first. For two weeks, May 8-21, 1864, the armies dug, probed, and assaulted in an unbroken daily battle, the longest single engagement of the war. The Confederate line formed a U-shaped salient called the Mule Shoe, bristling with log breastworks. On May 10 twelve picked Union regiments under Colonel Emory Upton burst through one corner of the line at a run, only to be driven back when reinforcements did not arrive. Grant ordered the experiment repeated on a corps scale. At 4:30 a.m. on May 12, Hancock's 20,000 men surged through fog into the apex, capturing nearly a full Confederate division. Lee himself rode forward to rally his men, and his soldiers turned him back with cries of \"Lee to the rear!\" For twenty-two hours the fighting at a spot forever after called the Bloody Angle swayed across the muddy parapets, men firing point-blank at enemies three feet away, bayoneting and clubbing one another while rain turned the trenches into rivers of red mud. Before dawn the Confederates fell back to a new line. Combined casualties for the two weeks exceeded 32,000. Grant wired Washington his most famous line: \"I propose to fight it out on this line if it takes all summer.\" It took far longer than that.",
+      "storyTr": "Grant, Vahşi Arazi'den sonra Lee'nin sağ kanadını atlatıp ordusunu Lee ile Richmond'un arasına yerleştirmeyi umdu; ancak Lee hareketi doğru tahmin ederek daha kısa bir iç yoldan yürüdü ve Spotsylvania Court House kavşağına önce ulaştı. 8-21 Mayıs 1864 arasında iki hafta boyunca ordular günlük kesintisiz bir muharebede kazdı, yokladı ve saldırdı; savaşın tek en uzun çarpışmasıydı. Konfederasyon hattı Katır Nalı (Mule Shoe) adlı U biçimli bir çıkıntı oluşturuyor, kütük siperlerle dikiliyordu. 10 Mayıs'ta Albay Emory Upton komutasındaki on iki seçme Birlik alayı koşarak hattın bir köşesini deldi ama takviye gelmeyince geri püskürtüldü. Grant deneyin kolordu ölçeğinde tekrarlanmasını emretti. 12 Mayıs sabah 04:30'da Hancock'un 20.000 askeri sis içinde tepenin zirvesine doğru saldırdı ve neredeyse tam bir Konfederasyon tümenini esir aldı. Lee bizzat askerlerini toplamak için ileri sürdü; askerleri \"Lee geriye!\" çığlıklarıyla onu geri çevirdi. Yirmi iki saat boyunca artık Kanlı Köşe olarak anılacak noktada çamurlu siperler üzerinde çarpışma gidip geldi; erler üç fit ötedeki düşmanlara yakın mesafeden ateş ediyor, yağmur hendekleri kırmızı çamur nehirlerine çeviriyordu. Şafaktan önce Konfederasyonlar yeni bir hatta çekildi. Iki haftanın toplam kayıpları 32.000'i aştı.",
+      "forces": {
+        "sideA": 100000,
+        "sideB": 52000
+      },
+      "casualties": {
+        "sideA": 18399,
+        "sideB": 12687
+      },
+      "commanders": {
+        "sideA": [
+          "Ulysses S. Grant",
+          "George G. Meade",
+          "Winfield S. Hancock"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "Richard S. Ewell",
+          "John B. Gordon"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Spotsylvania_Court_House"
+    },
+    {
+      "id": "cold-harbor",
+      "name": "Battle of Cold Harbor",
+      "nameTr": "Cold Harbor Muharebesi",
+      "lat": 37.5907,
+      "lng": -77.2819,
+      "date": "1864-05-31",
+      "dateEnd": "1864-06-12",
+      "kind": "battle",
+      "side": "victory-b",
+      "order": 18,
+      "summary": "A catastrophic Union frontal assault costs 7,000 casualties in under an hour; Grant later calls it his worst decision of the war.",
+      "summaryTr": "Felaket getiren bir Birlik cepheden saldırısı bir saatten az sürede 7.000 zayiata mal olur; Grant daha sonra bunu savaşın en kötü kararı olarak adlandırır.",
+      "story": "After Spotsylvania, Grant kept sliding southeast in a series of flank marches, crossing the North Anna River and reaching Cold Harbor, a shabby crossroads ten miles northeast of Richmond, by late May 1864. Lee, knowing the ground from 1862's Seven Days, had time to entrench six miles of interlocking trenches, traverses, and artillery lunettes in terrain he chose himself. Grant knew a frontal assault was risky but believed the Confederates were nearly broken and ordered an attack at dawn on June 3. At 4:30 a.m., 50,000 Union soldiers, many of whom had pinned scraps of paper with their names inside their blouses so their bodies could be identified, stepped off across open ground. In some parts of the line men never advanced more than a few yards before collapsing under fire described by veterans as unlike anything they had ever seen. Within twenty minutes the attack was effectively over; within an hour roughly 7,000 Union soldiers had fallen. Grant stopped the assault but could not retrieve the wounded for four days until a truce was finally arranged, by which time most had died between the lines. Sporadic fighting continued for another nine days before Grant disengaged and moved south toward the James River. Years later, in his memoirs, Grant wrote, \"I have always regretted that the last assault at Cold Harbor was ever made. No advantage whatever was gained to compensate for the heavy loss we sustained.\" Lee, for his part, had just fought his last great field victory.",
+      "storyTr": "Spotsylvania'dan sonra Grant bir dizi kuşatma yürüyüşüyle güneydoğuya kaymaya devam etti, North Anna Nehri'ni geçti ve Mayıs 1864 sonlarında Richmond'un on mil kuzeydoğusundaki döküntü kavşak Cold Harbor'a ulaştı. 1862 Yedi Günleri'nden araziyi bilen Lee, kendi seçtiği bölgede birbirine kenetli altı mil siper, bağlantı yolu ve topçu mevzii kazabilecek zamana sahipti. Grant cepheden saldırının riskli olduğunu biliyordu ama Konfederasyonların neredeyse kırıldığına inanıyor ve 3 Haziran şafağında saldırı emri verdi. 04:30'da çoğu cesedinin tanınabilmesi için blozlarının içine adlarını yazdığı kağıt parçaları iğnelemiş 50.000 Birlik askeri açık araziyi aştı. Hattın bazı bölümlerinde adamlar birkaç yarddan fazla ilerleyemeden gazilerin daha önce hiç görmedikleri şekilde tanımladığı ateş altında yığıldı. Yirmi dakika içinde saldırı fiilen bitmiş, bir saat içinde yaklaşık 7.000 Birlik askeri düşmüştü. Grant saldırıyı durdurdu ama dört gün sonra nihayet bir ateşkes düzenlenene kadar yaralıları alamadı; o zamana kadar çoğu iki hat arasında ölmüştü. Yıllar sonra anılarında Grant, \"Cold Harbor'daki son saldırının yapılmış olmasından her zaman pişmanlık duydum\" diye yazdı.",
+      "forces": {
+        "sideA": 108000,
+        "sideB": 62000
+      },
+      "casualties": {
+        "sideA": 12737,
+        "sideB": 4595
+      },
+      "commanders": {
+        "sideA": [
+          "Ulysses S. Grant",
+          "George G. Meade"
+        ],
+        "sideB": [
+          "Robert E. Lee"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Cold_Harbor"
+    },
+    {
+      "id": "petersburg",
+      "name": "Siege of Petersburg",
+      "nameTr": "Petersburg Kuşatması",
+      "lat": 37.2279,
+      "lng": -77.4019,
+      "date": "1864-06-15",
+      "dateEnd": "1865-04-02",
+      "kind": "siege",
+      "side": "victory-a",
+      "order": 19,
+      "summary": "Nine months of trench warfare around the rail hub of Petersburg gradually strangle Lee's army and preview World War I.",
+      "summaryTr": "Petersburg demiryolu merkezi çevresinde dokuz aylık siper savaşı Lee'nin ordusunu yavaşça boğar ve Birinci Dünya Savaşı'nı öngörür.",
+      "story": "After Cold Harbor, Grant stole a march on Lee, crossing the James River on a 2,100-foot pontoon bridge and racing for Petersburg, a rail hub twenty-five miles south of Richmond through which nearly all supplies to the capital and Lee's army flowed. On June 15-18, 1864, a series of fumbled Union attacks failed to break the thinly held Petersburg defenses before reinforcements arrived. Grant then settled into siege lines that eventually stretched thirty-seven miles from east of Richmond to southwest of Petersburg. On July 30 Pennsylvania coal-miners in Burnside's corps detonated four tons of black powder in a tunnel beneath Confederate lines, blowing a crater 170 feet long and 30 feet deep. The assault that followed became one of the war's worst debacles when Union soldiers charged into rather than around the crater and were massacred. Over the following months Grant launched repeated offensives extending west, each forcing Lee to stretch his thinning army further: the Weldon Railroad, Peebles Farm, Hatcher's Run, Fort Stedman. Lee's men subsisted on cornmeal and sick cattle; desertion ran in the hundreds weekly. In the Shenandoah, Philip Sheridan's scorched-earth campaign (\"the Burning\") destroyed crops, mills, and barns, denying Lee his last granary. By the spring of 1865 the siege had become a demographic contest Lee could not win. On April 1 Sheridan crushed the Confederate right at Five Forks; on April 2 Grant broke the Petersburg lines; that night Lee abandoned both cities. Richmond fell the next morning.",
+      "storyTr": "Cold Harbor'dan sonra Grant, Lee'yi bir adım önce aştı: James Nehri'ni 2.100 fitlik tombaz köprüyle geçti ve başkent ile Lee'nin ordusuna giden neredeyse tüm ikmalin aktığı Richmond'un yirmi beş mil güneyindeki demiryolu merkezi Petersburg'a koştu. 15-18 Haziran 1864'te bir dizi beceriksiz Birlik saldırısı, takviyeler gelmeden zayıf tutulan Petersburg savunmalarını kırmayı başaramadı. Grant sonra doğu Richmond'dan güneybatı Petersburg'a otuz yedi mil uzanacak kuşatma hatlarına yerleşti. 30 Temmuz'da Burnside kolordusundaki Pennsylvanyalı kömür madencileri Konfederasyon hatlarının altındaki tünelde dört ton kara barutu patlattı; 170 fit uzunluğunda, 30 fit derinliğinde bir krater açıldı. Sonraki saldırı, Birlik askerlerinin krater etrafından değil içine doğru hücum ederek katledilmesiyle savaşın en kötü bozgunlarından birine dönüştü. Sonraki aylarda Grant batıya uzanan tekrarlayan saldırılar başlattı: Weldon Demiryolu, Peebles Farm, Hatcher's Run, Fort Stedman. Shenandoah'da Philip Sheridan'ın toprağı kavuran seferi (\"Yanma\") ekinleri, değirmenleri ve ahırları yok ederek Lee'yi son tahıl ambarından mahrum bıraktı. 1 Nisan'da Sheridan Beş Yol'da Konfederasyon sağ kanadını ezdi; 2 Nisan'da Grant Petersburg hatlarını kırdı; o gece Lee iki şehri de terk etti.",
+      "forces": {
+        "sideA": 125000,
+        "sideB": 65000
+      },
+      "casualties": {
+        "sideA": 42000,
+        "sideB": 28000
+      },
+      "commanders": {
+        "sideA": [
+          "Ulysses S. Grant",
+          "George G. Meade",
+          "Philip Sheridan"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "P.G.T. Beauregard",
+          "A.P. Hill"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Siege_of_Petersburg"
+    },
+    {
+      "id": "atlanta-campaign",
+      "name": "Atlanta Campaign and Fall of Atlanta",
+      "nameTr": "Atlanta Seferi ve Atlanta'nın Düşüşü",
+      "lat": 33.749,
+      "lng": -84.388,
+      "date": "1864-05-07",
+      "dateEnd": "1864-09-02",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 20,
+      "summary": "Sherman's 100-mile advance through northern Georgia captures Atlanta and saves Lincoln's reelection.",
+      "summaryTr": "Sherman'ın kuzey Georgia'dan 100 millik ilerleyişi Atlanta'yı ele geçirir ve Lincoln'ün yeniden seçilmesini kurtarır.",
+      "story": "As Grant grappled with Lee in Virginia, William Tecumseh Sherman marched southeast from Chattanooga on May 7, 1864, with three armies totaling 100,000 men. Opposing him, Joseph E. Johnston, with 65,000, conducted a textbook fighting retreat across the rugged, river-laced terrain of northwest Georgia. Through May and June, Sherman repeatedly maneuvered Johnston out of strong positions at Dalton, Resaca, Cassville, New Hope Church, and Kennesaw Mountain, where Sherman's one direct frontal assault failed bloodily on June 27. Still, each move brought Sherman closer to Atlanta, the South's second industrial city and a vital rail hub. Jefferson Davis, losing patience, replaced the cautious Johnston on July 17 with the aggressive John Bell Hood. Hood promptly launched three offensive battles (Peachtree Creek, Atlanta, Ezra Church) in the last ten days of July. All three were disasters; Hood lost some 20,000 men his army could not replace. Sherman then extended his lines, cut the last railroad into Atlanta at Jonesboro on August 31, and forced Hood to evacuate the city. On September 2 Atlanta's mayor surrendered, and the next day Sherman wired Washington: \"Atlanta is ours, and fairly won.\" The telegram reached a Northern public weary of Grant's casualty lists, shifted the 1864 presidential election decisively toward Lincoln and against the Peace Democrats, and guaranteed that Union war aims, Union preservation and emancipation, would not be negotiated away. It was, arguably, the single most important political-military event of the war.",
+      "storyTr": "Grant Virginia'da Lee ile boğuşurken William Tecumseh Sherman, 7 Mayıs 1864'te 100.000 askerden oluşan üç orduyla Chattanooga'dan güneydoğuya yürüdü. Karşısında 65.000 askerle Joseph E. Johnston, kuzeybatı Georgia'nın engebeli, nehirlerle çevrili arazisinde ders kitabı niteliğinde bir çarpışarak geri çekilme yürüttü. Mayıs ve Haziran boyunca Sherman, Dalton, Resaca, Cassville, New Hope Kilisesi ve Sherman'ın tek doğrudan cepheden saldırısının 27 Haziran'da kanla başarısız olduğu Kennesaw Dağı'ndaki güçlü mevzilerden Johnston'ı defalarca uzaklaştırdı. Yine de her hamle Sherman'ı Güney'in ikinci sanayi şehri ve hayati demiryolu merkezi Atlanta'ya daha da yaklaştırdı. Sabrını kaybeden Jefferson Davis 17 Temmuz'da temkinli Johnston'ı saldırgan John Bell Hood ile değiştirdi. Hood Temmuz'un son on gününde üç saldırı muharebesi başlattı (Peachtree Creek, Atlanta, Ezra Church); her üçü de felaketti ve Hood yerine koyamayacağı yaklaşık 20.000 adamını kaybetti. Sherman sonra hatlarını uzattı, 31 Ağustos'ta Jonesboro'da Atlanta'ya giden son demiryolunu kesti ve Hood'u şehri tahliye etmeye zorladı. 2 Eylül'de Atlanta belediye başkanı teslim oldu.",
+      "forces": {
+        "sideA": 100000,
+        "sideB": 65000
+      },
+      "casualties": {
+        "sideA": 31687,
+        "sideB": 34979
+      },
+      "commanders": {
+        "sideA": [
+          "William T. Sherman",
+          "George H. Thomas",
+          "James B. McPherson"
+        ],
+        "sideB": [
+          "Joseph E. Johnston",
+          "John Bell Hood"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Atlanta_campaign"
+    },
+    {
+      "id": "shermans-march",
       "name": "Sherman's March to the Sea",
       "nameTr": "Sherman'ın Denize Yürüyüşü",
-      "lat": 32.0809, "lng": -81.0912,
-      "date": "1864-11-15", "dateEnd": "1864-12-21",
-      "kind": "event", "side": "victory-a",
-      "summary": "Sherman's army cuts a 60-mile wide path of destruction from Atlanta to Savannah, destroying the Confederacy's economic capacity. Total war on civilian infrastructure.",
-      "summaryTr": "Sherman'ın ordusu, Atlanta'dan Savannah'a uzanan 96 km genişliğinde bir yıkım koridoru açar; Konfederasyon'un ekonomik kapasitesini yok eder. Sivil altyapıya karşı topyekûn savaş.",
+      "lat": 32.0809,
+      "lng": -81.0912,
+      "date": "1864-11-15",
+      "dateEnd": "1864-12-21",
+      "kind": "occupation",
+      "side": "victory-a",
+      "order": 21,
+      "summary": "Sherman's 60,000 troops cut loose from supply lines, burn a 300-mile swath across Georgia, and capture Savannah as a Christmas gift to Lincoln.",
+      "summaryTr": "Sherman'ın 60.000 askeri ikmal hatlarından koparak Georgia'da 300 millik bir şerit yakar ve Savannah'ı Lincoln'e Noel hediyesi olarak ele geçirir.",
+      "story": "After Atlanta fell, Sherman argued to Grant that chasing Hood's battered army north was pointless; instead, he proposed to abandon his supply line, burn Atlanta's military infrastructure, and march his 62,000 veterans 285 miles across Georgia to the sea, living off the countryside. \"I can make Georgia howl,\" he telegraphed. On November 15, 1864, the columns set out in two wings thirty miles apart, accompanied by specially organized \"bummers\" who foraged for food, destroyed railroads by heating and bending rails around trees into \"Sherman's neckties,\" and systematically wrecked mills, warehouses, cotton gins, and plantations. Resistance was scattered; apart from a sharp fight at Griswoldville on November 22 where Georgia militia advanced foolishly into veteran infantry, the march met no serious opposition. Sherman's men ate well, covered roughly ten miles a day, and left an estimated $100 million in property destruction behind. The human cost fell most heavily on Georgia's enslaved population, thousands of whom followed the army toward freedom despite often being left behind or, at Ebenezer Creek, stranded by one Union division. On December 10 Sherman's columns reached Savannah's outer defenses; Confederate commander William Hardee evacuated on December 20. Sherman telegraphed Lincoln: \"I beg to present you, as a Christmas gift, the city of Savannah.\" The march demonstrated modern total war against the Confederate economy and will, broke Georgia's capacity to support the rebellion, and set the template for Sherman's even more destructive Carolinas campaign of early 1865.",
+      "storyTr": "Atlanta düştükten sonra Sherman, Hood'un yıpranmış ordusunu kuzeye kovalamanın anlamsız olduğunu Grant'a savundu; bunun yerine ikmal hattını terk etmeyi, Atlanta'nın askeri altyapısını yakmayı ve 62.000 gazisiyle Georgia boyunca denize 285 mil yürüyerek kırsaldan geçinmeyi önerdi. \"Georgia'yı uluturabilirim\" diye telgraf çekti. 15 Kasım 1864'te kollar birbirinden otuz mil uzakta iki kanatta yola çıktı; özel olarak örgütlenmiş \"bummer\"lar yiyecek toplar, rayları ısıtıp ağaçlara bükerek \"Sherman kravatları\" yapar ve değirmenleri, depoları, pamuk çırçırlarını ve çiftlikleri sistematik olarak yıkardı. Direniş dağınıktı; 22 Kasım'da Griswoldville'deki keskin çarpışma dışında ciddi bir muhalefetle karşılaşmadı. Sherman'ın askerleri iyi yedi, günde yaklaşık on mil ilerledi ve arkasında tahmini 100 milyon dolarlık mülk tahribatı bıraktı. İnsani maliyet en ağır şekilde Georgia'nın köle nüfusuna düştü; binlercesi özgürlüğe doğru orduyu takip etti, bazen geride bırakıldı ya da Ebenezer Deresi'nde bir Birlik tümeni tarafından mahsur bırakıldı. 10 Aralık'ta Sherman'ın kolları Savannah'nın dış savunmalarına ulaştı; Konfederasyon komutanı William Hardee 20 Aralık'ta tahliye etti. Sherman Lincoln'e telgraf çekti: \"Size Noel hediyesi olarak Savannah şehrini sunarım.\"",
+      "forces": {
+        "sideA": 62000,
+        "sideB": 13000
+      },
+      "casualties": {
+        "sideA": 2200,
+        "sideB": 3100
+      },
+      "commanders": {
+        "sideA": [
+          "William T. Sherman",
+          "Oliver O. Howard",
+          "Henry W. Slocum"
+        ],
+        "sideB": [
+          "William J. Hardee",
+          "Joseph Wheeler"
+        ]
+      },
       "wikipediaEn": "https://en.wikipedia.org/wiki/Sherman%27s_March_to_the_Sea"
     },
     {
+      "id": "franklin-nashville",
+      "name": "Battles of Franklin and Nashville",
+      "nameTr": "Franklin ve Nashville Muharebeleri",
+      "lat": 36.1627,
+      "lng": -86.7816,
+      "date": "1864-11-30",
+      "dateEnd": "1864-12-16",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 22,
+      "summary": "John Bell Hood's desperate invasion of Tennessee is annihilated by George Thomas; the Confederate Army of Tennessee effectively ceases to exist.",
+      "summaryTr": "John Bell Hood'un Tennessee'yi umutsuz işgali George Thomas tarafından imha edilir; Konfederasyon Tennessee Ordusu fiilen yok olur.",
+      "story": "While Sherman marched through Georgia, John Bell Hood led the Confederate Army of Tennessee, roughly 39,000 strong, on a long-shot invasion of Tennessee meant to draw Sherman back or at least damage Union supply lines and recruit Kentuckians. Hood pursued John Schofield's smaller Union corps north from Alabama. On November 30, 1864, at Franklin, Hood, furious over a missed opportunity the previous night, ordered fourteen brigades, 20,000 men, to charge Schofield's entrenched line across two miles of open ground in fading daylight. The assault, larger than Pickett's Charge, ended in catastrophe: six Confederate generals died on the field, including the irreplaceable Patrick Cleburne. Hood lost 6,200 men in five hours to Schofield's 2,300; the army was gutted but Hood, uncomprehending, pressed on to Nashville. There George Thomas, the \"Rock of Chickamauga,\" had assembled 55,000 Federals behind formidable entrenchments. For two weeks Thomas methodically prepared while Grant, impatient, nearly relieved him. On December 15-16 Thomas launched a beautifully coordinated double envelopment, smashed Hood's left flank, and sent the Confederate Army of Tennessee streaming south in the only near-complete rout of a major army during the war. Hood resigned; his shattered command, reduced to perhaps 15,000 effectives, never fought a major battle again. In combination with Sherman's campaign, Franklin and Nashville meant that by Christmas 1864 the Confederacy had no field army of consequence west of the Appalachians.",
+      "storyTr": "Sherman Georgia'dan geçerken John Bell Hood, yaklaşık 39.000 askerlik Konfederasyon Tennessee Ordusu'nu Sherman'ı geri çekmek ya da en azından Birlik ikmal hatlarını vurmak ve Kentucky'lileri toplamak amacıyla Tennessee'ye umutsuz bir işgale çıkardı. Hood, John Schofield'in daha küçük Birlik kolordusunu Alabama'dan kuzeye kovaladı. 30 Kasım 1864'te Franklin'de Hood, bir önceki gece kaçırılan fırsata öfkeli, on dört tugayı yani 20.000 askeri alacakaranlıkta iki millik açık araziyi aşarak Schofield'in siperli hattına saldırmaya emretti. Pickett'in Saldırısı'ndan daha büyük olan saldırı felaketle sonuçlandı: yeri doldurulamaz Patrick Cleburne dahil altı Konfederasyon generali sahada öldü. Hood beş saatte 6.200 adam kaybederken Schofield 2.300 verdi; ordu içten içe çökmüştü ama Hood anlamazlıktan gelerek Nashville'e ilerledi. Orada \"Chickamauga'nın Kayası\" George Thomas, heybetli siperlerin arkasında 55.000 Federal toplamıştı. Iki hafta boyunca Thomas metodik şekilde hazırlandı; sabırsız Grant onu neredeyse görevden alacaktı. 15-16 Aralık'ta Thomas güzel koordineli çifte kuşatma başlattı, Hood'un sol kanadını ezdi ve savaşta büyük bir ordunun neredeyse tam bozgun yaşadığı tek vaka olarak Konfederasyon Tennessee Ordusu'nu güneye sürdü.",
+      "forces": {
+        "sideA": 55000,
+        "sideB": 39000
+      },
+      "casualties": {
+        "sideA": 5100,
+        "sideB": 12000
+      },
+      "commanders": {
+        "sideA": [
+          "George H. Thomas",
+          "John M. Schofield"
+        ],
+        "sideB": [
+          "John Bell Hood"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Franklin%E2%80%93Nashville_campaign"
+    },
+    {
+      "id": "five-forks",
+      "name": "Battle of Five Forks",
+      "nameTr": "Beş Yol Muharebesi",
+      "lat": 37.1334,
+      "lng": -77.6247,
+      "date": "1865-04-01",
+      "kind": "battle",
+      "side": "victory-a",
+      "order": 23,
+      "summary": "Sheridan's cavalry and infantry crush George Pickett's corps at the 'Waterloo of the Confederacy,' forcing Lee to abandon Petersburg.",
+      "summaryTr": "Sheridan'ın süvari ve piyadesi 'Konfederasyon Waterloo'su'nda George Pickett'in kolordusunu ezer ve Lee'yi Petersburg'u terk etmeye zorlar.",
+      "story": "By late March 1865 Lee's Petersburg lines had stretched thinner than bone. Grant, reinforced by Sheridan's cavalry returning from the Shenandoah, extended his flank toward Five Forks, a road junction twelve miles southwest of Petersburg that guarded the South Side Railroad, the last line feeding Lee's army. Lee warned George Pickett to hold Five Forks \"at all hazards.\" On April 1 Pickett, unaware the junction was about to be attacked by infantry support, rode off behind his lines to attend a shad-bake, an old Virginian fish fry, with Fitzhugh Lee and Thomas Rosser. Communications failures left his command leaderless just as Sheridan unleashed a coordinated attack: Warren's V Corps rolled up the Confederate left flank while Sheridan personally led cavalry charges against the center and right, riding along the line swinging his red battle-flag. By nightfall Pickett's command had disintegrated; roughly 2,950 Confederates, a third of his force, were captured. The South Side Railroad was cut the next day. Early on April 2 Grant ordered a general assault along the entire Petersburg line; the Confederate defenses crumbled. A.P. Hill was killed rallying his men. That night, in Richmond, Jefferson Davis received a telegram in church: \"General Lee telegraphs he can hold his position no longer.\" Government officials loaded archives and gold onto trains; fires set to destroy tobacco warehouses swept out of control, and by dawn on April 3 the Confederate capital was in flames and the Union flag flew over the abandoned capitol. Lee began his final retreat west.",
+      "storyTr": "Mart 1865 sonunda Lee'nin Petersburg hatları kemikten daha ince uzamıştı. Shenandoah'tan dönen Sheridan süvarisi ile takviye edilen Grant, kanadını Petersburg'un on iki mil güneybatısındaki yol kavşağı Beş Yol'a doğru uzattı; burası Lee'nin ordusunu besleyen son hat olan South Side Demiryolu'nu koruyordu. Lee, George Pickett'e Beş Yol'u \"her türlü tehlikeye rağmen\" tutmasını söyledi. 1 Nisan'da Pickett, kavşağın piyade destekli saldırıya uğramak üzere olduğundan habersiz, Fitzhugh Lee ve Thomas Rosser ile eski bir Virginia balık ziyafeti olan shad-bake'e katılmak için hatlarının arkasına gitti. İletişim aksaklıkları emrini lidersiz bıraktı; tam o sırada Sheridan koordineli saldırıyı başlattı: Warren'ın V. Kolordusu Konfederasyon sol kanadını sarıp toparladı, Sheridan ise bizzat süvari saldırılarına önderlik ederek hat boyunca kırmızı savaş bayrağını sallayarak ilerledi. Geceye kadar Pickett'in komutası dağılmıştı. Ertesi gün South Side Demiryolu kesildi. 2 Nisan erken saatlerde Grant tüm Petersburg hattı boyunca genel saldırı emri verdi; Konfederasyon savunmaları çöktü. A.P. Hill adamlarını toparlarken öldürüldü. O gece Richmond'da Jefferson Davis kilisede bir telgraf aldı: \"General Lee pozisyonunu daha fazla tutamayacağını bildiriyor.\"",
+      "forces": {
+        "sideA": 22000,
+        "sideB": 10600
+      },
+      "casualties": {
+        "sideA": 830,
+        "sideB": 2950
+      },
+      "commanders": {
+        "sideA": [
+          "Philip Sheridan",
+          "Gouverneur K. Warren"
+        ],
+        "sideB": [
+          "George Pickett",
+          "Fitzhugh Lee"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Five_Forks"
+    },
+    {
+      "id": "fall-of-richmond",
+      "name": "Fall of Richmond",
+      "nameTr": "Richmond'un Düşüşü",
+      "lat": 37.5407,
+      "lng": -77.436,
+      "date": "1865-04-03",
+      "kind": "occupation",
+      "side": "occupation",
+      "order": 24,
+      "summary": "The Confederate capital is evacuated and burns; Lincoln walks its streets two days later.",
+      "summaryTr": "Konfederasyon başkenti tahliye edilir ve yanar; Lincoln iki gün sonra sokaklarında yürür.",
+      "story": "On Sunday, April 2, 1865, during services at St. Paul's Episcopal Church in Richmond, a messenger handed Jefferson Davis a note: Lee could no longer hold Petersburg; Richmond must be evacuated that night. Davis rose quietly and left the church. Within hours clerks were stuffing government documents into crates, and a special train was being loaded with the Confederate treasury, around $500,000 in gold and silver. By 11 p.m. the president and cabinet were aboard rolling stock heading south toward Danville. Confederate authorities ordered the burning of tobacco and cotton warehouses and the scuttling of the James River fleet to prevent their capture. The fires jumped firebreaks in a rising wind; by dawn on April 3 a third of Richmond was a furnace, including the business district and the Confederate arsenal, whose detonating shells rained on the ruins. Mayor Joseph Mayo surrendered the city to Union cavalry at 8:15 that morning. Troops from Godfrey Weitzel's XXV Corps, including U.S. Colored Troops, marched into the smoking capital and immediately organized firefighting and relief. On April 4 Abraham Lincoln, accompanied by his son Tad and a small escort of sailors, walked up the James River waterfront and through the ruined streets. Freed slaves crowded around him, some falling to their knees; Lincoln said, \"Don't kneel to me. That is not right. You must kneel to God only.\" He sat briefly in Jefferson Davis's abandoned study in the Confederate White House. Four years after Fort Sumter, the rebellion had lost its seat of government.",
+      "storyTr": "2 Nisan 1865 Pazar günü Richmond'daki St. Paul Piskoposluk Kilisesi'ndeki ayin sırasında bir haberci Jefferson Davis'e bir not uzattı: Lee artık Petersburg'u tutamaz; Richmond o gece tahliye edilmeli. Davis sessizce ayağa kalkıp kiliseden çıktı. Birkaç saat içinde memurlar hükümet belgelerini kasalara tıkıyor, yaklaşık 500.000 dolarlık altın ve gümüşle Konfederasyon hazinesi özel bir trene yükleniyordu. Saat 23'e kadar başkan ve kabinesi güneye, Danville'e doğru giden vagonlardaydı. Konfederasyon yetkilileri tütün ve pamuk depolarının yakılmasını, James Nehri filosunun batırılmasını emretti. Yangınlar yükselen rüzgarda yangın hatlarını aştı; 3 Nisan şafağına kadar Richmond'un üçte biri bir fırına dönmüştü; iş merkezi ve patlayan mermilerin kalıntılara yağdığı Konfederasyon cephaneliği dahil. Belediye Başkanı Joseph Mayo o sabah 08:15'te şehri Birlik süvarisine teslim etti. ABD Renkli Birlikleri dahil Godfrey Weitzel'in XXV. Kolordusu dumanlı başkente yürüdü ve derhal yangın söndürme ve yardım örgütledi. 4 Nisan'da Abraham Lincoln, oğlu Tad ve küçük bir denizci refakatiyle James Nehri kıyısından harabe sokaklarda yürüdü. Azat edilmiş köleler etrafını sardı, bazıları dizlerine kapandı; Lincoln \"Bana diz çökme. Bu doğru değil. Sadece Tanrı'ya diz çök\" dedi.",
+      "commanders": {
+        "sideA": [
+          "Godfrey Weitzel",
+          "Abraham Lincoln"
+        ],
+        "sideB": [
+          "Jefferson Davis",
+          "Richard S. Ewell"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Evacuation_of_Richmond"
+    },
+    {
       "id": "appomattox",
-      "name": "Appomattox Surrender",
-      "nameTr": "Appomattox'ta Teslim Oluş",
-      "lat": 37.3764, "lng": -78.7961,
+      "name": "Surrender at Appomattox Court House",
+      "nameTr": "Appomattox Teslimiyeti",
+      "lat": 37.3776,
+      "lng": -78.7955,
       "date": "1865-04-09",
-      "kind": "armistice", "side": "armistice",
-      "summary": "Robert E. Lee surrenders the Army of Northern Virginia to Ulysses S. Grant at Appomattox Court House. The Civil War is effectively over.",
-      "summaryTr": "Robert E. Lee, Appomattox Adliyesi'nde Kuzey Virginia Ordusu'nu Ulysses S. Grant'e teslim eder. İç Savaş fiilen sona erer.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Appomattox_Court_House"
+      "kind": "treaty",
+      "side": "treaty",
+      "order": 25,
+      "summary": "Robert E. Lee surrenders the Army of Northern Virginia to Ulysses S. Grant in Wilmer McLean's parlor, effectively ending the war.",
+      "summaryTr": "Robert E. Lee, Kuzey Virginia Ordusu'nu Wilmer McLean'in salonunda Ulysses S. Grant'a teslim eder ve savaş fiilen sona erer.",
+      "story": "After abandoning Petersburg and Richmond on the night of April 2-3, 1865, Lee tried to race west to Amelia Court House, resupply, and link up with Joseph Johnston in North Carolina. But expected rations were not at Amelia, and Sheridan's cavalry and the Union II and VI Corps harried every step. On April 6 at Sayler's Creek, a quarter of Lee's remaining army, roughly 7,700 men including eight generals, was cut off and captured; watching from a hill Lee cried, \"My God, has the army been dissolved?\" By April 8 Union cavalry had ridden ahead and blocked his path at Appomattox Station, capturing the four supply trains waiting for him. A final breakout attempt on the morning of April 9 briefly pushed cavalry aside before revealing two Union infantry corps behind them. Lee said, \"There is nothing left for me to do but go and see General Grant, and I would rather die a thousand deaths.\" That afternoon the two commanders met in the parlor of Wilmer McLean, who had moved to Appomattox after the first Bull Run was fought across his farm in 1861, so that, as he later said, \"the war began in my front yard and ended in my front parlor.\" Grant, muddy from the road, offered generous terms: officers kept sidearms and horses, men kept their personal mounts for spring plowing, all would be paroled home. Lee signed. As the Confederates stacked arms on April 12, Union General Joshua Chamberlain ordered his men to salute their former enemies. About 28,000 Confederates were paroled; the war's effective end had come in a farmer's sitting room.",
+      "storyTr": "2-3 Nisan 1865 gecesi Petersburg ve Richmond'u terk ettikten sonra Lee, batıya Amelia Court House'a koşup ikmal yaparak Kuzey Carolina'da Joseph Johnston ile birleşmeye çalıştı. Ancak beklenen erzak Amelia'da yoktu ve Sheridan'ın süvarisi ile Birlik II ve VI. Kolorduları her adımı taciz etti. 6 Nisan'da Sayler's Deresi'nde Lee'nin kalan ordusunun dörtte biri yani sekiz general dahil yaklaşık 7.700 adam kesildi ve esir edildi; Lee bir tepeden izleyerek \"Aman Tanrım, ordu dağıldı mı?\" diye haykırdı. 8 Nisan'a kadar Birlik süvarisi önden gelip Appomattox İstasyonu'nda yolunu kesti ve bekleyen dört ikmal trenini ele geçirdi. 9 Nisan sabahındaki son çıkış girişimi süvariyi kısaca kenara itti ama arkalarında iki Birlik piyade kolordusunu ortaya çıkardı. Lee \"General Grant'ı görmeye gitmekten başka yapacak bir şey yok; bin kere ölmeyi yeğlerim\" dedi. O öğleden sonra iki komutan, 1861'de Birinci Bull Run kendi çiftliğinde yapıldıktan sonra Appomattox'a taşınan Wilmer McLean'in salonunda buluştu; McLean daha sonra \"Savaş ön bahçemde başladı ve ön salonumda bitti\" diyecekti. Yoldan çamurlu Grant cömert şartlar sundu: subaylar yan silahlarını ve atlarını korur, askerler bahar çiftçiliği için kendi binek hayvanlarını tutar, herkes evine salıverilirdi.",
+      "commanders": {
+        "sideA": [
+          "Ulysses S. Grant",
+          "George G. Meade",
+          "Philip Sheridan"
+        ],
+        "sideB": [
+          "Robert E. Lee",
+          "James Longstreet",
+          "John B. Gordon"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Battle_of_Appomattox_Court_House",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Appomattox_Mahkeme_Salonu_Muharebesi"
     },
     {
       "id": "lincoln-assassination",
-      "name": "Assassination of Lincoln",
-      "nameTr": "Lincoln'e Suikast",
-      "lat": 38.8966, "lng": -77.0263,
+      "name": "Assassination of Abraham Lincoln",
+      "nameTr": "Abraham Lincoln Suikastı",
+      "lat": 38.8967,
+      "lng": -77.0256,
       "date": "1865-04-14",
-      "kind": "event", "side": "political",
-      "summary": "Five days after Appomattox, John Wilkes Booth shoots Lincoln at Ford's Theatre in Washington. Lincoln dies the next morning — the first US president assassinated.",
-      "summaryTr": "Appomattox'tan beş gün sonra, John Wilkes Booth, Washington'daki Ford Tiyatrosu'nda Lincoln'e ateş eder. Lincoln ertesi sabah hayatını kaybeder — suikaste kurban giden ilk ABD başkanı.",
-      "wikipediaEn": "https://en.wikipedia.org/wiki/Assassination_of_Abraham_Lincoln"
+      "dateEnd": "1865-04-15",
+      "kind": "event",
+      "side": "political",
+      "order": 26,
+      "summary": "John Wilkes Booth shoots President Lincoln at Ford's Theatre; Lincoln dies the next morning, transforming national mourning and Reconstruction.",
+      "summaryTr": "John Wilkes Booth, Ford Tiyatrosu'nda Başkan Lincoln'ü vurur; Lincoln ertesi sabah ölür, ulusal yas ve Yeniden Yapılanma'yı dönüştürür.",
+      "story": "Five days after Appomattox, on Good Friday, April 14, 1865, Washington was illuminated in victory celebration. Abraham Lincoln, exhausted but buoyant, attended the comedy Our American Cousin at Ford's Theatre with his wife Mary and their guests Major Henry Rathbone and Clara Harris. At 10:15 p.m., during Act III, a charismatic twenty-six-year-old stage actor and Confederate sympathizer named John Wilkes Booth slipped into the unguarded presidential box, levelled a single-shot .44-caliber Deringer at the back of Lincoln's head, and fired. He then stabbed Rathbone, leapt to the stage (reportedly breaking his left fibula), shouted a line many heard as \"Sic semper tyrannis,\" and escaped out the back alley on a waiting horse. Soldiers carried the unconscious Lincoln across the street to the Petersen House. Surgeons probed the wound but recognized it was mortal; the bullet lodged behind his right eye. He breathed through the night surrounded by cabinet members, his wife, and doctors. At 7:22 a.m. on April 15 he died. Secretary of War Stanton reportedly said, \"Now he belongs to the ages.\" The assassination was part of a wider conspiracy: the same night, accomplice Lewis Powell stabbed Secretary of State William Seward, who survived. Vice President Andrew Johnson escaped injury when his assigned attacker lost his nerve. Booth was cornered and killed in a Virginia barn twelve days later; four conspirators were hanged in July. Lincoln's death transformed Reconstruction from the generous peace he had urged in his Second Inaugural (\"with malice toward none, with charity for all\") into a bitter political struggle that would shape the postwar South for a century.",
+      "storyTr": "Appomattox'tan beş gün sonra, 14 Nisan 1865 Kutsal Cuma'da, Washington zafer kutlamasıyla aydınlatılmıştı. Abraham Lincoln, bitkin ama neşeli, eşi Mary ve konukları Binbaşı Henry Rathbone ve Clara Harris ile Ford Tiyatrosu'nda Our American Cousin adlı komediyi izledi. Saat 22.15'te üçüncü perde sırasında karizmatik yirmi altı yaşındaki sahne oyuncusu ve Konfederasyon yandaşı John Wilkes Booth, korumasız başkanlık locasına süzüldü, tek atışlık .44 kalibrelik bir Deringer'ı Lincoln'ün başının arkasına doğrulttu ve ateş etti. Sonra Rathbone'u bıçakladı, sahneye atladı (sol fibulasını kırdığı söylenir), birçok kişinin \"Sic semper tyrannis\" olarak duyduğu bir söz bağırdı ve arka sokaktaki bekleyen bir atla kaçtı. Askerler baygın Lincoln'ü karşıdaki Petersen Evi'ne taşıdı. Cerrahlar yarayı araştırdı ama ölümcül olduğunu anladı; kurşun sağ gözünün arkasına yerleşmişti. Gece boyunca kabine üyeleri, eşi ve doktorlar arasında nefes aldı. 15 Nisan sabah 07.22'de öldü. Savaş Bakanı Stanton'ın dediği rivayet edilir: \"Artık o çağlara aittir.\" Suikast daha geniş bir komplonun parçasıydı: aynı gece suç ortağı Lewis Powell, Dışişleri Bakanı William Seward'ı bıçakladı; Seward hayatta kaldı. Başkan Yardımcısı Andrew Johnson, kendisine atanan saldırganın cesareti kırılınca yaralanmadan kurtuldu. Booth on iki gün sonra Virginia'da bir ahırda köşeye sıkıştırılıp öldürüldü; dört komplocu Temmuz'da asıldı.",
+      "commanders": {
+        "sideA": [
+          "Abraham Lincoln",
+          "Edwin M. Stanton"
+        ],
+        "sideB": [
+          "John Wilkes Booth"
+        ]
+      },
+      "wikipediaEn": "https://en.wikipedia.org/wiki/Assassination_of_Abraham_Lincoln",
+      "wikipediaTr": "https://tr.wikipedia.org/wiki/Abraham_Lincoln_suikast%C4%B1"
     }
   ]
 }
