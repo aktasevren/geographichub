@@ -115,26 +115,39 @@ export default function WarGlobe({
     _e: e,
   }));
 
+  // Noir basemap recipe:
+  // - NASA Blue Marble (real satellite, label-free, 2k) as the color texture
+  // - earth-topology as bump map → relief shading on the terrain
+  // - CSS filter on the canvas element ONLY (via :global selector) so the
+  //   markers/atmosphere-glow HTML siblings keep their gold
   return (
-    <Globe
-      ref={globeRef}
-      width={width}
-      height={height}
-      backgroundColor="#0a0a0a"
-      globeImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-      atmosphereColor="#c9a961"
-      atmosphereAltitude={0.18}
-      polygonsData={countries}
-      polygonCapColor={() => "rgba(232,227,214,0.04)"}
-      polygonSideColor={() => "rgba(0,0,0,0.4)"}
-      polygonStrokeColor={() => "rgba(232,227,214,0.35)"}
-      polygonAltitude={0.006}
-      htmlElementsData={markers}
-      htmlLat="lat"
-      htmlLng="lng"
-      htmlAltitude="alt"
-      htmlElement={htmlElement}
-      arcsData={[]}
-    />
+    <div className="war-globe-wrap" style={{ width, height }}>
+      <style jsx>{`
+        .war-globe-wrap :global(canvas) {
+          filter: grayscale(1) contrast(1.15) brightness(0.85);
+        }
+      `}</style>
+      <Globe
+        ref={globeRef}
+        width={width}
+        height={height}
+        backgroundColor="#0a0a0a"
+        globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+        bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+        atmosphereColor="#c9a961"
+        atmosphereAltitude={0.18}
+        polygonsData={countries}
+        polygonCapColor={() => "rgba(232,227,214,0.03)"}
+        polygonSideColor={() => "rgba(0,0,0,0.4)"}
+        polygonStrokeColor={() => "rgba(232,227,214,0.32)"}
+        polygonAltitude={0.006}
+        htmlElementsData={markers}
+        htmlLat="lat"
+        htmlLng="lng"
+        htmlAltitude="alt"
+        htmlElement={htmlElement}
+        arcsData={[]}
+      />
+    </div>
   );
 }
