@@ -78,8 +78,8 @@
         "wellington",
         "waterloo"
       ],
-      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
-      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg",
+      "sideAFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_France.svg",
+      "sideBFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_Kingdom.svg",
       "militaryDead": 2500000
     },
     {
@@ -101,8 +101,8 @@
         "usa",
         "confederacy"
       ],
-      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/US_flag_35_stars.svg/1200px-US_flag_35_stars.svg.png",
-      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_the_Confederate_States_of_America_%281861%E2%80%931863%29.svg/1200px-Flag_of_the_Confederate_States_of_America_%281861%E2%80%931863%29.svg.png",
+      "sideAFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/US_flag_35_stars.svg",
+      "sideBFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Confederate_States_of_America_(1861%E2%80%931863).svg",
       "militaryDead": 700000
     },
     {
@@ -124,8 +124,8 @@
         "republic",
         "ataturk"
       ],
-      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
-      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece_%281822-1978%29.svg",
+      "sideAFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Turkey.svg",
+      "sideBFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Greece_(1822-1978).svg",
       "militaryDead": 340000
     },
     {
@@ -147,8 +147,8 @@
         "insurgency",
         "regime-change"
       ],
-      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
-      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Iraq%2C_1991-2004.svg",
+      "sideAFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_States.svg",
+      "sideBFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Iraq%2C_1991-2004.svg",
       "militaryDead": 60000
     },
     {
@@ -170,8 +170,8 @@
         "crimea",
         "21st-century"
       ],
-      "sideAFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
-      "sideBFlagUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg",
+      "sideAFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Ukraine.svg",
+      "sideBFlagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Russia.svg",
       "militaryDead": 180000
     }
   ]
