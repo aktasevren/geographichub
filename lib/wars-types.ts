@@ -63,7 +63,7 @@ export const WarSide = z.object({
       })
     )
     .min(1),
-  commanders: z.array(z.string()).min(1).max(6),
+  commanders: z.array(z.string()).min(1).max(12),
   result: z.enum(["victor", "defeated", "withdrew", "dissolved"]),
 });
 export type WarSide = z.infer<typeof WarSide>;
@@ -79,8 +79,8 @@ export const WarEvent = z.object({
   kind: WarEventKind,
   side: WarEventSide,
   order: z.number().int().positive(),
-  summary: z.string().min(1).max(240),
-  summaryTr: z.string().max(240).optional(),
+  summary: z.string().min(1).max(320),
+  summaryTr: z.string().max(320).optional(),
   story: z.string().min(100),
   storyTr: z.string().min(100),
   forces: z
@@ -110,8 +110,8 @@ export const War = z.object({
   era: WarEra,
   region: WarRegion,
   tags: z.array(z.string()).optional(),
-  blurb: z.string().min(1).max(320),
-  blurbTr: z.string().max(320).optional(),
+  blurb: z.string().min(1).max(400),
+  blurbTr: z.string().max(400).optional(),
   sides: z.array(WarSide).min(2).max(3),
   casualties: z.object({
     militaryDead: z.number().int().nonnegative(),
@@ -138,8 +138,8 @@ export const WarIndexEntry = z.object({
   startYear: z.number().int(),
   endYear: z.number().int(),
   eventCount: z.number().int().nonnegative(),
-  blurb: z.string(),
-  blurbTr: z.string().optional(),
+  blurb: z.string().max(400),
+  blurbTr: z.string().max(400).optional(),
   era: WarEra.optional(),
   region: WarRegion.optional(),
   tags: z.array(z.string()).optional(),
