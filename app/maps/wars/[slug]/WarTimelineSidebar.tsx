@@ -24,10 +24,10 @@ export default function WarTimelineSidebar({
   return (
     <aside
       data-map="wars"
-      className="hidden md:flex flex-col absolute z-20 top-[70px] left-6 w-[330px] max-h-[calc(100vh-90px)] rounded-2xl border backdrop-blur-md"
+      className="hidden md:flex flex-col absolute z-20 top-4 left-4 w-[320px] max-h-[calc(100%-2rem)] rounded-xl border backdrop-blur-md"
       style={{
         borderColor: "var(--war-rule)",
-        background: "rgba(20,20,20,0.8)",
+        background: "rgba(20,20,20,0.85)",
       }}
     >
       <div

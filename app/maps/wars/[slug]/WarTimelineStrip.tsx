@@ -16,10 +16,10 @@ export default function WarTimelineStrip({
   return (
     <div
       data-map="wars"
-      className="md:hidden absolute top-[62px] left-0 right-0 z-20 overflow-x-auto px-3 py-2 flex gap-2"
+      className="md:hidden absolute top-0 left-0 right-0 z-20 overflow-x-auto px-3 py-2 flex gap-2"
       style={{
         background:
-          "linear-gradient(to bottom, var(--war-ink) 70%, transparent)",
+          "linear-gradient(to bottom, rgba(10,10,10,0.85) 60%, transparent)",
       }}
     >
       {events.map((e) => {

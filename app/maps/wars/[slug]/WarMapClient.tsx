@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import SiteLogo from "@/components/SiteLogo";
 import { LocaleToggle, useLocale } from "@/components/LocaleProvider";
 import WarGlobe from "./WarGlobe";
@@ -17,12 +17,17 @@ import {
 
 export default function WarMapClient({ war }: { war: War }) {
   const { locale } = useLocale();
-  const [size, setSize] = useState({ w: 0, h: 0 });
+  const stageRef = useRef<HTMLDivElement>(null);
+  const [stageSize, setStageSize] = useState({ w: 0, h: 0 });
   const [activeId, setActiveId] = useState<string | null>(null);
 
+  // Measure the globe stage (viewport below the header + hero)
   useEffect(() => {
-    const onR = () =>
-      setSize({ w: window.innerWidth, h: window.innerHeight - 64 });
+    const onR = () => {
+      if (!stageRef.current) return;
+      const r = stageRef.current.getBoundingClientRect();
+      setStageSize({ w: r.width, h: r.height });
+    };
     onR();
     window.addEventListener("resize", onR);
     return () => window.removeEventListener("resize", onR);
@@ -46,7 +51,6 @@ export default function WarMapClient({ war }: { war: War }) {
     [war.events]
   );
 
-  // Log-normalised casualty scale (0..1) per event id — drives marker size
   const casualtyScale = useMemo(() => {
     const m: Record<string, number> = {};
     let max = 0;
@@ -67,17 +71,18 @@ export default function WarMapClient({ war }: { war: War }) {
   return (
     <div
       data-map="wars"
-      className="relative min-h-screen overflow-hidden"
+      className="flex flex-col h-screen overflow-hidden"
       style={{ background: "var(--war-ink)", color: "var(--war-paper)" }}
     >
+      {/* Header */}
       <header
-        className="absolute top-0 left-0 right-0 z-40"
+        className="flex-shrink-0"
         style={{
-          background:
-            "linear-gradient(to bottom, rgba(10,10,10,0.95), transparent)",
+          background: "var(--war-ink)",
+          borderBottom: "1px solid var(--war-rule)",
         }}
       >
-        <div className="flex justify-between items-center px-4 md:px-8 py-3 md:py-4">
+        <div className="flex justify-between items-center px-4 md:px-8 py-2 md:py-3 max-w-[1200px] mx-auto">
           <SiteLogo />
           <div className="flex items-center gap-4">
             <Link
@@ -92,36 +97,40 @@ export default function WarMapClient({ war }: { war: War }) {
         </div>
       </header>
 
+      {/* Hero — compact, normal flow */}
       <WarSidesHero war={war} />
 
-      {size.w > 0 && (
-        <WarGlobe
+      {/* Globe stage — fills remaining viewport */}
+      <div ref={stageRef} className="relative flex-1 overflow-hidden">
+        {stageSize.w > 0 && stageSize.h > 0 && (
+          <WarGlobe
+            events={events}
+            activeId={activeId}
+            onSelect={handleSelect}
+            width={stageSize.w}
+            height={stageSize.h}
+            casualtyScale={casualtyScale}
+          />
+        )}
+
+        <WarTimelineSidebar
           events={events}
           activeId={activeId}
           onSelect={handleSelect}
-          width={size.w}
-          height={size.h}
-          casualtyScale={casualtyScale}
         />
-      )}
+        <WarTimelineStrip
+          events={events}
+          activeId={activeId}
+          onSelect={handleSelect}
+        />
 
-      <WarTimelineSidebar
-        events={events}
-        activeId={activeId}
-        onSelect={handleSelect}
-      />
-      <WarTimelineStrip
-        events={events}
-        activeId={activeId}
-        onSelect={handleSelect}
-      />
-
-      <WarBottomSheet
-        events={events}
-        activeId={activeId}
-        onSelect={handleSelect}
-        onClose={() => setActiveId(null)}
-      />
+        <WarBottomSheet
+          events={events}
+          activeId={activeId}
+          onSelect={handleSelect}
+          onClose={() => setActiveId(null)}
+        />
+      </div>
     </div>
   );
 }
